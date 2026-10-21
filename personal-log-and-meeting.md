@@ -35,9 +35,7 @@
   * 
 
 ### 5. Next Steps & Task Allocation
-* **Assigned Action Items:**
-  * [ ] `@member1` - 
-  * [ ] `@member2` - 
+* **Finalize TeamName_Stage1_ProjectPlan in Word/PDF, attach the GitHub link, conduct a full team review, and submit prior to the October 24 deadline.**
 
 ---
 *(Older entries go below)*
