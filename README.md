@@ -12,11 +12,11 @@ Task List Location : -
 
 # **A. Team Information and Responsibilities**
 ## Team Roster 
-- Member Name : Ritchard Alexander 林俊宇
+- Member Name : RITCHARD ALEXANDER 林俊宇
 Student ID : 1820262050
 Responsibilities : Content Lead
 
-- Member Name : Frederic Chandra 张国立
+- Member Name : FREDERIC CHANDRA 张国立
 Student ID : 1820262083
 Responsibilities : Quality Lead 
 
@@ -28,9 +28,9 @@ Responsibilities :  Repository and submission lead (CIO)
 Student ID : 1820262104
 Responsibilities : Coordinator (CEO) 
 
-- Member Name : 
-Student ID : 1820262103
-Responsibilities : 
+- Member Name : FREDERICK BRYAN THE -  郑明畅
+Student ID :1820262029
+Responsibilities : Video Lead
 
 - Member Name : EIZEL MTHANA CONQUEROR - 康哲 
 Student ID : 1820262106
@@ -46,7 +46,11 @@ Our team brings a diverse set of complementary skills:
 
 - [Eizel Mthana Conqueror]: Strong visual design capabilities, slide formatting, and data visualization.
 
-- [Member 4 Name]: Experienced in public speaking, audio/video editing, and creating engaging presentation materials.
+- [Gunawan Nicolas Benedictus]: communication, collaboration, leadership and time management. My role as the CEO of this group will ensure this group project runs well and reaches its ultimate target. 
+
+- [Frederick Bryan The]: Research, discipline, visual design capabilities, video editing capabilities.
+
+- [Frederic Chandra] : Cooperative, Collaboration, Time management, Attention to detail. I've experience in studying GPR during high-school which required me to use meticulous sources. 
 
 # Skills to Develop 
 Through this project, team members aim to grow their individual technical and collaborative skill sets:
