@@ -37,7 +37,8 @@ Student ID : 1820262106
 Responsibilities : Visual Design Lead
 
 # Workload Distribution and Strengths
-## Strengths & Experience: Our team brings a diverse set of complementary skills:
+## Strengths & Experience
+Our team brings a diverse set of complementary skills:
 
 - [Ritchard Alexander]: writing, communication, research, and organizing information. serve as Content Lead, organizing and writing the project content.
 
@@ -47,30 +48,31 @@ Responsibilities : Visual Design Lead
 
 - [Member 4 Name]: Experienced in public speaking, audio/video editing, and creating engaging presentation materials.
 
-Skills to Develop: Through this project, team members aim to grow their individual technical and collaborative skill sets:
+# Skills to Develop 
+Through this project, team members aim to grow their individual technical and collaborative skill sets:
 
-## Collaborative Git Workflows 
+### Collaborative Git Workflows 
 - Gaining hands-on experience with branching, pull requests, and code reviews on GitHub.
 
-## Technical Content Strategy
+### Technical Content Strategy
 - Learning how to distill complex AI/CS topics into beginner-friendly explanations.
 
-## Multimedia Production 
+### Multimedia Production 
 - Improving skills in video editing and creating structured teaching slides.
 
-## Powerpoint Skills
+### Powerpoint Skills
 - Learning how to make interactive and interesting powerpoint presentations that can engage the audience to hear the presentation closely.
 
-## Fair Workload Strategy
-- To ensure a fair and balanced workload, tasks are assigned according to each member's primary strengths while maintaining shared accountability:
+# Fair Workload Strategy
+To ensure a fair and balanced workload, tasks are assigned according to each member's primary strengths while maintaining shared accountability:
 
-## Core Knowledge Sharing 
+### Core Knowledge Sharing 
 - Every member will independently study the module subject matter and contribute directly to the foundational Markdown documentation.
 
-## Lead Responsibilities
+### Lead Responsibilities
 - Each deliverable (Study Guide, Slides, Video, Mini Lecture) has a designated Lead responsible for oversight and formatting, but all members contribute content and participate in peer review.
 
-## Cross-Verification
+### Cross-Verification
 - Members will cross-review each other's outputs to guarantee technical accuracy and consistent quality across all project components.
 
 
