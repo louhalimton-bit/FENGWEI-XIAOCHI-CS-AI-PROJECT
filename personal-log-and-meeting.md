@@ -4,7 +4,7 @@
 
 ---
 
-## [YYYY-MM-DD] Latest Entry Title (e.g., Sprint 1 Integration)
+## [2026-10-21] Latest Entry Title (e.g., Sprint 1 Integration)
 
 **Time / Duration:** `[e.g., 02:00 PM - 04:30 PM]`  
 **Team Members Present:** `@member1`, `@member2`
@@ -17,20 +17,19 @@
 
 ### 2. Member Contributions & Division of Responsibilities
 * **Individual Roles & Deliverables:**
-  * **`@member1`:** [Specific contribution]
+  * **`Frederic`:** Making the files and double checking all the work
   * **`@member2`:** [Specific contribution]
 * **Integration & Code Review Notes:**
   * 
 
 ### 3. Shared Outcome & Evidence
 * **What did the team achieve?**
-  * 
+  * Finished setting up Github, defined each group member's tasks
 * **Supporting Evidence:** *(e.g., PR #X, Commit SHA, Test logs)*
   * 
 
 ### 4. Group Learning & Reflection
-* **What does the team now understand or execute better?**
-  * 
+* **'Frederic':** I found that it is most efficient to do work together in the same place, I find it very easy to communicate with everyone because of it.
 * **Blockers or Technical Debt Encountered:**
   * 
 
