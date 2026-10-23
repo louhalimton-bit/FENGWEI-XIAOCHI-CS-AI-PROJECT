@@ -1,12 +1,12 @@
 # FENGWEI-XIAOCHI-CS-AI-PROJECT
-This repository is the group project of FENGWEI XIAOCHI and everything we do will be inside here.
+|This repository is the group project of FENGWEI XIAOCHI and everything we do will be inside here|
 
 # FENGWEI XIAOCHI
 ## Stage - 1 Project Plan
 
 Selected Project Module : Software & Symbolic AI ( Academic Advisor Expert System )
 
-GitHub Repository Link : https://github.com/louhalimton-bit/FENGWEI-XIAOCHI-CS-AI-PROJECT/settings
+GitHub Repository Link : https://github.com/louhalimton-bit/FENGWEI-XIAOCHI-CS-AI-PROJECT
  
 Task List Location : -
 
