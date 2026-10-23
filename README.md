@@ -1,97 +1,50 @@
-# FENGWEI-XIAOCHI-CS-AI-PROJECT
-|This repository is the group project of FENGWEI XIAOCHI and everything we do will be inside here|
+# [Computer Science and Artificial Intelligence]
 
-# FENGWEI XIAOCHI
-## Stage - 1 Project Plan
+Welcome to the official repository by **风味小吃**
 
-Selected Project Module : Software & Symbolic AI ( Academic Advisor Expert System )
+---
 
-GitHub Repository Link : https://github.com/louhalimton-bit/FENGWEI-XIAOCHI-CS-AI-PROJECT
- 
-Task List Location : -
+## Team Overview
 
-# **A. Team Information and Responsibilities**
-## Team Roster 
-- Member Name : RITCHARD ALEXANDER 林俊宇
-Student ID : 1820262050
-Responsibilities : Content Lead
+* **Selected Module:** Software and Symbolic AI
+* **Team Name:** 风味小吃
 
-- Member Name : FREDERIC CHANDRA 张国立
-Student ID : 1820262083
-Responsibilities : Quality Lead 
+### Team Roster & Roles
 
-- Member Name : LOUIS ALEXANDER DALIM - 苏路成
-Student ID : 1820262103
-Responsibilities :  Repository and submission lead (CIO)
+| Name (Roster) | Student ID | Responsibility | GitHub Username |
+| :--- | :--- | :--- | :--- |
+| **RITCHARD ALEXANDER 林俊宇** | 1820262050 | **Content Lead** | alegii |
+| **FREDERIC CHANDRA 张国立** | 1820262083 | **Quality Lead** | Kimmayy |
+| **LOUIS ALEXANDER DALIM 苏路成** | 1820262103 | **Repository and submission lead (CIO)** | LewiZHalim ton |
+| **GUNAWAN NICOLAS BENEDICTUS 李庆成** | 1820262104 | **Coordinator (CEO)** | nicbgunawan |
+| **FREDERICK BRYAN THE 郑明畅** | 1820262029 | **Video Lead** | frederickbryan |
+| **EIZEL MTHANA CONQUEROR - 康哲** | 1820262106  | **Visual Design Lead** | mthanaconqu |
 
-- Member Name : GUNAWAN NICOLAS BENEDICTUS 李庆成 
-Student ID : 1820262104
-Responsibilities : Coordinator (CEO) 
+---
 
-- Member Name : FREDERICK BRYAN THE -  郑明畅
-Student ID :1820262029
-Responsibilities : Video Lead
+## Project Structure
 
-- Member Name : EIZEL MTHANA CONQUEROR - 康哲 
-Student ID : 1820262106
-Responsibilities : Visual Design Lead
+Below is the directory layout of this repository, showing where each component of the learning materials is located:
 
-# Workload Distribution and Strengths
-## Strengths & Experience
-Our team brings a diverse set of complementary skills:
+```text
+.
+├── README.md                          # Main repository overview and guide
+├── content.md                         # Foundation learning materials
+├── personal-log-and-meeting-log.md    # Record of personal learning and meeting activities
+│   ├── personal log
+│   └── meeeting log
+├── project-log.md                     # Maintain a clear, authentic record of the team’s work
+├── project-plan.md                    # Overview of project
+│   ├── Intended Learners and Prerequisites
+│   ├── Intended Learning Outcomes
+│   ├── Major Topics and Subtopics
+│   ├── Learning Sequence
+│   └──References
+└── tasklist.md                        # List of tasks and its details
+```
+## Current Progress and Remaining Work
+We finished creating and setting up GitHub repository and made an outline of the contents. We have to make ppt for live status report on stage one.
 
-- [Ritchard Alexander]: writing, communication, research, and organizing information. serve as Content Lead, organizing and writing the project content.
+## Location of Learning Material
 
-- [Louis Alexander Dalim]: Teamwork skills, Communication, and Discipline. My role as the CIO of this group will provide me the opportunity to prove my teamwork & communication skill.
-
-- [Eizel Mthana Conqueror]: Strong visual design capabilities, slide formatting, and data visualization.
-
-- [Gunawan Nicolas Benedictus]: communication, collaboration, leadership and time management. My role as the CEO of this group will ensure this group project runs well and reaches its ultimate target. 
-
-- [Frederick Bryan The]: Research, discipline, visual design capabilities, video editing capabilities.
-
-- [Frederic Chandra] : Cooperative, Collaboration, Time management, Attention to detail. I've experience in studying GPR during high-school which required me to use meticulous sources. 
-
-# Skills to Develop 
-Through this project, team members aim to grow their individual technical and collaborative skill sets:
-
-### Collaborative Git Workflows 
-- Gaining hands-on experience with branching, pull requests, and code reviews on GitHub.
-
-### Technical Content Strategy
-- Learning how to distill complex AI/CS topics into beginner-friendly explanations.
-
-### Multimedia Production 
-- Improving skills in video editing and creating structured teaching slides.
-
-### Powerpoint Skills
-- Learning how to make interactive and interesting powerpoint presentations that can engage the audience to hear the presentation closely.
-
-# Fair Workload Strategy
-To ensure a fair and balanced workload, tasks are assigned according to each member's primary strengths while maintaining shared accountability:
-
-### Core Knowledge Sharing 
-- Every member will independently study the module subject matter and contribute directly to the foundational Markdown documentation.
-
-### Lead Responsibilities
-- Each deliverable (Study Guide, Slides, Video, Mini Lecture) has a designated Lead responsible for oversight and formatting, but all members contribute content and participate in peer review.
-
-### Cross-Verification
-- Members will cross-review each other's outputs to guarantee technical accuracy and consistent quality across all project components.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+https://docs.google.com/document/d/1P8U-IOAZYCgZMObrSOtFQY8Dt_gOVCHvrQ0agEo_nzI/edit?userstoinvite=ritchard.alexander%40gmail.com&tab=t.d14wa0jsfgww
