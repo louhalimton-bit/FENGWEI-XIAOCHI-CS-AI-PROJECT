@@ -1,5 +1,4 @@
-# [Computer Science and Artificial Intelligence]
-
+# Computer Science and Artificial Intelligence
 Welcome to the official repository by **风味小吃**
 
 ---
@@ -15,7 +14,7 @@ Welcome to the official repository by **风味小吃**
 | :--- | :--- | :--- | :--- |
 | **RITCHARD ALEXANDER 林俊宇** | 1820262050 | **Content Lead** | alegii |
 | **FREDERIC CHANDRA 张国立** | 1820262083 | **Quality Lead** | Kimmayy |
-| **LOUIS ALEXANDER DALIM 苏路成** | 1820262103 | **Repository and submission lead (CIO)** | LewiZHalim ton |
+| **LOUIS ALEXANDER DALIM 苏路成** | 1820262103 | **Repository and submission lead (CIO)** | LewiZHalimton |
 | **GUNAWAN NICOLAS BENEDICTUS 李庆成** | 1820262104 | **Coordinator (CEO)** | nicbgunawan |
 | **FREDERICK BRYAN THE 郑明畅** | 1820262029 | **Video Lead** | frederickbryan |
 | **EIZEL MTHANA CONQUEROR - 康哲** | 1820262106  | **Visual Design Lead** | mthanaconqu |
