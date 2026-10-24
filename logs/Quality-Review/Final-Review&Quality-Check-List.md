@@ -1,4 +1,4 @@
-## `|First Project Plan Chack|`
+<img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/d9cd3017-ee7f-43f2-9477-6d341585efff" />## `|First Project Plan Chack|`
 * Frederic's strengths, experience, and workload strategy was not included
 * Many tasks left unassigned or marked as TBD
 * Project Scope and Learning Goals lacked expected outcome
@@ -63,3 +63,14 @@
 ****[done]**** Significant AI use is documented, and the team can explain and justify the submitted plan.
 
 * Page 29 Section 3.8
+
+## Module structure Checklist
+[done]Intended learning outcomes: what beginners should be able to explain or do.
+
+[done]Major topics and subtopics in a logical learning sequence.
+
+[done]Any prerequisite knowledge learners will need.
+
+[done]Planned examples, demonstrations, questions, or activities.
+
+[done]The current development status of each section.
