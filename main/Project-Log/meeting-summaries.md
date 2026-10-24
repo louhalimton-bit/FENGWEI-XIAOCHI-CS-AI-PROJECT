@@ -20,3 +20,22 @@
 | **Location or platform** | International Student Dormitory, Room 704 |
 | **Attendees** | Ritchard Alexander 林俊宇, Frederic Chandra 张国立, Louis Alexander Dalim 苏路成, Gunawan Nicolas Benedictus 李庆成, Frederick Bryan The 郑明畅, Eizel Mthana Conqueror 康哲 |
 | **Absent members** | None |
+
+### Purpose or agenda
+
+To discuss and clarify the task requirements, resolve different interpretations, organize the GitHub repository, divide responsibilities among the six members, and begin research and documentation for the Software & Symbolic AI project.
+
+### Key discussion points
+
+- Frederic Chandra and Louis Alexander would set up a GitHub repository and upload project files and data.
+- Gunawan Nicolas would develop the module structure and help organize the repository.
+- Frederick Bryan would research software and symbolic AI.
+- Ritchard Alexander would maintain the project log and write meeting summaries.
+- Eizel Mthana Conqueror would help maintain and check the project log.
+- The team discussed what the task required. Members had different opinions about some points, so they shared their views and discussed how to approach the work.
+
+### Decisions and outcomes
+
+- Divided the work according to each member's responsibilities.
+- Clarified the task requirements and reached a shared understanding of what the team needed to do.
+- Agreed to work together and began gathering information and developing the module structure.
