@@ -13,3 +13,16 @@
 | AI 05 | Oct 23, 2026 | Ritchard Alexander | OpenAI Codex (desktop app) | First draft of Chapter 2 | Unreviewed draft; not in the repository |
 | AI 06 | Oct 23, 2026 | Gunawan Nicolas Benedictus | ChatGPT | Six-chapter guide outline | Chapter framework and titles only |
 | AI 07 | Oct 23–24, 2026 | Eizel Mthana Conqueror | Claude (Claude Code desktop app) | Check plan and log against the five briefs | Corrected task list, corrected log copy (provisional) |
+
+## AI Record 01 — AI-Assisted Lecture Planning
+
+| Item | Detail |
+|---|---|
+| *Date* | October 21, 2026 |
+| *Member who used the AI tool* | Gunawan Nicolas Benedictus 李庆成 |
+| *Tool* | ChatGPT |
+| *Purpose* | To plan a short beginner-friendly lecture about software and symbolic AI. |
+
+*Important prompt*
+
+> Chat gpt, please help me to do this task... i need to present a short lecture about software and symbolic AI, please help me figure out what i should present, include, and do according to those steps and criteria in order to get a high grade.. Also please refer to the checklist for the rubricks of the task, and type it here in the chat... please be spesific, and use the pyramid formula (general to specific) and make sure everything is systematically in order and understandable..
