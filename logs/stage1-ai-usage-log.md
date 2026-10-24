@@ -234,3 +234,43 @@ An outline and a sample Chapter 1 exist as a starting point for the chapter lead
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 23, 2026.
 
 ---
+
+## AI Record 07 — AI-Assisted Review of the Stage 1 Plan and Project Log
+
+| Item | Detail |
+|---|---|
+| *Date* | October 23, 2026 (review) and October 24, 2026 (second round of corrections to the log) |
+| *Member who used the AI tool* | Eizel Mthana Conqueror 康哲 |
+| *Tool* | Claude (Claude Code desktop app) |
+| *Purpose* | To check the Stage 1 Project Plan and Task List and the Project Log against the five Stage 1 instruction documents (Shared Assignment Rules, Team Project Plan, Project Log, GitHub and Markdown, Personal Log), and to identify significant corrections and minor mistakes. |
+
+*Important prompts*
+
+> Go through everything within this folder and read every instruction carefully and make this as a baseline for our project plan. I'm going to give you our project master task list and project log, please make any corrections that are significant and also mention any minor mistakes we done
+
+> Yes, apply the simple fixes to a corrected copy of the project log docx, with the [TEAM] gaps highlighted.
+
+> Please rate 1 until 10 if our project log has followed the requirements or not. Do not make any corrections, Make the document more tidy and eye-appealing
+
+> Please fix all the correction now whatever you like to bump up the points
+
+*Relevant output summary*
+
+A ranked list of corrections: the Stage 3 deadline is 28 November (the plan said "TBA"); Markdown Content V1.0, the GitHub ZIP and the two logs were missing from the Stage 1 tasks; the task list had no documentation tasks; the contribution scores had no 100; the AI-use records had no interaction evidence; the repository was private and contained a personal log. Content-accuracy notes: MYCIN used backward chaining; the claim "missing information does not prove the opposite" needs a closed-world caveat; the answer to the overdue-book activity is that the system concludes nothing. Outputs: a review file (Stage1_Review_and_Corrections.md), a corrected master task list (Master_Task_List_Corrected.md), a corrected copy of the log with the simple fixes applied and the remaining gaps highlighted, a task-list.md for the repository, and on 24 October Entry 03, Meeting 3 and AI Records 04–06 drafted from the members' prompts and outputs for the team to verify. On 24 October the tool also rated the log against the brief (6/10, with reasons), produced a formatting-only tidied copy, and then applied the corrections it had listed: AI Records 04 and 05 added from the members' own prompts and outputs and the records renumbered so that every cross-reference matches; the E13 "after" screenshots added; evidence labels and the Meeting 3 time fixed. Facts only the team can supply were left as highlighted [TEAM] placeholders.
+
+*Verification and team judgment*
+
+- How it was checked: Claude compared the Stage 1 Project Plan and Project Log with the five assignment instruction documents and listed corrections. As of October 24, the team has not checked each recommendation point by point against the original instructions and sources. Frederic Chandra, the Quality Lead, has read the review and corrected copy; this does not mean every correction has been verified.
+- Accepted: The AI recommendations were used provisionally to prepare corrected copies and apply the requested simple fixes, with remaining [TEAM] gaps highlighted. No recommendation has yet been formally accepted after a full team verification.
+- Revised or rejected: No recommendation is recorded as rejected yet. The content-accuracy notes — the MYCIN chaining description, the closed-world caveat, and the overdue-book answer — still need to be checked against reliable sources or the teacher's guidance. Any point that does not match those checks will be revised or removed.
+
+*Outcome and learning*
+
+The review produced a corrected task list, a corrected copy of the Project Log, and draft Log Entry 03, Meeting 3, and AI Records 04–06 for the team to review. The task-list changes were prepared for the project plan and the GitHub task list.
+
+We learned that an AI review can help identify missing tasks and organize corrections, but its suggestions still need human verification. Frederic's reading was an initial quality review; the team still needs to record which corrections it checks, accepts, revises, or rejects.
+
+*Evidence:* AI07-E7 — screenshot of the Claude Code session with the review prompt and the ranked correction list.  
+![Evidence AI07-E7](../assets/evidence/AI07-E7.png)
+
+*Personal-log reference:* Eizel Mthana Conqueror 康哲 — Personal Learning and Work Log, October 23, 2026, AI Use entry for the Stage 1 plan and project-log review.
