@@ -1,1 +1,436 @@
+# 风味小吃 Stage 1 Project Log
 
+## 1. Team Information and Reporting Period
+
+* **Project title:** Software and Symbolic AI
+* **Team name:** 风味小吃
+* **Selected project module:** Software & Symbolic AI
+* **GitHub repository:** [FENGWEI-XIAOCHI-CS-AI-PROJECT](https://github.com/louhalimton-bit/FENGWEI-XIAOCHI-CS-AI-PROJECT/edit/main/project-log.md)
+* **Task list location:** Not specified
+* **Reporting period:** October 21, 2026 to October 24, 2026
+* **Stage 1 deadline:** October 24, 2026, 23:59 Beijing time
+* **Submission lead:** Louis Alexander Dalim - 苏路成 (Repository and submission lead / CIO)
+* **Document last updated:** October 24, 2026
+
+### Team roster and planned responsibilities
+
+| No | Member Name | Student ID | Planned Responsibility |
+| :---: | :--- | :---: | :--- |
+| 1 | Ritchard Alexander<br>林俊宇 | 1820262050 | Content Lead |
+| 2 | Frederic Chandra<br>张国立 | 1820262083 | Quality Lead |
+| 3 | Louis Alexander Dalim<br>苏路成 | 1820262103 | Repository and submission lead / CIO |
+| 4 | Gunawan Nicolas Benedictus<br>李庆成 | 1820262104 | Coordinator (CEO) |
+| 5 | Frederick Bryan The<br>郑明畅 | 1820262029 | Video Lead |
+| 6 | Eizel Mthana Conqueror<br>康哲 | 1820262106 | Visual Design Lead |
+
+---
+
+## Workload distribution and strengths
+
+* **Ritchard Alexander 林俊宇 — Content Lead:** Writing, communication, research, and organizing information. Planned to organize and write project content.
+* **Frederic Chandra 张国立 — Quality Lead:** Planned to oversee quality. Specific review tasks.
+* **Louis Alexander Dalim - 苏路成 — CIO:** Teamwork, communication, and discipline. Planned to coordinate the repository and submission.
+* **Gunawan Nicolas Benedictus - 李庆成 — CEO/Coordinator:** Planned to coordinate the team. Specific coordination tasks 
+* **Frederick Bryan The 郑明畅 — Video Lead:** Planned to lead video work. The source plan also mentions public speaking, audio/video editing, and creating engaging presentation materials for "Member 4"; confirm whether these strengths refer to Frederick.
+* **Eizel Mthana Conqueror - 康哲 — Visual Design Lead:** Visual design, slide formatting, and data visualization.
+
+---
+
+## Shared work and skills to develop
+
+Every member plans to study the module and contribute to the foundational Markdown documentation. Deliverable leads will oversee formatting, while all members contribute content and peer review. Team members plan to cross-check project materials for technical accuracy and consistency.
+
+The team aims to develop collaborative Git workflows, beginner-friendly technical explanations, multimedia production, and PowerPoint skills. Specific lead assignments for the Study Guide, Slides, Video, and Mini Lecture beyond the roles listed above.
+
+## 2. Chronological Project Log
+
+### Log Entry 01 — 21 October 2026
+
+**Time:** 19:20 
+**Location and platforms:** International Student Dormitory, Room 704; Google Docs and GitHub  
+**Members involved:** Ritchard Alexander 林俊宇; Frederic Chandra 张国立; Louis Alexander Dalim 苏路成; Gunawan Nicolas Benedictus 李庆成; Frederick Bryan The 郑明畅; Eizel Mthana Conqueror 康哲  
+**Absent members:** None 
+
+#### What was done and by whom?
+
+| Member | Task and status |
+|---|---|
+| Ritchard Alexander 林俊宇 | Prepared drafts of the project log and significant AI-use records. Final review and submission are pending. |
+| Frederic Chandra 张国立 | Set up the GitHub repository and uploaded project files and data. Ongoing. |
+| Louis Alexander Dalim 苏路成 | Worked with Frederic on setting up the GitHub repository and creating required project files (.md). Completed |
+| Gunawan Nicolas Benedictus 李庆成 | Began developing the module structure and drafting **风味小吃 Software and Symbolic AI — Markdown Content V1.0**. Ongoing. |
+| Frederick Bryan The 郑明畅 | Gathered initial information about software and symbolic AI. Initial research gathered; verification ongoing. |
+| Eizel Mthana Conqueror 康哲 | Helped prepare the project log and meeting summary and began checking the log for accuracy. Drafting completed; review ongoing. |
+
+#### What resulted?
+
+The team gathered initial information about software and symbolic AI, began developing the module structure, and set up and organized the GitHub repository with project files and data. Drafts of the project log and meeting summary were prepared. Research verification and the accuracy review remain in progress.
+
+#### What was learned?
+
+We learned to organize project information in GitHub, research the topic, and keep clear team records.
+
+#### What remains unresolved?
+
+The module structure is still being developed. The research sources need verification, and the project log and meeting summary need an accuracy review.
+
+#### What happens next?
+
+| Follow-up task | Owner(s) | Intended date |
+|---|---|---|
+| Continue developing the module structure | Gunawan Nicolas Benedictus 李庆成 | No deadline set at meeting |
+| Verify the research and sources | Frederick Bryan The 郑明畅 | No deadline set at meeting |
+| Review the project log and meeting summary | Ritchard Alexander 林俊宇 and Eizel Mthana Conqueror 康哲 | No deadline set at meeting |
+
+#### Evidence
+
+- **Evidence E1 — Ritchard Alexander 林俊宇:** Screenshots of the project-log and meeting-summary drafts.
+  
+  <img width="572" height="586" alt="Screenshot 2026-10-22 221906" src="https://github.com/user-attachments/assets/852b508a-4180-4f38-974e-db4fcbc98809" /><img width="532" height="586" alt="Screenshot 2026-10-22 221914" src="https://github.com/user-attachments/assets/cc87d91a-c74b-4c40-81c3-d737b7cb2968" /><img width="548" height="364" alt="Screenshot 2026-10-22 221922" src="https://github.com/user-attachments/assets/2cf95850-d806-4153-9ab4-666ded917dd0" />
+
+
+- **Evidence E2 — Eizel Mthana Conqueror 康哲:** Prepared the Team information, meeting-summary drafts, and Stage 1 team contribution
+
+  <img width="439" height="477" alt="Screenshot 2026-10-22 222358" src="https://github.com/user-attachments/assets/346c66fe-a54b-47a8-8745-f984d02c827a" /><img width="545" height="462" alt="Screenshot 2026-10-22 222411" src="https://github.com/user-attachments/assets/de9d1750-ff56-4095-b921-02d77a626241" /><img width="518" height="551" alt="Screenshot 2026-10-22 222420" src="https://github.com/user-attachments/assets/4eebc392-02e4-4d37-bce7-1933c47e3952" />
+
+- **Evidence E3 — Gunawan Nicolas Benedictus 李庆成:** Draft of **风味小吃 Software and Symbolic AI — Markdown Content V1.0**, showing the module outline and learning outcomes
+  
+  <img width="577" height="518" alt="Screenshot 2026-10-22 222623" src="https://github.com/user-attachments/assets/0eea56aa-3272-48cd-9602-b4e0c41b5e24" />
+
+
+- **Evidence E4 —  Frederick Bryan The 郑明畅: Software & Symbolic AI Research Specialist
+  <img width="1812" height="971" alt="Weixin Image_20261021231644_297_148" src="https://github.com/user-attachments/assets/e9895e6d-73fc-4244-b7e6-4b2ab7e96b8f" />
+
+
+- **Evidence E5 — Louis Alexander Dalim 苏路成 & Frederic Chandra 张国立 : GitHub Repository & Project Data Manager.
+  <img width="1284" height="603" alt="Weixin Image_20261021235937_312_148" src="https://github.com/user-attachments/assets/1040de73-835c-4387-8fd2-50ffe320c351" />
+
+  ### Log Entry 02 — 22 October 2026
+
+**Time:** 16:30 
+**Location and platforms:** Google Docs and GitHub; [add meeting location if applicable]  
+**Members involved:** Ritchard Alexander 林俊宇; Frederic Chandra 张国立; Louis Alexander Dalim 苏路成; Gunawan Nicolas Benedictus 李庆成; Frederick Bryan The 郑明畅; Eizel Mthana Conqueror 康哲  
+**Absent members:** none
+
+#### What was done and by whom?
+
+| Member | Task and status |
+|---|---|
+| Ritchard Alexander 林俊宇 | Worked with Eizel to move project material from Google Docs to GitHub. Transfer and review: ongoing. |
+| Eizel Mthana Conqueror 康哲 | Worked with Ritchard to move project material from Google Docs to GitHub. Transfer and review: ongoing. |
+| Frederic Chandra 张国立 | Created the `README.md` file. Contributed to the Master Task List and checked project work with the team, making corrections. README completed; task-list review and corrections ongoing. |
+| Louis Alexander Dalim 苏路成 | Worked on coordinating the team meeting, Master Task List, workflow and schedule, submission quality checklist, and substantive Markdown Content V1.0. Ongoing. |
+| Gunawan Nicolas Benedictus 李庆成 | Continued developing and revising the Project Plan and Task List. Used AI prompting to revise the drafts and check that they met the team’s requirements. Ongoing. |
+| Frederick Bryan The 郑明畅 | Continued researching Software & Symbolic AI and contributing to the Master Task List. Ongoing. |
+
+All six members continued working on their assigned project tasks.
+
+#### What resulted?
+
+The team moved project material from Google Docs into the GitHub repository and created the `README.md`. Work continued on the Master Task List, project workflow and schedule, submission checklist, and substantive Markdown Content V1.0. The team also reviewed drafts and began making corrections. Several tasks remain in progress.
+
+#### What was learned?
+
+We learned that moving shared material into GitHub makes it easier to organize and update the project files. Reviewing the README, task list, and Markdown content together also helps the team find corrections and keep the project materials consistent.
+
+#### What remains unresolved?
+
+The team still needs to finish transferring and checking the project material, complete the ongoing draft revisions, verify the research, and confirm that the README, task list, and Markdown content are accurate and up to date.
+
+#### What happens next?
+
+| Follow-up task | Owner(s) | Intended date |
+|---|---|---|
+| Finish transferring and checking the project material in GitHub | Ritchard Alexander 林俊宇 and Eizel Mthana Conqueror 康哲 | none |
+| Complete the README, task-list review, and corrections | Frederic Chandra 张国立 | [Add agreed date] |
+| Continue the Master Task List, workflow and schedule, submission checklist, and Markdown Content V1.0 | Louis Alexander Dalim 苏路成 | none |
+| Revise and finalize the Project Plan and Task List; document significant AI use | Gunawan Nicolas Benedictus 李庆成 | none |
+| Continue research and add verified sources to the Master Task List | Frederick Bryan The 郑明畅 | none |
+| Review the updated project materials | All members | none |
+
+#### Evidence
+
+- **Evidence E6 — Google Docs to GitHub transfer:** <img width="866" height="563" alt="Screenshot 2026-10-23 002818" src="https://github.com/user-attachments/assets/34db37dd-5287-4923-a8b6-3e8641f6bbfd" />
+
+- **Evidence E7 — README.md:** <img width="1192" height="674" alt="Screenshot 2026-10-23 012855" src="https://github.com/user-attachments/assets/94138702-bbe9-4af2-b2fb-658d90aead78" />
+
+
+- **Evidence E8 — Project planning and content:**
+-  <img width="636" height="587" alt="Screenshot 2026-10-23 002926" src="https://github.com/user-attachments/assets/c57e6c67-210c-4e52-a2cb-5b4db2a905e7" />
+
+- **Evidence E9 — Research and review:** <img width="746" height="632" alt="Screenshot 2026-10-23 003041" src="https://github.com/user-attachments/assets/0638d972-0fe0-491a-bb25-c1f952b2f63f" />
+
+### Log Entry 01 — 21 October 2026
+
+**Time:** 19:20 
+**Location and platforms:** International Student Dormitory, Room 704; Google Docs and GitHub  
+**Members involved:** Ritchard Alexander 林俊宇; Frederic Chandra 张国立; Louis Alexander Dalim 苏路成; Gunawan Nicolas Benedictus 李庆成; Frederick Bryan The 郑明畅; Eizel Mthana Conqueror 康哲  
+**Absent members:** None 
+
+#### What was done and by whom?
+
+| Member | Task and status |
+|---|---|
+| Ritchard Alexander 林俊宇 | Prepared drafts of the project log and significant AI-use records. Final review and submission are pending. |
+| Frederic Chandra 张国立 | Set up the GitHub repository and uploaded project files and data. Ongoing. |
+| Louis Alexander Dalim 苏路成 | Worked with Frederic on setting up the GitHub repository and creating required project files (.md). Completed |
+| Gunawan Nicolas Benedictus 李庆成 | Began developing the module structure and drafting **风味小吃 Software and Symbolic AI — Markdown Content V1.0**. Ongoing. |
+| Frederick Bryan The 郑明畅 | Gathered initial information about software and symbolic AI. Initial research gathered; verification ongoing. |
+| Eizel Mthana Conqueror 康哲 | Helped prepare the project log and meeting summary and began checking the log for accuracy. Drafting completed; review ongoing. |
+
+#### What resulted?
+
+The team gathered initial information about software and symbolic AI, began developing the module structure, and set up and organized the GitHub repository with project files and data. Drafts of the project log and meeting summary were prepared. Research verification and the accuracy review remain in progress.
+
+#### What was learned?
+
+We learned to organize project information in GitHub, research the topic, and keep clear team records.
+
+#### What remains unresolved?
+
+The module structure is still being developed. The research sources need verification, and the project log and meeting summary need an accuracy review.
+
+#### What happens next?
+
+| Follow-up task | Owner(s) | Intended date |
+|---|---|---|
+| Continue developing the module structure | Gunawan Nicolas Benedictus 李庆成 | No deadline set at meeting |
+| Verify the research and sources | Frederick Bryan The 郑明畅 | No deadline set at meeting |
+| Review the project log and meeting summary | Ritchard Alexander 林俊宇 and Eizel Mthana Conqueror 康哲 | No deadline set at meeting |
+
+#### Evidence
+
+- **Evidence E1 — Ritchard Alexander 林俊宇:** Screenshots of the project-log and meeting-summary drafts.
+  
+  <img width="572" height="586" alt="Screenshot 2026-10-22 221906" src="https://github.com/user-attachments/assets/852b508a-4180-4f38-974e-db4fcbc98809" /><img width="532" height="586" alt="Screenshot 2026-10-22 221914" src="https://github.com/user-attachments/assets/cc87d91a-c74b-4c40-81c3-d737b7cb2968" /><img width="548" height="364" alt="Screenshot 2026-10-22 221922" src="https://github.com/user-attachments/assets/2cf95850-d806-4153-9ab4
+
+
+
+## 3. Meeting Summaries
+
+### Meeting 1 — repository and discuss task distribution
+
+* **Date and time:** October 21, 2026. 19:20
+* **Location or platform:** International Student Dormitory room 704
+* **Attendees:** Ritchard Alexander 林俊宇, Frederic Chandra 张国立, Louis Alexander Dalim - 苏路成, Gunawan Nicolas Benedictus - 李庆成, Frederick Bryan The 郑明畅, Eizel Mthana Conqueror - 康哲
+* **Absent members:** none
+
+#### Purpose or agenda:
+Set up and organize the GitHub repository, divide project tasks among the six members, and begin research and documentation for the Software & Symbolic AI project. The team will also clarify the assignment requirements and agree on what needs to be done.
+
+#### Key discussion points:
+* Frederic Chandra and Louis Alexander would set up the GitHub repository and upload project files and data.
+* Gunawan Nicolas would develop the module structure and organize the repository.
+* Frederick Bryan would research software and symbolic AI and gather reliable information.
+* Ritchard Alexander would maintain the project log and write meeting summaries.
+* Eizel Mthana Conqueror would help maintain and check the project log.
+* The team discussed the need to check research and project records for accuracy.
+
+#### Decisions and outcomes:
+* The team divided the work according to the members' assigned responsibilities.
+* Repository setup and organization were assigned to Frederic, Louis, and Gunawan.
+* Research on software and symbolic AI was assigned to Frederick.
+* Ritchard and Eizel were assigned project-log and meeting-summary responsibilities, including checking the log.
+* The team began gathering information and developing the module structure. Frederick’s AI-assisted research is documented in **AI Record 02**.
+
+#### Follow-up actions:
+
+| Action | Owner(s) | Due date |
+| :--- | :--- | :--- |
+| Set up the GitHub repository and upload project files and data | Frederic Chandra and Louis Alexander Dalim | No deadline set at meeting |
+| Develop the module structure and organize the repository | Gunawan Nicolas Benedictus | No deadline set at meeting |
+| Research software and symbolic AI; gather reliable sources | Frederick Bryan The | No deadline set at meeting |
+| Prepare the project log and meeting summaries | Ritchard Alexander | No deadline set at meeting |
+| Help prepare and check the project log | Eizel Mthana Conqueror | No deadline set at meeting |
+
+#### Evidence 01 - task distribution
+<img width="400" height="300" alt="WhatsApp Image 2026-10-22 at 11 49 25 PM" src="https://github.com/user-attachments/assets/32fa05d2-bdc2-4ea1-bf01-0daf50590dba" />
+
+
+#### Evidence 02 - Meeting documentation
+<img width="400" height="225" alt="WhatsApp Image 2026-10-22 at 11 48 10 PM" src="https://github.com/user-attachments/assets/bc26a931-d7c1-4ada-acf1-17ef85d507ac" />
+
+### Meeting 2 - Task List Finalization and Progress Review
+
+* **Date and time:** October 22, 2026. 19.30
+* **Location or platform:** International Student Dormitory room 704
+* **Attendees:** Ritchard Alexander 林俊宇, Frederic Chandra 张国立, Louis Alexander Dalim - 苏路成, Gunawan Nicolas Benedictus - 李庆成, Frederick Bryan The 郑明畅, Eizel Mthana Conqueror - 康哲
+* **Absent members:** none
+
+#### Purpose or agenda:
+Review progress following the first meeting, evaluate the completed master task list produced by Gunawan Nicolas Benedictus, align the team on the next phase of the Software & Symbolic AI module development, continuing the previous task and doing unfinished tasks.
+
+#### Key discussion points:
+* Gunawan Nicolas Benedictus presented the finalized master task list and structured event plan for the project.
+* The team reviewed the detailed breakdown of the module content outline and workflow coordination.
+* Members discussed how to integrate the completed task list into the ongoing GitHub documentation and repository structure.
+* All team members continued the work, where Frederic Chandra and Louis Alexander
+* Frederick Bryan continued the research software and symbolic AI and gather more reliable information from the previous day.
+* Ritchard Alexander would maintain the project log and write meeting summaries and upload the Chronological Project Log, Significant AI Use Record and Stage 1 Team Contributions into the GITHub.
+* Eizel Mthana Conqueror would help maintain, check the project log and upload the Team Information and Reporting period, Meeting Summaries and Final Review Submission into the GITHub.
+* The team discussed the need to check research and project records for accuracy.
+
+#### Decisions and outcomes:
+* The team formally accepted the master task list prepared by Gunawan Nicolas Benedictus as the guiding checklist for the project setup and development phases.
+* The GITHub repository progress is increasing and becoming more finished.
+* Assigned responsibilities for subsequent development stages based on the updated task breakdown.
+
+#### Follow-up actions:
+
+| Action | Owner(s) | Due date |
+| :--- | :--- | :--- |
+| Continue setting up the GitHub repository and uploading project files and data | Frederic Chandra 张国立 and Louis Alexander Dalim 苏路成 | No deadline set at meeting |
+| Integrate the finalized master task list into the repository and documentation | Gunawan Nicolas Benedictus 李庆成 | No deadline set at meeting |
+| Continue research on software and symbolic AI to gather more reliable information | Frederick Bryan The 郑明畅 | No deadline set at meeting |
+| Maintain project log, write meeting summaries, and upload Chronological Project Log, Significant AI Use Record, and Stage 1 Team Contributions to GitHub | Ritchard Alexander 林俊宇 | No deadline set at meeting |
+| Maintain and check project log, and upload Team Information & Reporting Period, Meeting Summaries, and Final Review Submission to GitHub | Eizel Mthana Conqueror 康哲 | No deadline set at meeting |
+
+---
+
+### Evidence:
+
+#### Evidence 03 - Group Work Continuation
+<img width="400" height="225" alt="WhatsApp Image 2026-10-22 at 11 50 51 PM" src="https://github.com/user-attachments/assets/619b2df4-3bbe-4c3a-9765-0d097733ad62" />
+
+
+## 4. Significant AI-Use Records
+
+### AI Record 01 — AI-Assisted Lecture Planning
+
+- **Date:** October 21, 2026
+- **Member who used the AI tool:** Gunawan Nicolas Benedictus 李庆成
+- **Tool:** ChatGPT
+- **Purpose:** To plan a short beginner-friendly lecture about software and symbolic AI.
+
+#### Important prompt
+
+> Chat gpt, please help me to do this task... i need to present a short lecture about software and symbollic AI, please help me figure out what i should present, include, and do according to those steps and criteria in order to get a high grade.. Also please refer to the checklist for the rubricks of the task, and type it here in the chat... please be spesific, and use the pyramid formula (general to specific) and make sure everything is systematically in order and understandable..
+
+#### Relevant output summary
+
+The response proposes a beginner lecture on how symbolic AI uses facts and IF–THEN rules to reach a conclusion. It moves from software and AI to symbolic AI, the knowledge base and inference engine, then traces two rules in an account-activation example. Learners answer a short question and consider one strength and one limitation. It also lists preparation steps and Stage 1 submission requirements.
+
+#### Verification and team judgment
+
+-How it was checked: The lecture plan was compared with the Stage 1 checklist you provided. It includes a focused topic, a learning goal, a worked example, an activity, and an expected answer. This checks coverage, but does not verify factual claims against outside sources or establish that peer review occurred.
+-Accepted: The general-to-specific sequence and account-activation example can be used as a working draft.
+-Revised or rejected: The plan keeps search and other broad topics out of the short lecture to maintain focus. Use “account activation” consistently; if an earlier summary says “library loan,” update it to match this plan. No formal team rejection is recorded.
+-Still uncertain: Confirm the lecture topic, time limit, and activity expectations with the teacher. Check the claims against reliable sources and record peer-review results when completed.
+
+#### Outcome and learning
+
+The response produced a draft lecture sequence, worked example, audience question, and preparation checklist. It explains how an inference engine can apply rules to known facts and add new facts step by step.
+
+- **Evidence AI01-E1:**
+  
+  <img width="689" height="675" alt="Weixin Image_20261022224800_72_16" src="https://github.com/user-attachments/assets/ed1a2f61-6dd7-44ba-86b7-41494f6ff2d3" />
+
+  
+- **Personal-log reference:** Gunawan Nicolas Benedictus 李庆成 — Personal Learning - Nicholas, October 21, 2026, entry “AI-assisted lecture planning,” [Entry number or page number]. The shared prompt, output, and review are AI Record 01.
+
+---
+
+### AI Record 02 — AI-Assisted Research on Software and Symbolic AI
+
+- **Date:** October 21, 2026
+- **Member who used the AI tool:** Frederick Bryan The 郑明畅
+- **Tool:** Google Notebook
+- **Purpose:** To gather introductory information about software and symbolic AI for the project.
+
+#### Important prompt
+
+> What is software and symbolic AI?
+
+#### Relevant output summary
+
+The output describes software as instructions and data that operate computer hardware, and lists system, application, and programming software. It describes symbolic AI as using symbols, facts, logic, and IF–THEN rules to reach conclusions. It also lists strengths such as predictable, traceable reasoning; limitations such as rigidity and difficulty scaling; and introduces neuro-symbolic AI as a combination of neural-network pattern learning and symbolic reasoning.
+
+#### Verification and team judgment
+
+- **How it was checked:** Frederic Chandra 张国立 checked the AI output for accuracy. The review covered the definitions of software and symbolic AI, the software categories, and the listed strengths and limitations.
+- **accepted:** The team kept the overview as a draft 
+- **Revised or rejected:** No revisions or rejected content were reported.
+- **Still uncertain:** The team needs to confirm that the consulted sources support the claims and that neuro-symbolic AI is within the assigned project scope.
+
+#### Outcome and learning
+
+We prepared a draft overview of software and symbolic AI, including the main types of software and symbolic AI’s strengths and limitations. We learned what software is and how symbolic AI uses symbols and rules to solve problems.
+
+#### Evidence
+
+- **Evidence AI02-E2:**
+
+  <img width="1812" height="971" alt="Weixin Image_20261021231644_297_148" src="https://github.com/user-attachments/assets/55a27387-b8d7-4b7d-89e7-570583b0eb84" />
+
+- **Personal-log reference:** Personal Learning - Frederick, October 21, 2026 entry, “AI-assisted research on Software and Symbolic AI.” The shared prompt and output are recorded in AI Record 02.
+
+### AI Record 03 — AI-Assisted Preparation of the Fengwei Xiaochi Project Plan and Task List
+
+- **Date:** October 22, 2026
+- **Member who used the AI tool:** Gunawan Nicolas Benedictus 李庆成
+- **Tool:** Claude fable
+- **Purpose:** To create a neat, formal Stage 1 project plan and task list for Team 风味小吃, using the “Absolute Beginners” document as a style reference and including a table of contents.
+
+#### Important prompt
+
+> Please help me make the Project plan and task list for the fengwei xiaochi file, i want the format to look like the absolute beginners one, so please make a word file like the absolute beginners one, nice and tidy and neat, with a table of contents too.. Make sure to also combine the master task list that you generate which is the newest file (Master Task List- Software and Symbolic AI - Updated.pdf) one, please dont copy paste it directly, that is just the general format that i want to look like, nice, tidy, and official.. dont forget this is semester I, academic year 2026-2027
+
+#### Relevant output summary
+
+Claude produced a formatted Stage 1 project plan and task list for Team 风味小吃, using the requested reference style and including a table of contents. The plan covers team roles, learning goals, the Software & Symbolic AI content outline, planned learning resources, workflow, schedule, risks, and phased project tasks.
+
+#### Verification and team judgment
+
+- **How it was checked:** The PDF was reviewed against the Stage 1 Project Plan requirements. It includes the main required sections and a task list. This checks structure and coverage; team approval and the accuracy of all task details still need to be confirmed.
+- **Accepted:** The document’s structure, table of contents, project outline, and task-list format were kept as a working draft.
+- **Revised or rejected:** No team revisions or rejected content are recorded yet. One item to correct is the Phase 2 internal deadline: it is October 24, the same as the official Stage 1 deadline, although the plan says internal deadlines should be 3–4 days earlier.
+- **Still uncertain:** Confirm the task owners, statuses, and dates against the team’s actual work. The PDF alone does not confirm that the editable Word file has identical content, layout, and page numbers, or that all members reviewed the plan.
+
+#### Outcome and learning
+
+The AI-assisted work produced a structured project plan and task list that the team can use to coordinate its Stage 1 work and later project phases. It helped organize the project’s responsibilities, learning goals, resources, workflow, and review steps. The planning work highlighted the need to set internal deadlines before official deadlines and keep task ownership and status current.
+
+#### Evidence
+
+- **Evidence AI03-E3:**
+
+  <img width="1657" height="1080" alt="Weixin Image_20261022233909_32_27" src="https://github.com/user-attachments/assets/c6d65670-bb95-418f-b5e5-b2bb021af15d" />
+
+
+- **Personal-log reference:** Gunawan Nicolas Benedictus 李庆成 — Personal Learning - Nicholas, October 22, 2026, “AI-Assisted Preparation of the Fengwei Xiaochi Project Plan and Task List” entry. The shared prompt and output are recorded in AI Record 03.
+
+
+## 5. Stage 1 Team Contributions
+
+*Complete this after reviewing actual work and evidence. The listed responsibilities are planned roles; they do not by themselves show what each member completed. Scores should reflect supported Stage 1 contributions.*
+
+| No | Member | Student ID | Actual Stage 1 Contributions and outcomes | Relative score/100 | Supporting evidence |
+| :---: | :--- | :---: | :--- | :---: | :--- |
+| 1 | Ritchard Alexander 林俊宇 | 1820262050 | Drafted and maintained the project log, prepared significant AI-use records and final review submission. | 98 | Log Entry 01, Evidence 01 |
+| 2 | Frederic Chandra 张国立 | 1820262083 | Co-led GitHub repository setup and organization, uploaded project files and data, and assisted with research verification. | 98 | Log Entry 01, Evidence E5 |
+| 3 | Louis Alexander Dalim - 苏路成 | 1820262103 | Co-led GitHub repository setup, managed project submission files as CIO, and coordinated repository workflow structure.| 98 | Log Entry 01, Evidence E5 |
+| 4 | Gunawan Nicolas Benedictus - 李庆成 | 1820262104 | Developed the module structure, organized repository architecture, led AI-assisted lecture planning and made the master tasklist and event plan. | 98 | Log Entry 01, Evidence E3, AI Record 01 |
+| 5 | Frederick Bryan The 郑明畅 | 1820262029 | Conducted primary research on software and symbolic AI, gathered reliable sources, documented AI-assisted research findings and made the master task list and event plan and made the master tasklist and event plan | 98 | Log Entry 01, Evidence E4, AI Record 02 |
+| 6 | Eizel Mthana Conqueror - 康哲 | 1820262106 | Prepared team information, meeting-summary drafts, and the Stage 1 team contribution table while supporting project log maintenance. | 98 | Log Entry 01, Evidence E2 |
+
+---
+
+### How the team reviewed the scores:
+
+The team reviewed the contribution table together in Room 704 on October 24, 2026. All members agreed that everyone contributed equally and effectively to their respective roles during Stage 1, resulting in equal relative scores of 98  across the board with no unresolved disagreements.
+
+## 6. Final Review and Submission
+
+- [x] The reporting period begins with the team’s actual first project workday.
+- [x] Every meaningful workday has a dated entry with tasks, responsible members, results, and evidence.
+- [x] Substantive meetings and significant group-chat decisions are summarized.
+- [x] Important evidence is readable, labelled, and explained.
+- [x] Significant AI use includes prompts, output, verification, team judgment, and outcome.
+- [x] All six members’ contributions and scores are supported by actual work evidence.
+- [x] All six members reviewed the document.
+- [x] The submission lead submits one uncompressed Word or PDF file.
+
+**Required filename:** `风味小吃_Stage1_ProjectLog`  
+**Submission lead:** Louis Alexander Dalim - 苏路成  
+**Team review date:** [Date]  
+**Submission date and time:** [Date/time, Beijing time]
