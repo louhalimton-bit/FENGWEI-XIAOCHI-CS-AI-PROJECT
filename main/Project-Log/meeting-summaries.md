@@ -89,6 +89,23 @@ Review progress following the first meeting, evaluate the master task list produ
 - The GitHub repository was further organized and populated.
 - Assigned responsibilities for subsequent development stages based on the updated task breakdown.
 
+### Follow-up actions
+
+| Action | Owner(s) | Due date |
+|---|---|---|
+| Continue GitHub setup and file upload | Frederic Chandra 张国立 and Louis Alexander Dalim 苏路成 | 24 October 2026 |
+| Integrate finalized task list into repository | Gunawan Nicolas Benedictus 李庆成 | 24 October 2026 |
+| Continue research on software and symbolic AI | Frederick Bryan The 郑明畅 | 24 October 2026 |
+| Maintain log and upload entries to GitHub | Ritchard Alexander 林俊宇 | 24 October 2026 |
+| Check log and upload remaining documentation | Eizel Mthana Conqueror 康哲 | 24 October 2026 |
+
+### Evidence
+
+- **Evidence E12** — Photo of the members working during Meeting 2 (supplementary only).
+  ![Evidence E12 — members at Meeting 2](../assets/evidence/E12-meeting2-photo.jpg)
+
+---
+
 ## Meeting 3 — Task List Correction After the Professor's Clarification
 
 | Item | Detail |
