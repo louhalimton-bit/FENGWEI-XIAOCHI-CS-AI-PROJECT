@@ -134,3 +134,20 @@ Review the professor's clarification of the Stage 1 requirements, compare it wit
 - Every AI-generated draft is logged as an AI-use record with prompt, output, verification and decision, and is rewritten in the team's words rather than pasted.
 - Louis reorganizes the repository; from now on members commit from their own accounts.
 
+### Follow-up actions
+
+| Action | Owner(s) | Due date |
+|---|---|---|
+| Final check of the remade plan and task list | Gunawan Nicolas Benedictus 李庆成 (lead) and Frederic Chandra 张国立 | 24 October 2026 |
+| Write Chapter 3 as Markdown Content V1.0 with the diagram; peer review | Louis Alexander Dalim 苏路成 and Eizel Mthana Conqueror 康哲; review by Frederic Chandra 张国立 | 24 October 2026, 16:00 |
+| Module outline with status labels | Ritchard Alexander 林俊宇 | 24 October 2026, 12:00 |
+| Repository folders, README merge, teacher access, own-account commits | Louis Alexander Dalim 苏路成 and Frederic Chandra 张国立 | 24 October 2026, 16:00 |
+| Review the AI drafts and complete AI Records 04–06 | Frederic Chandra 张国立, Ritchard Alexander 林俊宇, Gunawan Nicolas Benedictus 李庆成 | 24 October 2026 |
+| Contribution review, personal logs; all four submissions | Ritchard Alexander 林俊宇, Eizel Mthana Conqueror 康哲, Louis Alexander Dalim 苏路成 | 24 October 2026, 22:00 |
+
+### Evidence
+
+- **Evidence E15** — Photo of the members during Meeting 3 (supplementary only; it does not show the substance of the work).
+  ![Evidence E15 — members at Meeting 3](../assets/evidence/E15-meeting3-photo.jpg)
+
+---
