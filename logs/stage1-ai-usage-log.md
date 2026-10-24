@@ -152,3 +152,46 @@ A first draft exists for Frederic to review and rewrite; nothing from it is used
 *Personal-log reference:* Frederic Chandra 张国立 — Personal Learning, Oct 23, 2026.
 
 ---
+
+## AI Record 05 — AI-Assisted First Draft of Chapter 2
+
+| Item | Detail |
+|---|---|
+| *Date* | October 23, 2026 |
+| *Member who used the AI tool* | Ritchard Alexander 林俊宇 |
+| *Tool* | OpenAI Codex (desktop app), with the project plan files attached as sources |
+| *Purpose* | To produce a detailed first draft of Chapter 2 (Software: How Programs Process Information and Make Decisions) that follows the chapter scope in the plan. |
+
+*Important prompts*
+
+> Explain input, processing, and output; data and instructions; algorithms as step-by-step procedures; and how a program decides with IF–ELSE conditions written by a programmer. Learners trace a short program step by step.
+
+> follow this scope and make it detailed
+
+> give me the text so i can copy paste it in docs
+
+*Relevant output summary*
+
+A chapter draft: why the chapter matters; five learning goals; sections on programs, data and instructions (a weather-reminder table separating data from instructions), input–processing–output (a shopping-total example), algorithms (a six-step weather-reminder algorithm), IF–ELSE decisions with a branch diagram, a step-by-step trace for both outcomes, a practice exercise and an answer key. The tool reported that its Python example follows the official Python documentation for the if statement and for input/output, and itself noted that Ritchard should review the chapter and record the AI assistance in the project and personal logs.
+
+*Verification and team judgment*
+
+- How it was checked: Through library loans, by asking ChatGPT for the links to the online books.
+- Checks still required before the draft is used (from the AI review, AI Record 07):
+  - Run the example program and the trace for both branches and confirm the stated outputs.
+  - The weather-reminder and shopping-total examples are fine, but the chapter should also show the library-loan decision as an ordinary program, because Chapters 4 and 6 compare it with the rule-based version.
+  - Cite the Python documentation pages the draft relied on in the chapter references (Table 10 of the plan has no Python reference yet).
+  - Rewrite in the team's words; the "copy paste it in docs" step must not put the AI text into the Markdown unchanged.
+- Accepted: Kept the overview as a draft.
+- Revised or rejected: Revised, because some of the material was not complete.
+
+*Outcome and learning*
+
+A detailed first draft exists for Ritchard to review and rewrite before it becomes the Chapter 2 Markdown file.
+
+*Evidence:* AI05-E5 — screenshot of the Codex session showing the prompt, the attached plan files and the start of the output.  
+![Evidence AI05-E5](../assets/evidence/AI05-E5.png)
+
+*Personal-log reference:* Ritchard Alexander 林俊宇 — Personal Learning, Oct 23, 2026.
+
+---
