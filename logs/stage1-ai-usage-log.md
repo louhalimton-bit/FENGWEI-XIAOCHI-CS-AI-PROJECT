@@ -196,7 +196,8 @@ A chapter draft: why the chapter matters; five learning goals; sections on progr
 A detailed first draft exists for Ritchard to review and rewrite before it becomes the Chapter 2 Markdown file.
 
 *Evidence:* AI05-E5 — screenshot of the Codex session showing the prompt, the attached plan files and the start of the output.  
-![Evidence AI05-E5](../assets/evidence/AI05-E5.png)
+<img width="1186" height="732" alt="image" src="https://github.com/user-attachments/assets/b89fa33a-93ff-4931-be85-63c4ad147d7b" />
+
 
 *Personal-log reference:* Ritchard Alexander 林俊宇 — Personal Learning, Oct 23, 2026.
 
