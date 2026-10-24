@@ -78,3 +78,77 @@ Prepared a draft overview of software and symbolic AI including strengths and li
 *Personal-log reference:* Frederick Bryan The 郑明畅 — Personal Learning, Oct 21, 2026.****
 
 ---
+
+## AI Record 03 — AI-Assisted Preparation of the Project Plan and Task List
+
+| Item | Detail |
+|---|---|
+| *Date* | October 22, 2026 |
+| *Member who used the AI tool* | Gunawan Nicolas Benedictus 李庆成 |
+| *Tool* | Claude |
+| *Purpose* | To create a formal Stage 1 project plan and task list. |
+
+*Important prompt*
+
+> Please help me make the Project plan and task list for the fengwei xiaochi file, i want the format to look like the absolute beginners one, so please make a word file like the absolute beginners one, nice and tidy and neat, with a table of contents too.. Make sure to also combine the master task list that you generate which is the newest file (Master Task List- Software and Symbolic AI - Updated.pdf) one... dont forget this is semester I, academic year 2026-2027.
+
+*Relevant output summary*
+
+Produced a structured Stage 1 project plan and task list covering team roles, learning goals, content outline, resources, workflow, schedule, and risks.
+
+*Verification and team judgment*
+
+- How it was checked: Reviewed against the Stage 1 Project Plan requirements, with adjustments through follow-up prompts such as "please regenerate, the logo is too big..".
+- Accepted: Document structure and task-list format kept.
+- Revised or rejected: Revised, because the material inside the master task list (the software and AI content) was judged minimal by the professor. The list was remade on 23 October (see Log Entry 03, Meeting 3 and AI Record 07).
+
+*Outcome and learning*
+
+Produced a structured project plan and task list for coordinating Stage 1 and future phases.
+
+*Evidence:* AI03-E3 — screenshot of the prompt and the generated plan.  
+![Evidence AI03-E3](../assets/evidence/AI03-E3.png)
+
+*Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 22, 2026.
+
+---
+
+## AI Record 04 — AI-Assisted First Draft of Chapter 6
+
+| Item | Detail |
+|---|---|
+| *Date* | October 23, 2026 |
+| *Member who used the AI tool* | Frederic Chandra 张国立 |
+| *Tool* | Gemini AI |
+| *Purpose* | To produce a first draft of Chapter 6 (Software and Symbolic AI Together: Correlation, Strengths, and Limitations) from the chapter scope in Table 2 of the project plan. |
+
+*Important prompt*
+
+> Explain how the two relate and combine: program logic handles input, storage, and display; a rule-based component handles the reasoning. Compare fixed program logic with explicit rules: easy to inspect and change, but unreliable when information is missing, conflicting, or outdated; missing information does not prove the opposite.
+
+*Relevant output summary*
+
+A chapter draft with five learning goals and five sections: (1) the hybrid architecture — program logic handles input, storage and display while a rule-based component handles reasoning, with a table of responsibilities; (2) fixed program logic versus explicit rules, with inspectability and modifiability; (3) strengths — transparency, modularity, predictability; (4) limitations — missing, conflicting and outdated information, with a sub-section "missing information does not prove the opposite"; (5) a worked example of a medical eligibility advisor with a trace in which the "cough" field is missing, so the rule does not fire. It ends with key points and two references (Brookshear & Brylow 2019; Russell & Norvig 2020).
+
+*Verification and team judgment*
+
+- How it was checked: Through library loans, by asking ChatGPT for the links to the books.
+- Checks still required before the draft is used (from the AI review, AI Record 07):
+  - The plan (Table 2) words the limitation as "a rule-based system can only conclude what its facts and rules support"; the draft's section must be aligned, and its sentence on the closed-world assumption is reversed — under that assumption a missing fact is treated as false, which is what many rule engines do, so the chapter should present both behaviours.
+  - "Deadlock" is not the usual term for conflicting rules; use "conflict" and name a conflict-resolution strategy (rule priority or specificity).
+  - Russell & Norvig (4th edition) is cited as 2021 in Table 10 of the plan; use one year consistently.
+  - Replace the medical example with, or link it to, the library-loan example used in Chapters 1, 3 and 4, so the chapters compare the same decision.
+  - Rewrite in the team's words; the brief does not allow AI output to be pasted into the Markdown.
+- Accepted: Kept the overview as a draft.
+- Revised or rejected: Revised, because the first draft had incomplete material.
+
+*Outcome and learning*
+
+A first draft exists for Frederic to review and rewrite; nothing from it is used in the repository until the checks above are recorded.
+
+*Evidence:* AI04-E4 — screenshots of the prompt and the start of the output.  
+![Evidence AI04-E4](../assets/evidence/AI04-E4.png)
+
+*Personal-log reference:* Frederic Chandra 张国立 — Personal Learning, Oct 23, 2026.
+
+---
