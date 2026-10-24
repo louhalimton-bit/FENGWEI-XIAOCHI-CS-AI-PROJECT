@@ -42,7 +42,8 @@ The response proposes a beginner lecture on how symbolic AI uses facts and IF–
 Produced a draft lecture sequence, worked example, audience question, and preparation checklist.
 
 *Evidence:* AI01-E1 — screenshot of the prompt and output.  
-![Evidence AI01-E1](../assets/evidence/AI01-E1.png)
+![Evidence AI01-E1] <img width="689" height="675" alt="Weixin Image_20261022224800_72_16" src="https://github.com/user-attachments/assets/6e76b7ef-0fbf-4d89-83af-1308422d3365" />
+
 
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 21, 2026.
 ## AI Record 02 — AI-Assisted Research on Software and Symbolic AI
