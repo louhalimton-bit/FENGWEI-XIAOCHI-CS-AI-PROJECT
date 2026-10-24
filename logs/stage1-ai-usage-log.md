@@ -151,7 +151,8 @@ A chapter draft with five learning goals and five sections: (1) the hybrid archi
 A first draft exists for Frederic to review and rewrite; nothing from it is used in the repository until the checks above are recorded.
 
 *Evidence:* AI04-E4 — screenshots of the prompt and the start of the output.  
-<img width="416" height="421" alt="image" src="https://github.com/user-attachments/assets/1440538e-6b23-4136-b086-817c670033b5" />
+<img width="397" height="359" alt="image" src="https://github.com/user-attachments/assets/1fa33181-1093-4922-8a62-5ec40ba74e21" />
+
 
 
 *Personal-log reference:* Frederic Chandra 张国立 — Personal Learning, Oct 23, 2026.
