@@ -53,9 +53,12 @@ To discuss and clarify the task requirements, resolve different interpretations,
 ### Evidence
 
 - **Evidence E10** — Handwritten task list agreed at Meeting 1 (21 October 2026): five tasks and their owners.
-  ![Evidence E10 — handwritten task list from Meeting 1](../assets/evidence/E10-meeting1-task-list.jpg)
+  <img width="617" height="479" alt="image" src="https://github.com/user-attachments/assets/77236aa2-7400-48b5-ba5f-ba13c07201c7" />
+
 - **Evidence E11** — Photo of the members working during Meeting 1 in Room 704 (supplementary only; it does not show the substance of the work).
-  ![Evidence E11 — members at Meeting 1](../assets/evidence/E11-meeting1-photo.jpg)
+
+  <img width="652" height="367" alt="image" src="https://github.com/user-attachments/assets/0dd02e9c-ac09-4c3c-9df2-cbebcbcdc42a" />
+
 
 ---
 
@@ -102,7 +105,8 @@ Review progress following the first meeting, evaluate the master task list produ
 ### Evidence
 
 - **Evidence E12** — Photo of the members working during Meeting 2 (supplementary only).
-  ![Evidence E12 — members at Meeting 2](../assets/evidence/E12-meeting2-photo.jpg)
+  <img width="738" height="417" alt="image" src="https://github.com/user-attachments/assets/0167c1ad-c078-47f5-b108-bea90399a7bc" />
+
 
 ---
 
@@ -148,6 +152,7 @@ Review the professor's clarification of the Stage 1 requirements, compare it wit
 ### Evidence
 
 - **Evidence E15** — Photo of the members during Meeting 3 (supplementary only; it does not show the substance of the work).
-  ![Evidence E15 — members at Meeting 3](../assets/evidence/E15-meeting3-photo.jpg)
+  <img width="434" height="325" alt="image" src="https://github.com/user-attachments/assets/d255f596-d64e-4450-bcaa-ce938c7bac1b" />
+
 
 ---
