@@ -110,7 +110,8 @@ Produced a structured Stage 1 project plan and task list covering team roles, le
 Produced a structured project plan and task list for coordinating Stage 1 and future phases.
 
 *Evidence:* AI03-E3 — screenshot of the prompt and the generated plan.  
-![Evidence AI03-E3](../assets/evidence/AI03-E3.png)
+<img width="399" height="362" alt="image" src="https://github.com/user-attachments/assets/1a6c299b-ad60-4f31-82a9-7a813c6640e9" />
+
 
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 22, 2026.
 
@@ -150,7 +151,8 @@ A chapter draft with five learning goals and five sections: (1) the hybrid archi
 A first draft exists for Frederic to review and rewrite; nothing from it is used in the repository until the checks above are recorded.
 
 *Evidence:* AI04-E4 — screenshots of the prompt and the start of the output.  
-![Evidence AI04-E4](../assets/evidence/AI04-E4.png)
+<img width="416" height="421" alt="image" src="https://github.com/user-attachments/assets/1440538e-6b23-4136-b086-817c670033b5" />
+
 
 *Personal-log reference:* Frederic Chandra 张国立 — Personal Learning, Oct 23, 2026.
 
@@ -275,6 +277,7 @@ The review produced a corrected task list, a corrected copy of the Project Log, 
 We learned that an AI review can help identify missing tasks and organize corrections, but its suggestions still need human verification. Frederic's reading was an initial quality review; the team still needs to record which corrections it checks, accepts, revises, or rejects.
 
 *Evidence:* AI07-E7 — screenshot of the Claude Code session with the review prompt and the ranked correction list.  
-![Evidence AI07-E7](../assets/evidence/AI07-E7.png)
+<img width="397" height="359" alt="image" src="https://github.com/user-attachments/assets/5114506a-54fa-4fc0-ae53-956ce3539ff8" />
+
 
 *Personal-log reference:* Eizel Mthana Conqueror 康哲 — Personal Learning and Work Log, October 23, 2026, AI Use entry for the Stage 1 plan and project-log review.
