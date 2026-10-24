@@ -45,3 +45,36 @@ Produced a draft lecture sequence, worked example, audience question, and prepar
 ![Evidence AI01-E1](../assets/evidence/AI01-E1.png)
 
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 21, 2026.
+## AI Record 02 — AI-Assisted Research on Software and Symbolic AI
+
+| Item | Detail |
+|---|---|
+| *Date* | October 21, 2026 |
+| *Member who used the AI tool* | Frederick Bryan The 郑明畅 |
+| *Tool* | Gemini Notebook (Google NotebookLM) — see Evidence E4 |
+| *Purpose* | To gather introductory information about software and symbolic AI. |
+
+*Important prompt*
+
+> What is software and symbolic AI?
+
+*Relevant output summary*
+
+Describes software as instructions/data operating hardware (system, application, programming software). Describes symbolic AI using symbols, facts, logic, and IF–THEN rules. Lists strengths, limitations, and introduces neuro-symbolic AI.
+
+*Verification and team judgment*
+
+- How it was checked: Checked by Frederic Chandra 张国立 for misspelling and misformatting.
+- Accepted: Kept the overview as a draft.
+- Revised or rejected: Revised, because the chapters produced by the AI did not match the latest, revised master plan and master task list.
+
+*Outcome and learning*
+
+Prepared a draft overview of software and symbolic AI including strengths and limitations.
+
+*Evidence:* AI02-E2 — see Evidence E4 (Log Entry 01): NotebookLM session with 18 sources.  
+![Evidence E4 / AI02-E2](../assets/evidence/E4-notebooklm-research.png)
+
+*Personal-log reference:* Frederick Bryan The 郑明畅 — Personal Learning, Oct 21, 2026.****
+
+---
