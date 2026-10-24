@@ -3,3 +3,12 @@
 **Team:** 风味小吃 (Fengwei Xiaochi) · **Module:** Software and Symbolic AI
 **Source:** 风味小吃_Stage1_ProjectLog, Section 4. The full prompt/output screenshots and verification evidence are in the submitted project log; this file is the repository copy and keeps the same record numbers.
 **Rule followed:** Shared Assignment Rules §6 — every significant AI use is recorded with date, member, tool, purpose, important interactions, verification and judgment, outcome and learning. No AI output is pasted into the Markdown content unchanged.
+| Record | Date | Member | Tool | Purpose | Used in |
+|---|---|---|---|---|---|
+| [AI 01](#ai-record-01--ai-assisted-lecture-planning) | Oct 21, 2026 | Gunawan Nicolas Benedictus | ChatGPT | Plan a short beginner lecture | Draft lecture sequence (working draft) |
+| [AI 02](#ai-record-02--ai-assisted-research-on-software-and-symbolic-ai) | Oct 21, 2026 | Frederick Bryan The | Gemini Notebook (NotebookLM) | Introductory research | Draft overview; revised to match the remade plan |
+| [AI 03](#ai-record-03--ai-assisted-preparation-of-the-project-plan-and-task-list) | Oct 22, 2026 | Gunawan Nicolas Benedictus | Claude | Formal Stage 1 project plan and task list | Project plan structure; task list later remade |
+| [AI 04](#ai-record-04--ai-assisted-first-draft-of-chapter-6) | Oct 23, 2026 | Frederic Chandra | Gemini AI | First draft of Chapter 6 | Unreviewed draft; not in the repository |
+| [AI 05](#ai-record-05--ai-assisted-first-draft-of-chapter-2) | Oct 23, 2026 | Ritchard Alexander | OpenAI Codex (desktop app) | First draft of Chapter 2 | Unreviewed draft; not in the repository |
+| [AI 06](#ai-record-06--ai-assisted-six-chapter-guide-draft) | Oct 23, 2026 | Gunawan Nicolas Benedictus | ChatGPT | Six-chapter guide outline | Chapter framework and titles only |
+| [AI 07](#ai-record-07--ai-assisted-review-of-the-stage-1-plan-and-project-log) | Oct 23–24, 2026 | Eizel Mthana Conqueror | Claude (Claude Code desktop app) | Check plan and log against the five briefs | Corrected task list, corrected log copy (provisional) |
