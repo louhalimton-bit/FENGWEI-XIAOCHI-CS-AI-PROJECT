@@ -26,3 +26,22 @@
 *Important prompt*
 
 > Chat gpt, please help me to do this task... i need to present a short lecture about software and symbolic AI, please help me figure out what i should present, include, and do according to those steps and criteria in order to get a high grade.. Also please refer to the checklist for the rubricks of the task, and type it here in the chat... please be spesific, and use the pyramid formula (general to specific) and make sure everything is systematically in order and understandable..
+
+*Relevant output summary*
+
+The response proposes a beginner lecture on how symbolic AI uses facts and IF–THEN rules to reach a conclusion. It moves from software and AI to symbolic AI, knowledge base and inference engine, then traces rules in an account-activation example. We decided to choose the materials from books around the internet that are free (library-loan). The books that ChatGPT mainly used are *Artificial Intelligence: Foundations of Computational Agents* by David L. Poole & Alan K. Mackworth and *Dive Into Systems: A Gentle Introduction to Computer Systems* by Suzanne J. Matthews, Tia Newhall and Kevin C. Webb.
+
+*Verification and team judgment*
+
+- How it was checked: Compared with the Stage 1 checklist requirements (checklist item 10 of the Team Project Plan and Task List brief).
+- Accepted: General-to-specific sequence and account-activation example kept as a working draft.
+- Revised or rejected: Kept search topics out of the short lecture for focus.
+
+*Outcome and learning*
+
+Produced a draft lecture sequence, worked example, audience question, and preparation checklist.
+
+*Evidence:* AI01-E1 — screenshot of the prompt and output.  
+![Evidence AI01-E1](../assets/evidence/AI01-E1.png)
+
+*Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 21, 2026.
