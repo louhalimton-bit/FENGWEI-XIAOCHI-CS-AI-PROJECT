@@ -42,10 +42,11 @@ The response proposes a beginner lecture on how symbolic AI uses facts and IF–
 Produced a draft lecture sequence, worked example, audience question, and preparation checklist.
 
 *Evidence:* AI01-E1 — screenshot of the prompt and output.  
-![Evidence AI01-E1] <img width="689" height="675" alt="Weixin Image_20261022224800_72_16" src="https://github.com/user-attachments/assets/6e76b7ef-0fbf-4d89-83af-1308422d3365" />
+ <img width="689" height="675" alt="Weixin Image_20261022224800_72_16" src="https://github.com/user-attachments/assets/6e76b7ef-0fbf-4d89-83af-1308422d3365" />
 
 
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 21, 2026.
+
 ## AI Record 02 — AI-Assisted Research on Software and Symbolic AI
 
 | Item | Detail |
@@ -74,7 +75,8 @@ Describes software as instructions/data operating hardware (system, application,
 Prepared a draft overview of software and symbolic AI including strengths and limitations.
 
 *Evidence:* AI02-E2 — see Evidence E4 (Log Entry 01): NotebookLM session with 18 sources.  
-![Evidence E4 / AI02-E2](../assets/evidence/E4-notebooklm-research.png)
+<img width="1812" height="971" alt="Weixin Image_20261021231644_297_148" src="https://github.com/user-attachments/assets/96f09476-2782-4eee-a1e1-47be92ec59f2" />
+
 
 *Personal-log reference:* Frederick Bryan The 郑明畅 — Personal Learning, Oct 21, 2026.****
 
@@ -230,7 +232,8 @@ A "Six-Chapter Learning Guide": a cover reproducing the plan's roster, a content
 An outline and a sample Chapter 1 exist as a starting point for the chapter leads; the Markdown content is written by the chapter leads, not taken from this draft.
 
 *Evidence:* AI06-E6 — screenshot of the prompt and the contents list (cover page with IDs omitted).  
-![Evidence AI06-E6](../assets/evidence/AI06-E6.png)
+<img width="660" height="668" alt="Weixin Image_20261023225533_78_16" src="https://github.com/user-attachments/assets/d314d0b6-6420-46bd-a609-cfda68d87f4e" />
+
 
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 23, 2026.
 
