@@ -1,4 +1,4 @@
-# Significant AI-Use Records — Stage 1
+#AI-Use Records — Stage 1
 
 *Team:* 风味小吃 (Fengwei Xiaochi) · *Module:* Software and Symbolic AI  
 *Source:* 风味小吃_Stage1_ProjectLog, Section 4. The full prompt/output screenshots and verification evidence are in the submitted project log; this file is the repository copy and keeps the same record numbers.  
