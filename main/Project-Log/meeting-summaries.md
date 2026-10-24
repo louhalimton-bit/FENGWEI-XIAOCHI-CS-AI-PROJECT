@@ -39,3 +39,22 @@ To discuss and clarify the task requirements, resolve different interpretations,
 - Divided the work according to each member's responsibilities.
 - Clarified the task requirements and reached a shared understanding of what the team needed to do.
 - Agreed to work together and began gathering information and developing the module structure.
+
+### Follow-up actions
+
+| Action | Owner(s) | Due date |
+|---|---|---|
+| Set up GitHub repository and upload project files | Frederic Chandra and Louis Alexander Dalim | 24 October 2026 |
+| Develop module structure and organize repository | Gunawan Nicolas Benedictus | 24 October 2026 |
+| Research software and symbolic AI | Frederick Bryan The | 24 October 2026 |
+| Prepare project log and meeting summaries | Ritchard Alexander | 24 October 2026 |
+| Help prepare and check project log | Eizel Mthana Conqueror | 24 October 2026 |
+
+### Evidence
+
+- **Evidence E10** — Handwritten task list agreed at Meeting 1 (21 October 2026): five tasks and their owners.
+  ![Evidence E10 — handwritten task list from Meeting 1](../assets/evidence/E10-meeting1-task-list.jpg)
+- **Evidence E11** — Photo of the members working during Meeting 1 in Room 704 (supplementary only; it does not show the substance of the work).
+  ![Evidence E11 — members at Meeting 1](../assets/evidence/E11-meeting1-photo.jpg)
+
+---
