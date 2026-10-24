@@ -1,87 +1,80 @@
-# Software and Symbolic AI: Learning Content (V1.0)
+# Software and Symbolic AI: Chapters 1-6
 
-**Module question:** How can software use rules to reach a conclusion?
+## Overview
 
-> Status: chapter summaries only. Each chapter still needs full explanations,
-> definitions, a worked example, an activity and an answer
-> (see `main/module-outline.md` for status per section).
-> Sources for every chapter are listed in `references/sources.md`.
+These six chapters move from basic software concepts to symbolic AI and real-world applications. They explain how programs process data, how rule-based systems draw conclusions, how software is designed and maintained, and where explicit rules work well or have limitations.
 
----
+## Chapter summaries
 
-## Chapter 1: Software and Symbolic AI: An Overview
+### Chapter 1 - Software and Symbolic AI Overview
 
-Software is a collection of data and instructions that tell a computer how to
-function. Symbolic AI is an approach to AI that represents information
-explicitly, using human-readable symbols and rules. Symbolic AI is one
-specific way of building software, where decisions are driven by explicit,
-inspectable rules. The chapter opens with a familiar decision scenario to show
-how human reasoning translates into software logic.
+- Defines software as instructions and supporting information that process inputs and produce outputs.
+- Introduces AI and symbolic AI, where facts and explicit rules represent knowledge.
+- Uses a library-loan example to show facts, rules, and a conclusion.
+- Explains that symbolic AI is software, while many software systems do not use AI reasoning.
 
-**Sources:** see `references/sources.md` at Chapter 1
+### Chapter 2 - How Programs Process Information and Make Decisions
 
-## Chapter 2: Software: How Programs Process Information and Make Decisions
+- Distinguishes data (values a program uses) from instructions (directions the program follows).
+- Explains input, processing, and output, with weather-reminder and shopping-total examples.
+- Defines an algorithm as an ordered, step-by-step procedure.
+- Shows how an `IF-ELSE` condition selects one of two written paths and how to trace the result for a given input.
 
-This chapter covers the core computing cycle of Input, Processing and Output,
-and the difference between raw data and the instructions that manipulate it.
-An algorithm is a step-by-step procedure designed to solve a specific problem.
-Programs make decisions using control structures, mainly IF-ELSE conditions
-written by a programmer. Learners trace a short program step by step to see how
-a computer evaluates conditions and chooses a branch.
+### Chapter 3 - Facts, IF-THEN Rules, and Rule-Based Reasoning
 
-**Sources:** see `references/sources.md` at Chapter 2
+- Defines symbols, facts, conditions, rules, and the `AND` operator.
+- Describes a knowledge base that stores facts and rules, and an inference engine that applies them.
+- Demonstrates forward chaining: match rules to known facts, add conclusions, then check whether another rule applies.
+- Compares rule-based reasoning with ordinary program logic.
 
-## Chapter 3: Symbolic AI: Facts, IF-THEN Rules, and Rule-Based Reasoning
+### Chapter 4 - Applications of Software: From Problem to Program
 
-Building on IF-ELSE logic, this chapter defines the building blocks of symbolic
-AI: symbols, facts, conditions, and IF-THEN rules (including AND). A
-rule-based system has two main parts:
+- Follows a library system through the software life cycle: understand the problem, plan, write, test, and maintain the program.
+- Covers requirements, data and interface design, pseudocode, and test cases with expected results.
+- Shows how policy changes affect a program and why testing should cover different cases.
 
-- **Knowledge Base:** stores the known facts and the rules.
-- **Inference Engine:** checks the current facts against the rules and applies
-  the rules that match.
+### Chapter 5 - Applications of Symbolic AI: Expert Systems and Rule Engines
 
-**Forward chaining** starts with known facts and triggers rules repeatedly to
-reach a conclusion. It is demonstrated step by step with the library-loan
-example.
+- Introduces the knowledge base, working memory, and inference engine as core parts of a rule-based system.
+- Explains forward and backward chaining and connects expert systems such as MYCIN to modern business rule engines such as Drools and its Rete algorithm.
+- Shows symbolic rules in language processing, database querying, and healthcare access control.
+- Compares rule-based systems with machine-learning systems and describes hybrid approaches that combine pattern recognition with explicit rules.
 
-**Sources:** see `references/sources.md` at Chapter 3
+### Chapter 6 - Software and Symbolic AI: Correlation, Strengths, and Limitations
 
-## Chapter 4: Applications of Software: From Problem to Program
+- Explains a hybrid architecture: program logic handles input, storage, and display while rules handle reasoning.
+- Compares hardcoded program decisions with separately stored explicit rules.
+- Highlights transparency, modularity, and predictable behavior as strengths of explicit rules.
+- Explains that rule systems can be brittle when facts are missing, conflicting, or outdated. Missing information does not establish the opposite fact.
+- Uses a medical eligibility example to show why a system should not make a definitive decision when a required input is absent.
 
-This chapter shows how software is built to solve everyday problems, following
-the software development lifecycle (SDLC): understand the problem, plan the
-steps, write and test the program, and maintain it. A library management system
-is the case study, showing how real-world logic (such as whether a user may
-borrow a book) becomes an ordinary program.
+## Shared takeaways
 
-**Sources:** see `references/sources.md` at Chapter 4
+- Programs follow instructions to process data; an algorithm describes the steps for a task.
+- Rule-based systems represent knowledge explicitly and can show which facts and rules support a conclusion.
+- A rule engine is only as reliable as its facts, rules, and maintenance process.
+- Testing should include varied inputs and expected outcomes, including missing or unusual information.
+- Hybrid systems can combine software's data-handling role, machine learning's pattern recognition, and symbolic rules' traceable reasoning.
 
-## Chapter 5: Applications of Symbolic AI: Expert Systems and Rule Engines
+## Library-loan rule example
 
-This chapter shows how the knowledge base and inference process from Chapter 3
-are used in practice. **MYCIN**, a 1970s expert system for diagnosing blood
-infections, is the historical case study. MYCIN used **backward chaining**,
-reasoning backward from a hypothesis to find supporting facts. Modern rule
-engines such as **Apache Drools** embed symbolic AI in enterprise software.
-Other uses of explicit rules include grammar-based natural language processing
-and database querying.
+```text
+IF valid_card AND no_overdue_books
+THEN member_may_borrow
 
-**Sources:** see `references/sources.md` at Chapter 5
+IF member_may_borrow AND book_available
+THEN loan_approved
+```
 
-## Chapter 6: Software and Symbolic AI Together: Correlation, Strengths, and Limitations
+The first rule adds `member_may_borrow` when its conditions are true. The second rule can then use that new fact to approve the loan if the book is available.
 
-This chapter compares how software and symbolic AI relate. In many systems,
-ordinary program logic handles input, storage and display, while a rule-based
-component handles the reasoning. Fixed program logic is compared with explicit
-rules.
+## Development status recorded in the compiled document
 
-- **Strength:** explicit rules are easy to inspect, debug and change without
-  altering the core program.
-- **Limitation:** rule-based systems are brittle. They are unreliable when
-  information is missing, conflicting or outdated, and can only conclude what
-  their facts and rules support.
-
-**Sources:** see `references/sources.md` at Chapter 6
-
-
+| Chapter | Status recorded |
+| --- | --- |
+| 1 | Drafted for V1.0; the chapter notes that the project plan still marked the task as To Do and that source verification and author revision should happen before submission. |
+| 2 | Drafted; peer review and final source checking remain to be recorded. |
+| 3 | Drafted for V1.0; peer review and source checking remain to be completed. |
+| 4 | Draft dated October 24, 2026; no separate development-status table is included. |
+| 5 | Drafted for V1.0; peer review and source checking are marked complete. |
+| 6 | Drafted; peer review and final source checking remain to be recorded. |
