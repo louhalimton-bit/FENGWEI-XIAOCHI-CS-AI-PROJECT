@@ -78,7 +78,7 @@ Prepared a draft overview of software and symbolic AI including strengths and li
 <img width="1812" height="971" alt="Weixin Image_20261021231644_297_148" src="https://github.com/user-attachments/assets/96f09476-2782-4eee-a1e1-47be92ec59f2" />
 
 
-*Personal-log reference:* Frederick Bryan The 郑明畅 — Personal Learning, Oct 21, 2026.****
+*Personal-log reference:* Frederick Bryan The 郑明畅 — Personal Learning, Oct 21, 2026.
 
 ---
 
