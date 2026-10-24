@@ -195,3 +195,42 @@ A detailed first draft exists for Ritchard to review and rewrite before it becom
 *Personal-log reference:* Ritchard Alexander 林俊宇 — Personal Learning, Oct 23, 2026.
 
 ---
+
+## AI Record 06 — AI-Assisted Six-Chapter Guide Draft
+
+| Item | Detail |
+|---|---|
+| *Date* | October 23, 2026 |
+| *Member who used the AI tool* | Gunawan Nicolas Benedictus 李庆成 |
+| *Tool* | ChatGPT |
+| *Purpose* | To obtain a six-chapter outline and draft (introduction, software, symbolic AI, the applications of each, and how they relate) as a starting point for the Markdown content. |
+
+*Important prompt*
+
+> Chat gpt, i have a project about symbolic AI and software, can you please make me 6 chapters starting with introduction, explaining software and symbolic AI each, applications, and finally the correlations between them.
+
+*Relevant output summary*
+
+A "Six-Chapter Learning Guide": a cover reproducing the plan's roster, a contents list with the same six chapter titles as Table 2 of the plan, a "how to use this guide" note that the library-loan example returns in Chapters 1, 3, 4 and 6, and a complete Chapter 1 (a familiar library decision, what software means, what AI means in this guide, a table of how software and symbolic AI relate, and a parts-identification activity) with numbered references [1]–[4]. Chapters 2–6 are titles only.
+
+*Verification and team judgment*
+
+- How it was checked: Checked by Frederic Chandra 张国立 for misspelling and misformatting.
+- Only Chapter 1 is written; the other five chapters are titles only, so the draft is an outline plus one sample chapter, not six chapters.
+- The references copy the plan's list but add phrases such as "Pearson title page" and cut off the Sommerville entry; correct them before any use.
+- "ValidCard(Mina)" introduces predicate-style notation that the plan keeps out of scope for beginners; decide whether to keep it or use plain facts.
+- The cover reproduces student IDs; that page is not published in the repository.
+- Rewrite in the team's words; the brief does not allow AI output to be pasted into the Markdown.
+- Accepted: We kept the six-chapter framework and the chapter titles that matched the Master Project Plan. Chapter 1 was retained as a sample for the chapter leads to review and use as a starting point. We did not use the AI-generated chapter text as final Markdown; each chapter lead writes and checks their own chapter.
+- Revised or rejected: Revised, because the chapters must match the master project plan and task list exactly.
+
+*Outcome and learning*
+
+An outline and a sample Chapter 1 exist as a starting point for the chapter leads; the Markdown content is written by the chapter leads, not taken from this draft.
+
+*Evidence:* AI06-E6 — screenshot of the prompt and the contents list (cover page with IDs omitted).  
+![Evidence AI06-E6](../assets/evidence/AI06-E6.png)
+
+*Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 23, 2026.
+
+---
