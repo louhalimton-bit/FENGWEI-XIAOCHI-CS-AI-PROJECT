@@ -58,3 +58,32 @@ To discuss and clarify the task requirements, resolve different interpretations,
   ![Evidence E11 — members at Meeting 1](../assets/evidence/E11-meeting1-photo.jpg)
 
 ---
+
+## Meeting 3 — Task List Correction After the Professor's Clarification
+
+| Item | Detail |
+|---|---|
+| **Date and time** | October 23, 2026, 19:00 |
+| **Location or platform** | International Student Dormitory, Room 1017 |
+| **Attendees** | Ritchard Alexander 林俊宇, Frederic Chandra 张国立, Louis Alexander Dalim 苏路成, Gunawan Nicolas Benedictus 李庆成, Frederick Bryan The 郑明畅, Eizel Mthana Conqueror 康哲 |
+| **Absent members** | None |
+
+### Purpose or agenda
+
+Review the professor's clarification of the Stage 1 requirements, compare it with the Master Task List accepted at Meeting 2, agree the corrections, and confirm the chapter assignments.
+
+### Key discussion points
+
+- The task list accepted at Meeting 2 planned only the project plan for Stage 1; the clarification showed that four submissions are due on 24 October (project plan, GitHub repository + Markdown Content V1.0 ZIP, project log, personal logs).
+- Stage 3 had been left as "TBA" although the brief gave 28 November; the list had no documentation tasks, dependencies or leads, and a Phase 1 folder task was wrongly marked done.
+- Nicolas presented the remade plan and task list (AI Records 03 and 07); the team went through the Phase 2 tasks one by one.
+- Chapter assignments (Table 2 of the plan): Chapter 1 Nicolas, Chapter 2 Ritchard, Chapter 3 Louis, Chapter 4 Eizel, Chapter 5 Frederick, Chapter 6 Frederic; Chapter 3 is developed first as Markdown Content V1.0.
+- AI-generated first drafts (Chapters 2 and 6, the six-chapter guide) must be reviewed by their chapter leads and recorded as AI Records 04–06 before any text goes into the repository.
+
+### Decisions and outcomes
+
+- The remade task list replaces the 22 October list as the team's checklist from 23 October; earlier log entries keep the old task names and dates as a historical record.
+- Chapter assignments confirmed; Chapter 3 is the Markdown Content V1.0 topic (Louis, diagram by Eizel, peer review by Frederic).
+- Every AI-generated draft is logged as an AI-use record with prompt, output, verification and decision, and is rewritten in the team's words rather than pasted.
+- Louis reorganizes the repository; from now on members commit from their own accounts.
+
