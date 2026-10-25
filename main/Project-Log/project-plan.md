@@ -1,15 +1,5 @@
 # Software and Symbolic AI — Stage 1 Project Plan and Task List
 
-| | |
-|---|---|
-| **Class** | Computer Science and Artificial Intelligence |
-| **Group** | 风味小吃 (Fengwei Xiaochi) |
-| **Selected project module** | Software & Symbolic AI |
-| **GitHub repository** | https://github.com/louhalimton-bit/FENGWEI-XIAOCHI-CS-AI-PROJECT |
-| **Term** | Semester I, Academic Year 2026–2027 |
-| **School** | School of Computer Science and Technology, Beijing Institute of Technology, Fangshan, Beijing, China |
-| **Date** | Saturday 24th October, 2026 |
-
 | Full Name | 
 |---|
 | Ritchard Alexander – 林俊宇 | 
