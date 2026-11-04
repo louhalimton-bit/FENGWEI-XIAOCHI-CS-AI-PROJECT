@@ -1,4 +1,4 @@
-Chapter 1-6
+## Chapter 1-6
 
 Chapter 2
 <img width="941" height="185" alt="image" src="https://github.com/user-attachments/assets/d5573baa-47cf-4450-bd43-8ddf41dd0338" />
@@ -23,3 +23,7 @@ The learning outcome requires learners to identify four limitations. However, on
 Revised:
 
 <img width="826" height="796" alt="image" src="https://github.com/user-attachments/assets/01554647-579e-4066-85a5-6df4c1e73b46" />
+
+
+## Chapter 7-12
+[Evidence Stage 2 Check.docx](https://github.com/user-attachments/files/34384125/Evidence.Stage.2.Check.docx)
