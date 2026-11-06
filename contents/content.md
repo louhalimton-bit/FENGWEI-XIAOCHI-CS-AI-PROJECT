@@ -1268,4 +1268,726 @@ PPT 2024 (slide 28) lists four areas where knowledge representation is essential
 - Logic is precise; semantic networks show relationships and allow inheritance; frames hold typical properties with defaults; scripts hold typical sequences of events; rules capture decisions; ontologies give a shared, formal vocabulary.
 - The same knowledge can be written in several forms; the best choice depends on the task.
 
+# Chapter 9 — Rule-Based and Expert Systems: Facts, IF-THEN Rules and Reasoning
+
+> Chapter lead: Louis Alexander Dalim 苏路成 (GitHub: LewiZHalimton) · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — discussed by the team on 4 November 2026
+
+### Learning outcomes
+
+After this chapter, learners should be able to:
+
+- Define symbol, fact, condition, IF-THEN rule, and AND condition, and spot them in a simple situation.
+- Describe what the knowledge base, working memory, inference engine and user interface each do.
+- Follow a forward-chaining example and say which rule applies at each step and what new fact it adds.
+- Follow a backward-chaining example from a goal to the facts it needs.
+- Explain how MYCIN worked and state two strengths and two limits of rule-based AI.
+- Apply the same steps to a new case and state what can, and cannot, be concluded.
+
+## 1. From IF-ELSE to IF-THEN
+
+In Chapter 3, a programmer wrote the umbrella decision directly into the program: IF the answer is yes, display "Take an umbrella", ELSE display "No umbrella needed". Chapter 5 does the same for the library loan. The program always follows the steps in the order the programmer wrote them.
+
+Symbolic AI takes a different approach. Instead of writing every decision into the steps of one program, we write down what we know (facts) and what follows from it (rules). A separate part of the system then works out the conclusion. The rest of this chapter shows how that works.
+
+## 2. Key terms
+
+Each term is defined when it first appears, using the library-loan situation.
+
+![Illustration for 2. Key terms](assets/chapter-9-image-01.png)
+
+**Remember.** A conclusion that a rule adds becomes a new fact. This is how one rule can help the next rule to apply.
+
+## 3. The parts of a rule-based system
+
+Rule-based systems are also called production systems, because their rules "produce" new facts (PPT 2024, chap4 slide 29). Think of a chef in a busy kitchen. A kitchen needs a cookbook, a counter to work on, and someone to do the cooking. A rule-based system has the same three parts:
+
+- The knowledge base (the cookbook) stores the system's rules and any lasting facts about its subject [1, 3]. Example: IF the member has a valid card AND the member has no overdue books, THEN the member may borrow.
+- Working memory (the kitchen counter) holds the facts of the current case while the system reasons, including each new conclusion. Example: "this member has a valid card".
+- The inference engine (the chef) checks the facts against the rules and applies the rules whose conditions are met. Russell and Norvig call this kind of step inference: deriving new sentences from the ones already known [1].
+
+![A rule-based system for the library loan. In a small system like this one, the facts of the case can be stored with the rules, so the figure draws them inside the knowledge base. Larger systems keep them apart in working memory, as in the kitchen picture above. The idea is the same: knowledge is kept separate from the engine.](assets/chapter-9-image-02.png)
+
+![A rule-based system for the library loan. In a small system like this one, the facts of the case can be stored with the rules, so the figure draws them inside the knowledge base. Larger systems keep them apart in working memory, as in the kitchen picture above. The idea is the same: knowledge is kept separate from the engine.](assets/chapter-9-image-03.png)
+
+> **Figure 1.** A rule-based system for the library loan. In a small system like this one, the facts of the case can be stored with the rules, so the figure draws them inside the knowledge base. Larger systems keep them apart in working memory, as in the kitchen picture above. The idea is the same: knowledge is kept separate from the engine.
+
+To change what the system knows, we edit the facts and rules. We do not rewrite the engine.
+
+An expert system is a rule-based system built to give the kind of advice a human expert gives in one narrow area, such as medicine (PPT 2024, chap4 slide 31). It adds a fourth part, the user interface, through which a person enters the facts of a case, asks questions and reads the advice (slide 32).
+
+## 4. Forward and backward chaining
+
+The inference engine can reason in two directions.
+
+Forward chaining starts from the facts we already have and works forward to new conclusions [1]. It is like a detective who starts with clues and sees where they lead. The steps are:
+
+1. Look through the rules and find one whose conditions are all true.
+2. Apply it: add its conclusion to the facts as a new fact.
+3. Go back to step 1, because the new fact may make another rule apply.
+4. Stop when no rule can add anything new.
+
+Backward chaining starts from a possible conclusion, called the goal, and works backward to check whether the facts support it [1, 2]. It is like a doctor who asks "could this be pneumonia?" and then checks only the symptoms that matter. The steps are:
+
+1. Find a rule that could conclude the goal.
+2. Make each condition of that rule a new, smaller goal.
+3. If a goal is already a known fact, it is met. If a rule can conclude it, go back to step 1. If neither, ask the user.
+4. The first goal is proved when all its conditions are met.
+
+Section 5 works through both methods on the same library loan.
+
+**Going further (optional).** In the course textbook, an IF-THEN rule is written as an implication. Its IF part is called the body and its THEN part the head, and simple rules of this kind are called definite clauses [1]. You do not need these names for this module; the plain words above are enough.
+
+## 5. Worked examples: the library loan
+
+The library-loan scenario comes from the team's project plan [5].
+
+![Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.](assets/chapter-9-image-04.png)
+
+**Trace.** Follow each step in the table, and look at Figure 2.
+
+![Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.](assets/chapter-9-image-05.png)
+
+![Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.](assets/chapter-9-image-06.png)
+
+> **Figure 2.** Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.
+
+**Conclusion of the example.** The loan is approved. The system reached it only because the stated facts and rules support it. R2 could apply only after R1 had added F4. This chain of rules is why the method is called chaining.
+
+Does the order of the rules matter? Suppose the engine checks R2 before R1. In the first cycle R2 fails, because F4 ("member may borrow") is not yet known; R1 then fires and adds F4. In the second cycle R2 fires and adds F5. The order of checking can change how many rule checks are needed (here both orders need two firing cycles), but not the conclusion — as long as the rules only add facts and never remove them.
+
+### Backward chaining: the same loan
+
+Now start from the question instead of the facts. Goal: is the loan approved? Use the same rules, R1 and R2.
+
+![Illustration for Backward chaining: the same loan](assets/chapter-9-image-07.png)
+
+Both methods reach the same conclusion. The difference is the route. Forward chaining starts with whatever facts it has and may work out things nobody asked about. Backward chaining looks only for what the goal needs. If the member's card were not valid, step 3 would fail, and the engine would never need to ask about overdue books. This is why backward chaining suits a system that must ask a person questions, such as MYCIN (Section 8).
+
+## 6. Rules versus ordinary program logic
+
+![Illustration for 6. Rules versus ordinary program logic](assets/chapter-9-image-08.png)
+
+This table is a simplification to help beginners. Real systems often combine both: ordinary program logic for input and display, and a rule-based part for the reasoning. Chapter 12 compares their strengths and limits.
+
+## 7. Learner activities
+
+### Activity 1: the book is on loan
+
+Try it yourself. Case: A different member has a valid card (F1) and no overdue books (F2), but the requested book is not available (it is on loan).
+
+Questions:
+
+1. Using R1 and R2, which rules apply? What facts does the system end with?
+2. Can the system approve the loan? Can it say the loan is refused?
+3. Extension: write a new IF-THEN rule with an AND condition that lets the system offer a reservation to this member.
+
+**Expected answer**
+
+1. R1 applies, because F1 and F2 are true. It adds the new fact "member may borrow". R2 does not apply, because it also needs "the book is available", and that is false. The system ends with F1, F2 and "member may borrow".
+2. The system cannot approve the loan, because R2 never applied. It also cannot say "refused", because no rule says that. A rule-based system only concludes what its rules and facts support.
+3. One possible rule: R3: IF the member may borrow AND the requested book is not available, THEN offer a reservation. R3 applies after R1 adds "member may borrow". Any rule with two conditions joined by AND that gives this outcome is acceptable.
+
+### Activity 2: the overdue book, in both rule orders
+
+Case: A member has a valid card (F1) and the requested book is available (F3), but the member has an overdue book.
+
+1. Trace the case with the engine checking R1 first, then R2. Which rules fire? What facts does the system end with?
+2. Trace it again with the engine checking R2 first, then R1. Does anything change?
+3. The librarian wants the system to say that the loan is refused. Write a rule that does this.
+
+**Expected answer**
+
+1. R1 does not fire, because its condition "the member has no overdue books" is false. R2 does not fire either, because it needs "member may borrow", which was never added. No rule fires, so the system ends with only its starting facts and gives no conclusion.
+2. Nothing changes: R2 fails (no "member may borrow"), then R1 fails (overdue book). The order changes the number of checks, not the result.
+3. One possible rule: R4: IF the member has overdue books, THEN the loan is refused (reason: overdue books). Without a rule like R4, the system cannot say "refused" — it only concludes what its rules support (Activity 1, question 2).
+
+## 8. Expert systems in practice: MYCIN
+
+MYCIN is one of the best-known expert systems in the history of AI.
+
+### 8.1 Why MYCIN was built
+
+In the early 1970s at Stanford University, Edward Shortliffe and his colleagues worked on a hospital problem [4]. Patients with serious blood infections needed antibiotics quickly, but identifying the exact bacteria in the laboratory could take a day or more. Doctors needed expert advice before the laboratory results were ready.
+
+### 8.2 How MYCIN made decisions
+
+![Illustration for 8.2 How MYCIN made decisions](assets/chapter-9-image-09.png)
+
+- Readable rules. MYCIN stored medical knowledge in about 450 IF-THEN rules [1, p. 41], written in a programming language called LISP. In English, a typical rule said: IF the stain of the organism is gram-negative AND its shape is rod AND it grows in air (aerobic), THEN there is strongly suggestive evidence (0.8) that the organism belongs to the group Enterobacteriaceae [2]. You do not need the medical words; notice the IF-THEN form and the number.
+- Backward chaining. MYCIN started from its goal, recommending a treatment, and worked backward through its rules. It asked the doctor only for the facts it needed, such as where a culture was taken or whether the patient had allergies [2].
+- Certainty factors. Medicine is rarely 100% certain, so each rule carried a certainty factor (CF), a number from −1.0 (definitely false) to +1.0 (definitely true) [4]. A CF of +0.8 meant strong belief, and 0 meant no evidence either way. MYCIN combined these numbers across rules.
+- Explanation. A doctor could type WHY to see the rule MYCIN was trying to use, and HOW to see which rules and facts led to a conclusion [8]. This explanation facility is a major strength of many expert systems: their reasoning can be shown step by step.
+
+### 8.3 What happened next
+
+MYCIN performed as well as some experts and better than junior doctors [1, p. 41], but it was a research system, and its authors report that it was never used routinely in patient care [4, Chapter 32]. Practical reasons included the time needed to type in a consultation and the lack of connection to hospital record systems, together with questions about who is responsible for a computer's advice.
+
+Systems like MYCIN also share a general problem, the knowledge acquisition bottleneck [9]. MYCIN's rules had to be collected through extensive interviews with experts [1, p. 41]. A classic rule-based system cannot learn by itself, so each new medical discovery meant that people had to update and re-check the rules.
+
+## 9. Rule engines today: Drools
+
+The core idea of expert systems lives on in business rule engines: software that keeps an organisation's rules outside its program code. Drools is one example [6].
+
+**The problem.** Imagine a bank whose program contains thousands of nested IF-ELSE decisions. Programmers call this kind of tangled program "spaghetti code". Each time a credit-score limit changes, programmers must edit the code, rebuild the application and install it again.
+
+**The solution.** A rule engine moves those decisions into separate, readable rule files, such as .drl files or decision tables. The rules can then be changed without rewriting the application's code, although the new rules must still be tested and deployed.
+
+![Illustration for 9. Rule engines today: Drools](assets/chapter-9-image-10.png)
+
+Where rules like these can be used (illustrations, not descriptions of particular companies):
+
+- Credit decisions: IF salary > $3,000 AND credit_score > 700 THEN approve_credit_card.
+- Online shops: rules for discounts, shipping fees and flagging suspicious orders.
+- Hospitals: rules for sorting patients on arrival and for who may open a medical record (Section 11).
+
+**Going further (optional, not examined):** how a rule engine stays fast. With 10,000 rules and millions of facts, checking every rule against every fact would be far too slow. Think of a post office: it does not carry each letter around the whole city, but sorts letters through a network of bins. The classic Rete algorithm does the same with facts [7]. It passes them through a network of tests and remembers partial matches, so that when one fact changes, only the affected rules are re-checked. Drools now uses Phreak, an improved version of this idea [6].
+
+![Illustration for 9. Rule engines today: Drools](assets/chapter-9-image-11.png)
+
+## 10. Strengths and limits of rule-based AI
+
+Why rule-based AI is still used
+
+- It can explain itself. Many neural networks are called "black boxes", because their decisions are spread across millions of numbers. A rule-based system can list the facts and rules it used at every step.
+- It does not invent facts. A statistical language model can produce statements that sound right but are false; these are called "hallucinations". A rule-based system concludes only what its facts and rules support. That does not make it always right: if a rule is wrong or out of date, or a fact is missing, the conclusion will be wrong or missing too (Chapter 12).
+- It needs no training data. A deep neural network usually needs large amounts of labelled data. A rule-based system needs none, but people must write, test and maintain the rules, and that is its main cost.
+
+Where rules struggle
+
+Expert systems proved hard to build and maintain for complex subjects, partly because their reasoning broke down in the face of uncertainty and partly because they could not learn from experience [1, p. 42].
+
+- Brittleness: if an input has a typing mistake, or a situation is slightly outside the rules, the system may break or give no answer.
+- No self-learning: a classic rule-based system cannot learn new rules by itself; people must write and update every rule. (Other methods, such as decision-tree learning, can learn rules from data, but they are not part of a classic rule engine.)
+
+This is why many researchers argue that hybrid systems, which combine learning and rules, are a way forward [10, 11]. Chapter 12, Section 7 (optional) looks at this idea.
+
+![Illustration for 10. Strengths and limits of rule-based AI](assets/chapter-9-image-12.png)
+
+## 11. Learner Activity 3: the hospital access rules
+
+**The Scenario.** A hospital uses an automated rule engine to enforce security permissions for Electronic Health Records (EHR).
+
+**Knowledge Base Rules:**
+
+- Rule H1: IF user_role = doctor AND patient_assigned = true THEN grant_access(EHR_record)
+- Rule H2 (Emergency Break-the-Glass): IF patient_status = critical AND user_role = doctor THEN grant_emergency_access(EHR_record)
+- Rule H3 (Audit Logging): IF grant_emergency_access = true THEN generate_compliance_audit_flag
+
+**Working Memory Initial Facts (Case Input):**
+
+- Fact F1: user_role = doctor
+- Fact F2: patient_assigned = false (The doctor is not the primary attending physician)
+- Fact F3: patient_status = critical
+
+![Illustration for 11. Learner Activity 3: the hospital access rules](assets/chapter-9-image-13.png)
+
+**Critical questions and expected answers**
+
+- Trace question: Which rules fire, in what order, and what final facts are added to Working Memory? Answer: Rule H1 fails because patient_assigned = false. Rule H2 fires first, adding Fact F4 (grant_emergency_access = true). Rule H3 fires second, adding Fact F5 (generate_compliance_audit_flag).
+- Safety question: Can the doctor access the patient's record? If patient_status were changed to normal, could the doctor access the record? Can the system infer "Access Permanently Banned"? Answer: Yes, emergency access is granted because Rule H2 fired. If patient_status were normal, Rule H2 would fail, Rule H1 would fail, and no access would be granted. The system cannot infer "Access Permanently Banned" because symbolic AI only asserts what explicit rules support — it never assumes unstated conclusions.
+- System extension: Write a new rule, Rule H4, that automatically alerts the chief medical officer if emergency access is granted to an unassigned patient. Answer: Rule H4: IF grant_emergency_access = true AND patient_assigned = false THEN send_alert(Chief_Medical_Officer).
+
+## 12. Chapter takeaway
+
+A rule-based system keeps what it knows as facts and IF-THEN rules in a knowledge base. An inference engine applies the rules that match. In forward chaining, each new conclusion becomes a fact that may let another rule apply, until nothing new can be added. In backward chaining, the engine starts from a goal and looks only for the facts that goal needs. Expert systems such as MYCIN show the strengths of this approach, and its limits: rules must be written and kept up to date by people.
+
+# Chapter 10 — Planning and Problem Solving
+
+> Chapter lead (proposed): Eizel Mthana Conqueror · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+
+### Learning outcomes
+
+After this chapter, you should be able to:
+
+- Describe a problem as a state space with an initial state, actions and a goal state.
+- Trace breadth-first, depth-first and uniform-cost search on a small map, and say which finds the cheapest route.
+- Explain what a heuristic is, and trace greedy best-first search and A*.
+- Work out a minimax value in a small game tree and show which branch alpha-beta pruning skips.
+- Explain how hill climbing can get stuck, and how simulated annealing tries to escape.
+
+## 1. Planning and problem solving
+
+A library robot must take a returned book from the desk to the Archive. Nobody tells it each step; it has to work out a sequence of actions that gets the job done. That is planning.
+
+- Planning is finding a sequence of actions that turns a given initial state into a desired goal state. It means reasoning about actions, what they change, and the state of the world (PPT 2024, slide 33).
+- Problem solving is finding solutions to problems by computational methods: searching for solutions, reasoning about possible actions and judging the possible outcomes.
+
+**Worked example:** a small plan. The robot is at the desk; the book is on the desk. The goal: the book is in the Archive.
+
+![Illustration for 1. Planning and problem solving](assets/chapter-10-image-01.png)
+
+**Plan:** pick up the book → move along a route to the Archive → put down the book. The middle step hides a smaller problem — which route? That is a search problem, and it is the subject of the rest of the chapter.
+
+## 2. State space, actions, goal state and search
+
+Every search problem has four parts (slide 35):
+
+![The library map (the same graph as Chapter 4, Figure 4). Start: E. Goal: A.](assets/chapter-10-image-02.png)
+
+![The library map (the same graph as Chapter 4, Figure 4). Start: E. Goal: A.](assets/chapter-10-image-03.png)
+
+> **Figure 1.** The library map (the same graph as Chapter 4, Figure 4). Start: E. Goal: A.
+
+There are three routes from E to A that take three steps (a longer route, E → K → S → H → R → A, also exists, with a distance of 19):
+
+![Illustration for 2. State space, actions, goal state and search](assets/chapter-10-image-04.png)
+
+On a map with six rooms we can list every route. On a city map with thousands of streets we cannot, so we need a search method that explores cleverly. In every trace below, the frontier is the list of rooms found but not yet explored, neighbours are added in alphabetical order, ties are broken alphabetically, and the goal is recognised when it is taken from the frontier.
+
+## 3. Uninformed search: BFS, DFS and uniform-cost search
+
+Uninformed (blind) search uses no knowledge about where the goal is; it simply explores the state space in a fixed order until it finds the goal (slide 36).
+
+### Breadth-first search (BFS)
+
+BFS explores layer by layer, using a queue — first in, first out (Chapter 4, Section 6).
+
+![Illustration for Breadth-first search (BFS)](assets/chapter-10-image-05.png)
+
+Route found: E → H → R → A (A was reached from R, R from H). BFS always finds a route with the fewest steps (here 3), but it ignores the distances, so this route costs 11, not 7.
+
+### Depth-first search (DFS)
+
+DFS goes as deep as possible along one route before trying another, using a stack — last in, first out. (We push neighbours in reverse alphabetical order so that the alphabetically first one is on top.)
+
+![Illustration for Depth-first search (DFS)](assets/chapter-10-image-06.png)
+
+Route found: E → H → R → A, cost 11. DFS needs little memory and can be fast, but it gives no guarantee of finding the shortest or cheapest route, and on very large maps it may wander down a long dead end.
+
+### Uniform-cost search (UCS)
+
+UCS always explores the frontier room with the lowest total cost so far, written g. If it finds a cheaper way to a room already in the frontier, it keeps the cheaper one.
+
+![Illustration for Uniform-cost search (UCS)](assets/chapter-10-image-07.png)
+
+Route found: E → K → S → A, cost 7 — the cheapest. UCS is guaranteed to find the cheapest route when all costs are positive, but it explores in every direction, including away from the goal.
+
+![Illustration for Uniform-cost search (UCS)](assets/chapter-10-image-08.png)
+
+## 4. Informed search: greedy best-first search and A*
+
+Informed search uses extra knowledge about the problem — a heuristic — to explore the most promising rooms first (slide 38). A heuristic h is an estimate of the remaining cost from a room to the goal, for example the straight-line distance on a floor plan.
+
+![Illustration for 4. Informed search: greedy best-first search and A*](assets/chapter-10-image-09.png)
+
+These estimates never exceed the true cost. A heuristic like this is called admissible, and it matters for A* below.
+
+### Greedy best-first search
+
+Greedy search always explores the room that looks closest to the goal: the lowest h, ignoring the distance already walked.
+
+![Illustration for Greedy best-first search](assets/chapter-10-image-10.png)
+
+Route: E → K → S → A, cost 7, after exploring only four rooms. Greedy search is fast, but it is not guaranteed to find the cheapest route: a misleading estimate can lead it down a costly path.
+
+### A* search
+
+A* combines both ideas. For each room it adds the cost already walked and the estimate still to go: f = g + h. It explores the room with the lowest f.
+
+![Illustration for A* search](assets/chapter-10-image-11.png)
+
+Route: E → K → S → A, cost 7. With an admissible heuristic, A* is guaranteed to find the cheapest route, and it usually explores fewer states than UCS because the heuristic pulls it towards the goal. Route-planning apps and computer games use A* and its relatives.
+
+## 5. Adversarial search: minimax and alpha-beta pruning
+
+In a game, an opponent works against you, so you cannot simply choose your favourite route: you must expect the best reply (slide 39). Adversarial search looks ahead through your moves and the opponent's replies.
+
+Minimax. Call the two players MAX (you, who want a high score) and MIN (the opponent, who wants a low score). At the end of the game each position has a score for MAX. Working upwards from the end:
+
+- at a MIN level, take the lowest value of the children (the opponent's best reply);
+- at a MAX level, take the highest value.
+
+![A two-move game tree with minimax values. The crossed branch is skipped by alpha-beta pruning.](assets/chapter-10-image-12.png)
+
+> **Figure 2.** A two-move game tree with minimax values. The crossed branch is skipped by alpha-beta pruning.
+
+Worked example. After move L, MIN can choose 3 or 5, and picks 3. After move R, MIN can choose 2 or 9, and picks 2. MAX compares 3 and 2 and plays L, guaranteeing a score of at least 3. (Choosing R in the hope of 9 would be a mistake: a sensible opponent would answer with 2.)
+
+Alpha-beta pruning gives the same answer as minimax while skipping branches that cannot change it. After exploring L, MAX knows it can get 3. Exploring R, the first leaf is 2, so MIN can force R down to 2 or less. Whatever the second leaf is, R is already worse than 3 — so the leaf 9 does not need to be looked at at all. In large games such as chess, pruning skips huge parts of the tree and lets the program look several moves further ahead in the same time.
+
+## 6. Local search: hill climbing and simulated annealing
+
+Sometimes we do not need a route; we need a good final arrangement — for example, the best layout of shelves, or a timetable without clashes. Local search starts with one solution and keeps moving to a neighbouring solution, hoping to reach the best one (slide 40).
+
+Picture the possible solutions as a landscape, where the height is how good each solution is:
+
+![Illustration for 6. Local search: hill climbing and simulated annealing](assets/chapter-10-image-13.png)
+
+Hill climbing always moves to the best (highest) neighbour, and stops when no neighbour is better. Starting at position 1: 1 (2) → 2 (4) → 3 (6). Both neighbours of 3 are worse (4 and 5), so it stops at quality 6. It is stuck on a local maximum: a hill that is not the highest one. The best solution, 9 at position 7, is never found. Hill climbing is simple and fast, but it can get stuck like this.
+
+Simulated annealing sometimes accepts a worse move on purpose, to escape small hills. The chance of accepting a worse move is controlled by a "temperature": high at the start (many bad moves allowed), lowered step by step (fewer and fewer allowed). The name comes from annealing metal, which is heated and cooled slowly so that it settles into a strong structure. In the landscape above, it might go 3 (6) → 4 (5) → 5 (3) while the temperature is high, then climb 6 (7) → 7 (9), and as it cools it stays on the higher hill. It is not guaranteed to find the very best solution, but it usually does much better than plain hill climbing.
+
+## 7. Activity: plan the route
+
+Use Figure 1 and the heuristic table of Section 4.
+
+1. The corridor between K and S is closed. Which of the three routes in Section 2 are still possible, and which is now cheapest?
+2. With the K–S corridor closed, trace uniform-cost search from E. Which route does it find?
+3. Without K–S, what is the true cheapest cost from K to A? Is the heuristic value h(K) = 3 still admissible?
+4. In Figure 2, change the leaf 9 to 1. Does MAX's choice change? Is any leaf still pruned?
+5. In the landscape of Section 6, where does hill climbing stop if it starts at position 5?
+
+**Expected answers**
+
+1. Without K–S, K is only connected to E, so two routes are left: E-H-R-A = 11 and E-H-S-A = 9 (E-K-S-A no longer exists). The cheapest is E-H-S-A, cost 9.
+2. E(0) → frontier H 2, K 4. Take H(2) → R 5, S 7. Take K(4) → no new rooms. Take R(5) → A 11. Take S(7) → A = 9, better than 11. Take A(9) → goal. Route E → H → S → A, cost 9.
+3. From K the only way is back to E and then on: K-E-H-S-A = 4+2+5+2 = 13. h(K) = 3 ≤ 13, so it is still admissible — it underestimates, which is allowed.
+4. No. The MIN value of R becomes 1 instead of 2, which is still less than 3, so MAX still plays L. And the leaf is still pruned: after seeing 2, MIN can already force R to 2 or less, so the second leaf is skipped whatever its value.
+5. From 5 (3), both neighbours are better; the best is 6 (7), then 7 (9). Both neighbours of 7 are lower (7 and 8), so it stops at position 7, quality 9 — the global maximum. Where you start matters for hill climbing.
+
+## Key points
+
+- Planning finds a sequence of actions from an initial state to a goal state; many planning steps are search problems.
+- A search problem has a state space, actions with costs, an initial state, a goal state and a search method.
+- BFS (queue) finds the fewest steps; DFS (stack) uses little memory but guarantees nothing; uniform-cost search finds the cheapest route.
+- A heuristic estimates the remaining cost. Greedy search follows the estimate only; A* uses f = g + h and, with an admissible heuristic, finds the cheapest route.
+- Minimax chooses the best move against a sensible opponent; alpha-beta pruning gives the same answer while skipping hopeless branches.
+- Hill climbing can stop on a local maximum; simulated annealing accepts some worse moves early on to escape.
+
+# Chapter 11 — Symbolic Natural Language Processing
+
+> Chapter lead: Frederick Bryan The · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — restructured and AI-assisted draft (3 November 2026); discussed by the team on 4 November 2026
+
+### Learning outcomes
+
+After this chapter, you should be able to:
+
+- Explain what NLP is and what makes an approach to it symbolic.
+- Use a small context-free grammar to parse a sentence and draw its parse tree.
+- Represent the meaning of a simple sentence with a predicate, and tag the parts of speech of a sentence with rules.
+- Use rules about family relations to answer a question by inference.
+- Describe how rules support sentiment analysis, question answering and information retrieval, and name one limit of each.
+
+## 1. What NLP is, and the symbolic approach
+
+You type "Which books by Rowling are available?" into the library catalogue. To answer, the computer must split the sentence into words, work out how they fit together, understand what is being asked, and find the facts. That is natural language processing.
+
+Natural language processing (NLP) is the part of AI that deals with the interaction between computers and human language. It develops methods that let computers understand, interpret and produce human language in a meaningful way (PPT 2024, slide 41).
+
+There are two broad approaches:
+
+- Symbolic NLP uses formal rules, logic and symbolic representations written by people: grammars, dictionaries, rules and knowledge bases.
+- Statistical and neural NLP learns patterns from very large amounts of text. Modern chatbots are mainly of this kind.
+
+This chapter is about the symbolic approach. Its strengths are the same as in Chapter 6: every step can be inspected and explained, and it needs no training data. Its weakness is that human language is huge and full of exceptions, so the rules are never complete.
+
+## 2. Grammars and parsing: a rule-based pipeline (moved from the former Chapter 5, §4.1)
+
+Until statistical methods took over in the late 1980s and 1990s (and deep learning in the 2010s), most computer programs processed human text using Symbolic Natural Language Processing (NLP) (Jurafsky & Martin; Russell & Norvig, 2021, Ch. 24).
+
+- Words as Symbols & Grammar Rules: Symbolic NLP treats words as discrete symbols governed by explicit grammar rules. Instead of guessing word probabilities, it builds syntax trees using formal rules such as Context-Free Grammar (CFG) to analyze sentence structure.
+- The Step-by-Step Language Pipeline:
+
+![Illustration for 2. Grammars and parsing: a rule-based pipeline (moved from the former Chapter 5, §4.1)](assets/chapter-11-image-01.png)
+
+1. Text Input: Receiving raw text from the user (e.g., "The expert doctor examines the patient").
+2. Tokenization: Splitting the text into individual word tokens ["The", "expert", "doctor", "examines", "the", "patient"].
+3. Part-of-Speech Tagging: Labelling each token with its word class — "The" determiner, "doctor" noun, "examines" verb (Section 4).
+4. *(For searching documents only — Section 6.3 — two further steps are common: stop-word removal, which drops filler words such as "the" and "a", and reducing words to a base form. Stemming chops endings by rule, so "studies" becomes "studi"; lemmatization gives the dictionary form, so "was" becomes "be". A parser must not use these steps, because it needs every word.)*
+5. Rule Matching & Parsing: Matching the tagged tokens against formal grammar rules (NounPhrase + VerbPhrase) to construct a structured syntax tree.
+
+### 2.1 Worked example: a grammar for "The cat chased the mouse"
+
+PPT 2024 (slide 42) explains that formal grammars, such as context-free grammars (CFGs), define the rules for building correct sentences and capture their hierarchical structure. A CFG is a set of rewrite rules. Each rule says what a part of a sentence can be made of:
+
+![Illustration for 2.1 Worked example: a grammar for "The cat chased the mouse"](assets/chapter-11-image-02.png)
+
+Parsing means finding how a sentence can be built from these rules. For "The cat chased the mouse":
+
+1. "The" is a Det and "cat" is an N, so The cat is an NP (rule NP → Det N).
+2. "chased" is a V; "the mouse" is another NP.
+3. V + NP makes a VP: chased the mouse (rule VP → V NP).
+4. NP + VP makes an S (rule S → NP VP). The whole sentence is grammatical.
+
+The result is a parse tree:
+
+![The parse tree shows the sentence's structure: who did what to whom.](assets/chapter-11-image-03.png)
+
+> **Figure 1.** The parse tree shows the sentence's structure: who did what to whom.
+
+"Mouse the chased cat the" cannot be parsed with these rules, so the grammar rejects it. Note that a parser needs all the words: if "the" were removed as a stop word (step 3 of the pipeline above), the rule NP → Det N could not match. Stop-word removal is useful for searching documents (Section 6), not for parsing.
+
+## 3. Semantics and knowledge representation for language
+
+Syntax is about structure; semantics is about meaning (slide 43). Two sentences with different structure can mean the same thing: "The cat chased the mouse" and "The mouse was chased by the cat". A symbolic system represents the meaning in a form that does not depend on the wording.
+
+Using predicate logic (Chapter 7), the meaning of both sentences is:
+
+Chased(cat, mouse)
+
+As a semantic network (Chapter 8): cat —chased→ mouse. With an ontology, the system can also know that a cat is-a animal and a mouse is-a animal, and therefore answer "Did an animal chase another animal?" with yes.
+
+PPT 2024 (slide 44) names the three knowledge representations most used for language:
+
+![Illustration for 3. Semantics and knowledge representation for language](assets/chapter-11-image-04.png)
+
+## 4. Rule-based NLP: part-of-speech tagging and parsing
+
+Rule-based NLP systems use explicitly written rules and patterns to analyse language, for tasks such as part-of-speech tagging, syntactic parsing and information extraction (slide 45).
+
+Part-of-speech (POS) tagging labels each word with its word class. A simple rule-based tagger uses two things: a lexicon (a dictionary of words and their classes) and rules for words that are not in the lexicon or have more than one class.
+
+Example from the slide: "The quick brown fox jumps over the lazy dog."
+
+![Illustration for 4. Rule-based NLP: part-of-speech tagging and parsing](assets/chapter-11-image-05.png)
+
+Rules like "a word ending in -ly is probably an adverb" or "after the, the next noun ends the noun phrase" handle words the lexicon does not know. Once the words are tagged, a grammar (Section 2.1, with extra rules for adjectives and prepositions) finds the structure: subject "the quick brown fox", verb "jumps", and the phrase "over the lazy dog" saying where.
+
+The tagger can be wrong. In "Time flies like an arrow", flies could be a verb or a plural noun; rules must use the context to decide, and some sentences remain ambiguous even for people.
+
+## 5. Logic and inference in NLP
+
+Logic lets a symbolic NLP system reason about what a sentence says and derive new knowledge (slide 46). PPT 2024's example: relationships between people, written as predicates and rules.
+
+Facts (from sentences such as "Ana is Ben's mother"):
+
+- Parent(Ana, Ben)
+- Parent(Ana, Cai)
+- Parent(Ben, Dan)
+
+Rules:
+
+- Grandparent: ∀x ∀y ∀z (Parent(x, y) ∧ Parent(y, z) → Grandparent(x, z))
+- Sibling: ∀x ∀y ∀p (Parent(p, x) ∧ Parent(p, y) ∧ x ≠ y → Sibling(x, y))
+
+Question: "Who is Dan's grandparent?" The system looks for an x with Parent(x, y) and Parent(y, Dan). Parent(Ben, Dan) gives y = Ben; Parent(Ana, Ben) gives x = Ana. Answer: Ana. Nobody told the system "Ana is Dan's grandparent"; it inferred it, and it can show the two facts and the rule it used.
+
+Question: "Is Cai Ben's sibling?" Parent(Ana, Ben), Parent(Ana, Cai) and Ben ≠ Cai → Sibling(Ben, Cai): yes.
+
+This is universal modus ponens from Chapter 7, applied to knowledge taken from language.
+
+## 6. Uses: sentiment analysis, question answering and information retrieval
+
+### 6.1 Sentiment analysis
+
+Sentiment analysis finds the emotional tone of a text — positive, negative or neutral — in reviews, posts or feedback (slide 47). A rule-based system uses word lists and patterns:
+
+- positive words: good, excellent, happy, helpful;
+- negative words: bad, poor, disappointed, slow;
+- a negation rule: "not" or "never" directly before a sentiment word reverses it;
+- a simple decision: count positive minus negative; above 0 → positive, below 0 → negative, 0 → neutral.
+
+![Illustration for 6.1 Sentiment analysis](assets/chapter-11-image-06.png)
+
+Limit: sarcasm ("Great, the printer is broken again") fools simple rules, because the words are positive but the meaning is negative.
+
+### 6.2 Question answering
+
+A question-answering system interprets a question in natural language and answers it from a knowledge base, often a knowledge graph of entities and relationships (slide 48). In the slide's medical example, diseases, symptoms and treatments are stored as entities linked by relations; when a user asks about the symptoms of a disease, the system follows the links to find the answer.
+
+For the library: the question "Which books by Rowling are available?" becomes a query — find every x with Book(x) ∧ WrittenBy(x, Rowling) ∧ Available(x) — which the system answers from its facts (as SQL does in Chapter 5, Section F). Limit: it can only answer questions about knowledge it has been given.
+
+### 6.3 Information retrieval
+
+Information retrieval finds the documents that match what a user is looking for in a large collection (slide 49). Symbolic techniques help by representing the concepts in the documents and in the query. In the slide's legal example, legal concepts, case law and statutes are encoded in a formal structure, and the system matches a legal question with relevant documents.
+
+A small library example: a search for "car repair" also returns a book indexed under "automobile maintenance", because an ontology records that car and automobile mean the same thing and repair is a kind of maintenance. Here stop-word removal and stemming (Section 2) are useful: "repairing the cars" and "car repairs" both reduce to car and repair. Limit: the ontology must be built and kept up to date by people.
+
+## 7. Activity: process the language
+
+1. Using the grammar of Section 2.1, add the rules needed to parse "The dog chased the cat". Then draw its parse tree.
+2. Write the meaning of "The mouse was chased by the cat" as a predicate.
+3. Tag each word: "The happy student reads quickly."
+4. Using the family facts of Section 5, add Parent(Cai, Eve). Who are Eve's grandparents? Is Dan Eve's sibling?
+5. Score this review with the rules of Section 6.1: "The library is good but the chairs are bad and not comfortable." (Treat comfortable as a positive word.)
+
+**Expected answers**
+
+1. Add N → dog. The tree is the same shape as Figure 1, with dog in place of cat and cat in place of mouse.
+2. Chased(cat, mouse) — the same as the active sentence; meaning does not depend on the wording.
+3. The — determiner; happy — adjective; student — noun; reads — verb; quickly — adverb (rule: ends in -ly).
+4. Parent(Ana, Cai) and Parent(Cai, Eve) → Ana is Eve's grandparent. The system cannot conclude that Dan and Eve are siblings: the rule needs a parent they have in common, and no such fact is known (Dan's parent is Ben; Eve's is Cai). They are cousins — a rule for "cousin" could be added.
+5. good (+1), bad (−1), not comfortable (−1) → score −1: negative. A person might call it mixed; this shows how simple counting can miss nuance.
+
+# Chapter 12 — Software and Symbolic AI Together
+
+> Chapter lead: Frederic Chandra 张国立 · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — discussed by the team on 4 November 2026
+
+### Learning goals
+
+After studying this chapter, you should be able to:
+
+- Explain how traditional program logic and symbolic rule-based components relate and combine in a hybrid system.
+- Describe the division of labor where program logic handles input, storage, and display, while a rule-based component handles reasoning.
+- Compare fixed program logic with explicit rules regarding inspectability and modifiability.
+- Identify the limitations of explicit rules when dealing with missing, conflicting, or outdated information.
+- Explain the concept that "missing information does not prove the opposite" in rule-based reasoning.
+- Compare the same decision written as an ordinary program and as rules, and say which is easier to inspect and to change.
+
+## 1. Bridging Software and Symbolic AI: The Hybrid Architecture
+
+In many advanced applications, software and symbolic AI do not compete — they cooperate. A robust system often divides its work into two distinct layers:
+
+1. Program Logic (The Procedural Shell): Written in traditional programming languages (such as Python or Java), this layer handles the operational "plumbing." It captures user input from interfaces, stores data in databases or variables, and renders the UI or output.
+2. Rule-Based Component (The Declarative Core): This acts as the reasoning engine. Instead of burying business logic inside hundreds of hardcoded if-else statements, the program passes structured facts into a separate knowledge base of explicit rules.
+
+By combining these two approaches, the program logic manages the user experience and data flow, while the rule-based component evaluates logical conditions to derive conclusions.
+
+![Software and symbolic AI together: the screens and the database (program logic) pass facts to the knowledge base, and the inference engine sends its conclusion back to the screen.](assets/chapter-12-image-01.png)
+
+> **Figure 1.** Software and symbolic AI together: the screens and the database (program logic) pass facts to the knowledge base, and the inference engine sends its conclusion back to the screen.
+
+![Illustration for 1. Bridging Software and Symbolic AI: The Hybrid Architecture](assets/chapter-12-image-02.png)
+
+## 2. Fixed Program Logic vs. Explicit Rules
+
+Traditional software relies on fixed program logic, where algorithms and decision paths are hardcoded by the programmer. Symbolic AI relies on explicit rules stored independently within a knowledge base.
+
+- Fixed Program Logic: Procedural steps are tightly woven into the code. Changing how a decision is made means a programmer must edit the code and re-test it (Chapter 5, Section 8).
+- Explicit Rules: Rules are declared as discrete statements (e.g., IF age > 65 AND income < 30000 THEN apply_senior_discount()).
+
+### Comparison of inspectability and modifiability
+
+- Easy to inspect: Because explicit rules are written in near-natural, declarative language, domain experts and auditors can read and verify them directly without needing to comb through lines of source code.
+- Easy to change: You can add, remove, or modify individual rules in the knowledge base without changing the program code. Each changed rule must still be tested.
+
+## 3. Worked Example 1: One Decision, Two Ways — the Library Loan
+
+Chapters 5 and 9 wrote the same library decision in two different ways. Put side by side, they show what each approach is good at.
+
+![Illustration for 3. Worked Example 1: One Decision, Two Ways — the Library Loan](assets/chapter-12-image-03.png)
+
+What this shows. Both versions reach the same decision for the same facts. The program is complete and predictable, but its policy is spread through the code. The rules make the policy visible and easy to change, but the system can only conclude what its rules cover. Real systems often combine the two (Figure 1).
+
+## 4. Worked Example 2: A Medical Eligibility Advisor
+
+Consider a program that helps determine whether a patient qualifies for an expedited health screening.
+
+- **Program logic (Python):** Collects patient symptoms via an input form, stores them in variables, and displays the final result on screen.
+- **Rule-based component:** Evaluates the explicit rule: IF fever == true AND cough == true THEN qualify_screening = true.
+
+### Trace: missing information
+
+Suppose the patient's record lists fever = true, but the cough field is blank (missing).
+
+- The rule requires both conditions to be true.
+- Because cough information is missing, the rule fails to fire.
+- The system does not know whether the patient has a cough or not; it cannot assume the cough is false just because the field is empty.
+
+Consequently, it cannot provide a definitive recommendation, illustrating how missing information disrupts rule-based reasoning.
+
+## 5. Learner Activity
+
+**Part A — missing or false? Use the rule from Section 4:** IF fever == true AND cough == true THEN qualify_screening = true.
+
+1. The record now says fever = true and cough = false. Does the rule fire? Can the system conclude that the patient does not qualify?
+2. The record says cough = true, but the fever field is blank. What should the system do?
+
+Part B — change the policy in both versions. The library decides that a member with overdue books may still borrow if they have paid their fine.
+
+3. What must change in the Chapter 5 program?
+4. What must change in the Chapter 9 rules?
+5. After the change, which version makes the new policy easier for a librarian to read? Why?
+
+**Expected answers**
+
+1. The rule does not fire, because cough == true is false. The system now knows this rule does not apply, but it still cannot say "does not qualify" unless another rule states that conclusion — a rule-based system only concludes what its rules support.
+2. The rule cannot fire, and the system must not assume the fever is false (or true): missing information does not prove the opposite. A good system would ask for the missing value or report that it cannot decide.
+3. A programmer edits the condition chain — for example, refuse for overdue books only when the fine is not paid — adds a new input fine_paid, and re-runs all the old test cases plus new ones for the changed branch (Chapter 5, Sections 7–8).
+4. Add one rule, for example R5: IF the member has a valid card AND has overdue books AND has paid the fine, THEN the member may borrow. R2 and the inference engine stay the same; the new rule still has to be tested.
+5. Usually the rules: the new policy appears as one readable sentence (R5), while in the program it is hidden inside the order of the conditions. Either answer is acceptable if it is explained.
+
+## 6. Hands-on: a rule-based assistant vs a machine-learning assistant
+
+PPT 2024 ends the Symbolic AI chapter with a hands-on activity (chap4, slide 50): build a tiny "smart assistant" that switches a fan and a lamp on and off, first with fixed rules, then with a machine-learning model, and compare them. It turns the whole module into one experiment.
+
+Test status (4 November 2026): Part A, the script on slide 50, was rebuilt in the live Scratch editor and tested. In Part B, the team trained the model on Machine Learning for Kids and tested it on the website (Figures 4 and 5), then ran its own script in Machine Learning for Kids' version of Scratch and tried three commands (Figures 6 and 7).
+
+Goal. See, with your own hands, what a rule-based program understands and what a trained model understands, and why.
+
+Preparation. A computer with a web browser; Scratch (https://scratch.mit.edu); Machine Learning for Kids (https://machinelearningforkids.co.uk), which lets you train a simple text classifier and use it inside Scratch. About 40 minutes.
+
+### Part A — the rule-based assistant (15 minutes)
+
+1. In Scratch, make two sprites, a fan and a lamp, each with an on and an off costume.
+2. Build the script in Figure 2, which comes from slide 50. Inside a forever loop, it asks for a command with ask … and wait, then checks the answer with one IF rule for each command:
+- IF answer = "Fan on" OR answer = "Fan on please" THEN broadcast turn-fan-on and wait
+- IF answer = "Fan off" THEN broadcast turn-fan-off and wait
+- IF answer = "Lamp on" THEN broadcast turn-lamp-on and wait
+- IF answer = "Lamp off" THEN broadcast turn-lamp-off and wait
+3. The slide shows only this main script. Give each sprite a short script of its own that reacts to the messages, for example: when I receive turn-fan-on, switch the fan's costume to on.
+4. Click the green flag, test the commands in the table below, and record what happens.
+
+![The rule-based assistant. Source: professor's PPT 2024, chap4 slide 50. On the slide, the ask block contains the answer block, so the first question is blank and later questions repeat your last answer; you can type "Enter your command" there instead, as in Figure 3.](assets/chapter-12-image-04.png)
+
+> **Figure 2.** The rule-based assistant. Source: professor's PPT 2024, chap4 slide 50. On the slide, the ask block contains the answer block, so the first question is blank and later questions repeat your last answer; you can type "Enter your command" there instead, as in Figure 3.
+
+### Part B — the machine-learning assistant (25 minutes)
+
+1. In Machine Learning for Kids, choose Get started, then Try it now (no account is needed, but the site first asks you to pass a "Verify you are human" check). This mode gives you one project, for a few hours, on one computer. Create a new project that recognises text.
+2. Make four labels: fan_on, fan_off, lamp_on, lamp_off.
+3. Type at least six different example sentences for each label — for example, for fan_on: "turn on the fan", "I'm hot", "it's so warm in here", "switch the fan on", "fan please", "I need some air".
+4. Train the model, then test it in the website with sentences you did not type.
+5. Open the project in Scratch from Machine Learning for Kids and build the script in Figure 6. It is the team's working version of the slide's script (Figure 3). It asks "Enter your command", then has one IF for each label, using the model's recognise text … (label) block. For example: IF recognise text (answer) (label) = fan_on THEN broadcast turn-fan-on. It differs from the slide in three ways:
+- There is one extra ask before the forever loop.
+- The loop ends with wait 5 seconds. Without a wait, the next question replaces the reply straight away.
+- Four short scripts on the same sprite show the result, for example: when I receive turn-fan-on, say "Fan on" for 5 seconds.
+6. Click the green flag. Because of the extra ask, the question appears twice at the start, and the script does not check your first answer. Press Enter the first time, then type your command the second time.
+7. Test the same commands again. Each reply stays for about 5 seconds, until the question comes back.
+
+![The machine-learning assistant. Source: professor's PPT 2024, chap4 slide 50. The loop and the four messages stay the same. The main change is the test inside each IF: it now asks the trained model instead of comparing exact words.](assets/chapter-12-image-05.png)
+
+> **Figure 3.** The machine-learning assistant. Source: professor's PPT 2024, chap4 slide 50. The loop and the four messages stay the same. The main change is the test inside each IF: it now asks the trained model instead of comparing exact words.
+
+![The team's training examples: six for each label. Screenshot from Machine Learning for Kids, 4 November 2026.](assets/chapter-12-image-06.png)
+
+> **Figure 4.** The team's training examples: six for each label. Screenshot from Machine Learning for Kids, 4 November 2026.
+
+![The trained model's answers to the eight test commands. Screenshots from Machine Learning for Kids, 4 November 2026.](assets/chapter-12-image-07.png)
+
+> **Figure 5.** The trained model's answers to the eight test commands. Screenshots from Machine Learning for Kids, 4 November 2026.
+
+![The team's working script, running in Machine Learning for Kids' version of Scratch. The yellow glow shows that it is running. Screenshot, 4 November 2026.](assets/chapter-12-image-08.png)
+
+> **Figure 6.** The team's working script, running in Machine Learning for Kids' version of Scratch. The yellow glow shows that it is running. Screenshot, 4 November 2026.
+
+![Three commands run through the script in Figure 6: the command typed (top) and the cat's reply (bottom). The team typed "turn fan on" and "It's too dark too read" (a typing slip), so the wording differs a little from the table below, but the cat still gave the replies you would expect. Screenshots, 4 November 2026.](assets/chapter-12-image-09.png)
+
+> **Figure 7.** Three commands run through the script in Figure 6: the command typed (top) and the cat's reply (bottom). The team typed "turn fan on" and "It's too dark too read" (a typing slip), so the wording differs a little from the table below, but the cat still gave the replies you would expect. Screenshots, 4 November 2026.
+
+### Observation table
+
+![Illustration for Observation table](assets/chapter-12-image-10.png)
+
+None of these eight commands was a training example, yet the model chose a sensible label for the first seven. The last result matters most: the script in Figure 6 checks only the label, not the confidence, so the cat said "Fan on" when the team typed "make me a sandwich" (Figure 7). A real assistant would have switched the fan on.
+
+### Reflection
+
+1. Which assistant understood more ways of saying the same thing? Why?
+2. For the rule-based assistant, can you explain exactly why each command worked or failed? Can you for the machine-learning one?
+3. Which assistant would you trust to control something important, such as a heater in a baby's room? What would you add to make it safe?
+4. How could the two be combined?
+
+**Expected answers**
+
+1. The machine-learning assistant: it learned patterns from examples, so it matched wording it had never seen, such as "turn on fan" (fan_on, 95%). The rule-based one only matches the exact words its rules were written for (Scratch ignores capital letters, but not different wording). That is why slide 50 needs a second condition just for "Fan on please".
+2. Yes for the rules — each result traces back to one rule (or to no rule), as in Chapter 9. For the trained model we can see the label and the confidence, but not a readable reason; this is the interpretability difference of Chapter 6, Section 3.
+3. Many people would choose rules for the safety part, because their behaviour is predictable and can be checked, and they do nothing when no rule matches. The sandwich test shows why: the model answered fan_on with only 18% confidence, and the script acted on it anyway (Figure 7). A good design adds a rule such as "IF the confidence is below a threshold THEN ask again" and safety rules (maximum temperature) that the model cannot override.
+4. Use the model to understand what the user said (the perception part), then pass its label to explicit rules that decide what to do (the decision part). This is the hybrid architecture of Section 1 and the neuro-symbolic idea of Section 7.
+
+## 7. Optional extension: neuro-symbolic AI (not examined; moved from the former Chapter 5)
+
+### 7.1 Combining neural networks and rules
+
+To work around the limits of each approach, many researchers combine both into Neuro-Symbolic AI. By pairing Neural Networks (which excel at perceiving messy, unstructured real-world data like vision, speech, and text) with Symbolic Logic Engines (which excel at reasoning, math, and safety guardrails), hybrid systems aim to be both adaptable and reliable (Liang et al., 2025; Bougzime et al., 2025):
+
+- Self-driving vehicles: Neural vision models detect pedestrians from camera images, while explicit rules can express safety requirements such as IF pedestrian_detected THEN stop.
+- Healthcare & LLM Verifiers: A clinical assistant can be designed so that a neural language model reads free-text patient notes, while symbolic engines check facts against clinical knowledge bases and medical rules to prevent dangerous drug contraindications.
+
+Scope note from the project plan: neuro-symbolic AI is out of scope for this module and is mentioned here only for the point about brittleness; it is not examined.
+
+### 7.2 Comparison table
+
+To synthesize everything we have learned in this chapter, here is a master comparison table evaluating Pure Connectionist AI, Pure Classical Symbolic AI, and Modern Hybrid Neuro-Symbolic AI.
+
+![Illustration for 7.2 Comparison table](assets/chapter-12-image-11.png)
+
+## Key points
+
+- Hybrid architectures separate concerns: program logic handles input, storage, and display, while a rule-based component handles reasoning.
+- Explicit rules are separate from procedural code, making them easy for humans to inspect and modify.
+- Explicit rules are reliable under strict conditions but become unreliable when information is missing, conflicting, or outdated.
+- Missing information does not prove the opposite; assuming a fact is false simply because data is absent can cause logical errors in rule-based systems.
+- The same decision can be written as a program or as rules: the program always gives an answer, while the rules make the policy easier to read and change but conclude only what they cover.
+
 
