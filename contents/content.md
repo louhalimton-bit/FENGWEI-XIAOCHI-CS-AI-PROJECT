@@ -1293,7 +1293,7 @@ Symbolic AI takes a different approach. Instead of writing every decision into t
 
 Each term is defined when it first appears, using the library-loan situation.
 
-![Illustration for 2. Key terms](assets/chapter-9-image-01.png)
+<img width="750" height="597" alt="image" src="https://github.com/user-attachments/assets/ff2f16c5-bbec-4c10-9bc5-bf5ab70f1512" />
 
 **Remember.** A conclusion that a rule adds becomes a new fact. This is how one rule can help the next rule to apply.
 
@@ -1305,9 +1305,9 @@ Rule-based systems are also called production systems, because their rules "prod
 - Working memory (the kitchen counter) holds the facts of the current case while the system reasons, including each new conclusion. Example: "this member has a valid card".
 - The inference engine (the chef) checks the facts against the rules and applies the rules whose conditions are met. Russell and Norvig call this kind of step inference: deriving new sentences from the ones already known [1].
 
-![A rule-based system for the library loan. In a small system like this one, the facts of the case can be stored with the rules, so the figure draws them inside the knowledge base. Larger systems keep them apart in working memory, as in the kitchen picture above. The idea is the same: knowledge is kept separate from the engine.](assets/chapter-9-image-02.png)
+<img width="750" height="765" alt="image" src="https://github.com/user-attachments/assets/543872ad-14f4-43c4-a2fd-aa908da05aa9" />
 
-![A rule-based system for the library loan. In a small system like this one, the facts of the case can be stored with the rules, so the figure draws them inside the knowledge base. Larger systems keep them apart in working memory, as in the kitchen picture above. The idea is the same: knowledge is kept separate from the engine.](assets/chapter-9-image-03.png)
+<img width="750" height="354" alt="image" src="https://github.com/user-attachments/assets/79cca3cf-161d-4cc5-9c8d-5b71c9d8f41c" />
 
 > **Figure 1.** A rule-based system for the library loan. In a small system like this one, the facts of the case can be stored with the rules, so the figure draws them inside the knowledge base. Larger systems keep them apart in working memory, as in the kitchen picture above. The idea is the same: knowledge is kept separate from the engine.
 
@@ -1341,13 +1341,13 @@ Section 5 works through both methods on the same library loan.
 
 The library-loan scenario comes from the team's project plan [5].
 
-![Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.](assets/chapter-9-image-04.png)
+<img width="750" height="297" alt="image" src="https://github.com/user-attachments/assets/a9f0b434-291a-4578-a603-000f814f3fd6" />
 
 **Trace.** Follow each step in the table, and look at Figure 2.
 
-![Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.](assets/chapter-9-image-05.png)
+<img width="750" height="282" alt="image" src="https://github.com/user-attachments/assets/4deba63f-f5d2-4041-b484-5fe7980b1cf7" />
 
-![Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.](assets/chapter-9-image-06.png)
+<img width="750" height="351" alt="image" src="https://github.com/user-attachments/assets/59c4997f-673c-46da-84ec-110f7fe4e4a5" />
 
 > **Figure 2.** Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.
 
@@ -1359,13 +1359,13 @@ Does the order of the rules matter? Suppose the engine checks R2 before R1. In t
 
 Now start from the question instead of the facts. Goal: is the loan approved? Use the same rules, R1 and R2.
 
-![Illustration for Backward chaining: the same loan](assets/chapter-9-image-07.png)
+<img width="750" height="373" alt="image" src="https://github.com/user-attachments/assets/1a7a06c6-f0bb-4167-b366-6fb8af3061c2" />
 
 Both methods reach the same conclusion. The difference is the route. Forward chaining starts with whatever facts it has and may work out things nobody asked about. Backward chaining looks only for what the goal needs. If the member's card were not valid, step 3 would fail, and the engine would never need to ask about overdue books. This is why backward chaining suits a system that must ask a person questions, such as MYCIN (Section 8).
 
 ## 6. Rules versus ordinary program logic
 
-![Illustration for 6. Rules versus ordinary program logic](assets/chapter-9-image-08.png)
+<img width="750" height="308" alt="image" src="https://github.com/user-attachments/assets/e2bccaf7-d2ce-4233-8e39-32bd2ad19cc7" />
 
 This table is a simplification to help beginners. Real systems often combine both: ordinary program logic for input and display, and a rule-based part for the reasoning. Chapter 12 compares their strengths and limits.
 
@@ -1411,7 +1411,7 @@ In the early 1970s at Stanford University, Edward Shortliffe and his colleagues 
 
 ### 8.2 How MYCIN made decisions
 
-![Illustration for 8.2 How MYCIN made decisions](assets/chapter-9-image-09.png)
+<img width="750" height="525" alt="image" src="https://github.com/user-attachments/assets/dca49958-5aed-49f4-a5c4-71991f0d76c8" />
 
 - Readable rules. MYCIN stored medical knowledge in about 450 IF-THEN rules [1, p. 41], written in a programming language called LISP. In English, a typical rule said: IF the stain of the organism is gram-negative AND its shape is rod AND it grows in air (aerobic), THEN there is strongly suggestive evidence (0.8) that the organism belongs to the group Enterobacteriaceae [2]. You do not need the medical words; notice the IF-THEN form and the number.
 - Backward chaining. MYCIN started from its goal, recommending a treatment, and worked backward through its rules. It asked the doctor only for the facts it needed, such as where a culture was taken or whether the patient had allergies [2].
@@ -1432,7 +1432,7 @@ The core idea of expert systems lives on in business rule engines: software that
 
 **The solution.** A rule engine moves those decisions into separate, readable rule files, such as .drl files or decision tables. The rules can then be changed without rewriting the application's code, although the new rules must still be tested and deployed.
 
-![Illustration for 9. Rule engines today: Drools](assets/chapter-9-image-10.png)
+<img width="750" height="525" alt="image" src="https://github.com/user-attachments/assets/ea995d16-d4bf-4942-aea1-758c5c82204b" />
 
 Where rules like these can be used (illustrations, not descriptions of particular companies):
 
@@ -1442,7 +1442,7 @@ Where rules like these can be used (illustrations, not descriptions of particula
 
 **Going further (optional, not examined):** how a rule engine stays fast. With 10,000 rules and millions of facts, checking every rule against every fact would be far too slow. Think of a post office: it does not carry each letter around the whole city, but sorts letters through a network of bins. The classic Rete algorithm does the same with facts [7]. It passes them through a network of tests and remembers partial matches, so that when one fact changes, only the affected rules are re-checked. Drools now uses Phreak, an improved version of this idea [6].
 
-![Illustration for 9. Rule engines today: Drools](assets/chapter-9-image-11.png)
+<img width="750" height="833" alt="image" src="https://github.com/user-attachments/assets/3707bd7c-37c1-4c87-bb05-2bc7b1639606" />
 
 ## 10. Strengths and limits of rule-based AI
 
@@ -1461,7 +1461,7 @@ Expert systems proved hard to build and maintain for complex subjects, partly be
 
 This is why many researchers argue that hybrid systems, which combine learning and rules, are a way forward [10, 11]. Chapter 12, Section 7 (optional) looks at this idea.
 
-![Illustration for 10. Strengths and limits of rule-based AI](assets/chapter-9-image-12.png)
+<img width="750" height="420" alt="image" src="https://github.com/user-attachments/assets/8001063d-0797-4915-93b7-495251869e62" />
 
 ## 11. Learner Activity 3: the hospital access rules
 
@@ -1479,7 +1479,7 @@ This is why many researchers argue that hybrid systems, which combine learning a
 - Fact F2: patient_assigned = false (The doctor is not the primary attending physician)
 - Fact F3: patient_status = critical
 
-![Illustration for 11. Learner Activity 3: the hospital access rules](assets/chapter-9-image-13.png)
+<img width="750" height="384" alt="image" src="https://github.com/user-attachments/assets/954a5035-5af5-4261-9f0b-fb3b8c7ede52" />
 
 **Critical questions and expected answers**
 
@@ -1514,7 +1514,7 @@ A library robot must take a returned book from the desk to the Archive. Nobody t
 
 **Worked example:** a small plan. The robot is at the desk; the book is on the desk. The goal: the book is in the Archive.
 
-![Illustration for 1. Planning and problem solving](assets/chapter-10-image-01.png)
+<img width="750" height="165" alt="image" src="https://github.com/user-attachments/assets/e44decaf-fcef-4cf0-9b53-d09661ffd3ba" />
 
 **Plan:** pick up the book → move along a route to the Archive → put down the book. The middle step hides a smaller problem — which route? That is a search problem, and it is the subject of the rest of the chapter.
 
@@ -1522,15 +1522,15 @@ A library robot must take a returned book from the desk to the Archive. Nobody t
 
 Every search problem has four parts (slide 35):
 
-![The library map (the same graph as Chapter 4, Figure 4). Start: E. Goal: A.](assets/chapter-10-image-02.png)
+<img width="750" height="307" alt="image" src="https://github.com/user-attachments/assets/abbed2f7-c6cc-4cc0-a68b-0762aa6a87f2" />
 
-![The library map (the same graph as Chapter 4, Figure 4). Start: E. Goal: A.](assets/chapter-10-image-03.png)
+<img width="750" height="450" alt="image" src="https://github.com/user-attachments/assets/1155476d-7d4d-4b49-b966-1d13a2a8a52e" />
 
 > **Figure 1.** The library map (the same graph as Chapter 4, Figure 4). Start: E. Goal: A.
 
 There are three routes from E to A that take three steps (a longer route, E → K → S → H → R → A, also exists, with a distance of 19):
 
-![Illustration for 2. State space, actions, goal state and search](assets/chapter-10-image-04.png)
+<img width="469" height="165" alt="image" src="https://github.com/user-attachments/assets/84ae0e98-fa1e-45e1-ac6b-6d2197216e71" />
 
 On a map with six rooms we can list every route. On a city map with thousands of streets we cannot, so we need a search method that explores cleverly. In every trace below, the frontier is the list of rooms found but not yet explored, neighbours are added in alphabetical order, ties are broken alphabetically, and the goal is recognised when it is taken from the frontier.
 
@@ -1542,7 +1542,7 @@ Uninformed (blind) search uses no knowledge about where the goal is; it simply e
 
 BFS explores layer by layer, using a queue — first in, first out (Chapter 4, Section 6).
 
-![Illustration for Breadth-first search (BFS)](assets/chapter-10-image-05.png)
+<img width="710" height="286" alt="image" src="https://github.com/user-attachments/assets/ce66c166-0a10-4d03-8d58-f0469ce4a483" />
 
 Route found: E → H → R → A (A was reached from R, R from H). BFS always finds a route with the fewest steps (here 3), but it ignores the distances, so this route costs 11, not 7.
 
@@ -1550,7 +1550,7 @@ Route found: E → H → R → A (A was reached from R, R from H). BFS always fi
 
 DFS goes as deep as possible along one route before trying another, using a stack — last in, first out. (We push neighbours in reverse alphabetical order so that the alphabetically first one is on top.)
 
-![Illustration for Depth-first search (DFS)](assets/chapter-10-image-06.png)
+<img width="529" height="205" alt="image" src="https://github.com/user-attachments/assets/cff7dc47-0982-4f76-8d2e-ac8afd23280a" />
 
 Route found: E → H → R → A, cost 11. DFS needs little memory and can be fast, but it gives no guarantee of finding the shortest or cheapest route, and on very large maps it may wander down a long dead end.
 
@@ -1558,17 +1558,17 @@ Route found: E → H → R → A, cost 11. DFS needs little memory and can be fa
 
 UCS always explores the frontier room with the lowest total cost so far, written g. If it finds a cheaper way to a room already in the frontier, it keeps the cheaper one.
 
-![Illustration for Uniform-cost search (UCS)](assets/chapter-10-image-07.png)
+<img width="608" height="286" alt="image" src="https://github.com/user-attachments/assets/21386434-40c3-41cd-9809-d08569e55b3c" />
 
 Route found: E → K → S → A, cost 7 — the cheapest. UCS is guaranteed to find the cheapest route when all costs are positive, but it explores in every direction, including away from the goal.
 
-![Illustration for Uniform-cost search (UCS)](assets/chapter-10-image-08.png)
+<img width="613" height="165" alt="image" src="https://github.com/user-attachments/assets/5ea0d195-dcfd-43c3-bd6e-f1edadd98b76" />
 
 ## 4. Informed search: greedy best-first search and A*
 
 Informed search uses extra knowledge about the problem — a heuristic — to explore the most promising rooms first (slide 38). A heuristic h is an estimate of the remaining cost from a room to the goal, for example the straight-line distance on a floor plan.
 
-![Illustration for 4. Informed search: greedy best-first search and A*](assets/chapter-10-image-09.png)
+<img width="463" height="124" alt="image" src="https://github.com/user-attachments/assets/32186a64-7f1c-4431-86d1-bea1a4a0710b" />
 
 These estimates never exceed the true cost. A heuristic like this is called admissible, and it matters for A* below.
 
@@ -1576,7 +1576,7 @@ These estimates never exceed the true cost. A heuristic like this is called admi
 
 Greedy search always explores the room that looks closest to the goal: the lowest h, ignoring the distance already walked.
 
-![Illustration for Greedy best-first search](assets/chapter-10-image-10.png)
+<img width="429" height="205" alt="image" src="https://github.com/user-attachments/assets/12f66ecd-c669-4a2a-b8c1-7d179c96efad" />
 
 Route: E → K → S → A, cost 7, after exploring only four rooms. Greedy search is fast, but it is not guaranteed to find the cheapest route: a misleading estimate can lead it down a costly path.
 
@@ -1584,7 +1584,7 @@ Route: E → K → S → A, cost 7, after exploring only four rooms. Greedy sear
 
 A* combines both ideas. For each room it adds the cost already walked and the estimate still to go: f = g + h. It explores the room with the lowest f.
 
-![Illustration for A* search](assets/chapter-10-image-11.png)
+<img width="578" height="246" alt="image" src="https://github.com/user-attachments/assets/f58fcb9b-fe24-4140-b417-52bdddd81f68" />
 
 Route: E → K → S → A, cost 7. With an admissible heuristic, A* is guaranteed to find the cheapest route, and it usually explores fewer states than UCS because the heuristic pulls it towards the goal. Route-planning apps and computer games use A* and its relatives.
 
@@ -1597,7 +1597,7 @@ Minimax. Call the two players MAX (you, who want a high score) and MIN (the oppo
 - at a MIN level, take the lowest value of the children (the opponent's best reply);
 - at a MAX level, take the highest value.
 
-![A two-move game tree with minimax values. The crossed branch is skipped by alpha-beta pruning.](assets/chapter-10-image-12.png)
+<img width="750" height="458" alt="image" src="https://github.com/user-attachments/assets/d9eafce4-1134-40b7-864e-ef41845aa340" />
 
 > **Figure 2.** A two-move game tree with minimax values. The crossed branch is skipped by alpha-beta pruning.
 
@@ -1611,7 +1611,7 @@ Sometimes we do not need a route; we need a good final arrangement — for examp
 
 Picture the possible solutions as a landscape, where the height is how good each solution is:
 
-![Illustration for 6. Local search: hill climbing and simulated annealing](assets/chapter-10-image-13.png)
+<img width="364" height="84" alt="image" src="https://github.com/user-attachments/assets/3cd0d611-3761-4a29-bdc4-5dcf4aefd8e2" />
 
 Hill climbing always moves to the best (highest) neighbour, and stops when no neighbour is better. Starting at position 1: 1 (2) → 2 (4) → 3 (6). Both neighbours of 3 are worse (4 and 5), so it stops at quality 6. It is stuck on a local maximum: a hill that is not the highest one. The best solution, 9 at position 7, is never found. Hill climbing is simple and fast, but it can get stuck like this.
 
