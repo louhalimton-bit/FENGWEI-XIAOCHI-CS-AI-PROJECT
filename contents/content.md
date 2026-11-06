@@ -15,7 +15,7 @@ After this chapter, learners should be able to:
 
 The module follows the professor's PPT 2024 outline: Part A — Software and Algorithms (chap3) and Part B — Symbolic AI (chap4). The umbrella decision and the library loan desk run through both parts.
 
-![Twelve-chapter module map](assets/chapter-1-image-01.png)
+<img width="750" height="650" alt="image" src="https://github.com/user-attachments/assets/3f7e22f6-ff2d-49b3-8cb0-fc2bcab8c2f9" />
 
 Sections 3 and 4 of this chapter preview symbolic AI; Chapters 6–9 develop it fully.
 
@@ -23,7 +23,7 @@ Sections 3 and 4 of this chapter preview symbolic AI; Chapters 6–9 develop it 
 
 Imagine leaving home for class. It is raining and you are going outside, so you take an umbrella. The situation can be represented with two facts and one rule: IF it is raining AND you are going outside, THEN recommend an umbrella. The result is a recommendation based on stated information. A program can store the facts, check the conditions, and display the conclusion.
 
-![Umbrella decision represented as facts, a rule, and a conclusion](assets/chapter-1-image-02.png)
+<img width="650" height="265" alt="image" src="https://github.com/user-attachments/assets/e8f6b592-4403-4997-9c22-331dfe89f283" />
 
 > **Figure 1.** A familiar decision represented as facts, a rule, and a conclusion.
 
@@ -39,7 +39,7 @@ A symbol is a named representation of something in a problem, such as `member_ha
 
 A rule-based system commonly has two parts. The knowledge base stores the facts and rules for the task. The inference engine checks whether current facts satisfy a rule's conditions and applies matching rules. The recommendation can then be shown to the user. Because the knowledge and rules are stated explicitly, a person can inspect what the system used to reach its result [14, 15].
 
-![Symbolic AI architecture with a knowledge base and inference engine](assets/chapter-1-image-03.png)
+<img width="750" height="344" alt="image" src="https://github.com/user-attachments/assets/ce74976b-b23e-4866-85da-741fbba1700c" />
 
 > **Figure 2.** A simple architecture for symbolic AI software.
 
@@ -69,7 +69,7 @@ Symbolic AI is one way to build software that reasons with explicit knowledge. T
 
 The supplied project plan uses a library-loan scenario in its mini lecture [16]. Start with these facts: the member has a valid card, has no overdue books, and the requested book is available.
 
-![Library loan facts and rule-based conclusion](assets/chapter-1-image-04.png)
+<img width="750" height="175" alt="image" src="https://github.com/user-attachments/assets/ad97f283-1f24-483d-b539-9cce190374c9" />
 
 This is a small example of forward chaining: start with known facts, apply a rule whose conditions match, add its conclusion as a new fact, and check the rules again. The software produces the approval because the stated facts and rules support it. Chapter 9 explains forward chaining fully and traces this example one step at a time.
 
@@ -81,7 +81,7 @@ Explicit rules are easy to inspect and test one by one. This is useful when a ta
 
 The history of software follows the development of programmable machines, stored programs, more expressive languages, and disciplined software engineering. Symbolic AI developed alongside it as researchers explored whether computers could manipulate symbols, represent knowledge, and reason from it. The two histories meet because AI systems are software: they use computer hardware and must also be designed, tested, and maintained.
 
-![Timeline comparing software and symbolic AI milestones](assets/chapter-1-image-05.png)
+<img width="750" height="650" alt="image" src="https://github.com/user-attachments/assets/d14e2864-15ee-4b2b-931c-11220273ac9c" />
 
 This timeline is selective. It shows how software moved from early programmable ideas to engineered systems, while symbolic AI moved from logic and deduction programs to expert systems and rule engines.
 
@@ -132,7 +132,7 @@ System software is the software that runs the computer itself and gives applicat
 
 A building is a useful picture. The operating system is the building's foundations, electricity and water pipes. The applications are the shops inside. A shop does not lay its own water pipe; it uses the one the building provides. In the same way, Weixin does not control the network card directly; it asks the operating system to send the message.
 
-![Layers of software, from hardware and operating system to applications](assets/chapter-2-image-01.png)
+<img width="750" height="507" alt="image" src="https://github.com/user-attachments/assets/e0813f36-d4dc-4e88-ad57-fb9c9e89fd26" />
 
 > **Figure 1.** Layers of software. Each layer uses the services of the layer below it.
 
@@ -142,7 +142,7 @@ Check yourself 1. Is a calculator app system software or application software? A
 
 Operating systems grew as computers became faster, cheaper and more widely used. A simple timeline (Forouzan, 2018, Ch. 7; Brookshear & Brylow, 2019, Ch. 3):
 
-![Operating system evolution timeline](assets/chapter-2-image-02.png)
+<img width="750" height="409" alt="image" src="https://github.com/user-attachments/assets/1aaec9c4-67a5-479d-b0b1-9dcf793cc4d0" />
 
 The main idea stays the same in every period: the operating system stands between the user's programs and the hardware, and shares the hardware fairly and safely.
 
@@ -160,7 +160,7 @@ Each process is always in one of three main states:
 
 **Worked example:** taking turns. Three processes need the processor: Music (needs 2 time slices), Browser (3 slices) and Weixin (1 slice). The OS gives one slice at a time, in a circle (this is called round-robin scheduling):
 
-![Round-robin scheduling example for Music, Browser, and Weixin](assets/chapter-2-image-03.png)
+<img width="517" height="286" alt="image" src="https://github.com/user-attachments/assets/73dea707-4726-4bd2-b7e2-2daa217991b1" />
 
 Nobody waits too long, and the short job (Weixin) finishes early.
 
@@ -180,7 +180,7 @@ Going further (optional). Many systems divide memory into equal-sized blocks cal
 
 A processor only understands machine language: instructions written as patterns of 0s and 1s. Programmers then made the work easier, step by step:
 
-![Programming language evolution](assets/chapter-2-image-04.png)
+<img width="750" height="292" alt="image" src="https://github.com/user-attachments/assets/6d3ba894-4edd-4b4e-bf2d-fff75debbeb4" />
 
 A high-level program must be translated before the processor can run it:
 
@@ -192,7 +192,7 @@ An interpreter reads and carries out the program step by step instead of produci
 
 Languages are grouped by the way a programmer describes the solution (Forouzan, 2018, Ch. 9):
 
-![Programming language categories](assets/chapter-2-image-05.png)
+<img width="750" height="307" alt="image" src="https://github.com/user-attachments/assets/2eb478d9-3c53-4f39-997f-fc1626df7be2" />
 
 The last group links directly to Part B of this module: in Prolog and in rule-based systems, the programmer writes facts and rules, and the system works out the answer (Chapter 9).
 
@@ -223,7 +223,8 @@ Linux, macOS and Android all follow these ideas: macOS is UNIX-based (it held th
 
 **Weixin (application software).** Weixin (WeChat) is a messaging application launched by Tencent in 2011. It is application software: it does tasks for the user — chatting, voice calls, sharing photos, paying, running mini programs. Every one of those tasks uses the operating system below it:
 
-![UNIX system software and Weixin application software](assets/chapter-2-image-06.png)
+
+<img width="750" height="282" alt="image" src="https://github.com/user-attachments/assets/3b8bb93b-8572-4262-a5ea-109553d9291b" />
 
 The same Weixin features exist on Android and on iOS because each version is written to use that operating system's services.
 
