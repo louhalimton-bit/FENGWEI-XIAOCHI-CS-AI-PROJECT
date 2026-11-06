@@ -986,11 +986,11 @@ Not propositions: "Close the door!" (a command), "Is it raining?" (a question), 
 
 We give propositions short letters. Let p = "It is raining" and q = "I have an umbrella". Three Boolean operators combine them (slide 9):
 
-![Boolean operators AND, OR, and NOT](assets/chapter-7-image-01.png)
+<img width="550" height="165" alt="image" src="https://github.com/user-attachments/assets/71524145-ac2e-4bdd-a60c-7fc17fb3e281" />
 
 A truth table lists every possible combination:
 
-![Truth table for Boolean operators](assets/chapter-7-image-02.png)
+<img width="263" height="205" alt="image" src="https://github.com/user-attachments/assets/909f4f90-9931-4240-85e1-470c913ed6a6" />
 
 Note that logical OR is inclusive: "p ∨ q" is true when both are true. The library's loan rule from Chapter 5 is an AND of three propositions: valid card ∧ no overdue books ∧ book available.
 
@@ -1009,19 +1009,19 @@ Worked example: the library. A loan is approved when the card is valid (c) and t
 
 Check with a truth table (the two right-hand columns are equal in every row):
 
-![Truth table checking logical equivalences](assets/chapter-7-image-03.png)
+<img width="336" height="205" alt="image" src="https://github.com/user-attachments/assets/96a98742-b975-4490-98ca-a0b3410ee353" />
 
 ## 3. Implication and biconditional
 
 Implication p → q is read "if p, then q" (slide 11). p is the antecedent (premise) and q is the consequent (conclusion). It is the logical form of an IF-THEN rule (Chapter 9).
 
-![Truth table for implication](assets/chapter-7-image-04.png)
+<img width="147" height="205" alt="image" src="https://github.com/user-attachments/assets/7bfe34f6-6051-4761-b157-80fc5efa1c37" />
 
 The only row that makes p → q false is the one where the promise is broken: p is true but q is false. Example: "If it rains (p), the match is cancelled (q)." If it does not rain, the rule has not been broken, whatever happens to the match — so the last two rows are true. Beginners often find this surprising; it helps to think of p → q as a promise that is only broken when p happens and q does not.
 
 Biconditional p ↔ q is read "p if and only if q". It is true when p and q have the same truth value:
 
-![Truth table for the biconditional](assets/chapter-7-image-05.png)
+<img width="147" height="205" alt="image" src="https://github.com/user-attachments/assets/9ea63796-d402-4350-b685-f3218de50e06" />
 
 Example: "The light is on ↔ the switch is up" — when one is true, so is the other; when one is false, so is the other.
 
@@ -1075,11 +1075,11 @@ Logical connectives work inside predicate logic just as in Section 1 (slide 16):
 
 To formalise a sentence is to write it precisely with predicates and quantifiers. PPT 2024 (slide 15) gives four steps. Here they are for "Some birds can fly":
 
-![Steps for formalising a sentence about birds](assets/chapter-7-image-06.png)
+<img width="750" height="256" alt="image" src="https://github.com/user-attachments/assets/7454cc0d-02da-4dcd-80cd-5d4077f51402" />
 
 More examples (slide 19, plus library ones):
 
-![Examples of predicate logic formalisation](assets/chapter-7-image-07.png)
+<img width="750" height="231" alt="image" src="https://github.com/user-attachments/assets/35c4fc88-337d-4812-a49d-503a878cc04c" />
 
 ## 8. Rules of inference in predicate logic
 
@@ -1170,7 +1170,7 @@ First-order (predicate) logic adds objects, predicates and quantifiers, so it ca
 
 For the library:
 
-![Library facts represented with logic](assets/chapter-8-image-01.png)
+<img width="685" height="205" alt="image" src="https://github.com/user-attachments/assets/7e5846a4-f236-4244-988c-4cfa11a8a5a5" />
 
 From the last two lines, universal modus ponens (Chapter 7, Section 8) gives ¬Available(B310). Strength: precise, and automatic inference is well understood. Weakness: hard for non-experts to read and write.
 
@@ -1178,7 +1178,7 @@ From the last two lines, universal modus ponens (Chapter 7, Section 8) gives ¬A
 
 A semantic network is a graph (Chapter 4, Section 6). Nodes stand for things or concepts, and labelled links stand for the relationships between them (slide 23).
 
-![Figure 1. A semantic network for part of the library.](assets/chapter-8-image-02.png)
+<img width="750" height="450" alt="image" src="https://github.com/user-attachments/assets/75bdf5c0-d86c-400d-a6e1-724dcc7f2cd5" />
 
 > **Figure 1.** A semantic network for part of the library.
 
@@ -1194,11 +1194,11 @@ A frame is a structure that describes a typical object or situation, with slots 
 
 **Frame: Book**
 
-![Frame representation for a book](assets/chapter-8-image-03.png)
+<img width="331" height="246" alt="image" src="https://github.com/user-attachments/assets/221fb388-f115-4a60-9983-5db360eaf084" />
 
 **Frame: Reference book**
 
-![Frame representation for a reference book](assets/chapter-8-image-04.png)
+<img width="405" height="124" alt="image" src="https://github.com/user-attachments/assets/ab3ccfc8-713f-4578-b83c-d8a6e81f049c" />
 
 A dictionary in the reference section fills in the Reference-book frame; it inherits the loan period slot from Book, but its own "can be borrowed: no" overrides the default. Frames, like semantic networks with default values, handle exceptions by letting a more specific frame override an inherited value (Russell & Norvig, 2021, pp. 347–355).
 
@@ -1229,13 +1229,13 @@ When two systems — or two people — use the same word, do they mean the same 
 
 A small library ontology:
 
-![A small library ontology](assets/chapter-8-image-05.png)
+<img width="750" height="322" alt="image" src="https://github.com/user-attachments/assets/0e870507-3fc8-401e-bd35-2af642f9c38a" />
 
 An ontology is like a semantic network with agreed definitions and rules, written carefully enough that different programs can share it. Large real examples include SNOMED CT for medical terms and the Gene Ontology for biology. Ontologies for the web are often written in OWL, the Web Ontology Language standardised by the World Wide Web Consortium (W3C, 2012).
 
 How the five forms compare
 
-![Comparison of knowledge representation forms](assets/chapter-8-image-06.png)
+<img width="750" height="297" alt="image" src="https://github.com/user-attachments/assets/c17bed0a-5d6f-4d39-93fb-ee2daeee8aeb" />
 
 ## 7. Applications
 
