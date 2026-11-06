@@ -676,3 +676,596 @@ Stacks are last in, first out; queues are first in, first out.
 Trees store hierarchies; binary search trees make searching fast by halving the choices.
 
 Graphs model connections; breadth-first search visits them layer by layer using a queue.
+
+# Chapter 5 — Software Engineering and Databases: From Problem to Program
+
+> Chapter lead: Eizel Mthana Conqueror 康哲 (Visual Design Lead) · Module: Software and Symbolic AI — "How Can Software Use Rules to Reach a Conclusion?" · Version: V2.0 working draft (2 November 2026) — discussed by the team on 4 November 2026
+
+### Abstract
+
+Chapter 3 of this module showed how a short program makes a decision with IF–ELSE, and Chapter 9 will write the same library-loan decision as facts and IF–THEN rules. This chapter steps back and asks a more practical question: where does such a program come from, and where does it live? It follows a piece of software from the problem it is meant to solve to a working, tested and maintained program, using the five stages of the software life cycle — understand the problem, plan the steps, write the program, test it, and use and maintain it. A library management system is the running case study. The library-loan decision is written as an ordinary program, placed inside that system, tested with four cases, and then changed when the library adds a new policy. The chapter ends on the point that Chapter 12 picks up: when the decision logic is written inside the program, changing the policy means changing the code.
+
+## 1. Introduction
+
+Every day we use software that makes small decisions for us: a library catalogue tells us whether a book is available, a ticket app tells us whether a seat is free, a timetable app tells us which class is next. In Chapter 3 we looked inside one such decision — the umbrella reminder — and traced it line by line as a program with IF–ELSE. In Chapter 9 we will write a bigger decision — whether a library member may borrow a book — in a very different way, as facts and rules that a separate inference engine applies.
+
+This chapter is about the ordinary-software side of that pair. It answers three questions that Chapter 3 left open: how is a program like these actually built, where does it sit inside a real system, and what happens when the library changes its rules? The answers prepare the comparison in Chapter 12, where the same decision written as code (this chapter) and written as rules (Chapter 9) are set side by side.
+
+### Learning outcomes
+
+- C5.1 Describe the stages of building software — understand the problem, plan the steps, write the program, test it, maintain it — and say why maintenance is needed.
+
+- C5.2 Give familiar examples of software that supports everyday decisions (module outcome ILO8).
+
+- C5.3 Read the library-loan decision written as an ordinary program and point to where the decision logic lives.
+
+- C5.4 Describe the steps of a small everyday program and write two test cases for it.
+
+### What you need before reading
+
+Chapter 3: input, processing and output; the idea of an algorithm; reading a short IF–ELSE program. Nothing else is assumed.
+
+## 2. Key terms
+
+<img width="750" height="611" alt="image" src="https://github.com/user-attachments/assets/d3be0f6c-c42e-4401-a02d-7ec74c0681bd" />
+
+## 3. Software all around us
+
+A piece of software exists because somebody had a problem and decided to solve it with a program. Three everyday examples make the point, and each one fits the input–processing–output pattern of Chapter 3:
+
+- A library system. The problem: hundreds of members, thousands of books, and a loan desk that has to answer "can this member borrow this book?" many times a day without losing track of anything. The software keeps the catalogue, records loans and returns, and sends reminders for overdue books. Input: a member and a book; processing: the loan check; output: a decision on the screen and a new record in the database.
+
+- A ticket-booking app. The problem: many people want the same seats at the same time. Input: a chosen seat and a payment; processing: is the seat still free, is the payment valid; output: a ticket or a refusal.
+
+- A timetable app. The problem: a class schedule that changes every week. Input: today's date and the student's group; processing: look up the lessons; output: the list for today with rooms and times.
+
+In each case the decision is small and clear, which is why ordinary program logic handles it well. The rest of this chapter follows the first example, the library system, from the problem to the program.
+
+## 4. From problem to program: the software life cycle
+
+Building software is not one step but a sequence of stages, and the sequence repeats for as long as the software is in use. Textbooks describe the sequence with slightly different lists: Forouzan (2018, Chapter 10) uses analysis, design, implementation and testing; Brookshear (2011, Sections 7.1–7.2) adds maintenance; the Atlassian and IBM web guides each list seven phases, with different names (planning, feasibility or analysis, design, implementation or coding, testing, deployment, maintenance). The lists differ in how finely they cut the work, not in what the work is. This module uses the five plain-language stages of the project plan and gives the textbook names in brackets (Figure 1).
+
+<img width="750" height="260" alt="image" src="https://github.com/user-attachments/assets/118b7828-12ab-4f62-a121-7fc413d80826" />
+
+> **Figure 1.** The five stages of the software life cycle used in this module, with the textbook names in brackets. The return arrow is the point of the diagram: software is never finished while it is in use.
+
+### 4.1 Understand the problem (requirements analysis)
+
+Before anything is written, somebody has to find out what the software must do and for whom. For the library this means talking to the librarians: What does the desk decide? On what information? What must be recorded? The result is a short list of requirements in plain words, for example: "The system must tell the librarian whether a member may borrow a chosen book, using the member's card, their overdue books and the book's availability, and must record the loan if it is approved." Getting this stage wrong is expensive, because every later stage builds on it.
+
+### 4.2 Plan the steps (design, algorithm)
+
+Next the requirements are turned into a plan: which data the program needs (card valid?, overdue books, book available?), which steps it takes, in which order, and what it shows at the end. The steps are the algorithm of Chapter 3 — an ordered list of unambiguous steps that produces a result and stops. For the loan check the plan is a chain of yes/no questions: the IF–ELSE of Chapter 3, extended with ELSE IF so that there can be more than two outcomes.
+
+### 4.3 Write the program (implementation, coding)
+
+The plan is written in a programming language so that a computer can execute it. In this chapter we write the steps in pseudocode — numbered lines close to plain English — because the language does not matter for the idea. Chapter 3 showed the same IF–ELSE idea in Python.
+
+### 4.4 Test it (testing)
+
+A program that runs is not yet a program that is right. Testing means choosing inputs, deciding in advance what the correct output is, running the program, and comparing. Each input with its expected output is a test case. Section 7 does this for the loan check.
+
+### 4.5 Use and maintain it (deployment, maintenance)
+
+Once the program is in daily use it still changes, for three reasons: a mistake is found that the tests missed; a rule or a law changes, so the program must change with it; or the users ask for something new. Sommerville (2016, Chapters 1–2) treats this as a normal part of a software process rather than an afterthought, and in long-lived systems maintenance takes more effort than the first version. The library gives an everyday example of the second reason: if the library decides that members may have at most five books on loan, the loan-check program is wrong until somebody changes it (Section 8).
+
+## 5. Case study: a library management system
+
+A library management system is a good first example of real software because every reader has stood at a loan desk. Three questions describe it.
+
+- What it stores. Members (name, card number, whether the card is valid; how many books are overdue is worked out from the loans), books (title, copy number, whether the copy is available), and loans (which member has which book, and the due date). Together these are the system's database.
+
+- What it does. Check out a book (the loan decision and a new loan record), return a book (close the loan and, if it is late, charge a fine), and remind members whose books are overdue.
+
+- Who uses it. Librarians at the desk, members who search the catalogue, and an administrator who changes the rules — for example the loan period or the number of books a member may hold.
+
+Figure 2 sketches the system as the librarian meets it: three screens on top, the loan-check program in the middle, and the database underneath. The check-out screen collects the member and the book, hands them to the program, and shows the decision; the program looks up the facts it needs in the database and records the loan if it is approved.
+
+<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/a995c24f-5669-4eb3-a8ac-12c71dc8d4f1" />
+
+> **Figure 2.** The library management system: screens (user interface), the loan-check program, and the database. The decision logic lives inside the program box. Chapter 12 adds a separate rules box to this same picture.
+
+## 6. The loan decision as an ordinary program
+
+Here is the library-loan decision written as an ordinary program, placed inside the check-out screen. The three inputs no longer come from a person typing; the screen reads them from the database when the librarian selects the member and the book. The output goes back to the screen. The listing is written in pseudocode (Forouzan style: if (condition) … else …, with indentation).
+
+```text
+1  read member_has_card, overdue_books, book_available   // from the database
+2  if (member_has_card = false)
+3      output "Loan refused (no valid card)"
+4  else if (overdue_books > 0)
+5      output "Loan refused (overdue books)"
+6  else if (book_available = false)
+7      output "Loan refused (book not available)"
+8  else
+9      output "Loan approved"            // and record the loan
+```
+
+Where does the decision live? Entirely in lines 2 to 9. The library's policy — a member may borrow when the card is valid, no book is overdue and the copy is available — is not stored anywhere as a policy. It is spread across three conditions, in the order the programmer chose, inside the code. To find out what the policy is, you have to read the program; to change the policy, you have to change the program. Notice also that the program always produces an output: the final else covers every case the earlier conditions did not catch. That is a convenience of ordinary code which the rule-based version in Chapter 9 does not have — there, when no rule fires, the system simply has no conclusion.
+
+
+## 7. Testing the program
+
+Testing the loan check means choosing member cases, writing down the expected output before running, and comparing. We use three library members — Mei (valid card, nothing overdue), Tom (one overdue book) and Lin (no valid card) — and add one more case so that every branch of the program is exercised at least once (Table 2).
+
+<img width="750" height="308" alt="image" src="https://github.com/user-attachments/assets/e84ec6c9-180f-405b-98fb-bdf42629dfa2" />
+
+> **Table 2.** Test table for the loan-check program: four cases that between them reach every output line.
+
+The expected outputs come from the requirements, not from the code — this is the idea of black-box testing (Forouzan, 2018, Chapter 10): the tester judges only inputs and outputs, and the expected output is fixed before the program runs, so that the program cannot "tell" the tester what the right answer is. A test passes when the actual output equals the expected one. Two habits make a test table useful: every branch of the program should be reached by at least one case (choosing cases by looking at the branches is white-box testing, Section C), and the cases should be kept, because they will be run again after every change (Section 8).
+
+## 8. Changing the policy: "at most five books on loan"
+
+Suppose the library decides that a member may have at most five books on loan at the same time. The decision in Section 6 knows nothing about this, so the system will keep approving a sixth loan until a programmer changes it. The change runs through the whole life cycle in miniature:
+
+- Understand: the new requirement is written down — "a loan is refused when the member already has five books on loan".
+
+- Plan: the program needs one more input, the number of books the member currently has on loan, and one more condition in the chain.
+
+- Write: the programmer edits the code — line 1 reads the new value and a new else-if is inserted (below).
+
+- Test: all four old cases are run again to make sure nothing else broke, plus two new ones: a member with four books (approved) and a member with five (refused).
+
+- Use: the new version replaces the old one at the loan desk.
+
+```text
+1  read member_has_card, overdue_books, book_available, books_on_loan
+2  if (member_has_card = false)
+3      output "Loan refused (no valid card)"
+4  else if (overdue_books > 0)
+5      output "Loan refused (overdue books)"
+6  else if (books_on_loan >= 5)                       // new condition
+7      output "Loan refused (loan limit reached)"
+8  else if (book_available = false)
+9      output "Loan refused (book not available)"
+10 else
+11     output "Loan approved"
+```
+
+Three things are worth noticing. First, a one-sentence change of policy needed a programmer, an edit in two places, and a full re-test. Second, the order of the conditions is a design decision: putting the loan-limit check before the availability check changes which reason a member sees when two reasons apply at once. Third, nobody can see the policy without reading the code. This is the "change the policy, change the code" side of the story. Chapter 9 (Sections 5–6) shows the opposite picture — the loan policy written as rules R1 and R2 that a person can read, with the engine untouched when a rule is edited — and Chapter 12 compares the two directly, with their strengths and their limitations.
+
+## 9. Activity 5.1 — Describe the steps of a small everyday program
+
+The library needs a second small program for the return desk: when a book is returned, the system records the return and, if the book is late, charges a fine. Write the following, using only this chapter:
+
+1. Requirements — two or three sentences saying what the program must do and with what information.
+
+2. An algorithm of five to nine steps, each step a single action, in the order the program performs them. The late-fine decision should be an IF–ELSE.
+
+3. Two test cases in the form of Table 2: one book returned on time and one returned late, each with its expected output written before you "run" the steps by hand.
+
+Self-check before you look at the answer: Is every step one action? Is the fine decision written as IF … ELSE? Do you have one on-time case and one late case? Did you write each expected output before tracing?
+
+## 10. Answers and expected outcomes
+
+Any wording is acceptable if it has the same parts. A sample answer:
+
+Requirements. When a librarian records a returned book, the program must close the member's loan for that book and mark the copy as available. If the return date is after the due date, the program must calculate a fine of one yuan for each day late and show it; otherwise it shows that no fine is due.
+
+**Algorithm.**
+
+```text
+1  read the book copy and today's date              // return screen
+2  look up the loan for this copy: member, due_date  // database
+3  days_late = today - due_date
+4  if (days_late > 0)
+5      fine = days_late * 1
+6      output "Late by", days_late, "days. Fine:", fine, "yuan"
+7  else
+8      output "Returned on time. No fine."
+9  mark the copy available and close the loan       // write to database
+```
+
+<img width="679" height="124" alt="image" src="https://github.com/user-attachments/assets/7daa1110-570f-45f0-84f9-75d1e785c73a" />
+
+> **Table 3.** Two test cases for the return program, with the expected output decided before tracing.
+
+What to check in a learner's answer: the requirements name the inputs (copy, dates) and both outcomes (fine or no fine); the algorithm has one action per step and reads its facts before deciding; the fine decision is a single IF–ELSE on days_late; the two test cases cover both branches; and the expected outputs were written before the trace. A common mistake is to put
+
+# Chapter 6 — Introduction to Symbolic AI
+
+> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — restructured and AI-assisted draft (3 November 2026); discussed by the team on 4 November 2026
+
+### Learning outcomes
+
+After this chapter, you should be able to:
+
+- Explain what symbolic AI (GOFAI) is, using the words symbol, explicit rule and reasoning.
+- Read an IF-THEN rule, say when it fires, and explain why "may have" and missing facts matter.
+- Name the three benefits and four limitations of symbolic AI listed in PPT 2024, and explain each in one sentence.
+- Describe how symbolic rules are used in assistants, medical diagnosis, autonomous cars and computer vision.
+
+## 1. What symbolic AI is (GOFAI)
+
+Imagine teaching a new library assistant. You could show them thousands of past loans and hope they spot the pattern. Or you could hand them the library's rule book: a member may borrow if the card is valid and nothing is overdue. Symbolic AI takes the second path.
+
+Symbolic AI is the part of AI that represents knowledge with symbols — readable names such as valid_card or fever — and reasons with explicit rules and logic written by people (PPT 2024, chap4 slide 3). It is also called GOFAI, "Good Old-Fashioned AI" — a name coined by the philosopher John Haugeland (1985) — because it was the main approach to AI from the 1950s to the 1980s, before machine learning became popular.
+
+Three ideas sit at its centre:
+
+1. Symbols stand for things. Book(B412) stands for "B412 is a book"; available(B412) for "B412 is on the shelf".
+2. Knowledge is written down explicitly as facts and rules, so a person can read it.
+3. Reasoning is manipulating symbols with rules. The system combines facts and rules to reach new conclusions, step by step, the way you might solve a logic puzzle.
+
+Newell and Simon, two founders of AI, proposed that a system which manipulates symbols in this way has what it needs for intelligent action — their physical symbol system hypothesis (Newell & Simon, 1976). Not everyone agrees, but the idea shaped decades of AI research.
+
+Chapter 1, Sections 3–4, introduced facts, rules, the knowledge base and the inference engine. The rest of Part B develops each idea: logic (Chapter 7), ways of representing knowledge (Chapter 8), rule-based and expert systems (Chapter 9), planning and search (Chapter 10) and language (Chapter 11).
+
+## 2. Rules in action: the medical example
+
+PPT 2024 (chap4 slide 4) gives this rule:
+
+IF the patient has a fever AND the patient has a cough AND the patient has difficulty breathing THEN the patient may have pneumonia.
+
+Read it piece by piece:
+
+<img width="750" height="216" alt="image" src="https://github.com/user-attachments/assets/b0eacafc-4c48-4842-b498-3208911d41ed" />
+
+Worked example. Three patients arrive. The system knows these facts:
+
+<img width="750" height="241" alt="image" src="https://github.com/user-attachments/assets/f81a1cb0-4c1b-43a5-ac3c-b47bf37b1a40" />
+
+Two lessons for beginners:
+
+- The system can explain itself. For Ana it can say exactly why: "the pneumonia rule fired because fever, cough and difficulty breathing are all true". This is the interpretability benefit in PPT 2024 (slide 6).
+- No conclusion is not the same as "no pneumonia". For Chen, the rule simply could not fire. A safe system should ask for the missing fact rather than assume it is false — the trap explained in Section 4.
+
+## 3. Strengths of Explicit Rules
+
+PPT 2024 (slide 6) names three benefits of symbolic AI. All three come from one fact: the knowledge is written down as rules that people can read.
+
+- Interpretability — you can see why. Every decision can be traced back to the exact facts and rules that produced it. Example: the system can say "Ana may have pneumonia because the pneumonia rule fired: fever, cough and difficulty breathing are all true" (Section 2). Many machine-learning models cannot give a reason like this; people call them "black boxes".
+- Knowledge representation — knowledge is stored in a readable form. Facts and rules use symbols that people understand, such as valid_card and overdue_books, so an expert can check them. Example: a librarian can read rules R1 and R2 (Chapter 9) and confirm that they match the library's policy.
+- Flexibility — easy to change. The rules are kept apart from the engine that applies them, so a rule can be added or changed without rewriting the program. Example: the library's new "at most five books" policy is one new rule (Chapter 9), instead of a change to the code (Chapter 5, Section 8).
+
+A fourth advantage is often mentioned: predictability. Given the same facts and rules, the system always reaches the same conclusion.
+
+## 4. Limitations: Handling Imperfect Real-World Information
+
+Despite their clarity, explicit rules and symbolic systems possess significant limitations when confronted with messy, real-world data. They can become unreliable when information is missing, conflicting, or outdated. Expert systems proved hard to build and maintain, partly because their reasoning broke down in the face of uncertainty and partly because they could not learn from experience (Russell & Norvig, 2021, p. 42).
+
+- Missing information: If a required fact is absent from the input data, a rule may fail to trigger entirely, leading to incomplete or stalled decision-making.
+- Conflicting information: If two rules lead to contradictory conclusions from overlapping data, the system can produce conflicting results unless it has a way to resolve the conflict, for example by giving some rules priority.
+- Outdated information: Rules that were accurate last year may become obsolete due to changing regulations or business policies, requiring manual updates by domain experts.
+
+### The trap of missing information ("Missing information does not prove the opposite")
+
+In classical logic and rule-based systems, a critical pitfall arises when information is absent. If a database lacks a record of a customer's allergy, the system cannot logically conclude that the customer is safe from that allergen. In formal reasoning, lack of evidence is not evidence of absence. Some rule engines treat any fact they cannot find as false; this is called the closed-world assumption (Russell & Norvig, 2021, pp. 315, 356). It is safe only when the data is known to be complete — for example, a list of everyone who has paid. When the data may be incomplete, assuming that a missing fact is false can lead to serious mistakes, especially in safety-critical domains such as medicine.
+
+## 5. Where symbolic AI is used
+
+PPT 2024 (chap4 slide 5) lists four application areas. In most modern products, symbolic rules work together with machine learning rather than alone:
+
+<img width="750" height="511" alt="image" src="https://github.com/user-attachments/assets/c4d2a8f1-73e1-4d0a-8d6d-0b8ae4dea568" />
+
+Other uses appear later in this module: business rule engines such as Drools (Chapter 9), route planning and games (Chapter 10), and grammar-based language processing (Chapter 11).
+
+Benefits and limitations in one view. PPT 2024 lists three benefits — interpretability, knowledge representation and flexibility (rules can be added or changed without rewriting the whole program) — and four limitations — incomplete knowledge, scalability (thousands of rules become hard to manage), difficulty with uncertain or ambiguous information, and limited ability to learn and adapt (slides 6–7). Section 3 explains the three benefits with library examples; Section 4 explains incomplete and uncertain information; scalability and the limited ability to learn are discussed in Chapter 9, Section 10.
+
+## 6. Activity: will the rule fire?
+
+Use the pneumonia rule of Section 2.
+
+1. Dina has a fever, a cough and difficulty breathing, and she also has a headache. Does the rule fire? What does the system add?
+2. Eli has difficulty breathing and a cough, but his temperature has not been measured. What should a well-designed system do?
+3. A hospital learns that the rule misses many patients who have no fever. Which benefit from PPT slide 6 makes this easy to fix, and how?
+4. Is a spam filter that learned from thousands of example emails symbolic AI? Why or why not?
+
+**Expected answers**
+
+1. Yes. All three conditions are true; the extra fact (headache) does not matter to this rule. The system adds "Dina may have pneumonia".
+2. It should not assume "no fever". It should ask for the missing fact (measure the temperature) before concluding, because missing information does not prove the opposite (Section 4).
+3. Flexibility (and interpretability): experts can read the rule, see why it misses those patients, and change or add a rule — for example one without the fever condition — without rebuilding the system.
+4. No, not in the sense of this chapter. It learned statistical patterns from data instead of following rules written explicitly by people. It is machine learning (Chapter 1, Section 2). Chapter 12 compares the two approaches with a hands-on activity.
+
+# Chapter 7 — Logic and Reasoning
+
+> Chapter lead (proposed): Frederic Chandra · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+
+### Learning outcomes
+
+After this chapter, you should be able to:
+
+- Decide whether a sentence is a proposition, and work out AND, OR, NOT, implication and biconditional with a truth table.
+- Use De Morgan's laws and double negation to rewrite a condition.
+- Apply modus ponens and modus tollens to reach a conclusion.
+- Read and write simple statements with predicates and the quantifiers ∀ ("for all") and ∃ ("there exists").
+- Use universal modus ponens to draw a conclusion about one object from a general rule.
+
+## 1. Propositions and Boolean operators
+
+The umbrella program of Chapter 3 asked one question: is it raining? The answer was true or false. Logic is the study of sentences like that and of how to combine them correctly.
+
+A proposition is a sentence that is either true or false, but not both (PPT 2024, slide 8). Examples from the slides:
+
+- "The sky is blue."
+- "It is raining."
+- "2 + 2 = 4."
+
+Not propositions: "Close the door!" (a command), "Is it raining?" (a question), "x > 3" (we cannot say true or false until we know x — Section 6 deals with this).
+
+We give propositions short letters. Let p = "It is raining" and q = "I have an umbrella". Three Boolean operators combine them (slide 9):
+
+![Boolean operators AND, OR, and NOT](assets/chapter-7-image-01.png)
+
+A truth table lists every possible combination:
+
+![Truth table for Boolean operators](assets/chapter-7-image-02.png)
+
+Note that logical OR is inclusive: "p ∨ q" is true when both are true. The library's loan rule from Chapter 5 is an AND of three propositions: valid card ∧ no overdue books ∧ book available.
+
+## 2. Logical equivalences: De Morgan and double negation
+
+Two expressions are logically equivalent (≡) when they have the same truth value in every row of the truth table (slide 10). Equivalences let us rewrite a condition into a simpler or clearer form.
+
+De Morgan's laws:
+
+- ¬(p ∧ q) ≡ ¬p ∨ ¬q — "not (p and q)" means "not p, or not q".
+- ¬(p ∨ q) ≡ ¬p ∧ ¬q — "not (p or q)" means "not p, and not q".
+
+Double negation: ¬(¬p) ≡ p — "it is not true that it is not raining" just means "it is raining".
+
+Worked example: the library. A loan is approved when the card is valid (c) and there are no overdue books (n): c ∧ n. When is it refused? ¬(c ∧ n), which by De Morgan is ¬c ∨ ¬n: the card is not valid or there are overdue books. This is exactly how the refusal messages in Chapter 5 work — either reason alone is enough.
+
+Check with a truth table (the two right-hand columns are equal in every row):
+
+![Truth table checking logical equivalences](assets/chapter-7-image-03.png)
+
+## 3. Implication and biconditional
+
+Implication p → q is read "if p, then q" (slide 11). p is the antecedent (premise) and q is the consequent (conclusion). It is the logical form of an IF-THEN rule (Chapter 9).
+
+![Truth table for implication](assets/chapter-7-image-04.png)
+
+The only row that makes p → q false is the one where the promise is broken: p is true but q is false. Example: "If it rains (p), the match is cancelled (q)." If it does not rain, the rule has not been broken, whatever happens to the match — so the last two rows are true. Beginners often find this surprising; it helps to think of p → q as a promise that is only broken when p happens and q does not.
+
+Biconditional p ↔ q is read "p if and only if q". It is true when p and q have the same truth value:
+
+![Truth table for the biconditional](assets/chapter-7-image-05.png)
+
+Example: "The light is on ↔ the switch is up" — when one is true, so is the other; when one is false, so is the other.
+
+## 4. Inference rules: modus ponens and modus tollens
+
+An inference rule lets us derive a new true proposition from ones we already accept (slide 12).
+
+Modus ponens ("the way of affirming"):
+
+- p → q If it is raining, the ground is wet.
+- p It is raining.
+- therefore q The ground is wet.
+
+Modus tollens ("the way of denying"):
+
+- p → q If it is raining, the ground is wet.
+- ¬q The ground is not wet.
+- therefore ¬p It is not raining.
+
+Two common mistakes (they look similar but are not valid):
+
+From p → q and q, concluding p. The ground is wet, so it is raining? Not necessarily — a sprinkler may have been on.
+
+From p → q and ¬p, concluding ¬q. It is not raining, so the ground is not wet? Again, not necessarily.
+
+Forward chaining in Chapter 9 is modus ponens used again and again: when a rule's IF part is known to be true, its THEN part is added as a new fact.
+
+## 5. Propositional logic in AI
+
+PPT 2024 (slide 13) names two roles for propositional logic in AI:
+
+- Knowledge representation: facts and rules are written as propositions and implications, for example valid_card ∧ no_overdue → may_borrow. A computer can store and read these precisely, with no ambiguity.
+- Logical inference: a program applies inference rules such as modus ponens automatically to reach new conclusions. This is what the inference engine of Chapter 9 does.
+
+Propositional logic has a limit: each proposition is one fixed statement. To say "every member with a valid card may borrow", we would need a separate proposition for every member — Mei, Tom, Lin and thousands more. Predicate logic solves this.
+
+## 6. Predicate logic: predicates and quantifiers
+
+A predicate is a statement with a variable that becomes true or false once the variable is given a value (slide 14). Example from the slides: Even(x) — "x is even". Even(4) is true; Even(7) is false. A predicate can have more than one variable: Borrowed(m, b) — "member m borrowed book b".
+
+Quantifiers say how many objects a statement is about:
+
+- The universal quantifier ∀ ("for all") says the statement is true for every object in the domain. Slide example: ∀x (Cat(x) → Mammal(x)) — "for every x, if x is a cat then x is a mammal", or simply "all cats are mammals".
+- The existential quantifier ∃ ("there exists") says it is true for at least one object. Slide example: ∃x (Prime(x) ∧ x < 10) — "there is at least one prime number smaller than 10" (true: 2, 3, 5 and 7).
+
+A useful pattern: ∀ usually goes with → ("all cats are mammals"), and ∃ usually goes with ∧ ("some number is prime and smaller than 10").
+
+Logical connectives work inside predicate logic just as in Section 1 (slide 16): Even(x) ∧ Prime(x); Positive(x) ∨ Negative(x); Adult(x) → CanVote(x); ¬Married(x).
+
+## 7. Formalising natural-language sentences
+
+To formalise a sentence is to write it precisely with predicates and quantifiers. PPT 2024 (slide 15) gives four steps. Here they are for "Some birds can fly":
+
+![Steps for formalising a sentence about birds](assets/chapter-7-image-06.png)
+
+More examples (slide 19, plus library ones):
+
+![Examples of predicate logic formalisation](assets/chapter-7-image-07.png)
+
+## 8. Rules of inference in predicate logic
+
+The rules of Section 4 extend to statements with quantifiers (slides 17–18, 20).
+
+Universal instantiation: from ∀x (P(x) → Q(x)) we may write P(a) → Q(a) for any particular object a. What is true for all is true for each one.
+
+Universal modus ponens: from ∀x (P(x) → Q(x)) and P(a), infer Q(a).
+
+Worked example — the library.
+
+1. ∀m (ValidCard(m) ∧ NoOverdue(m) → MayBorrow(m)) — the library's rule.
+2. ValidCard(Mei) ∧ NoOverdue(Mei) — facts about Mei.
+3. By universal instantiation, ValidCard(Mei) ∧ NoOverdue(Mei) → MayBorrow(Mei).
+4. By modus ponens on 2 and 3: MayBorrow(Mei).
+
+Universal modus tollens: from ∀x (P(x) → Q(x)) and ¬Q(a), infer ¬P(a). All cats are mammals; Tweety is not a mammal; so Tweety is not a cat.
+
+Existential instantiation: from ∃x P(x), we may give the object a name, P(c), where c is a new name not used anywhere else. There is a book that is not available; call it c.
+
+Existential generalisation: from P(c) for a particular c, infer ∃x P(x). B205 is a book and is not available — Book(B205) ∧ ¬Available(B205) — so some book is not available: ∃b (Book(b) ∧ ¬Available(b)).
+
+Universal generalisation: from P(a), infer ∀x P(x) — but only if a was an arbitrary object, one about which we assumed nothing special.
+
+Slide 18 asks: "Do you see anything strange?" Two rules look dangerous at first sight. Universal generalisation seems to say "Mei may borrow, so everyone may borrow" — that would be wrong. It is valid only when a stands for any object at all, not a particular one we know facts about. Existential instantiation seems to say "some book is unavailable, so this book is" — it is valid only because c is a brand-new name that we do not identify with any known book.
+
+## 9. Activity: reason it out
+
+1. Which are propositions? (a) "Beijing is in China." (b) "Please sit down." (c) "y + 1 = 5."
+2. Complete: if p is true and q is false, what are p ∧ q, p ∨ q, p → q and p ↔ q?
+3. Use De Morgan to rewrite "It is not true that the shop is open and has bread."
+4. "If a book is overdue, the member pays a fine. Tom paid no fine." What can you conclude, and which rule did you use?
+5. Formalise: "All students in the module read Chapter 1." Use Student(x) and ReadCh1(x).
+6. From ∀x (Bird(x) → HasFeathers(x)) and Bird(Tweety), what follows, and by which rule?
+
+**Expected answers**
+
+1. (a) yes — it is true; (b) no — a command; (c) no — it depends on y (it becomes a proposition once y has a value).
+2. p ∧ q = F; p ∨ q = T; p → q = F; p ↔ q = F.
+3. "The shop is not open or it has no bread" (¬o ∨ ¬b).
+4. Tom's book was not overdue (assuming the rule is always applied). Modus tollens: p → q, ¬q, therefore ¬p.
+5. ∀x (Student(x) → ReadCh1(x)).
+6. HasFeathers(Tweety), by universal modus ponens (universal instantiation followed by modus ponens).
+
+## Key points
+
+- A proposition is true or false; AND, OR and NOT combine propositions, and truth tables show every case.
+- De Morgan's laws and double negation rewrite conditions without changing their meaning.
+- p → q is false only when p is true and q is false; p ↔ q is true when both sides agree.
+- Modus ponens and modus tollens are valid; "affirming the consequent" and "denying the antecedent" are not.
+- Predicate logic adds predicates and the quantifiers ∀ and ∃, so one rule can cover every object; universal modus ponens applies such a rule to one case — the basis of rule-based reasoning in Chapter 9.
+
+# Chapter 8 — Knowledge Representation
+
+> Chapter lead (proposed): Louis Alexander Dalim · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+
+### Learning outcomes
+
+After this chapter, you should be able to:
+
+- Explain what knowledge representation is and why an AI system needs it.
+- Represent the same library knowledge with logic, a semantic network, a frame and a rule.
+- Use inheritance in a semantic network to answer a question that is not stored directly.
+- Describe a script and an ontology, and name four application areas.
+
+## 1. What knowledge representation is
+
+A new library assistant knows many things without being told each time: a book is something you can borrow, a DVD is too, a borrowed book is not on the shelf, and borrowing follows the same steps every time. A computer knows none of this unless we write it down in a form it can use.
+
+Knowledge representation (KR) is the process of structuring information so that a computer program can use it to solve problems, reason or make decisions (PPT 2024, slide 21). It answers the question: in what form should we store what the system knows?
+
+A good representation lets the system:
+
+- store facts and relationships clearly;
+- reason — work out new facts that were not stored directly;
+- explain its answers in terms people understand;
+- grow — accept new knowledge without being rebuilt.
+
+There is no single best form. This chapter shows five forms from PPT 2024, all describing the same small library world, so you can compare them.
+
+## 2. Logic-based representation
+
+The logic of Chapter 7 is itself a representation language (slide 22).
+
+Propositional logic stores whole statements: let P = "It is raining"; then "It is not raining" is ¬P.
+
+First-order (predicate) logic adds objects, predicates and quantifiers, so it can say much more. The slide's example: "All humans are mortal" is ∀x (Human(x) → Mortal(x)).
+
+For the library:
+
+![Library facts represented with logic](assets/chapter-8-image-01.png)
+
+From the last two lines, universal modus ponens (Chapter 7, Section 8) gives ¬Available(B310). Strength: precise, and automatic inference is well understood. Weakness: hard for non-experts to read and write.
+
+## 3. Semantic networks
+
+A semantic network is a graph (Chapter 4, Section 6). Nodes stand for things or concepts, and labelled links stand for the relationships between them (slide 23).
+
+![Figure 1. A semantic network for part of the library.](assets/chapter-8-image-02.png)
+
+> **Figure 1.** A semantic network for part of the library.
+
+The most important kind of link is is-a, which builds a hierarchy. It allows inheritance: a node automatically has the properties of the nodes above it.
+
+Worked example. Does Harry Potter 1 have pages? The network does not say so directly. But Harry Potter 1 is-a Book, and Book has Pages. By inheritance, yes. Can it be borrowed? If we add "Item — can-be — borrowed", then by following is-a twice (Harry Potter 1 → Book → Item), yes again.
+
+Strength: easy to draw and read; questions become "follow the links". Weakness: link names must be used consistently, and exceptions (a reference book that cannot be borrowed) need extra care.
+
+## 4. Frames and scripts
+
+A frame is a structure that describes a typical object or situation, with slots for its properties and values (slide 24). It is like a form to fill in; slots can have default values that are used unless something else is known.
+
+**Frame: Book**
+
+![Frame representation for a book](assets/chapter-8-image-03.png)
+
+**Frame: Reference book**
+
+![Frame representation for a reference book](assets/chapter-8-image-04.png)
+
+A dictionary in the reference section fills in the Reference-book frame; it inherits the loan period slot from Book, but its own "can be borrowed: no" overrides the default. Frames, like semantic networks with default values, handle exceptions by letting a more specific frame override an inherited value (Russell & Norvig, 2021, pp. 347–355).
+
+A script is a sequence of frames that describes a typical series of events (slide 24; Schank & Abelson, 1977). Script: borrowing a book
+
+1. Entry: the member brings a book and a card to the desk.
+2. Check: the librarian scans the card and the book.
+3. Decision: the system applies the loan rules (Chapter 9).
+4. Loan: the loan is recorded with a due date.
+5. Exit: the member leaves with the book.
+
+Scripts let a system fill gaps in a story. If someone says "Mei went to the desk and left with the book", a system with this script can infer that her card was checked and a loan was recorded, even though nobody said so.
+
+## 5. Rule-based representation
+
+Knowledge can also be stored as production rules: IF-THEN statements that capture conditions and the actions or conclusions that follow (slide 25). The slide's medical example: "IF the patient has fever and cough, THEN consider the possibility of a respiratory infection."
+
+For the library:
+
+- R1: IF the member has a valid card AND has no overdue books THEN the member may borrow.
+- R2: IF the member may borrow AND the book is available THEN approve the loan.
+
+Rules are used to infer new knowledge from existing knowledge. Chapter 9 explains how a rule-based system stores them in a knowledge base and how its inference engine applies them by forward and backward chaining.
+
+## 6. Ontologies
+
+When two systems — or two people — use the same word, do they mean the same thing? For one library "item" includes e-books; for another it does not. An ontology fixes this. It is a formal description of the concepts in a domain and the relationships between them, giving a shared vocabulary and a hierarchy (slides 26–27). Gruber (1993) described an ontology as an explicit specification of a conceptualisation — a written-down, agreed way of seeing a domain.
+
+A small library ontology:
+
+![A small library ontology](assets/chapter-8-image-05.png)
+
+An ontology is like a semantic network with agreed definitions and rules, written carefully enough that different programs can share it. Large real examples include SNOMED CT for medical terms and the Gene Ontology for biology. Ontologies for the web are often written in OWL, the Web Ontology Language standardised by the World Wide Web Consortium (W3C, 2012).
+
+How the five forms compare
+
+![Comparison of knowledge representation forms](assets/chapter-8-image-06.png)
+
+## 7. Applications
+
+PPT 2024 (slide 28) lists four areas where knowledge representation is essential:
+
+1. Medical diagnosis: symptoms, diseases and medical expertise are represented so the system can suggest diagnoses (the pneumonia rule of Chapter 6; MYCIN in Chapter 9).
+2. Natural language understanding: knowledge about words and meaning lets a system understand and produce language — for example, knowing that a cat is an animal (Chapter 11).
+3. Robotics: a robot needs to represent space, objects and tasks — where the shelves are, what a book is, how to plan a route (Chapter 10).
+4. Expert systems: domain knowledge is represented so the system can give expert-level advice (Chapter 9).
+
+## 8. Activity: represent it
+
+1. Add to Figure 1: "A DVD has a running time" and "Spirited Away is a DVD". Write the new links.
+2. Using your network, does Spirited Away have a running time? Which property of semantic networks did you use?
+3. Write a frame for "Member" with at least four slots, including one default value.
+4. Write "Every DVD is an item" in predicate logic.
+5. Which representation would you choose to explain the steps of returning a book, and why?
+
+**Expected answers**
+
+1. DVD —has→ Running time; Spirited Away —is-a→ DVD.
+2. Yes, by inheritance: Spirited Away is-a DVD, and DVD has a running time.
+3. For example — is-a: Person; name: (fill in); card valid: (fill in); maximum loans: 5 (default); overdue books: 0 (default).
+4. ∀x (DVD(x) → Item(x)).
+5. A script, because returning a book is a typical sequence of events (bring the book → scan → check the due date → fine if late → mark as available). Rules would suit the fine decision inside it.
+
+## Key points
+
+- Knowledge representation decides the form in which a system stores what it knows, so that it can reason and explain.
+- Logic is precise; semantic networks show relationships and allow inheritance; frames hold typical properties with defaults; scripts hold typical sequences of events; rules capture decisions; ontologies give a shared, formal vocabulary.
+- The same knowledge can be written in several forms; the best choice depends on the task.
+
+
