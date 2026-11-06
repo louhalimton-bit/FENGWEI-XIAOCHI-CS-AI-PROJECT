@@ -1678,7 +1678,7 @@ Until statistical methods took over in the late 1980s and 1990s (and deep learni
 - Words as Symbols & Grammar Rules: Symbolic NLP treats words as discrete symbols governed by explicit grammar rules. Instead of guessing word probabilities, it builds syntax trees using formal rules such as Context-Free Grammar (CFG) to analyze sentence structure.
 - The Step-by-Step Language Pipeline:
 
-![Illustration for 2. Grammars and parsing: a rule-based pipeline (moved from the former Chapter 5, §4.1)](assets/chapter-11-image-01.png)
+<img width="750" height="143" alt="image" src="https://github.com/user-attachments/assets/b0070b99-06d2-44ac-bd67-a8d5b215eb01" />
 
 1. Text Input: Receiving raw text from the user (e.g., "The expert doctor examines the patient").
 2. Tokenization: Splitting the text into individual word tokens ["The", "expert", "doctor", "examines", "the", "patient"].
@@ -1690,7 +1690,7 @@ Until statistical methods took over in the late 1980s and 1990s (and deep learni
 
 PPT 2024 (slide 42) explains that formal grammars, such as context-free grammars (CFGs), define the rules for building correct sentences and capture their hierarchical structure. A CFG is a set of rewrite rules. Each rule says what a part of a sentence can be made of:
 
-![Illustration for 2.1 Worked example: a grammar for "The cat chased the mouse"](assets/chapter-11-image-02.png)
+<img width="661" height="286" alt="image" src="https://github.com/user-attachments/assets/fc18d263-113e-41ed-b870-9f097de42a40" />
 
 Parsing means finding how a sentence can be built from these rules. For "The cat chased the mouse":
 
@@ -1701,7 +1701,7 @@ Parsing means finding how a sentence can be built from these rules. For "The cat
 
 The result is a parse tree:
 
-![The parse tree shows the sentence's structure: who did what to whom.](assets/chapter-11-image-03.png)
+<img width="750" height="507" alt="image" src="https://github.com/user-attachments/assets/d453198c-0478-4957-8ecc-4ee8ad750838" />
 
 > **Figure 1.** The parse tree shows the sentence's structure: who did what to whom.
 
@@ -1719,7 +1719,7 @@ As a semantic network (Chapter 8): cat —chased→ mouse. With an ontology, the
 
 PPT 2024 (slide 44) names the three knowledge representations most used for language:
 
-![Illustration for 3. Semantics and knowledge representation for language](assets/chapter-11-image-04.png)
+<img width="750" height="165" alt="image" src="https://github.com/user-attachments/assets/1d8fc689-286e-49f9-ba61-3d989e714850" />
 
 ## 4. Rule-based NLP: part-of-speech tagging and parsing
 
@@ -1729,7 +1729,7 @@ Part-of-speech (POS) tagging labels each word with its word class. A simple rule
 
 Example from the slide: "The quick brown fox jumps over the lazy dog."
 
-![Illustration for 4. Rule-based NLP: part-of-speech tagging and parsing](assets/chapter-11-image-05.png)
+<img width="750" height="408" alt="image" src="https://github.com/user-attachments/assets/72e16dda-ea85-449e-be4e-2faa55095b73" />
 
 Rules like "a word ending in -ly is probably an adverb" or "after the, the next noun ends the noun phrase" handle words the lexicon does not know. Once the words are tagged, a grammar (Section 2.1, with extra rules for adjectives and prepositions) finds the structure: subject "the quick brown fox", verb "jumps", and the phrase "over the lazy dog" saying where.
 
@@ -1767,7 +1767,7 @@ Sentiment analysis finds the emotional tone of a text — positive, negative or 
 - a negation rule: "not" or "never" directly before a sentiment word reverses it;
 - a simple decision: count positive minus negative; above 0 → positive, below 0 → negative, 0 → neutral.
 
-![Illustration for 6.1 Sentiment analysis](assets/chapter-11-image-06.png)
+<img width="750" height="241" alt="image" src="https://github.com/user-attachments/assets/2e51616d-cafd-4247-af7b-434bc14758fb" />
 
 Limit: sarcasm ("Great, the printer is broken again") fools simple rules, because the words are positive but the meaning is negative.
 
@@ -1823,11 +1823,11 @@ In many advanced applications, software and symbolic AI do not compete — they 
 
 By combining these two approaches, the program logic manages the user experience and data flow, while the rule-based component evaluates logical conditions to derive conclusions.
 
-![Software and symbolic AI together: the screens and the database (program logic) pass facts to the knowledge base, and the inference engine sends its conclusion back to the screen.](assets/chapter-12-image-01.png)
+<img width="750" height="434" alt="image" src="https://github.com/user-attachments/assets/e4d420bf-4f63-479a-a307-4d2bfecbc2df" />
 
 > **Figure 1.** Software and symbolic AI together: the screens and the database (program logic) pass facts to the knowledge base, and the inference engine sends its conclusion back to the screen.
 
-![Illustration for 1. Bridging Software and Symbolic AI: The Hybrid Architecture](assets/chapter-12-image-02.png)
+<img width="750" height="175" alt="image" src="https://github.com/user-attachments/assets/f1f44153-630a-4da3-881d-c5836023f903" />
 
 ## 2. Fixed Program Logic vs. Explicit Rules
 
@@ -1845,7 +1845,7 @@ Traditional software relies on fixed program logic, where algorithms and decisio
 
 Chapters 5 and 9 wrote the same library decision in two different ways. Put side by side, they show what each approach is good at.
 
-![Illustration for 3. Worked Example 1: One Decision, Two Ways — the Library Loan](assets/chapter-12-image-03.png)
+<img width="750" height="526" alt="image" src="https://github.com/user-attachments/assets/6a94e436-83e5-4de3-a984-98ad45c4093b" />
 
 What this shows. Both versions reach the same decision for the same facts. The program is complete and predictable, but its policy is spread through the code. The rules make the policy visible and easy to change, but the system can only conclude what its rules cover. Real systems often combine the two (Figure 1).
 
@@ -1908,7 +1908,7 @@ Preparation. A computer with a web browser; Scratch (https://scratch.mit.edu); M
 3. The slide shows only this main script. Give each sprite a short script of its own that reacts to the messages, for example: when I receive turn-fan-on, switch the fan's costume to on.
 4. Click the green flag, test the commands in the table below, and record what happens.
 
-![The rule-based assistant. Source: professor's PPT 2024, chap4 slide 50. On the slide, the ask block contains the answer block, so the first question is blank and later questions repeat your last answer; you can type "Enter your command" there instead, as in Figure 3.](assets/chapter-12-image-04.png)
+<img width="750" height="986" alt="image" src="https://github.com/user-attachments/assets/a6f37dc2-badb-47d6-956f-768156c4c652" />
 
 > **Figure 2.** The rule-based assistant. Source: professor's PPT 2024, chap4 slide 50. On the slide, the ask block contains the answer block, so the first question is blank and later questions repeat your last answer; you can type "Enter your command" there instead, as in Figure 3.
 
@@ -1925,29 +1925,29 @@ Preparation. A computer with a web browser; Scratch (https://scratch.mit.edu); M
 6. Click the green flag. Because of the extra ask, the question appears twice at the start, and the script does not check your first answer. Press Enter the first time, then type your command the second time.
 7. Test the same commands again. Each reply stays for about 5 seconds, until the question comes back.
 
-![The machine-learning assistant. Source: professor's PPT 2024, chap4 slide 50. The loop and the four messages stay the same. The main change is the test inside each IF: it now asks the trained model instead of comparing exact words.](assets/chapter-12-image-05.png)
+<img width="750" height="979" alt="image" src="https://github.com/user-attachments/assets/8d6b7565-6328-472a-9855-2930afbd28d0" />
 
 > **Figure 3.** The machine-learning assistant. Source: professor's PPT 2024, chap4 slide 50. The loop and the four messages stay the same. The main change is the test inside each IF: it now asks the trained model instead of comparing exact words.
 
-![The team's training examples: six for each label. Screenshot from Machine Learning for Kids, 4 November 2026.](assets/chapter-12-image-06.png)
+<img width="750" height="476" alt="image" src="https://github.com/user-attachments/assets/85302e3a-a64a-4f56-8cd5-e1d661cd0b1b" />
 
 > **Figure 4.** The team's training examples: six for each label. Screenshot from Machine Learning for Kids, 4 November 2026.
 
-![The trained model's answers to the eight test commands. Screenshots from Machine Learning for Kids, 4 November 2026.](assets/chapter-12-image-07.png)
+<img width="750" height="630" alt="image" src="https://github.com/user-attachments/assets/ad7daccf-f7a2-4643-b7f7-791dc05e03b4" />
 
 > **Figure 5.** The trained model's answers to the eight test commands. Screenshots from Machine Learning for Kids, 4 November 2026.
 
-![The team's working script, running in Machine Learning for Kids' version of Scratch. The yellow glow shows that it is running. Screenshot, 4 November 2026.](assets/chapter-12-image-08.png)
+<img width="750" height="832" alt="image" src="https://github.com/user-attachments/assets/080eacb3-626b-487e-9dbb-e2c5393b3334" />
 
 > **Figure 6.** The team's working script, running in Machine Learning for Kids' version of Scratch. The yellow glow shows that it is running. Screenshot, 4 November 2026.
 
-![Three commands run through the script in Figure 6: the command typed (top) and the cat's reply (bottom). The team typed "turn fan on" and "It's too dark too read" (a typing slip), so the wording differs a little from the table below, but the cat still gave the replies you would expect. Screenshots, 4 November 2026.](assets/chapter-12-image-09.png)
+<img width="750" height="455" alt="image" src="https://github.com/user-attachments/assets/dec5d4b4-5e10-460e-9237-a2439aea6338" />
 
 > **Figure 7.** Three commands run through the script in Figure 6: the command typed (top) and the cat's reply (bottom). The team typed "turn fan on" and "It's too dark too read" (a typing slip), so the wording differs a little from the table below, but the cat still gave the replies you would expect. Screenshots, 4 November 2026.
 
 ### Observation table
 
-![Illustration for Observation table](assets/chapter-12-image-10.png)
+<img width="750" height="546" alt="image" src="https://github.com/user-attachments/assets/def8e02c-68ae-4f00-b000-258696df214e" />
 
 None of these eight commands was a training example, yet the model chose a sensible label for the first seven. The last result matters most: the script in Figure 6 checks only the label, not the confidence, so the cat said "Fan on" when the team typed "make me a sandwich" (Figure 7). A real assistant would have switched the fan on.
 
@@ -1980,7 +1980,7 @@ Scope note from the project plan: neuro-symbolic AI is out of scope for this mod
 
 To synthesize everything we have learned in this chapter, here is a master comparison table evaluating Pure Connectionist AI, Pure Classical Symbolic AI, and Modern Hybrid Neuro-Symbolic AI.
 
-![Illustration for 7.2 Comparison table](assets/chapter-12-image-11.png)
+<img width="750" height="694" alt="image" src="https://github.com/user-attachments/assets/ac4bb1d5-0bf8-450b-b702-29628698f95d" />
 
 ## Key points
 
