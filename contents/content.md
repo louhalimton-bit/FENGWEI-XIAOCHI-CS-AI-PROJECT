@@ -18,7 +18,7 @@ Summarize selected milestones in software and symbolic AI history and state one 
 
 The module follows the professor's PPT 2024 outline: **Part A — Software and Algorithms** (chap3) and **Part B — Symbolic AI** (chap4). The umbrella decision and the library loan desk run through both parts.
 
-![Embedded figure](assets/image-068.png)
+<img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/1bbcb9ce-0914-48ff-ad28-be775c280243" />
 
 Sections 3 and 4 of this chapter preview symbolic AI; Chapters 6–9 develop it fully.
 
@@ -26,7 +26,7 @@ Sections 3 and 4 of this chapter preview symbolic AI; Chapters 6–9 develop it 
 
 Imagine leaving home for class. It is raining and you are going outside, so you take an umbrella. The situation can be represented with two facts and one rule: **IF it is raining AND you are going outside, THEN recommend an umbrella.** The result is a recommendation based on stated information. A program can store the facts, check the conditions, and display the conclusion.
 
-![Embedded figure](assets/image-088.png)
+<img width="500" height="265" alt="image" src="https://github.com/user-attachments/assets/2f6f7c6c-1d78-433b-8f40-e7022962612e" />
 
 *Figure 1. A familiar decision represented as facts, a rule, and a conclusion.*
 
@@ -42,7 +42,7 @@ A **symbol** is a named representation of something in a problem, such as member
 
 A rule-based system commonly has two parts. The **knowledge base** stores the facts and rules for the task. The **inference engine** checks whether current facts satisfy a rule's conditions and applies matching rules. The recommendation can then be shown to the user. Because the knowledge and rules are stated explicitly, a person can inspect what the system used to reach its result [14, 15].
 
-![Embedded figure](assets/image-057.png)
+<img width="575" height="344" alt="image" src="https://github.com/user-attachments/assets/2745cecf-fefd-4f55-a79f-fea6a27580a6" />
 
 *Figure 2. A simple architecture for symbolic AI software.*
 
@@ -78,7 +78,7 @@ Symbolic AI is one way to build software that reasons with explicit knowledge. T
 
 The supplied project plan uses a library-loan scenario in its mini lecture [16]. Start with these facts: the member has a valid card, has no overdue books, and the requested book is available.
 
-![Embedded figure](assets/image-044.png)
+<img width="550" height="175" alt="image" src="https://github.com/user-attachments/assets/e6b76f93-776f-484c-b6e9-465bc651b5cf" />
 
 This is a small example of **forward chaining**: start with known facts, apply a rule whose conditions match, add its conclusion as a new fact, and check the rules again. The software produces the approval because the stated facts and rules support it. Chapter 9 explains forward chaining fully and traces this example one step at a time.
 
@@ -90,7 +90,7 @@ Explicit rules are easy to inspect and test one by one. This is useful when a ta
 
 The history of software follows the development of programmable machines, stored programs, more expressive languages, and disciplined software engineering. Symbolic AI developed alongside it as researchers explored whether computers could manipulate symbols, represent knowledge, and reason from it. The two histories meet because AI systems are software: they use computer hardware and must also be designed, tested, and maintained.
 
-![Embedded figure](assets/image-011.png)
+<img width="550" height="650" alt="image" src="https://github.com/user-attachments/assets/b93fe21e-45b6-40b4-9b00-b72f5d3f6f70" />
 
 This timeline is selective. It shows how software moved from early programmable ideas to engineered systems, while symbolic AI moved from logic and deduction programs to expert systems and rule engines.
 
