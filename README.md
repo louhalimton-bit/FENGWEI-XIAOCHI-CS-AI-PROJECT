@@ -71,32 +71,34 @@ conclusion.
 ├── README.md                  # Repository overview and guide
 ├── contents/
 │   └── content.md             # Shared Markdown learning content (V1.0)
+│   └── study-guide.md         # Study guide for beginner to learn the module.
 ├── main/
-│   ├── README.md              # Notes on this folder
-│   ├── module-outline.md      # Module outline and section status
-│   ├── task-list.md           # Project plan and task list
-│   ├── study-guidev1/         # Study guide drafts (chapter1, chapter2)
 │   └── Project-Log/
-│       ├── Significant-AI-Use
+│       ├── project-plan.md
 │       └── meeting-summaries.md
+│   ├── module-outline.md      # Module outline and section status
 ├── logs/
 │   ├── stage1-ai-usage-log.md
+│   ├── stage2-ai-usafe-log.md
 │   └── Quality-Review/
 │       ├── Evidence.md
 │       └── Final-Review-Quality-Check-List.md
 ├── references/
-│   └── sources.md             # Verified sources
+│   └── chapter-references.md             # Verified sources
 └── assets/                    # Images and diagrams (relative paths)
+│   ├── videos                 # Videos used for the module 
+│   ├── Presentation slides    # PowerPoint slides for each chapter
+│   ├── Chapters               # Diagrams and images for each chapter
 ```
 ## Current Progress and Remaining Work
 
 **Done:** Repository set up with roster and README ; Module outline for the developed 12 chapters; project plan and task list developed further to follow Stage 2; Markdown content V2 Completed ; review and AI-use logs started ; Study Guide and Test Bank completed ; Video Tutorial completed ; PowerPoint presentation slides completed
 
-**Remaining:** Peer review and Example testing ; live mini lecture draft
+**Remaining:** Peer review and Example testing ; live mini lecture draft; Stage 3 initialization 
 
 ## Location of Learning Material
 
 - Module outline: `main/module-outline.md`
-- Learning content: `contents/content.md` and `main/study-guidev1/`
-- Plan and task list: `main/task-list.md`
-- Sources: `references/references.md`
+- Learning content: `contents/content.md` and `contents/study-guide.md/`
+- Plan and task list: `main/project log/project-plan.md`
+- Sources: `references/chapter-references.md`
