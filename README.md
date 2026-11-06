@@ -90,16 +90,13 @@ conclusion.
 ```
 ## Current Progress and Remaining Work
 
-**Done:** repository set up with roster and README; module outline for six
-chapters; project plan and task list; Markdown content drafted
-(chapters 1 - 2 completed); review and AI-use logs started.
+**Done:** Repository set up with roster and README ; Module outline for the developed 12 chapters; project plan and task list developed further to follow Stage 2; Markdown content V2 Completed ; review and AI-use logs started ; Study Guide and Test Bank completed ; Video Tutorial completed ; PowerPoint presentation slides completed
 
-**Remaining:** draft chapters 3 - 6; peer review and example testing; Study Guide and Test Bank, PPT slides and video tutorial (Stage 2, due
-Nov 7); live mini lecture.
+**Remaining:** Peer review and Example testing ; live mini lecture draft
 
 ## Location of Learning Material
 
 - Module outline: `main/module-outline.md`
 - Learning content: `contents/content.md` and `main/study-guidev1/`
 - Plan and task list: `main/task-list.md`
-- Sources: `references/sources.md`
+- Sources: `references/references.md`
