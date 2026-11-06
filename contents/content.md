@@ -282,7 +282,7 @@ For example, a weather application can receive a location, process weather infor
 
 Data are values a program receives, stores, or works with. Data may be text, numbers, answers, dates, or measurements. Instructions tell the program what to do with the data. An instruction might ask the program to compare two values, calculate a total, save information, or display a message.
 
-![Examples distinguishing data from instructions](assets/chapter-3-image-01.png)
+<img width="750" height="205" alt="image" src="https://github.com/user-attachments/assets/20deb0a8-10da-4fdc-beb0-6e5a8dc854ba" />
 
 The computer does not treat the user's answer as a command in this example. The answer is data. The program's instructions decide how to use it.
 
@@ -296,7 +296,7 @@ A useful way to understand many programs is to divide their work into three stag
 
 A weather reminder can be represented like this:
 
-![Weather reminder shown as input, processing, and output](assets/chapter-3-image-02.png)
+<img width="750" height="195" alt="image" src="https://github.com/user-attachments/assets/04a813bc-156c-42eb-8647-517562ec3d33" />
 
 Input, processing, and output describe roles in a task. A program can have several inputs and outputs, and the output of one step can become the input for a later step.
 
@@ -304,7 +304,7 @@ Input, processing, and output describe roles in a task. A program can have sever
 
 Suppose a program receives the prices of two items. The prices are input data. The instructions add the prices together during processing. The total is the output.
 
-![Shopping total example shown as input, processing, and output](assets/chapter-3-image-03.png)
+<img width="504" height="165" alt="image" src="https://github.com/user-attachments/assets/ea4f6ef4-975f-4aa3-a47d-299ec6646c01" />
 
 The numbers are data. "Add the two prices" is an instruction.
 
@@ -331,9 +331,9 @@ If the condition is true, run the instructions in the IF branch.
 
 If the condition is false, run the instructions in the ELSE branch.
 
-![Generic IF-ELSE flowchart with two branches and one result](assets/chapter-3-image-04.png)
+<img width="575" height="480" alt="image" src="https://github.com/user-attachments/assets/35768678-31c5-490e-9a08-10721904f43c" />
 
-![Weather reminder flowchart with true and false branches](assets/chapter-3-image-05.png)
+<img width="750" height="476" alt="image" src="https://github.com/user-attachments/assets/02b51357-d4f7-4553-8730-d9536e183746" />
 
 > **Figure 1.** The weather reminder as a flowchart: the condition is checked once, and exactly one branch runs.
 
@@ -355,7 +355,7 @@ The Python Language Reference explains that an `if` statement selects exactly on
 
 ### What each line does
 
-![Python weather reminder program with line explanations](assets/chapter-3-image-06.png)
+<img width="750" height="348" alt="image" src="https://github.com/user-attachments/assets/5a7fbd91-6732-4579-ac43-194653d6ca07" />
 
 A variable is a named place in a program where a value can be stored. Here, `rain_answer` stores the input. In Python, `=` assigns a value to a variable, while `==` compares two values. Python's `input()` receives text, and `print()` displays output. [3]
 
@@ -363,13 +363,13 @@ A variable is a named place in a program where a value can be stored. Here, `rai
 
 To trace a program is to follow its instructions in order for a particular input. Record the data, evaluate each condition, and note which instructions run.
 
-![Trace of the weather reminder when the answer is yes](assets/chapter-3-image-07.png)
+<img width="750" height="399" alt="image" src="https://github.com/user-attachments/assets/90943511-fbf5-4c03-b39e-4695848d814d" />
 
 **Output:** Take an umbrella
 
 ### Trace B: the user enters no
 
-![Trace of the weather reminder when the answer is no](assets/chapter-3-image-08.png)
+<img width="750" height="399" alt="image" src="https://github.com/user-attachments/assets/e4018dd6-780e-4498-94cd-6d2962c3f629" />
 
 **Output:** No umbrella needed
 
@@ -400,7 +400,7 @@ For each input, write:
 
 **Expected answers**
 
-![Practice trace example and expected answers](assets/chapter-3-image-09.png)
+<img width="643" height="124" alt="image" src="https://github.com/user-attachments/assets/29d45f5f-69d7-40a9-a331-258319e62b36" />
 
 ### Practice 2: find the error
 
@@ -436,7 +436,7 @@ Sections 1–6 showed one small algorithm, the weather reminder. This section an
 
 Not every list of steps is an algorithm. Knuth (1997, §1.1) describes five features; the course books give shorter definitions with the same ideas — an ordered set of unambiguous steps that produces a result and stops (Forouzan, 2018, pp. 223–224; Brookshear & Brylow, 2019, Ch. 5):
 
-![Five features of an algorithm](assets/chapter-3-image-10.png)
+<img width="750" height="399" alt="image" src="https://github.com/user-attachments/assets/f3e49b82-99d4-4206-88b0-feb84025759d" />
 
 A recipe that says "add salt until it tastes right" fails definiteness: two cooks will do different things. A step that says "keep counting until you reach the last number" fails finiteness, because there is no last number.
 
@@ -444,7 +444,7 @@ A recipe that says "add salt until it tastes right" fails definiteness: two cook
 
 The same algorithm can be written in several ways. Each way suits a different reader.
 
-![Ways to represent an algorithm](assets/chapter-3-image-11.png)
+<img width="750" height="373" alt="image" src="https://github.com/user-attachments/assets/7aec4205-3bf9-4db2-ab65-5df398c66cd3" />
 
 A flowchart uses standard shapes: an oval for Start and Stop, a parallelogram for input and output, a rectangle for a processing step, a diamond for a yes/no decision, and arrows for the order.
 
@@ -463,8 +463,7 @@ for days in days_late:
     total = total + days * 1
 print("Total fine:", total, "yuan")
 ```
-
-![Iteration example calculating total late fines](assets/chapter-3-image-12.png)
+<img width="415" height="165" alt="image" src="https://github.com/user-attachments/assets/017d4a68-8d65-4e32-b9d3-d8bd5d87d8c7" />
 
 **Output:** `Total fine: 7 yuan`. The loop stops by itself after the last item, so the algorithm is finite.
 
@@ -499,7 +498,7 @@ Binary search only works on a sorted list, but it is much faster. It looks at th
 
 **Example:** find 70 in the sorted list `10, 20, 30, 40, 50, 60, 70, 80, 90` (positions 1–9).
 
-![Binary search example on a sorted list](assets/chapter-3-image-13.png)
+<img width="546" height="124" alt="image" src="https://github.com/user-attachments/assets/c335dc52-7204-4139-a6a8-bcab53a4a653" />
 
 Two checks instead of seven. Each step halves the list, so even 1,000 sorted items need only about 10 checks. It is the same game as "guess my number from 1 to 100" when the answer is "higher" or "lower".
 
@@ -507,7 +506,7 @@ Sorting puts items into order. A simple method is bubble sort: go through the li
 
 **Example:** sort `5, 3, 8, 1`.
 
-![Bubble sort example across passes](assets/chapter-3-image-14.png)
+<img width="618" height="205" alt="image" src="https://github.com/user-attachments/assets/86bc3414-cc76-49d2-b1ad-0d993d8b5da9" />
 
 After each pass the largest remaining number has "bubbled" to its place at the end. Bubble sort is easy to understand but slow on long lists; real software uses faster methods such as merge sort and quicksort, which a "Going further" study can explore.
 
@@ -568,7 +567,7 @@ Algorithms (Chapter 3) and data structures work together: an algorithm is the li
 
 An array is a fixed number of boxes of the same kind, stored side by side. Each box has a number called its index. In most languages the first index is 0.
 
-![Array and linked list diagrams](assets/chapter-4-image-01.png)
+<img width="750" height="420" alt="image" src="https://github.com/user-attachments/assets/c42d78c3-9aae-42d0-a849-bb5b7ae0f24a" />
 
 > **Figure 1.** Top: an array. Bottom: a linked list (Section 3).
 
@@ -584,7 +583,7 @@ Because the boxes sit side by side, the computer can jump straight to any index;
 
 A record groups several pieces of data about one thing, each with its own name (a field). A library member is a record:
 
-![Library member record example](assets/chapter-4-image-02.png)
+<img width="228" height="205" alt="image" src="https://github.com/user-attachments/assets/a06ba3c0-cb08-4883-89ae-49c1f06d475f" />
 
 In Python a record can be written as a dictionary: `member = {"member_id": "M017", "name": "Mei", "has_valid_card": True, "overdue_books": 0}`. An array of records — one record per member — is much like a database table (Chapter 5, Section E), where each row is one record.
 
@@ -594,7 +593,7 @@ A linked list is a chain of nodes. Each node holds a value and a link (pointer) 
 
 Think of a treasure hunt: each clue tells you where the next clue is. To reach the third clue you must follow the first two — you cannot jump. That is the main trade-off:
 
-![Linked list insertion example](assets/chapter-4-image-03.png)
+<img width="750" height="216" alt="image" src="https://github.com/user-attachments/assets/bef3a044-ca06-4d9f-9e06-169143e887e6" />
 
 **Example.** To insert B250 between B205 and B310, make the new node point to B310, then make B205 point to the new node. Nothing else moves.
 
@@ -610,13 +609,13 @@ A queue is a list where items join at the back and leave from the front — like
 - **enqueue:** join at the back.
 - **dequeue:** leave from the front.
 
-![Stack and queue diagrams](assets/chapter-4-image-04.png)
+<img width="750" height="330" alt="image" src="https://github.com/user-attachments/assets/f0e9a5df-47bc-4f71-91db-7f1ea711f8eb" />
 
 > **Figure 2.** A stack (left) and a queue (right).
 
 **Worked example:** trace a stack. Start with an empty stack.
 
-![Stack trace example](assets/chapter-4-image-05.png)
+<img width="529" height="286" alt="image" src="https://github.com/user-attachments/assets/245e1d29-2f33-4a13-8a90-db05cf5b437b" />
 
 Where they are used: the Undo button keeps your last actions on a stack; a printer keeps jobs in a queue; the operating system keeps ready processes in a queue (Chapter 2, Section 3).
 
@@ -626,7 +625,7 @@ A tree stores data in a hierarchy, like a family tree or the library's subject c
 
 A binary tree is a tree in which every node has at most two children, a left one and a right one. A very useful kind is the binary search tree: for every node, all numbers in its left part are smaller, and all numbers in its right part are larger.
 
-![Binary search tree of shelf numbers](assets/chapter-4-image-06.png)
+<img width="750" height="458" alt="image" src="https://github.com/user-attachments/assets/90315f03-aa9d-447d-96b9-5e0aa8362b01" />
 
 > **Figure 3.** A binary search tree of shelf numbers.
 
@@ -638,7 +637,7 @@ Find 45. 50 → left to 30 → right to 40 → right of 40 is empty. So 45 is no
 
 A graph is a set of nodes (also called vertices) joined by edges. Unlike a tree, a graph can have cycles (paths that lead back to where they started), and any node can connect to any other. Maps, social networks and the web are graphs.
 
-![Library map represented as a graph](assets/chapter-4-image-07.png)
+<img width="750" height="450" alt="image" src="https://github.com/user-attachments/assets/a5f19dd0-779e-4f20-8f2f-c52a77781f1c" />
 
 > **Figure 4.** The library map as a graph. Chapter 10 uses the numbers on the edges; here we only need which rooms are connected.
 
@@ -646,7 +645,7 @@ Breadth-first search (BFS) visits a graph layer by layer: first the start node, 
 
 **Worked example:** BFS from the Entrance (E). Neighbours are added in alphabetical order, and a node is never added twice.
 
-![Breadth-first search visiting order](assets/chapter-4-image-08.png)
+<img width="627" height="286" alt="image" src="https://github.com/user-attachments/assets/1f7965e5-5b72-454a-aa19-5d2c0052e660" />
 
 Visiting order: E, H, K, R, S, A. The rooms one step away (H, K) come before the rooms two steps away (R, S). Chapter 10 uses BFS and other search methods to plan a route to the Archive.
 
