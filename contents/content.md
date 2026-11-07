@@ -17,7 +17,7 @@ The module follows the professor's PPT 2024 outline: Part A — Software and Alg
 
 <img width="750" height="650" alt="image" src="https://github.com/user-attachments/assets/3f7e22f6-ff2d-49b3-8cb0-fc2bcab8c2f9" />
 
-Sections 3 and 4 of this chapter preview symbolic AI; Chapters 6–9 develop it fully.
+Sections 3 and 4 of this chapter preview symbolic AI; Chapters 6–11 develop it fully.
 
 ## 1. Start with a familiar decision
 
@@ -110,7 +110,7 @@ Software provides instructions for processing information. AI describes systems 
 
 # Chapter 2 — Software Overview
 
-> Chapter lead (proposed): Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -198,13 +198,13 @@ The last group links directly to Part B of this module: in Prolog and in rule-ba
 
 Most languages share the same basic features:
 
-Variables and data types: named places that store values such as numbers, text or true/false (Chapter 3).
+Variables and data types: named places that store values such as numbers, text or true/false.
 
 Sequence: instructions run one after another.
 
 Selection: the program chooses a path, for example with IF–ELSE (Chapter 3).
 
-Iteration: the program repeats steps, for example with a loop (Chapter 3, Section C).
+Iteration: the program repeats steps, for example with a loop (Chapter 3, Section 7C).
 
 Subprograms (functions): a named group of steps that can be reused.
 
@@ -252,7 +252,7 @@ The operating system shares the processor among processes by scheduling, and sha
 
 Programming languages moved from machine code to assembly to high-level languages, which compilers or interpreters translate.
 
-Languages can be procedural, object-oriented, functional or declarative; all use variables, sequence, selection, iteration and subprograms.
+Languages can be procedural, object-oriented, functional or declarative; most use variables, sequence, selection, iteration and subprograms.
 
 # Chapter 3 — Algorithms: How Programs Process Information and Make Decisions
 
@@ -484,7 +484,7 @@ def countdown(n):
 countdown(3)
 ```
 
-The output is 3, 2, 1, Lift off!. Each call works on a smaller number until it reaches the base case, 0. Without the base case the function would never stop — it would break the finiteness feature of Section A.
+The output is 3, 2, 1, Lift off!. Each call works on a smaller number until it reaches the base case, 0. Without the base case the calls would have no natural end, which breaks the finiteness feature of Section 7A; Python stops such a program with an error.
 
 The same problem can usually be solved either way. Loops are often easier for beginners to trace; recursion is natural for problems that contain smaller copies of themselves, such as folders inside folders, or the trees of Chapter 4.
 
@@ -494,7 +494,7 @@ Linear search checks the items one by one, from the start, until it finds the ta
 
 **Example:** find book B412 on the shelf `B205, B518, B101, B412, B310`. Check B205 (no), B518 (no), B101 (no), B412 — found after 4 checks. On a shelf of n books, linear search may need up to n checks.
 
-Binary search only works on a sorted list, but it is much faster. It looks at the middle item; if that is not the target, it throws away the half that cannot contain the target and repeats on the other half.
+Binary search only works on a sorted list, but it is much faster. It looks at the middle item; if that is not the target, it throws away the half that cannot contain the target and repeats on the other half. If two items are in the middle, it takes the left one.
 
 **Example:** find 70 in the sorted list `10, 20, 30, 40, 50, 60, 70, 80, 90` (positions 1–9).
 
@@ -538,7 +538,7 @@ The IF–ELSE decisions in this chapter are directly written into the program. L
 
 # Chapter 4 — Data Structures
 
-> Chapter lead (proposed): Ritchard Alexander · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Ritchard Alexander · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -585,6 +585,8 @@ A record groups several pieces of data about one thing, each with its own name (
 
 <img width="228" height="205" alt="image" src="https://github.com/user-attachments/assets/a06ba3c0-cb08-4883-89ae-49c1f06d475f" />
 
+To keep the record simple, `overdue_books` is stored here as a field; Chapter 5, Section E, shows that a real library works this number out from its Loans table.
+
 In Python a record can be written as a dictionary: `member = {"member_id": "M017", "name": "Mei", "has_valid_card": True, "overdue_books": 0}`. An array of records — one record per member — is much like a database table (Chapter 5, Section E), where each row is one record.
 
 ## 3. Linked lists
@@ -629,7 +631,7 @@ A binary tree is a tree in which every node has at most two children, a left one
 
 > **Figure 3.** A binary search tree of shelf numbers.
 
-**Worked example:** find 60. Start at the root, 50. 60 is larger, so go right to 70. 60 is smaller than 70, so go left to 60. Found, after looking at only three nodes. A plain list of seven numbers might need seven looks. This "halve the problem at every step" idea is the same as binary search (Chapter 3, Section D).
+**Worked example:** find 60. Start at the root, 50. 60 is larger, so go right to 70. 60 is smaller than 70, so go left to 60. Found, after looking at only three nodes. A plain list of seven numbers might need seven looks. This "halve the problem at every step" idea is the same as binary search (Chapter 3, Section 7D).
 
 Find 45. 50 → left to 30 → right to 40 → right of 40 is empty. So 45 is not in the tree. The search stops as soon as there is nowhere left to go.
 
@@ -643,9 +645,16 @@ A graph is a set of nodes (also called vertices) joined by edges. Unlike a tree,
 
 Breadth-first search (BFS) visits a graph layer by layer: first the start node, then all its neighbours, then their neighbours, and so on. It uses a queue (Section 4) to remember which node to visit next. PPT 2024 (chap3, slide 4) names BFS as a sample algorithm.
 
-**Worked example:** BFS from the Entrance (E). Neighbours are added in alphabetical order, and a node is never added twice.
+**Worked example:** BFS from the Entrance (E). Neighbours are added in alphabetical order. A node is never added twice, so we skip any neighbour that has already been visited or is already waiting in the queue.
 
-<img width="627" height="286" alt="image" src="https://github.com/user-attachments/assets/1f7965e5-5b72-454a-aa19-5d2c0052e660" />
+| Step | Visit | Add to the back of the queue | Queue after the step |
+|---|---|---|---|
+| 1 | E | H, K | H, K |
+| 2 | H | R, S (E is already visited) | K, R, S |
+| 3 | K | — (E is already visited; S is already waiting) | R, S |
+| 4 | R | A (H is already visited) | S, A |
+| 5 | S | — (H and K are already visited; A is already waiting) | A |
+| 6 | A | — (R and S are already visited) | empty |
 
 Visiting order: E, H, K, R, S, A. The rooms one step away (H, K) come before the rooms two steps away (R, S). Chapter 10 uses BFS and other search methods to plan a route to the Archive.
 
@@ -757,7 +766,7 @@ A library management system is a good first example of real software because eve
 
 - What it does. Check out a book (the loan decision and a new loan record), return a book (close the loan and, if it is late, charge a fine), and remind members whose books are overdue.
 
-- Who uses it. Librarians at the desk, members who search the catalogue, and an administrator who changes the rules — for example the loan period or the number of books a member may hold.
+- Who uses it. Librarians at the desk, members who search the catalogue, and an administrator who can change settings stored as data, such as the loan period. A new kind of rule still needs a programmer (Section 8).
 
 Figure 2 sketches the system as the librarian meets it: three screens on top, the loan-check program in the middle, and the database underneath. The check-out screen collects the member and the book, hands them to the program, and shows the decision; the program looks up the facts it needs in the database and records the loan if it is approved.
 
@@ -767,11 +776,11 @@ Figure 2 sketches the system as the librarian meets it: three screens on top, th
 
 ## 6. The loan decision as an ordinary program
 
-Here is the library-loan decision written as an ordinary program, placed inside the check-out screen. The three inputs no longer come from a person typing; the screen reads them from the database when the librarian selects the member and the book. The output goes back to the screen. The listing is written in pseudocode (Forouzan style: if (condition) … else …, with indentation).
+Here is the library-loan decision written as an ordinary program: the loan-check program of Figure 2. Its three inputs do not come from a person typing, as the umbrella answer did in Chapter 3. The program reads them from the database when the librarian selects the member and the book. The output goes back to the check-out screen. The listing is written in pseudocode (Forouzan style: if (condition) … else …, with indentation).
 
 ```text
-1  read member_has_card, overdue_books, book_available   // from the database
-2  if (member_has_card = false)
+1  read has_valid_card, overdue_books, book_available   // from the database
+2  if (has_valid_card = false)
 3      output "Loan refused (no valid card)"
 4  else if (overdue_books > 0)
 5      output "Loan refused (overdue books)"
@@ -781,16 +790,16 @@ Here is the library-loan decision written as an ordinary program, placed inside 
 9      output "Loan approved"            // and record the loan
 ```
 
-Where does the decision live? Entirely in lines 2 to 9. The library's policy — a member may borrow when the card is valid, no book is overdue and the copy is available — is not stored anywhere as a policy. It is spread across three conditions, in the order the programmer chose, inside the code. To find out what the policy is, you have to read the program; to change the policy, you have to change the program. Notice also that the program always produces an output: the final else covers every case the earlier conditions did not catch. That is a convenience of ordinary code which the rule-based version in Chapter 9 does not have — there, when no rule fires, the system simply has no conclusion.
+Where does the decision live? Entirely in lines 2 to 9. The library's policy — a loan is approved when the card is valid, no book is overdue and the copy is available — is not stored anywhere as a policy. It is spread across three conditions, in the order the programmer chose, inside the code. To find out what the policy is, you have to read the program; to change the policy, you have to change the program. Notice also that the program always produces an output: the final else covers every case the earlier conditions did not catch. That is a convenience of ordinary code which the rule-based version in Chapter 9 does not have — there, when no rule fires, the system simply has no conclusion.
 
 
 ## 7. Testing the program
 
-Testing the loan check means choosing member cases, writing down the expected output before running, and comparing. We use three library members — Mei (valid card, nothing overdue), Tom (one overdue book) and Lin (no valid card) — and add one more case so that every branch of the program is exercised at least once (Table 2).
+Testing the loan check means choosing member cases, writing down the expected output before running, and comparing. We use three library members — Mei (valid card, nothing overdue), Tom (one overdue book) and Lin (no valid card) — and add one more case so that every branch of the program is exercised at least once (Table 1).
 
 <img width="750" height="308" alt="image" src="https://github.com/user-attachments/assets/e84ec6c9-180f-405b-98fb-bdf42629dfa2" />
 
-> **Table 2.** Test table for the loan-check program: four cases that between them reach every output line.
+> **Table 1.** Test table for the loan-check program: four cases that between them reach every output line.
 
 The expected outputs come from the requirements, not from the code — this is the idea of black-box testing (Forouzan, 2018, Chapter 10): the tester judges only inputs and outputs, and the expected output is fixed before the program runs, so that the program cannot "tell" the tester what the right answer is. A test passes when the actual output equals the expected one. Two habits make a test table useful: every branch of the program should be reached by at least one case (choosing cases by looking at the branches is white-box testing, Section C), and the cases should be kept, because they will be run again after every change (Section 8).
 
@@ -809,8 +818,8 @@ Suppose the library decides that a member may have at most five books on loan at
 - Use: the new version replaces the old one at the loan desk.
 
 ```text
-1  read member_has_card, overdue_books, book_available, books_on_loan
-2  if (member_has_card = false)
+1  read has_valid_card, overdue_books, book_available, books_on_loan
+2  if (has_valid_card = false)
 3      output "Loan refused (no valid card)"
 4  else if (overdue_books > 0)
 5      output "Loan refused (overdue books)"
@@ -826,13 +835,13 @@ Three things are worth noticing. First, a one-sentence change of policy needed a
 
 ## 9. Activity 5.1 — Describe the steps of a small everyday program
 
-The library needs a second small program for the return desk: when a book is returned, the system records the return and, if the book is late, charges a fine. Write the following, using only this chapter:
+The library needs a second small program for the return desk: when a book is returned, the system records the return and, if the book is late, charges a fine of one yuan for each day late. Write the following, using only this chapter:
 
 1. Requirements — two or three sentences saying what the program must do and with what information.
 
 2. An algorithm of five to nine steps, each step a single action, in the order the program performs them. The late-fine decision should be an IF–ELSE.
 
-3. Two test cases in the form of Table 2: one book returned on time and one returned late, each with its expected output written before you "run" the steps by hand.
+3. Two test cases in the form of Table 1: one book returned on time and one returned late, each with its expected output written before you "run" the steps by hand.
 
 Self-check before you look at the answer: Is every step one action? Is the fine decision written as IF … ELSE? Do you have one on-time case and one late case? Did you write each expected output before tracing?
 
@@ -858,9 +867,184 @@ Requirements. When a librarian records a returned book, the program must close t
 
 <img width="679" height="124" alt="image" src="https://github.com/user-attachments/assets/7daa1110-570f-45f0-84f9-75d1e785c73a" />
 
-> **Table 3.** Two test cases for the return program, with the expected output decided before tracing.
+> **Table 2.** Two test cases for the return program, with the expected output decided before tracing.
 
-What to check in a learner's answer: the requirements name the inputs (copy, dates) and both outcomes (fine or no fine); the algorithm has one action per step and reads its facts before deciding; the fine decision is a single IF–ELSE on days_late; the two test cases cover both branches; and the expected outputs were written before the trace. A common mistake is to put
+What to check in a learner's answer: the requirements name the inputs (copy, dates) and both outcomes (fine or no fine); the algorithm has one action per step and reads its facts before deciding; the fine decision is a single IF–ELSE on days_late; the two test cases cover both branches; and the expected outputs were written before the trace. A common mistake is to put the database update inside only one branch, so that a late return is never closed — a good example of why Section 7 insists on a case for every branch.
+
+## Software engineering and databases in more depth (PPT 2024 chap3, slide 2)
+
+Sections 1–10 followed one small program from problem to tested code. Real software is built by teams and keeps its facts in databases. This part covers the six topics PPT 2024 lists for software engineering and databases, using the same library.
+
+### A. Software development process models
+
+Section 4 described the five stages that all software goes through. A **process model** is a plan for *how* a team moves through those stages. Three common models (Sommerville, 2016, Ch. 2–3):
+
+| Model | How it works | Library example | Good when … | Risk |
+|---|---|---|---|---|
+| **Waterfall** | Each stage is finished and approved before the next starts: understand → plan → write → test → use | The whole library system is specified, then built, then tested, then opened | The requirements are clear and will not change (for example, safety-critical systems) | A change found late, such as "at most five books", is expensive because earlier stages must be redone |
+| **Incremental** | The system is built and delivered in small working pieces | First the loan check, then returns and fines, then reports | Users can start using part of the system early | The pieces must fit together, so the overall design still needs care |
+| **Agile** (Scrum is one popular way of doing it) | Very short cycles (often 1–4 weeks). Each cycle plans, builds and tests a few features, then shows them to the users | Every two weeks the librarians try the new features and say what to change next | Requirements are likely to change; users are available to give feedback | Without discipline, documentation and design can be skipped |
+
+Section 8 ("at most five books on loan") is a small example of why many teams prefer incremental or agile models: the policy changed after the program was in use, and the team simply ran one more cycle.
+
+### B. Modularity
+
+**Modularity** means dividing a large program into smaller parts called **modules**, each with one clear job and a clear way to talk to the others (its **interface**). The library system can be split like this:
+
+| Module | Its one job | What other modules ask it |
+|---|---|---|
+| Members | Keeps member records and cards | "Does M017 have a valid card?" |
+| Catalogue | Keeps books and whether each copy is on the shelf | "Is B310 available?" |
+| Loans | Decides and records loans (the program of Section 6) | "May M017 borrow B310?" |
+| Fines | Works out late fines | "What does M022 owe?" |
+| Reports | Produces lists for the librarians | "Which books are overdue today?" |
+
+Why it helps:
+
+**Easier to understand:** a reader can study the Loans module without reading the whole system.
+
+**Easier to test:** each module can be tested on its own (Section C).
+
+**Easier to change:** if the fine becomes 2 yuan a day, only the Fines module changes.
+
+**Easier to share work:** different team members can build different modules at the same time.
+
+Two words describe good modules. **High cohesion**: everything inside a module belongs to its one job. **Low coupling**: modules depend on each other only through their interfaces, so a change inside one does not break the others.
+
+### C. Quality assurance
+
+Testing (Section 7) checks a program after it is written. **Quality assurance (QA)** is wider: it is every activity that helps make sure the software does what it should, to an agreed standard, from the first stage to the last.
+
+QA activities include:
+
+1. **Standards:** agreed rules for writing requirements and code (names, layout, comments), so that everyone's work looks the same.
+
+2. **Reviews and inspections:** someone who did not write the work reads it and looks for mistakes.
+
+3. **Testing at several levels:**
+
+| Level | What is tested | Library example |
+|---|---|---|
+| **Unit testing** | One module or function on its own | The four test cases of Section 7 on the loan check |
+| **Integration testing** | Modules working together | The check-out screen asks Loans, which asks Members and Catalogue |
+| **System testing** | The whole system against the requirements | A full day of borrowing and returning in a test copy of the library |
+| **Acceptance testing** | The users decide whether it meets their needs | The librarians try it before it goes live |
+
+4. **Regression testing:** after every change, the old tests are run again to make sure nothing that used to work is now broken (Section 8 did this).
+
+Two ways to choose tests: **black-box testing** looks only at inputs and expected outputs, without reading the code (Section 7); **white-box testing** uses the code to make sure every line and every branch is run at least once. The four test cases of Section 7 happen to satisfy both, because each reaches a different branch.
+
+Quality has several sides, not only "no bugs": **correctness** (right answers), **reliability** (keeps working), **usability** (easy for librarians), **efficiency** (fast enough) and **maintainability** (easy to change later).
+
+### D. Database models
+
+Early programs each kept their own data files. The same member could be stored in three files, and if her phone number changed in one file but not the others, the data **disagreed**. A **database** solves this: one organised store of data, shared by all the programs, managed by a **database management system (DBMS)** that controls who may read or change it (Forouzan, 2018, Ch. 14).
+
+A **database model** is the way the data is organised inside the database:
+
+| Model | Shape of the data | Picture |
+|---|---|---|
+| **Hierarchical** | A tree: each record has one parent (Chapter 4, Section 5) | Library → Floors → Shelves → Books |
+| **Network** | A graph: a record can have several parents (Chapter 4, Section 6) | A book linked to its author, its subject *and* its borrower |
+| **Relational** | Tables of rows and columns, connected by shared values | The Members, Books and Loans tables below |
+| **Newer models** | Objects, or flexible documents (often called NoSQL) | Used by many web apps for very large or changing data |
+
+Today the relational model is the most widely used, and it is the one to learn first.
+
+### E. Relational databases
+
+In a **relational database**, all data is stored in **tables** (also called *relations*). Each **row** is one record (Chapter 4, Section 2) and each **column** is one field. Here is a small library database:
+
+**Members**
+
+| member_id | name | has_valid_card |
+|---|---|---|
+| M017 | Mei | true |
+| M022 | Tom | true |
+| M031 | Lin | false |
+
+**Books**
+
+| book_id | title | available |
+|---|---|---|
+| B205 | The Little Prince | false |
+| B310 | Python for Beginners | false |
+| B412 | A Brief History of Time | true |
+
+**Loans**
+
+| loan_id | member_id | book_id | due_date | returned |
+|---|---|---|---|---|
+| L1 | M022 | B205 | 2026-10-20 | false |
+| L2 | M017 | B310 | 2026-11-15 | false |
+
+Two kinds of column connect the tables:
+
+A **primary key** identifies each row uniquely: member_id in Members, book_id in Books, loan_id in Loans.
+
+A **foreign key** is a column that refers to the primary key of another table: in Loans, member_id points to a member and book_id points to a book.
+
+This is how the loan check of Section 6 gets its inputs. overdue_books for Tom is not stored anywhere as a number; the system counts his Loans rows that are not returned and whose due date has passed. On 3 November 2026, Tom has one (L1), so his loan is refused — exactly test case T2 in Section 7.
+
+### F. Querying the database with SQL
+
+**SQL** (Structured Query Language) is the language used to ask relational databases questions and to change their data. SQL is a **declarative** language: you state *what* you want, and the database works out *how* to find it. It is based on the relational model, which rests on predicate logic (Codd, 1970; Forouzan, 2018, Ch. 14).
+
+**Find all books on the shelf:**
+
+```sql
+SELECT title FROM Books WHERE available = TRUE;
+```
+
+Result: *A Brief History of Time*. You did not write a loop that checks every row — you stated a condition, and the database's query engine treats available = TRUE as a logical condition (a *predicate*, Chapter 7) and matches it against the stored facts.
+
+**Count Tom's overdue books on 3 November 2026:**
+
+```sql
+SELECT COUNT(*) FROM Loans
+WHERE member_id = 'M022' AND returned = FALSE AND due_date < '2026-11-03';
+```
+
+Result: 1. The AND works exactly like the AND in the umbrella rule of Chapter 1, Section 1, and in Chapter 9's rules: all three parts must be true.
+
+**Join two tables — which members have an overdue book?**
+
+```sql
+SELECT Members.name
+FROM Members JOIN Loans ON Members.member_id = Loans.member_id
+WHERE Loans.returned = FALSE AND Loans.due_date < '2026-11-03';
+```
+
+Result: Tom. The JOIN … ON uses the foreign key to match each loan with its member.
+
+**Record a new loan and mark the book as out:**
+
+```sql
+INSERT INTO Loans VALUES ('L3', 'M017', 'B412', '2026-11-17', FALSE);
+UPDATE Books SET available = FALSE WHERE book_id = 'B412';
+```
+
+The link to Part B of the module is direct: a WHERE clause is a condition over facts, much like the IF part of an IF-THEN rule. The difference is that SQL *finds* the facts that match, while a rule-based system *adds new conclusions* when its conditions match (Chapter 9).
+
+**Practice 5.2 — write the query.** (1) List the titles of all books that are *not* available. (2) Write the query that finds the names of members whose card is not valid.
+
+**Expected answers** (using the original tables, before the INSERT and UPDATE above). (1) SELECT title FROM Books WHERE available = FALSE; → *The Little Prince*, *Python for Beginners*. (2) SELECT name FROM Members WHERE has_valid_card = FALSE; → Lin.
+
+## 11. Summary
+
+Software exists to solve a problem. Building it follows five stages — understand, plan, write, test, use and maintain — and the stages repeat for as long as the software is in use.
+
+Textbooks and web guides cut the same work into four, five or seven phases with different names; the work itself is the same.
+
+In a real system the program is one part among several: screens for the user, a database for the facts, and the program in between. The library-loan decision lives inside the check-out part of the library system.
+
+A test case is an input with its expected output, decided before running. A good test table reaches every branch and is kept for re-use after every change.
+
+Process models (waterfall, incremental, agile) organise how a team moves through the stages; modularity splits a system into modules with one job each; quality assurance covers standards, reviews and testing at every level.
+
+A relational database stores facts in tables linked by primary and foreign keys; SQL asks for the facts that match a condition, a declarative idea that leads into Part B.
+
+When the decision logic is written inside the code, the policy can only be read and changed by reading and changing the code. Chapter 12 compares this with the rules of Chapter 9.
 
 # Chapter 6 — Introduction to Symbolic AI
 
@@ -883,7 +1067,7 @@ Symbolic AI is the part of AI that represents knowledge with symbols — readabl
 
 Three ideas sit at its centre:
 
-1. Symbols stand for things. Book(B412) stands for "B412 is a book"; available(B412) for "B412 is on the shelf".
+1. Symbols stand for things. Book(B412) stands for "B412 is a book"; Available(B412) for "B412 is on the shelf".
 2. Knowledge is written down explicitly as facts and rules, so a person can read it.
 3. Reasoning is manipulating symbols with rules. The system combines facts and rules to reach new conclusions, step by step, the way you might solve a logic puzzle.
 
@@ -916,17 +1100,31 @@ PPT 2024 (slide 6) names three benefits of symbolic AI. All three come from one 
 
 - Interpretability — you can see why. Every decision can be traced back to the exact facts and rules that produced it. Example: the system can say "Ana may have pneumonia because the pneumonia rule fired: fever, cough and difficulty breathing are all true" (Section 2). Many machine-learning models cannot give a reason like this; people call them "black boxes".
 - Knowledge representation — knowledge is stored in a readable form. Facts and rules use symbols that people understand, such as valid_card and overdue_books, so an expert can check them. Example: a librarian can read rules R1 and R2 (Chapter 9) and confirm that they match the library's policy.
-- Flexibility — easy to change. The rules are kept apart from the engine that applies them, so a rule can be added or changed without rewriting the program. Example: the library's new "at most five books" policy is one new rule (Chapter 9), instead of a change to the code (Chapter 5, Section 8).
+- Flexibility — easy to change. The rules are kept apart from the engine that applies them, so a rule can be added or changed without rewriting the program. Example: the library's new "at most five books" policy needs one new condition in rule R1 (Chapter 9), for example "has fewer than five books on loan". In the ordinary program of Chapter 5, Section 8, the same policy meant a change to the code.
 
 A fourth advantage is often mentioned: predictability. Given the same facts and rules, the system always reaches the same conclusion.
 
 ## 4. Limitations: Handling Imperfect Real-World Information
 
-Despite their clarity, explicit rules and symbolic systems possess significant limitations when confronted with messy, real-world data. They can become unreliable when information is missing, conflicting, or outdated. Expert systems proved hard to build and maintain, partly because their reasoning broke down in the face of uncertainty and partly because they could not learn from experience (Russell & Norvig, 2021, p. 42).
+Despite their clarity, explicit rules and symbolic systems possess significant limitations when confronted with messy, real-world data. They can become unreliable when information is missing, conflicting, or outdated. Expert systems were hard to build and to keep up to date. They coped badly with uncertainty, and they could not learn from what happened to them (Russell & Norvig, 2021, p. 42).
 
-- Missing information: If a required fact is absent from the input data, a rule may fail to trigger entirely, leading to incomplete or stalled decision-making.
-- Conflicting information: If two rules lead to contradictory conclusions from overlapping data, the system can produce conflicting results unless it has a way to resolve the conflict, for example by giving some rules priority.
-- Outdated information: Rules that were accurate last year may become obsolete due to changing regulations or business policies, requiring manual updates by domain experts.
+PPT 2024 (slide 7) names four limitations of symbolic AI:
+
+**1. Incomplete knowledge.** A rule-based system knows only what it has been told.
+
+- *A missing fact.* Chen's breathing was never recorded (Section 2), so the pneumonia rule cannot fire and the system has nothing to say about Chen.
+- *A missing rule.* A visitor with a one-day pass comes to the loan desk. R1 asks only about a valid card. If nobody wrote a rule for one-day passes, the system cannot treat this case properly.
+- *An out-of-date rule.* Knowledge can stop being true. Suppose a rule says that a loan lasts 30 days, and the library changes this to 14. The system keeps saying 30 days, with no warning, until a person edits the rule.
+
+**2. Scalability.** Scalability means coping as the system grows. You can check two rules by eye, but a large system may need thousands, and each new rule can clash with the old ones. Imagine a city library service with 3 kinds of member, 4 kinds of book and 5 branches. That is 3 × 4 × 5 = 60 combinations, and each might need its own loan rule. Soon nobody can read all the rules, or be sure that a change has not broken something.
+
+**3. Uncertain or ambiguous information.** Rule conditions want a clear true or false, but real information is often not so clean.
+
+- *Uncertain.* A nurse writes "slight fever" for a patient. Is `fever` true or false? The pneumonia rule cannot say "a bit true".
+- *Ambiguous.* A member asks for "the new book by the same author". A word like "new" or "same" can mean different things, and the rules need one meaning.
+- *Conflicting.* Facts or rules can disagree. Suppose the library handles the five-book policy by adding a separate rule, called Limit: IF the member has five books on loan THEN the loan is refused. Now take a member with a valid card, nothing overdue, five books on loan and an available book. R1 and R2 fire, so the system adds "loan approved". Limit fires too, so it adds "loan refused". The system now holds two opposite conclusions. It needs a way out. It can give some rules priority (refusal beats approval), or the rules can be rewritten so that they cannot clash, as Section 3 did by adding a condition to R1.
+
+**4. Limited ability to learn.** A classic rule-based system does not learn from experience. Suppose many patients start to arrive with pneumonia but no cough. The rule goes on missing them, however many there are, until doctors notice and someone changes the rule. Chapter 9, Section 10, says more about this limit.
 
 ### The trap of missing information ("Missing information does not prove the opposite")
 
@@ -940,7 +1138,7 @@ PPT 2024 (chap4 slide 5) lists four application areas. In most modern products, 
 
 Other uses appear later in this module: business rule engines such as Drools (Chapter 9), route planning and games (Chapter 10), and grammar-based language processing (Chapter 11).
 
-Benefits and limitations in one view. PPT 2024 lists three benefits — interpretability, knowledge representation and flexibility (rules can be added or changed without rewriting the whole program) — and four limitations — incomplete knowledge, scalability (thousands of rules become hard to manage), difficulty with uncertain or ambiguous information, and limited ability to learn and adapt (slides 6–7). Section 3 explains the three benefits with library examples; Section 4 explains incomplete and uncertain information; scalability and the limited ability to learn are discussed in Chapter 9, Section 10.
+Benefits and limitations in one view. PPT 2024 lists three benefits — interpretability, knowledge representation and flexibility (rules can be added or changed without rewriting the whole program) — and four limitations — incomplete knowledge, scalability (thousands of rules become hard to manage), difficulty with uncertain or ambiguous information, and limited ability to learn and adapt (slides 6–7). Section 3 explains the three benefits with library examples; Section 4 explains all four; Chapter 9, Section 10, says more about the limit on learning.
 
 ## 6. Activity: will the rule fire?
 
@@ -960,7 +1158,7 @@ Use the pneumonia rule of Section 2.
 
 # Chapter 7 — Logic and Reasoning
 
-> Chapter lead (proposed): Frederic Chandra · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Frederic Chandra · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -1005,7 +1203,7 @@ De Morgan's laws:
 
 Double negation: ¬(¬p) ≡ p — "it is not true that it is not raining" just means "it is raining".
 
-Worked example: the library. A loan is approved when the card is valid (c) and there are no overdue books (n): c ∧ n. When is it refused? ¬(c ∧ n), which by De Morgan is ¬c ∨ ¬n: the card is not valid or there are overdue books. This is exactly how the refusal messages in Chapter 5 work — either reason alone is enough.
+Worked example: the library. A member may borrow when the card is valid (c) and there are no overdue books (n): c ∧ n. When may the member not borrow? ¬(c ∧ n), which by De Morgan is ¬c ∨ ¬n: the card is not valid or there are overdue books. This is how the first two refusal messages in Chapter 5 work — either reason alone is enough.
 
 Check with a truth table (the two right-hand columns are equal in every row):
 
@@ -1111,7 +1309,7 @@ Slide 18 asks: "Do you see anything strange?" Two rules look dangerous at first 
 1. Which are propositions? (a) "Beijing is in China." (b) "Please sit down." (c) "y + 1 = 5."
 2. Complete: if p is true and q is false, what are p ∧ q, p ∨ q, p → q and p ↔ q?
 3. Use De Morgan to rewrite "It is not true that the shop is open and has bread."
-4. "If a book is overdue, the member pays a fine. Tom paid no fine." What can you conclude, and which rule did you use?
+4. "If a book is overdue, the member pays a fine. Kai paid no fine." What can you conclude, and which rule did you use?
 5. Formalise: "All students in the module read Chapter 1." Use Student(x) and ReadCh1(x).
 6. From ∀x (Bird(x) → HasFeathers(x)) and Bird(Tweety), what follows, and by which rule?
 
@@ -1120,7 +1318,7 @@ Slide 18 asks: "Do you see anything strange?" Two rules look dangerous at first 
 1. (a) yes — it is true; (b) no — a command; (c) no — it depends on y (it becomes a proposition once y has a value).
 2. p ∧ q = F; p ∨ q = T; p → q = F; p ↔ q = F.
 3. "The shop is not open or it has no bread" (¬o ∨ ¬b).
-4. Tom's book was not overdue (assuming the rule is always applied). Modus tollens: p → q, ¬q, therefore ¬p.
+4. Kai's book was not overdue (assuming the rule is always applied). Modus tollens: p → q, ¬q, therefore ¬p.
 5. ∀x (Student(x) → ReadCh1(x)).
 6. HasFeathers(Tweety), by universal modus ponens (universal instantiation followed by modus ponens).
 
@@ -1134,7 +1332,7 @@ Slide 18 asks: "Do you see anything strange?" Two rules look dangerous at first 
 
 # Chapter 8 — Knowledge Representation
 
-> Chapter lead (proposed): Louis Alexander Dalim · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Louis Alexander Dalim · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -1200,7 +1398,7 @@ A frame is a structure that describes a typical object or situation, with slots 
 
 <img width="405" height="124" alt="image" src="https://github.com/user-attachments/assets/ab3ccfc8-713f-4578-b83c-d8a6e81f049c" />
 
-A dictionary in the reference section fills in the Reference-book frame; it inherits the loan period slot from Book, but its own "can be borrowed: no" overrides the default. Frames, like semantic networks with default values, handle exceptions by letting a more specific frame override an inherited value (Russell & Norvig, 2021, pp. 347–355).
+A dictionary in the reference section fills in the Reference-book frame; it inherits the title and author slots from Book, but its own "can be borrowed: no" overrides the default. Frames, like semantic networks with default values, handle exceptions by letting a more specific frame override an inherited value (Russell & Norvig, 2021, pp. 347–355).
 
 A script is a sequence of frames that describes a typical series of events (slide 24; Schank & Abelson, 1977). Script: borrowing a book
 
@@ -1219,7 +1417,7 @@ Knowledge can also be stored as production rules: IF-THEN statements that captur
 For the library:
 
 - R1: IF the member has a valid card AND has no overdue books THEN the member may borrow.
-- R2: IF the member may borrow AND the book is available THEN approve the loan.
+- R2: IF the member may borrow AND the book is available THEN the loan is approved.
 
 Rules are used to infer new knowledge from existing knowledge. Chapter 9 explains how a rule-based system stores them in a knowledge base and how its inference engine applies them by forward and backward chaining.
 
@@ -1383,7 +1581,7 @@ Questions:
 
 **Expected answer**
 
-1. R1 applies, because F1 and F2 are true. It adds the new fact "member may borrow". R2 does not apply, because it also needs "the book is available", and that is false. The system ends with F1, F2 and "member may borrow".
+1. R1 applies, because F1 and F2 are true. It adds the new fact "member may borrow". R2 does not apply, because it also needs "the book is available", and that is false. The system ends with F1, F2, "the requested book is not available" and "member may borrow".
 2. The system cannot approve the loan, because R2 never applied. It also cannot say "refused", because no rule says that. A rule-based system only concludes what its rules and facts support.
 3. One possible rule: R3: IF the member may borrow AND the requested book is not available, THEN offer a reservation. R3 applies after R1 adds "member may borrow". Any rule with two conditions joined by AND that gives this outcome is acceptable.
 
@@ -1398,7 +1596,7 @@ Case: A member has a valid card (F1) and the requested book is available (F3), b
 **Expected answer**
 
 1. R1 does not fire, because its condition "the member has no overdue books" is false. R2 does not fire either, because it needs "member may borrow", which was never added. No rule fires, so the system ends with only its starting facts and gives no conclusion.
-2. Nothing changes: R2 fails (no "member may borrow"), then R1 fails (overdue book). The order changes the number of checks, not the result.
+2. Nothing changes: R2 fails (no "member may borrow"), then R1 fails (overdue book). Both orders make the same two checks and reach the same result: no conclusion.
 3. One possible rule: R4: IF the member has overdue books, THEN the loan is refused (reason: overdue books). Without a rule like R4, the system cannot say "refused" — it only concludes what its rules support (Activity 1, question 2).
 
 ## 8. Expert systems in practice: MYCIN
@@ -1454,12 +1652,12 @@ Why rule-based AI is still used
 
 Where rules struggle
 
-Expert systems proved hard to build and maintain for complex subjects, partly because their reasoning broke down in the face of uncertainty and partly because they could not learn from experience [1, p. 42].
+Large expert systems were difficult to create and to keep working. Real cases are often unclear, and the systems' methods coped badly when the evidence was not certain. They also stayed the same as they were used, unless people changed them [1, p. 42].
 
 - Brittleness: if an input has a typing mistake, or a situation is slightly outside the rules, the system may break or give no answer.
 - No self-learning: a classic rule-based system cannot learn new rules by itself; people must write and update every rule. (Other methods, such as decision-tree learning, can learn rules from data, but they are not part of a classic rule engine.)
 
-This is why many researchers argue that hybrid systems, which combine learning and rules, are a way forward [10, 11]. Chapter 12, Section 7 (optional) looks at this idea.
+This is why many researchers argue that neuro-symbolic systems, which combine learning and rules, are a way forward [10, 11]. Chapter 12, Section 7 (optional) looks at this idea.
 
 <img width="750" height="420" alt="image" src="https://github.com/user-attachments/assets/8001063d-0797-4915-93b7-495251869e62" />
 
@@ -1469,8 +1667,8 @@ This is why many researchers argue that hybrid systems, which combine learning a
 
 **Knowledge Base Rules:**
 
-- Rule H1: IF user_role = doctor AND patient_assigned = true THEN grant_access(EHR_record)
-- Rule H2 (Emergency Break-the-Glass): IF patient_status = critical AND user_role = doctor THEN grant_emergency_access(EHR_record)
+- Rule H1: IF user_role = doctor AND patient_assigned = true THEN grant_access = true
+- Rule H2 (Emergency Break-the-Glass): IF patient_status = critical AND user_role = doctor THEN grant_emergency_access = true
 - Rule H3 (Audit Logging): IF grant_emergency_access = true THEN generate_compliance_audit_flag
 
 **Working Memory Initial Facts (Case Input):**
@@ -1493,7 +1691,7 @@ A rule-based system keeps what it knows as facts and IF-THEN rules in a knowledg
 
 # Chapter 10 — Planning and Problem Solving
 
-> Chapter lead (proposed): Eizel Mthana Conqueror · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Eizel Mthana Conqueror · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -1586,7 +1784,7 @@ A* combines both ideas. For each room it adds the cost already walked and the es
 
 <img width="578" height="246" alt="image" src="https://github.com/user-attachments/assets/f58fcb9b-fe24-4140-b417-52bdddd81f68" />
 
-Route: E → K → S → A, cost 7. With an admissible heuristic, A* is guaranteed to find the cheapest route, and it usually explores fewer states than UCS because the heuristic pulls it towards the goal. Route-planning apps and computer games use A* and its relatives.
+Route: E → K → S → A, cost 7. With an admissible heuristic, A* is guaranteed to find the cheapest route (on large maps it must also be allowed to go back to an explored room if it later finds a cheaper way there; this does not change any answer on our small map), and it usually explores fewer states than UCS because the heuristic pulls it towards the goal. You can see this here: UCS explored six rooms, but A* explored five and never needed R. Route-planning apps and computer games use A* and its relatives.
 
 ## 5. Adversarial search: minimax and alpha-beta pruning
 
@@ -1669,11 +1867,11 @@ There are two broad approaches:
 - Symbolic NLP uses formal rules, logic and symbolic representations written by people: grammars, dictionaries, rules and knowledge bases.
 - Statistical and neural NLP learns patterns from very large amounts of text. Modern chatbots are mainly of this kind.
 
-This chapter is about the symbolic approach. Its strengths are the same as in Chapter 6: every step can be inspected and explained, and it needs no training data. Its weakness is that human language is huge and full of exceptions, so the rules are never complete.
+This chapter is about the symbolic approach. It has the strength described in Chapter 6, Section 3: every step can be inspected and explained. It also needs no training data (Chapter 9, Section 10). Its weakness is that human language is huge and full of exceptions, so the rules are never complete.
 
-## 2. Grammars and parsing: a rule-based pipeline (moved from the former Chapter 5, §4.1)
+## 2. Grammars and parsing: a rule-based pipeline
 
-Until statistical methods took over in the late 1980s and 1990s (and deep learning in the 2010s), most computer programs processed human text using Symbolic Natural Language Processing (NLP) (Jurafsky & Martin; Russell & Norvig, 2021, Ch. 24).
+Until statistical methods took over in the late 1980s and 1990s (and deep learning in the 2010s), most computer programs processed human text using Symbolic Natural Language Processing (NLP) (Jurafsky & Martin, 2026; Russell & Norvig, 2021, Ch. 24).
 
 - Words as Symbols & Grammar Rules: Symbolic NLP treats words as discrete symbols governed by explicit grammar rules. Instead of guessing word probabilities, it builds syntax trees using formal rules such as Context-Free Grammar (CFG) to analyze sentence structure.
 - The Step-by-Step Language Pipeline:
@@ -1705,7 +1903,7 @@ The result is a parse tree:
 
 > **Figure 1.** The parse tree shows the sentence's structure: who did what to whom.
 
-"Mouse the chased cat the" cannot be parsed with these rules, so the grammar rejects it. Note that a parser needs all the words: if "the" were removed as a stop word (step 3 of the pipeline above), the rule NP → Det N could not match. Stop-word removal is useful for searching documents (Section 6), not for parsing.
+"Mouse the chased cat the" cannot be parsed with these rules, so the grammar rejects it. Note that a parser needs all the words: if "the" were removed as a stop word (step 4 of the pipeline above), the rule NP → Det N could not match. Stop-word removal is useful for searching documents (Section 6), not for parsing.
 
 ## 3. Semantics and knowledge representation for language
 
@@ -1731,7 +1929,18 @@ Example from the slide: "The quick brown fox jumps over the lazy dog."
 
 <img width="750" height="408" alt="image" src="https://github.com/user-attachments/assets/72e16dda-ea85-449e-be4e-2faa55095b73" />
 
-Rules like "a word ending in -ly is probably an adverb" or "after the, the next noun ends the noun phrase" handle words the lexicon does not know. Once the words are tagged, a grammar (Section 2.1, with extra rules for adjectives and prepositions) finds the structure: subject "the quick brown fox", verb "jumps", and the phrase "over the lazy dog" saying where.
+Rules like "a word ending in -ly is probably an adverb" or "after the, the next noun ends the noun phrase" handle words the lexicon does not know.
+
+Once the words are tagged, a grammar finds the structure. The grammar of Section 2.1 needs a few extra rules for this sentence:
+
+| Extra rule | Read as |
+|---|---|
+| NP → Det Adj N | A noun phrase can have one adjective before the noun ("the lazy dog") |
+| NP → Det Adj Adj N | A noun phrase can have two adjectives ("the quick brown fox") |
+| VP → V PP | A verb phrase can be a verb followed by a prepositional phrase |
+| PP → P NP | A **prepositional phrase** is a preposition (P) followed by a noun phrase ("over the lazy dog") |
+
+The tags in the table above supply the word rules, such as Adj → quick and P → over. The structure is then: [NP the quick brown fox] [VP jumps [PP over [NP the lazy dog]]]. The first noun phrase is the **subject**, the one doing the action. The verb is "jumps", and the phrase "over the lazy dog" says where.
 
 The tagger can be wrong. In "Time flies like an arrow", flies could be a verb or a plural noun; rules must use the context to decide, and some sentences remain ambiguous even for people.
 
@@ -1769,7 +1978,7 @@ Sentiment analysis finds the emotional tone of a text — positive, negative or 
 
 <img width="750" height="241" alt="image" src="https://github.com/user-attachments/assets/2e51616d-cafd-4247-af7b-434bc14758fb" />
 
-Limit: sarcasm ("Great, the printer is broken again") fools simple rules, because the words are positive but the meaning is negative.
+Limit: sarcasm fools simple rules. In "Good, the printer is broken again", good is on the positive list and broken is on neither list. The score is +1, positive, but the meaning is negative.
 
 ### 6.2 Question answering
 
@@ -1847,7 +2056,7 @@ Chapters 5 and 9 wrote the same library decision in two different ways. Put side
 
 <img width="750" height="526" alt="image" src="https://github.com/user-attachments/assets/6a94e436-83e5-4de3-a984-98ad45c4093b" />
 
-What this shows. Both versions reach the same decision for the same facts. The program is complete and predictable, but its policy is spread through the code. The rules make the policy visible and easy to change, but the system can only conclude what its rules cover. Real systems often combine the two (Figure 1).
+What this shows. For an approval, both versions reach the same decision. For a refusal, the program answers but the rules give no conclusion unless a rule such as R4 says so. The program is complete and predictable, but its policy is spread through the code. The rules make the policy visible and easy to change, but the system can only conclude what its rules cover. Real systems often combine the two (Figure 1).
 
 ## 4. Worked Example 2: A Medical Eligibility Advisor
 
@@ -1884,7 +2093,7 @@ Part B — change the policy in both versions. The library decides that a member
 1. The rule does not fire, because cough == true is false. The system now knows this rule does not apply, but it still cannot say "does not qualify" unless another rule states that conclusion — a rule-based system only concludes what its rules support.
 2. The rule cannot fire, and the system must not assume the fever is false (or true): missing information does not prove the opposite. A good system would ask for the missing value or report that it cannot decide.
 3. A programmer edits the condition chain — for example, refuse for overdue books only when the fine is not paid — adds a new input fine_paid, and re-runs all the old test cases plus new ones for the changed branch (Chapter 5, Sections 7–8).
-4. Add one rule, for example R5: IF the member has a valid card AND has overdue books AND has paid the fine, THEN the member may borrow. R2 and the inference engine stay the same; the new rule still has to be tested.
+4. Add one rule, for example R5: IF the member has a valid card AND has overdue books AND has paid the fine, THEN the member may borrow. R2 and the inference engine stay the same; the new rule still has to be tested. If the rule set also holds R4, the two rules clash: one says "refused" and the other "may borrow".
 5. Usually the rules: the new policy appears as one readable sentence (R5), while in the program it is hidden inside the order of the conditions. Either answer is acceptable if it is explained.
 
 ## 6. Hands-on: a rule-based assistant vs a machine-learning assistant
@@ -1963,13 +2172,13 @@ None of these eight commands was a training example, yet the model chose a sensi
 1. The machine-learning assistant: it learned patterns from examples, so it matched wording it had never seen, such as "turn on fan" (fan_on, 95%). The rule-based one only matches the exact words its rules were written for (Scratch ignores capital letters, but not different wording). That is why slide 50 needs a second condition just for "Fan on please".
 2. Yes for the rules — each result traces back to one rule (or to no rule), as in Chapter 9. For the trained model we can see the label and the confidence, but not a readable reason; this is the interpretability difference of Chapter 6, Section 3.
 3. Many people would choose rules for the safety part, because their behaviour is predictable and can be checked, and they do nothing when no rule matches. The sandwich test shows why: the model answered fan_on with only 18% confidence, and the script acted on it anyway (Figure 7). A good design adds a rule such as "IF the confidence is below a threshold THEN ask again" and safety rules (maximum temperature) that the model cannot override.
-4. Use the model to understand what the user said (the perception part), then pass its label to explicit rules that decide what to do (the decision part). This is the hybrid architecture of Section 1 and the neuro-symbolic idea of Section 7.
+4. Use the model to understand what the user said (the perception part), then pass its label to explicit rules that decide what to do (the decision part). This is the neuro-symbolic idea of Section 7.
 
-## 7. Optional extension: neuro-symbolic AI (not examined; moved from the former Chapter 5)
+## 7. Optional extension: neuro-symbolic AI (not examined)
 
 ### 7.1 Combining neural networks and rules
 
-To work around the limits of each approach, many researchers combine both into Neuro-Symbolic AI. By pairing Neural Networks (which excel at perceiving messy, unstructured real-world data like vision, speech, and text) with Symbolic Logic Engines (which excel at reasoning, math, and safety guardrails), hybrid systems aim to be both adaptable and reliable (Liang et al., 2025; Bougzime et al., 2025):
+To work around the limits of each approach, many researchers combine both into Neuro-Symbolic AI. By pairing Neural Networks (which excel at perceiving messy, unstructured real-world data like vision, speech, and text) with Symbolic Logic Engines (which excel at reasoning, math, and safety guardrails), these combined systems aim to be both adaptable and reliable (Liang et al., 2025; Bougzime et al., 2025):
 
 - Self-driving vehicles: Neural vision models detect pedestrians from camera images, while explicit rules can express safety requirements such as IF pedestrian_detected THEN stop.
 - Healthcare & LLM Verifiers: A clinical assistant can be designed so that a neural language model reads free-text patient notes, while symbolic engines check facts against clinical knowledge bases and medical rules to prevent dangerous drug contraindications.
@@ -1978,9 +2187,16 @@ Scope note from the project plan: neuro-symbolic AI is out of scope for this mod
 
 ### 7.2 Comparison table
 
-To synthesize everything we have learned in this chapter, here is a master comparison table evaluating Pure Connectionist AI, Pure Classical Symbolic AI, and Modern Hybrid Neuro-Symbolic AI.
+To synthesize everything we have learned in this chapter, here is a master comparison table evaluating Pure Connectionist AI, Pure Classical Symbolic AI, and Modern Neuro-Symbolic AI.
 
-<img width="750" height="694" alt="image" src="https://github.com/user-attachments/assets/ac4bb1d5-0bf8-450b-b702-29628698f95d" />
+| Evaluation dimension | Connectionist AI (Pure Deep Learning) | Classical Symbolic AI (Pure Rule Systems) | Neuro-symbolic AI (neural networks plus rules) |
+|---|---|---|---|
+| Information representation | Continuous high-dimensional floating-point vectors | Discrete human-readable symbols, logic formulas, and IF-THEN rules | Dual-space: continuous vector embeddings mapped to discrete logical symbols |
+| Training & data requirement | Usually high; needs large amounts of data (pre-trained models can reduce this) | No training data; experts must write and maintain the rules | Moderate; neural perception learns from data, symbolic rules guide logic |
+| Interpretability & auditability | Opaque "black box"; internal weights are unreadable | Transparent; can list the facts and rules behind each conclusion | Layered explainability; symbolic rule guardrails verify neural predictions |
+| Constraint & safety enforcement | Soft, probabilistic; cannot strictly guarantee safety rules | Deterministic; applies the stated rules the same way every time | Rules can act as checkable safety limits on neural outputs |
+| Perception & noise tolerance | Native strength; handles noisy, unstructured sensor data easily | Fragile (brittle); breaks when inputs are messy or ambiguous | More robust in principle; neural perception handles noisy input, symbolic rules handle the logic |
+| Hallucination profile | High risk; prone to plausible but factually wrong "hallucinations" | Does not invent facts, but wrong or missing rules give wrong or missing conclusions | Some errors can be caught by explicit symbolic checking rules |
 
 ## Key points
 
@@ -1988,6 +2204,7 @@ To synthesize everything we have learned in this chapter, here is a master compa
 - Explicit rules are separate from procedural code, making them easy for humans to inspect and modify.
 - Explicit rules are reliable under strict conditions but become unreliable when information is missing, conflicting, or outdated.
 - Missing information does not prove the opposite; assuming a fact is false simply because data is absent can cause logical errors in rule-based systems.
-- The same decision can be written as a program or as rules: the program always gives an answer, while the rules make the policy easier to read and change but conclude only what they cover.
+- The same decision can be written as a program or as rules: for a refusal, the program answers but the rules give no conclusion unless a rule such as R4 says so. The rules make the policy easier to read and change, but conclude only what they cover.
+
 
 
