@@ -110,7 +110,7 @@ Software provides instructions for processing information. AI describes systems 
 
 # Chapter 2 — Software Overview
 
-> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -538,7 +538,7 @@ The IF–ELSE decisions in this chapter are directly written into the program. L
 
 # Chapter 4 — Data Structures
 
-> Chapter lead: Ritchard Alexander · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Ritchard Alexander · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -1048,7 +1048,7 @@ When the decision logic is written inside the code, the policy can only be read 
 
 # Chapter 6 — Introduction to Symbolic AI
 
-> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — restructured and AI-assisted draft (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 draft (2 November 2026) — restructured (3 November 2026); discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -1158,7 +1158,7 @@ Use the pneumonia rule of Section 2.
 
 # Chapter 7 — Logic and Reasoning
 
-> Chapter lead: Frederic Chandra · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Frederic Chandra · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -1332,7 +1332,7 @@ Slide 18 asks: "Do you see anything strange?" Two rules look dangerous at first 
 
 # Chapter 8 — Knowledge Representation
 
-> Chapter lead: Louis Alexander Dalim · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Louis Alexander Dalim · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -1691,7 +1691,7 @@ A rule-based system keeps what it knows as facts and IF-THEN rules in a knowledg
 
 # Chapter 10 — Planning and Problem Solving
 
-> Chapter lead: Eizel Mthana Conqueror · Module: Software and Symbolic AI · Version: V2.0 working draft (3 November 2026) — AI-assisted draft; discussed by the team on 4 November 2026
+> Chapter lead: Eizel Mthana Conqueror · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
@@ -1844,7 +1844,7 @@ Use Figure 1 and the heuristic table of Section 4.
 
 # Chapter 11 — Symbolic Natural Language Processing
 
-> Chapter lead: Frederick Bryan The · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — restructured and AI-assisted draft (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Frederick Bryan The · Module: Software and Symbolic AI · Version: V2.0 draft (2 November 2026) — restructured draft (3 November 2026); discussed by the team on 4 November 2026
 
 ### Learning outcomes
 
