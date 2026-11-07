@@ -31,7 +31,8 @@ The five members present accepted their assigned chapters and project roles. Fre
 
 - **Evidence E57 — Team:** Photo of the five members at Meeting 1.
 
-![Evidence screenshot](meeting-summary-assets/image-01.jpg)
+<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/8dd8a933-2d08-4291-a996-2f0b28fffed2" />
+
 
 ## **Meeting 2 — Project Log and Stage 2 Materials**
 
