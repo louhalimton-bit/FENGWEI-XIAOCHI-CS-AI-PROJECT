@@ -112,7 +112,7 @@ The module outline and project plan would use the twelve-chapter structure based
 
 ![Evidence screenshot](meeting-summary-assets/image-03.jpg)
 
-\## **Meeting 4 — Game Development and Chapter Quality Check**
+## **Meeting 4 — Game Development and Chapter Quality Check**
 
 - **Date and time:** 5 November 2026, 20:34
 - **Location or platform:** International Student Dormitory, Room 1017; Claude AI, Google Docs and Microsoft Word
@@ -150,3 +150,47 @@ The meeting set 7 November as the date to finish the game, the twelve-chapter qu
 - **Evidence E60 — Team:** Photo of the four members at Meeting 4.
 
 ![Evidence screenshot](meeting-summary-assets/image-04.jpg)
+
+## **Meeting 5 — Video Narration, Game Finalization, and Project Updates**
+
+- **Date and time:** 6 November 2026, 21:43
+- **Location or platform:** International Student Dormitory, Room 1017; Claude AI, Google Docs and Microsoft Word
+- **Attendees:** Ritchard Alexander 林俊宇, Frederic Chandra 张国立, Louis Alexander Dalim 苏路成, Gunawan Nicolas Benedictus 李庆成, Eizel Mthana Conqueror 康哲
+- **Absent members:** Frederick Bryan The 郑明畅 (not involved)
+
+### **Purpose or agenda**
+
+To review the revised video tutorial narration script, audio recording progress, game finalization, GitHub module-content and AI-use uploads, PPT quality checking, and the start of the individual personal logs.
+
+### **Key discussion points**
+
+- Eizel revised the video tutorial narration script.
+- All six members recorded audio for their assigned chapters and parts: Gunawan for Chapters 1, 2, and 6; Ritchard for Chapters 3 and 4; Eizel for Chapters 5 and 10; Frederic for Chapters 7 and 12; Louis for Chapters 8 and 9; and Frederick Bryan for Chapter 11.
+- Gunawan finalized the game by correcting its glitches and improving how enjoyable it is.
+- The module content was assigned for GitHub entry by chapter range: Gunawan for Chapters 1–4, Louis for Chapters 5–8, and Frederic for Chapters 9–12. Louis continued updating the GitHub repository.
+- Ritchard and Eizel worked on uploading the AI-use records to GitHub.
+- Frederic quality-checked the PPT slides.
+- All six members began working on their individual personal logs.
+- Ritchard updated Project Log Entry 05 and Meeting Summary 05.
+- **Follow-up on earlier actions:** From Meeting 4: the PowerPoint was completed and the game was closed. The twelve-chapter quality-check findings were on GitHub’s Frederic branch (Entry 03), and the corrections still had to reach content.md.
+
+### **Decisions and outcomes**
+
+Each member recorded their own chapters, and the module-content upload to GitHub was divided by chapter range among Gunawan, Louis, and Frederic. Ritchard and Eizel took the AI-use records. The team began preparing individual personal logs.
+
+### **Follow-up actions**
+
+| **Action** | **Owner(s)** | **Due date** |
+| --- | --- | --- |
+| Confirm that Chapters 1–12 and the AI-use records are uploaded to GitHub and organized correctly | Gunawan Nicolas Benedictus 李庆成 (Chapters 1–4); Louis Alexander Dalim 苏路成 (Chapters 5–8); Frederic Chandra 张国立 (Chapters 9–12); Ritchard Alexander 林俊宇 and Eizel Mthana Conqueror 康哲 (AI-use records) | By 7 November 2026 |
+| Assemble the recorded audio with the video visuals and review the tutorial videos. The assembly was done that evening (Entry 05); the review followed on 7 November (Entry 06) | Frederick Bryan The 郑明畅 with the assigned narrators; Eizel Mthana Conqueror 康哲 with Claude | By 7 November 2026 |
+| Record the PPT quality-check findings and make any needed corrections | Frederic Chandra 张国立 | By 7 November 2026 |
+| Complete the individual personal logs | All six members | By 7 November 2026 |
+| Review and finalize Project Log Entry 05 and Meeting Summary 05 | Ritchard Alexander 林俊宇 | By 7 November 2026 |
+
+### **Evidence**
+
+- **Evidence E61 — Team:** Photo of the five members at Meeting 5.
+
+![Evidence screenshot](meeting-summary-assets/image-05.jpg)
+
