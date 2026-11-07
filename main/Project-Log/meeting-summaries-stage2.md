@@ -69,7 +69,8 @@ The assets folder structure was set, with subfolders for videos, PowerPoint pres
 
 - **Evidence E58 — Team:** Photo of the four members at Meeting 2.
 
-![Evidence screenshot](meeting-summary-assets/image-02.jpg)
+<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/78acbd8c-cf07-4235-8383-a4c3d11fb6a6" />
+
 
 ## **Meeting 3 — Twelve-Chapter Structure and Quality Review**
 
@@ -111,7 +112,8 @@ The module outline and project plan would use the twelve-chapter structure based
 
 - **Evidence E59 — Team:** Photo of the five members at Meeting 3.
 
-![Evidence screenshot](meeting-summary-assets/image-03.jpg)
+<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/7a1a2f44-5053-4ed6-8a22-94e8b237cbea" />
+
 
 ## **Meeting 4 — Game Development and Chapter Quality Check**
 
@@ -150,7 +152,9 @@ The meeting set 7 November as the date to finish the game, the twelve-chapter qu
 
 - **Evidence E60 — Team:** Photo of the four members at Meeting 4.
 
-![Evidence screenshot](meeting-summary-assets/image-04.jpg)
+<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/0fb096fc-5af1-4bf1-8b1d-54dbcb594750" />
+
+
 
 ## **Meeting 5 — Video Narration, Game Finalization, and Project Updates**
 
