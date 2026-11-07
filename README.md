@@ -86,7 +86,6 @@ conclusion.
 ├── references/
 │   └── chapter-references.md             # Verified sources
 └── assets/                    # Images and diagrams (relative paths)
-│   ├── videos                 # Videos used for the module 
 │   ├── Presentation slides    # PowerPoint slides for each chapter
 │   ├── Chapters               # Diagrams and images for each chapter
 ```
