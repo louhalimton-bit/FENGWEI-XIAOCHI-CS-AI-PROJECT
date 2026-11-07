@@ -197,5 +197,6 @@ Each member recorded their own chapters, and the module-content upload to GitHub
 
 - **Evidence E61 — Team:** Photo of the five members at Meeting 5.
 
-![Evidence screenshot](meeting-summary-assets/image-05.jpg)
+<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/7e13cfde-6c1d-4a21-9f1b-3534b2513613" />
+
 
