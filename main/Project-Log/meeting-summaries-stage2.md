@@ -111,3 +111,42 @@ The module outline and project plan would use the twelve-chapter structure based
 - **Evidence E59 — Team:** Photo of the five members at Meeting 3.
 
 ![Evidence screenshot](meeting-summary-assets/image-03.jpg)
+
+\## **Meeting 4 — Game Development and Chapter Quality Check**
+
+- **Date and time:** 5 November 2026, 20:34
+- **Location or platform:** International Student Dormitory, Room 1017; Claude AI, Google Docs and Microsoft Word
+- **Attendees:** Ritchard Alexander 林俊宇, Louis Alexander Dalim 苏路成, Gunawan Nicolas Benedictus 李庆成, Eizel Mthana Conqueror 康哲
+- **Absent members:** Frederic Chandra 张国立 (not involved), Frederick Bryan The 郑明畅 (not involved)
+
+### **Purpose or agenda**
+
+To review progress on the game, the quality checks of the twelve chapters, and the Stage 2 project documentation.
+
+### **Key discussion points**
+
+- Louis took on updating the GitHub project plan, module outline and content.md for twelve chapters, and committed them later that night (Entry 04). Louis and Eizel worked together on developing the game; work was ongoing.
+- Frederic and Frederick quality-checked the twelve chapters.
+- Ritchard updated Project Log Entry 04 and Meeting Summary 04.
+- Eizel completed checking the Study Guide and Test Bank against the module content and fixed the formatting of both documents.
+- Eizel worked on the PowerPoint presentation; it was still in progress.
+- **Follow-up on earlier actions:** From Meeting 3: the Study Guide and Test Bank comparison was completed, and bringing the project plan on GitHub into line with the twelve chapters was under way. The chapter quality check and the AI-use log were still in progress.
+
+### **Decisions and outcomes**
+
+The meeting set 7 November as the date to finish the game, the twelve-chapter quality checks, the project documentation and the Stage 2 PowerPoint. Louis updated the GitHub project materials to match the twelve-chapter structure. Eizel completed checking the Study Guide and Test Bank against the module content and fixed their formatting.
+
+### **Follow-up actions**
+
+| **Action** | **Owner(s)** | **Due date** |
+| --- | --- | --- |
+| Continue developing and test the game; record its completion status | Louis Alexander Dalim 苏路成 and Eizel Mthana Conqueror 康哲 | By 7 November 2026 |
+| Complete the quality checks of all twelve chapters and record any corrections | Frederic Chandra 张国立 and Frederick Bryan The 郑明畅 | By 7 November 2026 |
+| Complete the Stage 2 PowerPoint presentation | Eizel Mthana Conqueror 康哲 | By 7 November 2026 |
+| Review and finalize Project Log Entry 04 and Meeting Summary 04 | Ritchard Alexander 林俊宇 | By 7 November 2026 |
+
+### **Evidence**
+
+- **Evidence E60 — Team:** Photo of the four members at Meeting 4.
+
+![Evidence screenshot](meeting-summary-assets/image-04.jpg)
