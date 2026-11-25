@@ -1,7 +1,7 @@
 # Study Guide: Software and Symbolic AI
 
 *Team:* 风味小吃 (Fengwei Xiaochi)
-*Source:* This is the short repository copy of 风味小吃_Stage2_StudyGuide_V1.4. It gives the route through the module, in the book’s own words. The full book, with the explanations, activities, answers and figures, is submitted with the Test Bank, Pip’s Library Trials.
+*Source:* This is the short repository copy of the final Study Guide (风味小吃_Final_StudyGuide.pdf, November 2026). It gives the route through the module, in the book’s own words. The full book, with the explanations, activities, answers and figures, is submitted with the Test Bank.
 
 ## Welcome: meet Pip
 
@@ -36,40 +36,41 @@ By the end of this guide, you should be able to:
 
 Every chapter follows the same route: meet a problem → predict or try → observe → explain → apply → check.
 
-Work through the chapters in order. Each one uses ideas from the one before. Read the chapter, watch the matching video, do the activities, and then use the separate Test Bank, Pip’s Library Trials, to check yourself. Review any question you cannot explain.
+Work through the chapters in order. Each one uses ideas from the one before. Read the chapter, watch the matching video, do the activities, and then use the separate Test Bank to check yourself. Review any question you cannot explain.
 
 | Ch. | Topic | Main activity | You need | Video | Test Bank |
 |---|---|---|---|---|---|
-| 1 | Software, AI and symbolic AI | Check yourself 1.1: Is it AI? | Paper | 01 | T01–T02, M01–M02, O01 |
-| 2 | Software overview | Activity 2.1: Who does what? | Paper | 01 | T03–T04, M03–M04, M32, O01 |
-| 3 | Algorithms | Activity 3.1: Trace and debug | Paper | 02 | T05–T06, M05–M06, O01 |
-| 4 | Data structures | Activity 4.1: Trace BFS | Paper | 02 | T07–T08, M07–M08, M37, O02 |
-| 5 | Software engineering and databases | Activity 5.1: Design and test | Paper | 03 | T09–T10, M09–M10, M33–M34, O03 |
-| 6 | Introduction to symbolic AI | Activity 6.1: Will the rule fire? | Paper | 04 | T11–T12, M11–M12, O05 |
-| 7 | Logic and reasoning | Activity 7.1: Formalize and reason | Paper | 04 | T13–T14, M13–M14, M38, O04 |
-| 8 | Knowledge representation | Activity 8.1: Same case, different forms | Paper | 05 | T15–T16, M15–M16, M31, O04 |
-| 9 | Rule-based and expert systems | Activity 9.1: Be the inference engine; 9.2: Prolog | Paper; browser | 05 | T17–T18, M17–M18, M25, M35, O05 |
-| 10 | Planning and problem solving | Activity 10.1: River puzzle; 10.2: Plan a route | Paper | 06 | T19–T20, M19–M20, M26, M29–M30, O02 |
-| 11 | Symbolic language processing | Activity 11.1: Parse tree; 11.2: ELIZA | Paper; browser | 07 | T21–T22, M21–M22, M27, O06 |
-| 12 | Software and symbolic AI together | Activity 12.1: Policy change; Hands-on 12.2 | Paper; browser | 07 | T23–T24, M23–M24, M28, M36, O03, O06 |
+| 1 | Software, AI and symbolic AI | Check yourself 1.1: Is it AI? | Paper | 01 | T01–T02, T25, M01–M02, O01 |
+| 2 | Software overview | Activity 2.1: Who does what? | Paper | 01 | T03–T04, M03–M04, M32, M39, O01 |
+| 3 | Algorithms | Activity 3.1: Trace and debug | Paper | 02 | T05–T06, M05–M06, M49, O01, O07 |
+| 4 | Data structures | Activity 4.1: Trace BFS | Paper | 02 | T07–T08, T26, M07–M08, M37, O02, O07 |
+| 5 | Software engineering and databases | Activity 5.1: Design and test | Paper | 03 | T09–T10, T27, M09–M10, M33–M34, M40–M41, O03 |
+| 6 | Introduction to symbolic AI | Activity 6.1: Will the rule fire? | Paper | 04 | T11–T12, M11–M12, M42, O05, O08 |
+| 7 | Logic and reasoning | Activity 7.1: Formalize and reason | Paper | 04 | T13–T14, T28, M13–M14, M38, M43, O04 |
+| 8 | Knowledge representation | Activity 8.1: Same case, different forms | Paper | 05 | T15–T16, M15–M16, M31, M44, O04 |
+| 9 | Rule-based and expert systems | Activity 9.1: Be the inference engine; 9.2: Prolog | Paper; browser | 05 | T17–T18, M17–M18, M25, M35, M45, O05 |
+| 10 | Planning and problem solving | Activity 10.1: River puzzle; 10.2: Plan a route | Paper | 06 | T19–T20, T29, M19–M20, M26, M29–M30, M46, O02 |
+| 11 | Symbolic language processing | Activity 11.1: Parse tree; 11.2: ELIZA | Paper; browser | 07 | T21–T22, T30, M21–M22, M27, M47–M48, O06 |
+| 12 | Software and symbolic AI together | Activity 12.1: Policy change; Hands-on 12.2 | Paper; browser | 07 | T23–T24, M23–M24, M28, M36, O03, O06, O08 |
 
-**Reading the codes.** T = True/False, M = Multiple Choice, O = Open-ended. “Video 01” means the team’s own 风味小吃 Video Tutorial with that number, from the team’s Video Tutorials submission. Attempt a Case File (O) only after finishing every chapter it covers.
+**Reading the codes.** T = True/False, M = Multiple Choice, O = Open-ended. “Video 01” means the team’s own 风味小吃 Video Tutorial with that number, from the team’s Video Tutorials submission. Attempt an open-ended case (O) only after finishing every chapter it covers.
 
 ## Learning suggestion
 
-- **Order one dish at a time.** Work through the chapters in order. Each one uses ideas from the one before, so skipping ahead is like starting dinner with the bill.
-- **Taste before you read the menu.** When you see Predict first, write your answer before you read on. A wrong guess you can explain teaches more than a right guess you cannot.
-- **Eat with friends.** This book is meant to be talked about. Explain each idea to the person next to you. If you cannot explain it, go back one page.
-- **Visit the kitchen.** Do not only read about the tools. Use the cards, Scratch, SWISH and ELIZA, and watch the team’s Video Tutorials. Each one has instructions next to its activity.
-- **Come back for seconds.** Check yourself with the Test Bank, Pip’s Library Trials. Its Score Sheet sends you back to any chapter you need. Coming back is part of the meal.
+- **One chapter at a time.** Work through the chapters in order. Each one uses ideas from the one before.
+- **Predict first.** When you see Predict first, write your answer before you read on. A wrong guess you can explain teaches more than a right guess you cannot.
+- **Check your answers at the back.** Activities and Try it questions send you to the Answers section (p. 120). Try them fully before you look.
+- **Explain it to someone.** Explain each idea to the person next to you. If you cannot explain it, go back one page.
+- **Use the tools.** Do not only read about the tools. Use the cards, Scratch, SWISH and ELIZA, and watch the team’s video tutorials. Each one has instructions next to its activity.
+- **Come back with the Test Bank.** Check yourself with the Test Bank. Its Score Sheet sends you back to any chapter you need.
 
 ## Optional game: Rulebound
 
 **What is it?** Even robots take breaks. In the staff room, Pip found an arcade cabinet: a one-on-one pixel fighting game made for this module, with five fighters, five battlegrounds and twelve stages, one for each chapter.
 
-**Where it is:** The game is in the Study Guide and Test Bank ZIP, not in this repository.
+**How to open it** Open https://claude.ai/artifact/6ijDz9ZTwsuW9NCvXZrn1M in a web browser (the same link is in the Resource index, p. 117). There is nothing to install and no sign-in. Offline copy: from the Study Guide ZIP, double-click `Supporting_Files/Game_Rulebound/rulebound.html`. README.md in that folder has the controls and explains how the rival works.
 
-**How to open it** Extract the whole ZIP first, then double-click Supporting_Files/Game_Rulebound/rulebound.html . It runs in a browser, with no installation, sign-in or internet.
+**How the game was tested** The script `tests/test_game.js` in the game folder runs 1,330 automated checks on the fight rules, the rival’s IF-THEN rules, every listed combo and ability, and all twelve stages; all passed on 21 November 2026. Team Opus 7 played the game from the p. 117 link during their Stage 3 peer review and reported that it worked and that the instructions were clear.
 
 **If you cannot open it** Nothing else depends on the game. Use the Test Bank and each chapter’s activities instead.
 
@@ -95,7 +96,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Explain the difference between software, AI, machine learning, and symbolic AI.
 - [ ] Represent a familiar decision as facts and a rule.
 
-**Practise next:** Test Bank T01–T02, M01–M02, O01 (after Chapter 3). Optional: Rulebound, Stage 1.  
+**Practise next:** Test Bank T01–T02, T25, M01–M02, O01 (after Chapter 3). Optional: Rulebound, Stage 1.  
 *Sources:* IEEE (1990); OECD (2019); McCarthy et al. (1955); Davis et al. (1977).
 
 ### Chapter 2: Software Overview
@@ -119,7 +120,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Describe what an operating system manages, and trace programs taking turns on the processor.
 - [ ] Tell procedural, object-oriented, functional and declarative languages apart.
 
-**Practise next:** Test Bank T03–T04, M03–M04, M32, O01 (after Chapter 3). Optional: Rulebound, Stage 2.  
+**Practise next:** Test Bank T03–T04, M03–M04, M32, M39, O01 (after Chapter 3). Optional: Rulebound, Stage 2.  
 *Sources:* chap3 slides 2 and 4; Forouzan (2018), Ch. 7 and 9; Brookshear and Brylow (2019), Ch. 3 and 6.
 
 ### Chapter 3: Algorithms: How Programs Process Information and Make Decisions
@@ -143,7 +144,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Check a list of steps against the five features of an algorithm.
 - [ ] Trace a loop, a recursive function, linear search, binary search and a pass of bubble sort.
 
-**Practise next:** Test Bank T05–T06, M05–M06, O01. Optional: Rulebound, Stage 3.  
+**Practise next:** Test Bank T05–T06, M05–M06, M49, O01, O07 (after Chapter 4). Optional: Rulebound, Stage 3.  
 *Sources:* chap3 slide 3; Brookshear and Brylow (2019); Knuth (1997).
 
 ### Chapter 4: Data Structures
@@ -166,7 +167,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Describe the main data structures, with a library example for each.
 - [ ] Trace a queue, and trace breadth-first search on a map.
 
-**Practise next:** Test Bank T07–T08, M07–M08, M37, O02 (after Chapter 10). Optional: Rulebound, Stage 4.  
+**Practise next:** Test Bank T07–T08, T26, M07–M08, M37, O07, O02 (after Chapter 10). Optional: Rulebound, Stage 4.  
 *Sources:* chap3 slides 3 and 4; Forouzan (2018), Ch. 11 and 12; Brookshear and Brylow (2019), Ch. 8.
 
 ### Chapter 5: Software Engineering and Databases
@@ -190,7 +191,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Read the loan decision as a program and write test cases for it.
 - [ ] Explain tables and keys, and read simple SQL.
 
-**Practise next:** Test Bank T09–T10, M09–M10, M33–M34, O03 (after Chapter 12). Optional: Rulebound, Stage 5.  
+**Practise next:** Test Bank T09–T10, T27, M09–M10, M33–M34, M40–M41, O03 (after Chapter 12). Optional: Rulebound, Stage 5.  
 *Sources:* Forouzan (2018), Ch. 8, 10 and 14; Brookshear and Brylow (2019), Ch. 7; Sommerville (2016), Ch. 1 and 2.
 
 ## Part B: Symbolic AI
@@ -215,7 +216,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Read an IF–THEN rule, say when it fires, and explain why “may have” and missing facts matter.
 - [ ] Give the benefits and limitations of symbolic AI, and where it is used.
 
-**Practise next:** Test Bank T11–T12, M11–M12, O05 (after Chapter 9). Optional: Rulebound, Stage 6.  
+**Practise next:** Test Bank T11–T12, M11–M12, M42, O05 (after Chapter 9), O08 (after Chapter 12). Optional: Rulebound, Stage 6.  
 *Sources:* chap4 slides 3–7; Russell and Norvig (2021), Ch. 1 and 7; Newell and Simon (1976).
 
 ### Chapter 7: Logic and Reasoning
@@ -239,7 +240,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Use modus ponens and modus tollens, and spot the two invalid forms.
 - [ ] Read and write simple statements with predicates and quantifiers.
 
-**Practise next:** Test Bank T13–T14, M13–M14, M38, O04 (after Chapter 8). Optional: Rulebound, Stage 7.  
+**Practise next:** Test Bank T13–T14, T28, M13–M14, M38, M43, O04 (after Chapter 8). Optional: Rulebound, Stage 7.  
 *Sources:* chap4 slides 8–20; Russell and Norvig (2021), Ch. 7–9; Brookshear and Brylow (2019), Ch. 11.
 
 ### Chapter 8: Knowledge Representation
@@ -262,7 +263,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Compare logic, semantic networks, frames, scripts, rules and ontologies.
 - [ ] Use inheritance in a semantic network.
 
-**Practise next:** Test Bank T15–T16, M15–M16, M31, O04. Optional: Rulebound, Stage 8.  
+**Practise next:** Test Bank T15–T16, M15–M16, M31, M44, O04. Optional: Rulebound, Stage 8.  
 *Sources:* chap4 slides 21–28; Russell and Norvig (2021), Ch. 10; Minsky (1974); Schank and Abelson (1977); Gruber (1993).
 
 ### Chapter 9: Rule-Based and Expert Systems
@@ -286,7 +287,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Trace forward and backward chaining on the library loan.
 - [ ] Explain how MYCIN combined certainty factors, and why rule engines keep rules outside the code.
 
-**Practise next:** Test Bank T17–T18, M17–M18, M25, M35, O05. Optional: Rulebound, Stage 9.  
+**Practise next:** Test Bank T17–T18, M17–M18, M25, M35, M45, O05. Optional: Rulebound, Stage 9.  
 *Sources:* Russell and Norvig (2021), §1.3.4 and Ch. 7; Davis et al. (1977); Buchanan and Shortliffe (1984); Apache KIE.
 
 ### Chapter 10: Planning and Problem Solving
@@ -310,7 +311,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Trace BFS, DFS, uniform-cost, greedy and A* search on one map.
 - [ ] Work out minimax and pruning, and explain hill climbing and simulated annealing.
 
-**Practise next:** Test Bank T19–T20, M19–M20, M26, M29–M30, O02. Optional: Rulebound, Stage 10.  
+**Practise next:** Test Bank T19–T20, T29, M19–M20, M26, M29–M30, M46, O02. Optional: Rulebound, Stage 10.  
 *Sources:* chap4 slides 33–40; Russell and Norvig (2021), Ch. 3, 4, 6 and 11.
 
 ### Chapter 11: Symbolic Natural Language Processing
@@ -333,7 +334,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Follow a sentence through a language pipeline, and draw its parse tree.
 - [ ] Give an example and a limit for sentiment analysis, question answering and information retrieval.
 
-**Practise next:** Test Bank T21–T22, M21–M22, M27, O06 (after Chapter 12). Optional: Rulebound, Stage 11.  
+**Practise next:** Test Bank T21–T22, T30, M21–M22, M27, M47–M48, O06 (after Chapter 12). Optional: Rulebound, Stage 11.  
 *Sources:* chap4 slides 41–49; Jurafsky and Martin; Russell and Norvig (2021), Ch. 24; Weizenbaum (1966).
 
 ### Chapter 12: Software and Symbolic AI Together
@@ -357,7 +358,7 @@ Work through the chapters in order. Each one uses ideas from the one before. Rea
 - [ ] Compare a rule-based assistant with a machine-learning assistant, using real results.
 - [ ] Say how a system should respond to missing, conflicting, outdated or low-confidence information.
 
-**Practise next:** Test Bank T23–T24, M23–M24, M28, M36, O03, O06. Optional: Rulebound, Stage 12.  
+**Practise next:** Test Bank T23–T24, M23–M24, M28, M36, O03, O06, O08. Optional: Rulebound, Stage 12.  
 *Sources:* chap4 slide 50; Russell and Norvig (2021), Ch. 7; Lane, Machine Learning for Kids; Scratch Foundation.
 
 ## Pip’s last day as a trainee: bringing the module together
@@ -366,7 +367,7 @@ Chapter 6 said what symbolic AI is: knowledge written down as symbols and rules 
 
 **Neither approach is enough for everything. Program logic moves the data, rules give decisions you can explain and check, and a trained model can help with messy input. Knowing which job suits which approach is the main lesson of this module.**
 
-**The final trial.** The Head Librarian has one more question: can Pip be trusted with the loan desk? Take the Test Bank, Pip’s Library Trials, as one sitting: 24 true-or-false statements, 38 multiple-choice questions and 6 case files. Its Score Sheet sends you back to any chapter you need.
+**The final trial.** The Head Librarian has one more question: can Pip be trusted with the loan desk? Take the Test Bank as one sitting: 30 true-or-false statements, 49 multiple-choice questions and 8 open-ended cases. Its Score Sheet sends you back to any chapter you need.
 
 ## Quick reference glossary
 
@@ -457,6 +458,7 @@ The reference list for the module is in `references/chapter_references.md`, and 
 
 Pip is an original character for this guide. Rulebound is the team’s own game, built with AI assistance, including its code, pixel art, music and questions. It uses no third-party code, art, music or fonts. Significant AI assistance is recorded in the team’s project and personal logs.
 
-The book’s format (full-page openers, one idea at a time, an activity card after each topic, and a closing page) is modelled on the Study Guide Book of the 2025 team BOTUMANJI, which we used as a format reference, as the Shared Assignment Rules allow. No text, questions or pictures were taken from it.
+The book’s format (chapter openers, one idea at a time, an activity card after each topic, and a closing page) is modelled on the Study Guide Book of the 2025 team BOTUMANJI, which we used as a format reference, as the Shared Assignment Rules allow. No text, questions or pictures were taken from it.
+
 
 
