@@ -48,7 +48,7 @@ This repository holds the shared Markdown content for our module. Everything is 
    The table below lists each chapter's resources.
 4. Need a shorter route? [`contents/study-guide.md`](contents/study-guide.md) gives the Study Guide's own route, chapter summaries and glossary.
 
-| Ch | Chapter | Slides (`assets/Presentation Slides/`) | Video (start time) | Study Guide (pages, activity) | Test Bank |
+| Ch | Chapter | Slides (`assets/Presentation slides/`) | Video (start time) | Study Guide (pages, activity) | Test Bank |
 | :-- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Software, AI and Symbolic AI | `01_Software_AI_and_Symbolic_AI.pptx` | Video 01, 00:45 | pp. 15–19, Check yourself 1.1 | T01–T02, T25, M01–M02, O01 |
 | 2 | Software Overview | `02_Software_Overview.pptx` | Video 01, 03:19 | pp. 20–26, Activity 2.1 | T03–T04, M03–M04, M32, M39, O01 |
@@ -75,7 +75,7 @@ This repository holds the shared Markdown content for our module. Everything is 
 │   ├── images/                   # Every figure, named by chapter (ch10_fig03.png = Chapter 10, figure 3); README.md indexes them
 │   │   └── study-guide/          # The final Study Guide’s figures, one file each, with captions in the index
 │   ├── Chapters/                 # One page of diagrams for each chapter
-│   └── Presentation Slides/      # Final PPT decks 01–12, with presenter notes
+│   └── Presentation slides/      # Final PPT decks 01–12, with presenter notes
 ├── supporting-files/             # Files for the hands-on activities (see below)
 ├── references/
 │   └── chapter_references.md     # Sources for each chapter
