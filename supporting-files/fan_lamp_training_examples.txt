@@ -1,0 +1,36 @@
+Fan-and-lamp assistant: the team's training examples for Machine Learning for Kids
+Copied exactly as shown in the team's screenshot of 4 November 2026 (Study Guide Figure 12.3).
+Project type: recognising text. Four labels, six examples each.
+The screenshot cuts off the bottom of the lamp_off box, so its count badge is not visible; six examples are visible.
+
+fan_on
+turn on the fan
+I'm hot
+It's so warm in here
+switch the fan on
+fan please
+I need some air
+
+fan_off
+turn off the fan
+I'm cold
+it's freezing in here
+switch the fan off
+stop the fan
+no more fan
+
+lamp_on
+turn on the lamp
+it's dark
+I can't see anything
+switch the light on
+lamp please
+I need more light
+
+lamp_off
+turn off the lamp
+it's too bright
+lights out
+switch the light off
+stop the lamp
+I want to sleep
