@@ -42,7 +42,7 @@ The response proposes a beginner lecture on how symbolic AI uses facts and IF–
 Produced a draft lecture sequence, worked example, audience question, and preparation checklist.
 
 *Evidence:* AI01-E1 — screenshot of the prompt and output.  
- <img width="689" height="675" alt="Weixin Image_20261022224800_72_16" src="https://github.com/user-attachments/assets/6e76b7ef-0fbf-4d89-83af-1308422d3365" />
+ <img width="689" height="675" alt="Weixin Image_20261022224800_72_16" src="../assets/images/ailog_stage1_01.png" />
 
 
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 21, 2026.
@@ -75,7 +75,7 @@ Describes software as instructions/data operating hardware (system, application,
 Prepared a draft overview of software and symbolic AI including strengths and limitations.
 
 *Evidence:* AI02-E2 — see Evidence E4 (Log Entry 01): NotebookLM session with 18 sources.  
-<img width="1812" height="971" alt="Weixin Image_20261021231644_297_148" src="https://github.com/user-attachments/assets/96f09476-2782-4eee-a1e1-47be92ec59f2" />
+<img width="1812" height="971" alt="Weixin Image_20261021231644_297_148" src="../assets/images/ailog_stage1_02.png" />
 
 
 *Personal-log reference:* Frederick Bryan The 郑明畅 — Personal Learning, Oct 21, 2026.
@@ -110,7 +110,7 @@ Produced a structured Stage 1 project plan and task list covering team roles, le
 Produced a structured project plan and task list for coordinating Stage 1 and future phases.
 
 *Evidence:* AI03-E3 — screenshot of the prompt and the generated plan.  
-<img width="399" height="362" alt="image" src="https://github.com/user-attachments/assets/1a6c299b-ad60-4f31-82a9-7a813c6640e9" />
+<img width="399" height="362" alt="image" src="../assets/images/ailog_stage1_03.png" />
 
 
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 22, 2026.
@@ -151,7 +151,7 @@ A chapter draft with five learning goals and five sections: (1) the hybrid archi
 A first draft exists for Frederic to review and rewrite; nothing from it is used in the repository until the checks above are recorded.
 
 *Evidence:* AI04-E4 — screenshots of the prompt and the start of the output.  
-<img width="397" height="359" alt="image" src="https://github.com/user-attachments/assets/1fa33181-1093-4922-8a62-5ec40ba74e21" />
+<img width="397" height="359" alt="image" src="../assets/images/ailog_stage1_04.png" />
 
 
 
@@ -196,7 +196,7 @@ A chapter draft: why the chapter matters; five learning goals; sections on progr
 A detailed first draft exists for Ritchard to review and rewrite before it becomes the Chapter 2 Markdown file.
 
 *Evidence:* AI05-E5 — screenshot of the Codex session showing the prompt, the attached plan files and the start of the output.  
-<img width="1186" height="732" alt="image" src="https://github.com/user-attachments/assets/b89fa33a-93ff-4931-be85-63c4ad147d7b" />
+<img width="1186" height="732" alt="image" src="../assets/images/ailog_stage1_05.png" />
 
 
 *Personal-log reference:* Ritchard Alexander 林俊宇 — Personal Learning, Oct 23, 2026.
@@ -236,7 +236,7 @@ A "Six-Chapter Learning Guide": a cover reproducing the plan's roster, a content
 An outline and a sample Chapter 1 exist as a starting point for the chapter leads; the Markdown content is written by the chapter leads, not taken from this draft.
 
 *Evidence:* AI06-E6 — screenshot of the prompt and the contents list (cover page with IDs omitted).  
-<img width="660" height="668" alt="Weixin Image_20261023225533_78_16" src="https://github.com/user-attachments/assets/d314d0b6-6420-46bd-a609-cfda68d87f4e" />
+<img width="660" height="668" alt="Weixin Image_20261023225533_78_16" src="../assets/images/ailog_stage1_06.png" />
 
 
 *Personal-log reference:* Gunawan Nicolas Benedictus 李庆成 — Personal Learning, Oct 23, 2026.
@@ -279,7 +279,8 @@ The review produced a corrected task list, a corrected copy of the Project Log, 
 We learned that an AI review can help identify missing tasks and organize corrections, but its suggestions still need human verification. Frederic's reading was an initial quality review; the team still needs to record which corrections it checks, accepts, revises, or rejects.
 
 *Evidence:* AI07-E7 — screenshot of the Claude Code session with the review prompt and the ranked correction list.  
-<img width="397" height="359" alt="image" src="https://github.com/user-attachments/assets/5114506a-54fa-4fc0-ae53-956ce3539ff8" />
+<img width="397" height="359" alt="image" src="../assets/images/ailog_stage1_07.png" />
 
 
 *Personal-log reference:* Eizel Mthana Conqueror 康哲 — Personal Learning and Work Log, October 23, 2026, AI Use entry for the Stage 1 plan and project-log review.
+
