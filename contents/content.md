@@ -1,6 +1,6 @@
 # Chapter 1 — Module Overview: Software, AI and Symbolic AI
 
-> Chapter lead: Gunawan Nicolas Benedictus 李庆成 · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — discussed by the team on 4 November 2026
+> Chapter lead: Gunawan Nicolas Benedictus 李庆成 · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -15,7 +15,7 @@ After this chapter, learners should be able to:
 
 The module follows the professor's PPT 2024 outline: Part A — Software and Algorithms (chap3) and Part B — Symbolic AI (chap4). The umbrella decision and the library loan desk run through both parts.
 
-<img width="750" height="650" alt="image" src="https://github.com/user-attachments/assets/3f7e22f6-ff2d-49b3-8cb0-fc2bcab8c2f9" />
+<img width="750" height="650" alt="image" src="../assets/images/ch01_fig01.png" />
 
 Sections 3 and 4 of this chapter preview symbolic AI; Chapters 6–11 develop it fully.
 
@@ -23,7 +23,7 @@ Sections 3 and 4 of this chapter preview symbolic AI; Chapters 6–11 develop it
 
 Imagine leaving home for class. It is raining and you are going outside, so you take an umbrella. The situation can be represented with two facts and one rule: IF it is raining AND you are going outside, THEN recommend an umbrella. The result is a recommendation based on stated information. A program can store the facts, check the conditions, and display the conclusion.
 
-<img width="650" height="265" alt="image" src="https://github.com/user-attachments/assets/e8f6b592-4403-4997-9c22-331dfe89f283" />
+<img width="650" height="265" alt="image" src="../assets/images/ch01_fig02.png" />
 
 > **Figure 1.** A familiar decision represented as facts, a rule, and a conclusion.
 
@@ -39,7 +39,7 @@ A symbol is a named representation of something in a problem, such as `member_ha
 
 A rule-based system commonly has two parts. The knowledge base stores the facts and rules for the task. The inference engine checks whether current facts satisfy a rule's conditions and applies matching rules. The recommendation can then be shown to the user. Because the knowledge and rules are stated explicitly, a person can inspect what the system used to reach its result [14, 15].
 
-<img width="750" height="344" alt="image" src="https://github.com/user-attachments/assets/ce74976b-b23e-4866-85da-741fbba1700c" />
+<img width="750" height="344" alt="image" src="../assets/images/ch01_fig03.png" />
 
 > **Figure 2.** A simple architecture for symbolic AI software.
 
@@ -69,7 +69,7 @@ Symbolic AI is one way to build software that reasons with explicit knowledge. T
 
 The supplied project plan uses a library-loan scenario in its mini lecture [16]. Start with these facts: the member has a valid card, has no overdue books, and the requested book is available.
 
-<img width="750" height="175" alt="image" src="https://github.com/user-attachments/assets/ad97f283-1f24-483d-b539-9cce190374c9" />
+<img width="750" height="175" alt="image" src="../assets/images/ch01_fig04.png" />
 
 This is a small example of forward chaining: start with known facts, apply a rule whose conditions match, add its conclusion as a new fact, and check the rules again. The software produces the approval because the stated facts and rules support it. Chapter 9 explains forward chaining fully and traces this example one step at a time.
 
@@ -81,7 +81,7 @@ Explicit rules are easy to inspect and test one by one. This is useful when a ta
 
 The history of software follows the development of programmable machines, stored programs, more expressive languages, and disciplined software engineering. Symbolic AI developed alongside it as researchers explored whether computers could manipulate symbols, represent knowledge, and reason from it. The two histories meet because AI systems are software: they use computer hardware and must also be designed, tested, and maintained.
 
-<img width="750" height="650" alt="image" src="https://github.com/user-attachments/assets/d14e2864-15ee-4b2b-931c-11220273ac9c" />
+<img width="750" height="650" alt="image" src="../assets/images/ch01_fig05.png" />
 
 This timeline is selective. It shows how software moved from early programmable ideas to engineered systems, while symbolic AI moved from logic and deduction programs to expert systems and rule engines.
 
@@ -110,7 +110,7 @@ Software provides instructions for processing information. AI describes systems 
 
 # Chapter 2 — Software Overview
 
-> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -132,7 +132,7 @@ System software is the software that runs the computer itself and gives applicat
 
 A building is a useful picture. The operating system is the building's foundations, electricity and water pipes. The applications are the shops inside. A shop does not lay its own water pipe; it uses the one the building provides. In the same way, Weixin does not control the network card directly; it asks the operating system to send the message.
 
-<img width="750" height="507" alt="image" src="https://github.com/user-attachments/assets/e0813f36-d4dc-4e88-ad57-fb9c9e89fd26" />
+<img width="750" height="507" alt="image" src="../assets/images/ch02_fig01.png" />
 
 > **Figure 1.** Layers of software. Each layer uses the services of the layer below it.
 
@@ -142,7 +142,7 @@ Check yourself 1. Is a calculator app system software or application software? A
 
 Operating systems grew as computers became faster, cheaper and more widely used. A simple timeline (Forouzan, 2018, Ch. 7; Brookshear & Brylow, 2019, Ch. 3):
 
-<img width="750" height="409" alt="image" src="https://github.com/user-attachments/assets/1aaec9c4-67a5-479d-b0b1-9dcf793cc4d0" />
+<img width="750" height="409" alt="image" src="../assets/images/ch02_fig02.png" />
 
 The main idea stays the same in every period: the operating system stands between the user's programs and the hardware, and shares the hardware fairly and safely.
 
@@ -160,7 +160,7 @@ Each process is always in one of three main states:
 
 **Worked example:** taking turns. Three processes need the processor: Music (needs 2 time slices), Browser (3 slices) and Weixin (1 slice). The OS gives one slice at a time, in a circle (this is called round-robin scheduling):
 
-<img width="517" height="286" alt="image" src="https://github.com/user-attachments/assets/73dea707-4726-4bd2-b7e2-2daa217991b1" />
+<img width="517" height="286" alt="image" src="../assets/images/ch02_fig03.png" />
 
 Nobody waits too long, and the short job (Weixin) finishes early.
 
@@ -180,7 +180,7 @@ Going further (optional). Many systems divide memory into equal-sized blocks cal
 
 A processor only understands machine language: instructions written as patterns of 0s and 1s. Programmers then made the work easier, step by step:
 
-<img width="750" height="292" alt="image" src="https://github.com/user-attachments/assets/6d3ba894-4edd-4b4e-bf2d-fff75debbeb4" />
+<img width="750" height="292" alt="image" src="../assets/images/ch02_fig04.png" />
 
 A high-level program must be translated before the processor can run it:
 
@@ -192,7 +192,7 @@ An interpreter reads and carries out the program step by step instead of produci
 
 Languages are grouped by the way a programmer describes the solution (Forouzan, 2018, Ch. 9):
 
-<img width="750" height="307" alt="image" src="https://github.com/user-attachments/assets/2eb478d9-3c53-4f39-997f-fc1626df7be2" />
+<img width="750" height="307" alt="image" src="../assets/images/ch02_fig05.png" />
 
 The last group links directly to Part B of this module: in Prolog and in rule-based systems, the programmer writes facts and rules, and the system works out the answer (Chapter 9).
 
@@ -224,7 +224,7 @@ Linux, macOS and Android all follow these ideas: macOS is UNIX-based (it held th
 **Weixin (application software).** Weixin (WeChat) is a messaging application launched by Tencent in 2011. It is application software: it does tasks for the user — chatting, voice calls, sharing photos, paying, running mini programs. Every one of those tasks uses the operating system below it:
 
 
-<img width="750" height="282" alt="image" src="https://github.com/user-attachments/assets/3b8bb93b-8572-4262-a5ea-109553d9291b" />
+<img width="750" height="282" alt="image" src="../assets/images/ch02_fig06.png" />
 
 The same Weixin features exist on Android and on iOS because each version is written to use that operating system's services.
 
@@ -256,7 +256,7 @@ Languages can be procedural, object-oriented, functional or declarative; most us
 
 # Chapter 3 — Algorithms: How Programs Process Information and Make Decisions
 
-> Chapter lead: Ritchard Alexander 林俊宇 · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — discussed by the team on 4 November 2026
+> Chapter lead: Ritchard Alexander 林俊宇 · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ## Why this chapter matters
 
@@ -282,7 +282,7 @@ For example, a weather application can receive a location, process weather infor
 
 Data are values a program receives, stores, or works with. Data may be text, numbers, answers, dates, or measurements. Instructions tell the program what to do with the data. An instruction might ask the program to compare two values, calculate a total, save information, or display a message.
 
-<img width="750" height="205" alt="image" src="https://github.com/user-attachments/assets/20deb0a8-10da-4fdc-beb0-6e5a8dc854ba" />
+<img width="750" height="205" alt="image" src="../assets/images/ch03_fig01.png" />
 
 The computer does not treat the user's answer as a command in this example. The answer is data. The program's instructions decide how to use it.
 
@@ -296,7 +296,7 @@ A useful way to understand many programs is to divide their work into three stag
 
 A weather reminder can be represented like this:
 
-<img width="750" height="195" alt="image" src="https://github.com/user-attachments/assets/04a813bc-156c-42eb-8647-517562ec3d33" />
+<img width="750" height="195" alt="image" src="../assets/images/ch03_fig02.png" />
 
 Input, processing, and output describe roles in a task. A program can have several inputs and outputs, and the output of one step can become the input for a later step.
 
@@ -304,7 +304,7 @@ Input, processing, and output describe roles in a task. A program can have sever
 
 Suppose a program receives the prices of two items. The prices are input data. The instructions add the prices together during processing. The total is the output.
 
-<img width="504" height="165" alt="image" src="https://github.com/user-attachments/assets/ea4f6ef4-975f-4aa3-a47d-299ec6646c01" />
+<img width="504" height="165" alt="image" src="../assets/images/ch03_fig03.png" />
 
 The numbers are data. "Add the two prices" is an instruction.
 
@@ -331,9 +331,9 @@ If the condition is true, run the instructions in the IF branch.
 
 If the condition is false, run the instructions in the ELSE branch.
 
-<img width="575" height="480" alt="image" src="https://github.com/user-attachments/assets/35768678-31c5-490e-9a08-10721904f43c" />
+<img width="575" height="480" alt="image" src="../assets/images/ch03_fig04.png" />
 
-<img width="750" height="476" alt="image" src="https://github.com/user-attachments/assets/02b51357-d4f7-4553-8730-d9536e183746" />
+<img width="750" height="476" alt="image" src="../assets/images/ch03_fig05.png" />
 
 > **Figure 1.** The weather reminder as a flowchart: the condition is checked once, and exactly one branch runs.
 
@@ -355,7 +355,7 @@ The Python Language Reference explains that an `if` statement selects exactly on
 
 ### What each line does
 
-<img width="750" height="348" alt="image" src="https://github.com/user-attachments/assets/5a7fbd91-6732-4579-ac43-194653d6ca07" />
+<img width="750" height="348" alt="image" src="../assets/images/ch03_fig06.png" />
 
 A variable is a named place in a program where a value can be stored. Here, `rain_answer` stores the input. In Python, `=` assigns a value to a variable, while `==` compares two values. Python's `input()` receives text, and `print()` displays output. [3]
 
@@ -363,13 +363,13 @@ A variable is a named place in a program where a value can be stored. Here, `rai
 
 To trace a program is to follow its instructions in order for a particular input. Record the data, evaluate each condition, and note which instructions run.
 
-<img width="750" height="399" alt="image" src="https://github.com/user-attachments/assets/90943511-fbf5-4c03-b39e-4695848d814d" />
+<img width="750" height="399" alt="image" src="../assets/images/ch03_fig07.png" />
 
 **Output:** Take an umbrella
 
 ### Trace B: the user enters no
 
-<img width="750" height="399" alt="image" src="https://github.com/user-attachments/assets/e4018dd6-780e-4498-94cd-6d2962c3f629" />
+<img width="750" height="399" alt="image" src="../assets/images/ch03_fig08.png" />
 
 **Output:** No umbrella needed
 
@@ -400,7 +400,7 @@ For each input, write:
 
 **Expected answers**
 
-<img width="643" height="124" alt="image" src="https://github.com/user-attachments/assets/29d45f5f-69d7-40a9-a331-258319e62b36" />
+<img width="643" height="124" alt="image" src="../assets/images/ch03_fig09.png" />
 
 ### Practice 2: find the error
 
@@ -436,7 +436,7 @@ Sections 1–6 showed one small algorithm, the weather reminder. This section an
 
 Not every list of steps is an algorithm. Knuth (1997, §1.1) describes five features; the course books give shorter definitions with the same ideas — an ordered set of unambiguous steps that produces a result and stops (Forouzan, 2018, pp. 223–224; Brookshear & Brylow, 2019, Ch. 5):
 
-<img width="750" height="399" alt="image" src="https://github.com/user-attachments/assets/f3e49b82-99d4-4206-88b0-feb84025759d" />
+<img width="750" height="399" alt="image" src="../assets/images/ch03_fig10.png" />
 
 A recipe that says "add salt until it tastes right" fails definiteness: two cooks will do different things. A step that says "keep counting until you reach the last number" fails finiteness, because there is no last number.
 
@@ -444,7 +444,7 @@ A recipe that says "add salt until it tastes right" fails definiteness: two cook
 
 The same algorithm can be written in several ways. Each way suits a different reader.
 
-<img width="750" height="373" alt="image" src="https://github.com/user-attachments/assets/7aec4205-3bf9-4db2-ab65-5df398c66cd3" />
+<img width="750" height="373" alt="image" src="../assets/images/ch03_fig11.png" />
 
 A flowchart uses standard shapes: an oval for Start and Stop, a parallelogram for input and output, a rectangle for a processing step, a diamond for a yes/no decision, and arrows for the order.
 
@@ -463,7 +463,7 @@ for days in days_late:
     total = total + days * 1
 print("Total fine:", total, "yuan")
 ```
-<img width="415" height="165" alt="image" src="https://github.com/user-attachments/assets/017d4a68-8d65-4e32-b9d3-d8bd5d87d8c7" />
+<img width="415" height="165" alt="image" src="../assets/images/ch03_fig12.png" />
 
 **Output:** `Total fine: 7 yuan`. The loop stops by itself after the last item, so the algorithm is finite.
 
@@ -498,7 +498,7 @@ Binary search only works on a sorted list, but it is much faster. It looks at th
 
 **Example:** find 70 in the sorted list `10, 20, 30, 40, 50, 60, 70, 80, 90` (positions 1–9).
 
-<img width="546" height="124" alt="image" src="https://github.com/user-attachments/assets/c335dc52-7204-4139-a6a8-bcab53a4a653" />
+<img width="546" height="124" alt="image" src="../assets/images/ch03_fig13.png" />
 
 Two checks instead of seven. Each step halves the list, so even 1,000 sorted items need only about 10 checks. It is the same game as "guess my number from 1 to 100" when the answer is "higher" or "lower".
 
@@ -506,7 +506,7 @@ Sorting puts items into order. A simple method is bubble sort: go through the li
 
 **Example:** sort `5, 3, 8, 1`.
 
-<img width="618" height="205" alt="image" src="https://github.com/user-attachments/assets/86bc3414-cc76-49d2-b1ad-0d993d8b5da9" />
+<img width="618" height="205" alt="image" src="../assets/images/ch03_fig14.png" />
 
 After each pass the largest remaining number has "bubbled" to its place at the end. Bubble sort is easy to understand but slow on long lists; real software uses faster methods such as merge sort and quicksort, which a "Going further" study can explore.
 
@@ -538,7 +538,7 @@ The IF–ELSE decisions in this chapter are directly written into the program. L
 
 # Chapter 4 — Data Structures
 
-> Chapter lead: Ritchard Alexander · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Ritchard Alexander · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -567,7 +567,7 @@ Algorithms (Chapter 3) and data structures work together: an algorithm is the li
 
 An array is a fixed number of boxes of the same kind, stored side by side. Each box has a number called its index. In most languages the first index is 0.
 
-<img width="750" height="420" alt="image" src="https://github.com/user-attachments/assets/c42d78c3-9aae-42d0-a849-bb5b7ae0f24a" />
+<img width="750" height="420" alt="image" src="../assets/images/ch04_fig01.png" />
 
 > **Figure 1.** Top: an array. Bottom: a linked list (Section 3).
 
@@ -583,7 +583,7 @@ Because the boxes sit side by side, the computer can jump straight to any index;
 
 A record groups several pieces of data about one thing, each with its own name (a field). A library member is a record:
 
-<img width="228" height="205" alt="image" src="https://github.com/user-attachments/assets/a06ba3c0-cb08-4883-89ae-49c1f06d475f" />
+<img width="228" height="205" alt="image" src="../assets/images/ch04_fig02.png" />
 
 To keep the record simple, `overdue_books` is stored here as a field; Chapter 5, Section E, shows that a real library works this number out from its Loans table.
 
@@ -595,7 +595,7 @@ A linked list is a chain of nodes. Each node holds a value and a link (pointer) 
 
 Think of a treasure hunt: each clue tells you where the next clue is. To reach the third clue you must follow the first two — you cannot jump. That is the main trade-off:
 
-<img width="750" height="216" alt="image" src="https://github.com/user-attachments/assets/bef3a044-ca06-4d9f-9e06-169143e887e6" />
+<img width="750" height="216" alt="image" src="../assets/images/ch04_fig03.png" />
 
 **Example.** To insert B250 between B205 and B310, make the new node point to B310, then make B205 point to the new node. Nothing else moves.
 
@@ -611,13 +611,13 @@ A queue is a list where items join at the back and leave from the front — like
 - **enqueue:** join at the back.
 - **dequeue:** leave from the front.
 
-<img width="750" height="330" alt="image" src="https://github.com/user-attachments/assets/f0e9a5df-47bc-4f71-91db-7f1ea711f8eb" />
+<img width="750" height="330" alt="image" src="../assets/images/ch04_fig04.png" />
 
 > **Figure 2.** A stack (left) and a queue (right).
 
 **Worked example:** trace a stack. Start with an empty stack.
 
-<img width="529" height="286" alt="image" src="https://github.com/user-attachments/assets/245e1d29-2f33-4a13-8a90-db05cf5b437b" />
+<img width="529" height="286" alt="image" src="../assets/images/ch04_fig05.png" />
 
 Where they are used: the Undo button keeps your last actions on a stack; a printer keeps jobs in a queue; the operating system keeps ready processes in a queue (Chapter 2, Section 3).
 
@@ -627,7 +627,7 @@ A tree stores data in a hierarchy, like a family tree or the library's subject c
 
 A binary tree is a tree in which every node has at most two children, a left one and a right one. A very useful kind is the binary search tree: for every node, all numbers in its left part are smaller, and all numbers in its right part are larger.
 
-<img width="750" height="458" alt="image" src="https://github.com/user-attachments/assets/90315f03-aa9d-447d-96b9-5e0aa8362b01" />
+<img width="750" height="458" alt="image" src="../assets/images/ch04_fig06.png" />
 
 > **Figure 3.** A binary search tree of shelf numbers.
 
@@ -639,7 +639,7 @@ Find 45. 50 → left to 30 → right to 40 → right of 40 is empty. So 45 is no
 
 A graph is a set of nodes (also called vertices) joined by edges. Unlike a tree, a graph can have cycles (paths that lead back to where they started), and any node can connect to any other. Maps, social networks and the web are graphs.
 
-<img width="750" height="450" alt="image" src="https://github.com/user-attachments/assets/a5f19dd0-779e-4f20-8f2f-c52a77781f1c" />
+<img width="750" height="450" alt="image" src="../assets/images/ch04_fig07.png" />
 
 > **Figure 4.** The library map as a graph. Chapter 10 uses the numbers on the edges; here we only need which rooms are connected.
 
@@ -688,7 +688,7 @@ Graphs model connections; breadth-first search visits them layer by layer using 
 
 # Chapter 5 — Software Engineering and Databases: From Problem to Program
 
-> Chapter lead: Eizel Mthana Conqueror 康哲 (Visual Design Lead) · Module: Software and Symbolic AI — "How Can Software Use Rules to Reach a Conclusion?" · Version: V2.0 working draft (2 November 2026) — discussed by the team on 4 November 2026
+> Chapter lead: Eizel Mthana Conqueror 康哲 (Visual Design Lead) · Module: Software and Symbolic AI — "How Can Software Use Rules to Reach a Conclusion?" · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Abstract
 
@@ -716,7 +716,7 @@ Chapter 3: input, processing and output; the idea of an algorithm; reading a sho
 
 ## 2. Key terms
 
-<img width="750" height="611" alt="image" src="https://github.com/user-attachments/assets/d3be0f6c-c42e-4401-a02d-7ec74c0681bd" />
+<img width="750" height="611" alt="image" src="../assets/images/ch05_fig01.png" />
 
 ## 3. Software all around us
 
@@ -734,7 +734,7 @@ In each case the decision is small and clear, which is why ordinary program logi
 
 Building software is not one step but a sequence of stages, and the sequence repeats for as long as the software is in use. Textbooks describe the sequence with slightly different lists: Forouzan (2018, Chapter 10) uses analysis, design, implementation and testing; Brookshear (2011, Sections 7.1–7.2) adds maintenance; the Atlassian and IBM web guides each list seven phases, with different names (planning, feasibility or analysis, design, implementation or coding, testing, deployment, maintenance). The lists differ in how finely they cut the work, not in what the work is. This module uses the five plain-language stages of the project plan and gives the textbook names in brackets (Figure 1).
 
-<img width="750" height="260" alt="image" src="https://github.com/user-attachments/assets/118b7828-12ab-4f62-a121-7fc413d80826" />
+<img width="750" height="260" alt="image" src="../assets/images/ch05_fig02.png" />
 
 > **Figure 1.** The five stages of the software life cycle used in this module, with the textbook names in brackets. The return arrow is the point of the diagram: software is never finished while it is in use.
 
@@ -770,7 +770,7 @@ A library management system is a good first example of real software because eve
 
 Figure 2 sketches the system as the librarian meets it: three screens on top, the loan-check program in the middle, and the database underneath. The check-out screen collects the member and the book, hands them to the program, and shows the decision; the program looks up the facts it needs in the database and records the loan if it is approved.
 
-<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/a995c24f-5669-4eb3-a8ac-12c71dc8d4f1" />
+<img width="900" height="500" alt="image" src="../assets/images/ch05_fig03.png" />
 
 > **Figure 2.** The library management system: screens (user interface), the loan-check program, and the database. The decision logic lives inside the program box. Chapter 12 adds a separate rules box to this same picture.
 
@@ -797,7 +797,7 @@ Where does the decision live? Entirely in lines 2 to 9. The library's policy —
 
 Testing the loan check means choosing member cases, writing down the expected output before running, and comparing. We use three library members — Mei (valid card, nothing overdue), Tom (one overdue book) and Lin (no valid card) — and add one more case so that every branch of the program is exercised at least once (Table 1).
 
-<img width="750" height="308" alt="image" src="https://github.com/user-attachments/assets/e84ec6c9-180f-405b-98fb-bdf42629dfa2" />
+<img width="750" height="308" alt="image" src="../assets/images/ch05_fig04.png" />
 
 > **Table 1.** Test table for the loan-check program: four cases that between them reach every output line.
 
@@ -865,7 +865,7 @@ Requirements. When a librarian records a returned book, the program must close t
 9  mark the copy available and close the loan       // write to database
 ```
 
-<img width="679" height="124" alt="image" src="https://github.com/user-attachments/assets/7daa1110-570f-45f0-84f9-75d1e785c73a" />
+<img width="679" height="124" alt="image" src="../assets/images/ch05_fig05.png" />
 
 > **Table 2.** Two test cases for the return program, with the expected output decided before tracing.
 
@@ -1048,7 +1048,7 @@ When the decision logic is written inside the code, the policy can only be read 
 
 # Chapter 6 — Introduction to Symbolic AI
 
-> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: V2.0 draft (2 November 2026) — restructured (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Gunawan Nicolas Benedictus · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -1083,11 +1083,11 @@ IF the patient has a fever AND the patient has a cough AND the patient has diffi
 
 Read it piece by piece:
 
-<img width="750" height="216" alt="image" src="https://github.com/user-attachments/assets/b0eacafc-4c48-4842-b498-3208911d41ed" />
+<img width="750" height="216" alt="image" src="../assets/images/ch06_fig01.png" />
 
 Worked example. Three patients arrive. The system knows these facts:
 
-<img width="750" height="241" alt="image" src="https://github.com/user-attachments/assets/f81a1cb0-4c1b-43a5-ac3c-b47bf37b1a40" />
+<img width="750" height="241" alt="image" src="../assets/images/ch06_fig02.png" />
 
 Two lessons for beginners:
 
@@ -1130,11 +1130,13 @@ PPT 2024 (slide 7) names four limitations of symbolic AI:
 
 In classical logic and rule-based systems, a critical pitfall arises when information is absent. If a database lacks a record of a customer's allergy, the system cannot logically conclude that the customer is safe from that allergen. In formal reasoning, lack of evidence is not evidence of absence. Some rule engines treat any fact they cannot find as false; this is called the closed-world assumption (Russell & Norvig, 2021, pp. 315, 356). It is safe only when the data is known to be complete — for example, a list of everyone who has paid. When the data may be incomplete, assuming that a missing fact is false can lead to serious mistakes, especially in safety-critical domains such as medicine.
 
+The same trap appears on everyday forms. Mei fills in a library form but leaves the phone number blank. A rule says: IF the member has no phone number, THEN send reminders by post. The rule cannot fire yet: a blank box is unknown, not “no phone”. Mei may simply have skipped it, so the system should ask her, or record “not given yet”.
+
 ## 5. Where symbolic AI is used
 
 PPT 2024 (chap4 slide 5) lists four application areas. In most modern products, symbolic rules work together with machine learning rather than alone:
 
-<img width="750" height="511" alt="image" src="https://github.com/user-attachments/assets/c4d2a8f1-73e1-4d0a-8d6d-0b8ae4dea568" />
+<img width="750" height="511" alt="image" src="../assets/images/ch06_fig03.png" />
 
 Other uses appear later in this module: business rule engines such as Drools (Chapter 9), route planning and games (Chapter 10), and grammar-based language processing (Chapter 11).
 
@@ -1158,7 +1160,7 @@ Use the pneumonia rule of Section 2.
 
 # Chapter 7 — Logic and Reasoning
 
-> Chapter lead: Frederic Chandra · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Frederic Chandra · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -1184,11 +1186,11 @@ Not propositions: "Close the door!" (a command), "Is it raining?" (a question), 
 
 We give propositions short letters. Let p = "It is raining" and q = "I have an umbrella". Three Boolean operators combine them (slide 9):
 
-<img width="550" height="165" alt="image" src="https://github.com/user-attachments/assets/71524145-ac2e-4bdd-a60c-7fc17fb3e281" />
+<img width="550" height="165" alt="image" src="../assets/images/ch07_fig01.png" />
 
 A truth table lists every possible combination:
 
-<img width="263" height="205" alt="image" src="https://github.com/user-attachments/assets/909f4f90-9931-4240-85e1-470c913ed6a6" />
+<img width="263" height="205" alt="image" src="../assets/images/ch07_fig02.png" />
 
 Note that logical OR is inclusive: "p ∨ q" is true when both are true. The library's loan rule from Chapter 5 is an AND of three propositions: valid card ∧ no overdue books ∧ book available.
 
@@ -1207,19 +1209,19 @@ Worked example: the library. A member may borrow when the card is valid (c) and 
 
 Check with a truth table (the two right-hand columns are equal in every row):
 
-<img width="336" height="205" alt="image" src="https://github.com/user-attachments/assets/96a98742-b975-4490-98ca-a0b3410ee353" />
+<img width="336" height="205" alt="image" src="../assets/images/ch07_fig03.png" />
 
 ## 3. Implication and biconditional
 
 Implication p → q is read "if p, then q" (slide 11). p is the antecedent (premise) and q is the consequent (conclusion). It is the logical form of an IF-THEN rule (Chapter 9).
 
-<img width="147" height="205" alt="image" src="https://github.com/user-attachments/assets/7bfe34f6-6051-4761-b157-80fc5efa1c37" />
+<img width="147" height="205" alt="image" src="../assets/images/ch07_fig04.png" />
 
 The only row that makes p → q false is the one where the promise is broken: p is true but q is false. Example: "If it rains (p), the match is cancelled (q)." If it does not rain, the rule has not been broken, whatever happens to the match — so the last two rows are true. Beginners often find this surprising; it helps to think of p → q as a promise that is only broken when p happens and q does not.
 
 Biconditional p ↔ q is read "p if and only if q". It is true when p and q have the same truth value:
 
-<img width="147" height="205" alt="image" src="https://github.com/user-attachments/assets/9ea63796-d402-4350-b685-f3218de50e06" />
+<img width="147" height="205" alt="image" src="../assets/images/ch07_fig05.png" />
 
 Example: "The light is on ↔ the switch is up" — when one is true, so is the other; when one is false, so is the other.
 
@@ -1273,11 +1275,11 @@ Logical connectives work inside predicate logic just as in Section 1 (slide 16):
 
 To formalise a sentence is to write it precisely with predicates and quantifiers. PPT 2024 (slide 15) gives four steps. Here they are for "Some birds can fly":
 
-<img width="750" height="256" alt="image" src="https://github.com/user-attachments/assets/7454cc0d-02da-4dcd-80cd-5d4077f51402" />
+<img width="750" height="256" alt="image" src="../assets/images/ch07_fig06.png" />
 
 More examples (slide 19, plus library ones):
 
-<img width="750" height="231" alt="image" src="https://github.com/user-attachments/assets/35c4fc88-337d-4812-a49d-503a878cc04c" />
+<img width="750" height="231" alt="image" src="../assets/images/ch07_fig07.png" />
 
 ## 8. Rules of inference in predicate logic
 
@@ -1332,7 +1334,7 @@ Slide 18 asks: "Do you see anything strange?" Two rules look dangerous at first 
 
 # Chapter 8 — Knowledge Representation
 
-> Chapter lead: Louis Alexander Dalim · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Louis Alexander Dalim · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -1356,7 +1358,7 @@ A good representation lets the system:
 - explain its answers in terms people understand;
 - grow — accept new knowledge without being rebuilt.
 
-There is no single best form. This chapter shows five forms from PPT 2024, all describing the same small library world, so you can compare them.
+There is no single best form. This chapter shows five forms from PPT 2024, all describing the same small library world, so you can compare them. Frames and scripts are counted as one form here; Video 05 and the Study Guide's first table list them separately, which makes six.
 
 ## 2. Logic-based representation
 
@@ -1368,7 +1370,7 @@ First-order (predicate) logic adds objects, predicates and quantifiers, so it ca
 
 For the library:
 
-<img width="685" height="205" alt="image" src="https://github.com/user-attachments/assets/7e5846a4-f236-4244-988c-4cfa11a8a5a5" />
+<img width="685" height="205" alt="image" src="../assets/images/ch08_fig01.png" />
 
 From the last two lines, universal modus ponens (Chapter 7, Section 8) gives ¬Available(B310). Strength: precise, and automatic inference is well understood. Weakness: hard for non-experts to read and write.
 
@@ -1376,7 +1378,7 @@ From the last two lines, universal modus ponens (Chapter 7, Section 8) gives ¬A
 
 A semantic network is a graph (Chapter 4, Section 6). Nodes stand for things or concepts, and labelled links stand for the relationships between them (slide 23).
 
-<img width="750" height="450" alt="image" src="https://github.com/user-attachments/assets/75bdf5c0-d86c-400d-a6e1-724dcc7f2cd5" />
+<img width="750" height="450" alt="image" src="../assets/images/ch08_fig02.png" />
 
 > **Figure 1.** A semantic network for part of the library.
 
@@ -1392,11 +1394,11 @@ A frame is a structure that describes a typical object or situation, with slots 
 
 **Frame: Book**
 
-<img width="331" height="246" alt="image" src="https://github.com/user-attachments/assets/221fb388-f115-4a60-9983-5db360eaf084" />
+<img width="331" height="246" alt="image" src="../assets/images/ch08_fig03.png" />
 
 **Frame: Reference book**
 
-<img width="405" height="124" alt="image" src="https://github.com/user-attachments/assets/ab3ccfc8-713f-4578-b83c-d8a6e81f049c" />
+<img width="405" height="124" alt="image" src="../assets/images/ch08_fig04.png" />
 
 A dictionary in the reference section fills in the Reference-book frame; it inherits the title and author slots from Book, but its own "can be borrowed: no" overrides the default. Frames, like semantic networks with default values, handle exceptions by letting a more specific frame override an inherited value (Russell & Norvig, 2021, pp. 347–355).
 
@@ -1427,13 +1429,13 @@ When two systems — or two people — use the same word, do they mean the same 
 
 A small library ontology:
 
-<img width="750" height="322" alt="image" src="https://github.com/user-attachments/assets/0e870507-3fc8-401e-bd35-2af642f9c38a" />
+<img width="750" height="322" alt="image" src="../assets/images/ch08_fig05.png" />
 
 An ontology is like a semantic network with agreed definitions and rules, written carefully enough that different programs can share it. Large real examples include SNOMED CT for medical terms and the Gene Ontology for biology. Ontologies for the web are often written in OWL, the Web Ontology Language standardised by the World Wide Web Consortium (W3C, 2012).
 
 How the five forms compare
 
-<img width="750" height="297" alt="image" src="https://github.com/user-attachments/assets/c17bed0a-5d6f-4d39-93fb-ee2daeee8aeb" />
+<img width="750" height="297" alt="image" src="../assets/images/ch08_fig06.png" />
 
 ## 7. Applications
 
@@ -1468,7 +1470,7 @@ PPT 2024 (slide 28) lists four areas where knowledge representation is essential
 
 # Chapter 9 — Rule-Based and Expert Systems: Facts, IF-THEN Rules and Reasoning
 
-> Chapter lead: Louis Alexander Dalim 苏路成 (GitHub: LewiZHalimton) · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — discussed by the team on 4 November 2026
+> Chapter lead: Louis Alexander Dalim 苏路成 (GitHub: LewiZHalimton) · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -1491,7 +1493,7 @@ Symbolic AI takes a different approach. Instead of writing every decision into t
 
 Each term is defined when it first appears, using the library-loan situation.
 
-<img width="750" height="597" alt="image" src="https://github.com/user-attachments/assets/ff2f16c5-bbec-4c10-9bc5-bf5ab70f1512" />
+<img width="750" height="597" alt="image" src="../assets/images/ch09_fig01.png" />
 
 **Remember.** A conclusion that a rule adds becomes a new fact. This is how one rule can help the next rule to apply.
 
@@ -1503,9 +1505,9 @@ Rule-based systems are also called production systems, because their rules "prod
 - Working memory (the kitchen counter) holds the facts of the current case while the system reasons, including each new conclusion. Example: "this member has a valid card".
 - The inference engine (the chef) checks the facts against the rules and applies the rules whose conditions are met. Russell and Norvig call this kind of step inference: deriving new sentences from the ones already known [1].
 
-<img width="750" height="765" alt="image" src="https://github.com/user-attachments/assets/543872ad-14f4-43c4-a2fd-aa908da05aa9" />
+<img width="750" height="765" alt="image" src="../assets/images/ch09_fig02.png" />
 
-<img width="750" height="354" alt="image" src="https://github.com/user-attachments/assets/79cca3cf-161d-4cc5-9c8d-5b71c9d8f41c" />
+<img width="750" height="354" alt="image" src="../assets/images/ch09_fig03.png" />
 
 > **Figure 1.** A rule-based system for the library loan. In a small system like this one, the facts of the case can be stored with the rules, so the figure draws them inside the knowledge base. Larger systems keep them apart in working memory, as in the kitchen picture above. The idea is the same: knowledge is kept separate from the engine.
 
@@ -1539,13 +1541,13 @@ Section 5 works through both methods on the same library loan.
 
 The library-loan scenario comes from the team's project plan [5].
 
-<img width="750" height="297" alt="image" src="https://github.com/user-attachments/assets/a9f0b434-291a-4578-a603-000f814f3fd6" />
+<img width="750" height="297" alt="image" src="../assets/images/ch09_fig04.png" />
 
 **Trace.** Follow each step in the table, and look at Figure 2.
 
-<img width="750" height="282" alt="image" src="https://github.com/user-attachments/assets/4deba63f-f5d2-4041-b484-5fe7980b1cf7" />
+<img width="750" height="282" alt="image" src="../assets/images/ch09_fig05.png" />
 
-<img width="750" height="351" alt="image" src="https://github.com/user-attachments/assets/59c4997f-673c-46da-84ec-110f7fe4e4a5" />
+<img width="750" height="351" alt="image" src="../assets/images/ch09_fig06.png" />
 
 > **Figure 2.** Forward chaining for the library loan: R1 adds F4, then R2 uses F4 to add F5.
 
@@ -1557,13 +1559,13 @@ Does the order of the rules matter? Suppose the engine checks R2 before R1. In t
 
 Now start from the question instead of the facts. Goal: is the loan approved? Use the same rules, R1 and R2.
 
-<img width="750" height="373" alt="image" src="https://github.com/user-attachments/assets/1a7a06c6-f0bb-4167-b366-6fb8af3061c2" />
+<img width="750" height="373" alt="image" src="../assets/images/ch09_fig07.png" />
 
 Both methods reach the same conclusion. The difference is the route. Forward chaining starts with whatever facts it has and may work out things nobody asked about. Backward chaining looks only for what the goal needs. If the member's card were not valid, step 3 would fail, and the engine would never need to ask about overdue books. This is why backward chaining suits a system that must ask a person questions, such as MYCIN (Section 8).
 
 ## 6. Rules versus ordinary program logic
 
-<img width="750" height="308" alt="image" src="https://github.com/user-attachments/assets/e2bccaf7-d2ce-4233-8e39-32bd2ad19cc7" />
+<img width="750" height="308" alt="image" src="../assets/images/ch09_fig08.png" />
 
 This table is a simplification to help beginners. Real systems often combine both: ordinary program logic for input and display, and a rule-based part for the reasoning. Chapter 12 compares their strengths and limits.
 
@@ -1599,6 +1601,37 @@ Case: A member has a valid card (F1) and the requested book is available (F3), b
 2. Nothing changes: R2 fails (no "member may borrow"), then R1 fails (overdue book). Both orders make the same two checks and reach the same result: no conclusion.
 3. One possible rule: R4: IF the member has overdue books, THEN the loan is refused (reason: overdue books). Without a rule like R4, the system cannot say "refused" — it only concludes what its rules support (Activity 1, question 2).
 
+### Prolog activity: predict, query and change a rule (Study Guide Activity 9.2)
+
+Prolog is a programming language often used to represent facts and rules. Here is the library loan in Prolog. Each line ends with a full stop, `:-` means "if", a comma means "and", and a word starting with a capital letter, such as `Person`, is a variable. The same lines are in `supporting-files/library_loan.pl`.
+
+```prolog
+valid_card(mei).
+no_overdue_books(mei).
+book_available(book_a).
+may_borrow(Person) :- valid_card(Person), no_overdue_books(Person).
+approve_loan(Person, Book) :- may_borrow(Person), book_available(Book).
+```
+
+**Goal.** Connect facts and rules to a computer query.
+
+**Preparation.** In SWISH (https://swish.swi-prolog.org), create a new program: the program goes in the program editor, and each query is run separately. `?-` is the prompt; type what follows it. Put each new fact beside the matching facts. If you cannot use the site, trace by hand: the expected answers give the output.
+
+**Task.**
+
+1. Predict whether `?- approve_loan(mei, book_a).` succeeds. Then run it.
+2. Predict and run `?- may_borrow(Who).`
+3. Change the fact to `book_available(book_c).` Predict the result of the first query again and run it.
+4. Change it back, and add `book_available(book_b).` Test a query for that book.
+5. Add `valid_card(tom).` Predict and run `?- may_borrow(tom).`
+6. Change a rule: the library adds a loan limit. Add `under_limit(Person)` to the `may_borrow` rule, then add the facts `under_limit(mei).` and `no_overdue_books(tom).` Predict, then run `?- may_borrow(mei).` and `?- may_borrow(tom).`
+
+**Reflect.** Does a failed query prove that a real-world fact is false, or only that the current knowledge base does not prove it?
+
+**Expected answers.** The first query succeeds (`true`), because the facts support both rules. `Who = mei`. With the fact changed, the query fails (`false`), because the rule cannot establish that book_a is available. With the new fact, `approve_loan(mei, book_b)` succeeds. `may_borrow(tom)` fails, because no fact says that Tom has no overdue books. After the rule change, `may_borrow(mei)` succeeds, and `may_borrow(tom)` fails, because no fact says that Tom is under the limit. In an incomplete real-world system, this failure should not automatically be treated as proof that the book is unavailable, or that Tom has overdue books.
+
+> Checked on SWISH on 21 November 2026: every query above gave exactly the output listed here.
+
 ## 8. Expert systems in practice: MYCIN
 
 MYCIN is one of the best-known expert systems in the history of AI.
@@ -1609,7 +1642,7 @@ In the early 1970s at Stanford University, Edward Shortliffe and his colleagues 
 
 ### 8.2 How MYCIN made decisions
 
-<img width="750" height="525" alt="image" src="https://github.com/user-attachments/assets/dca49958-5aed-49f4-a5c4-71991f0d76c8" />
+<img width="750" height="525" alt="image" src="../assets/images/ch09_fig09.png" />
 
 - Readable rules. MYCIN stored medical knowledge in about 450 IF-THEN rules [1, p. 41], written in a programming language called LISP. In English, a typical rule said: IF the stain of the organism is gram-negative AND its shape is rod AND it grows in air (aerobic), THEN there is strongly suggestive evidence (0.8) that the organism belongs to the group Enterobacteriaceae [2]. You do not need the medical words; notice the IF-THEN form and the number.
 - Backward chaining. MYCIN started from its goal, recommending a treatment, and worked backward through its rules. It asked the doctor only for the facts it needed, such as where a culture was taken or whether the patient had allergies [2].
@@ -1630,7 +1663,7 @@ The core idea of expert systems lives on in business rule engines: software that
 
 **The solution.** A rule engine moves those decisions into separate, readable rule files, such as .drl files or decision tables. The rules can then be changed without rewriting the application's code, although the new rules must still be tested and deployed.
 
-<img width="750" height="525" alt="image" src="https://github.com/user-attachments/assets/ea995d16-d4bf-4942-aea1-758c5c82204b" />
+<img width="750" height="525" alt="image" src="../assets/images/ch09_fig10.png" />
 
 Where rules like these can be used (illustrations, not descriptions of particular companies):
 
@@ -1640,7 +1673,7 @@ Where rules like these can be used (illustrations, not descriptions of particula
 
 **Going further (optional, not examined):** how a rule engine stays fast. With 10,000 rules and millions of facts, checking every rule against every fact would be far too slow. Think of a post office: it does not carry each letter around the whole city, but sorts letters through a network of bins. The classic Rete algorithm does the same with facts [7]. It passes them through a network of tests and remembers partial matches, so that when one fact changes, only the affected rules are re-checked. Drools now uses Phreak, an improved version of this idea [6].
 
-<img width="750" height="833" alt="image" src="https://github.com/user-attachments/assets/3707bd7c-37c1-4c87-bb05-2bc7b1639606" />
+<img width="750" height="833" alt="image" src="../assets/images/ch09_fig11.png" />
 
 ## 10. Strengths and limits of rule-based AI
 
@@ -1659,7 +1692,7 @@ Large expert systems were difficult to create and to keep working. Real cases ar
 
 This is why many researchers argue that neuro-symbolic systems, which combine learning and rules, are a way forward [10, 11]. Chapter 12, Section 7 (optional) looks at this idea.
 
-<img width="750" height="420" alt="image" src="https://github.com/user-attachments/assets/8001063d-0797-4915-93b7-495251869e62" />
+<img width="750" height="420" alt="image" src="../assets/images/ch09_fig12.png" />
 
 ## 11. Learner Activity 3: the hospital access rules
 
@@ -1677,7 +1710,7 @@ This is why many researchers argue that neuro-symbolic systems, which combine le
 - Fact F2: patient_assigned = false (The doctor is not the primary attending physician)
 - Fact F3: patient_status = critical
 
-<img width="750" height="384" alt="image" src="https://github.com/user-attachments/assets/954a5035-5af5-4261-9f0b-fb3b8c7ede52" />
+<img width="750" height="384" alt="image" src="../assets/images/ch09_fig13.png" />
 
 **Critical questions and expected answers**
 
@@ -1691,7 +1724,7 @@ A rule-based system keeps what it knows as facts and IF-THEN rules in a knowledg
 
 # Chapter 10 — Planning and Problem Solving
 
-> Chapter lead: Eizel Mthana Conqueror · Module: Software and Symbolic AI · Version: V2.0 draft (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Eizel Mthana Conqueror · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -1712,7 +1745,7 @@ A library robot must take a returned book from the desk to the Archive. Nobody t
 
 **Worked example:** a small plan. The robot is at the desk; the book is on the desk. The goal: the book is in the Archive.
 
-<img width="750" height="165" alt="image" src="https://github.com/user-attachments/assets/e44decaf-fcef-4cf0-9b53-d09661ffd3ba" />
+<img width="750" height="165" alt="image" src="../assets/images/ch10_fig01.png" />
 
 **Plan:** pick up the book → move along a route to the Archive → put down the book. The middle step hides a smaller problem — which route? That is a search problem, and it is the subject of the rest of the chapter.
 
@@ -1720,17 +1753,38 @@ A library robot must take a returned book from the desk to the Archive. Nobody t
 
 Every search problem has four parts (slide 35):
 
-<img width="750" height="307" alt="image" src="https://github.com/user-attachments/assets/abbed2f7-c6cc-4cc0-a68b-0762aa6a87f2" />
+<img width="750" height="307" alt="image" src="../assets/images/ch10_fig02.png" />
 
-<img width="750" height="450" alt="image" src="https://github.com/user-attachments/assets/1155476d-7d4d-4b49-b966-1d13a2a8a52e" />
+<img width="750" height="450" alt="image" src="../assets/images/ch10_fig03.png" />
 
 > **Figure 1.** The library map (the same graph as Chapter 4, Figure 4). Start: E. Goal: A.
 
 There are three routes from E to A that take three steps (a longer route, E → K → S → H → R → A, also exists, with a distance of 19):
 
-<img width="469" height="165" alt="image" src="https://github.com/user-attachments/assets/84ae0e98-fa1e-45e1-ac6b-6d2197216e71" />
+<img width="469" height="165" alt="image" src="../assets/images/ch10_fig04.png" />
 
 On a map with six rooms we can list every route. On a city map with thousands of streets we cannot, so we need a search method that explores cleverly. In every trace below, the frontier is the list of rooms found but not yet explored, neighbours are added in alphabetical order, ties are broken alphabetically, and the goal is recognised when it is taken from the frontier.
+
+### River-crossing activity: get everyone across (Study Guide Activity 10.1)
+
+**Goal.** Discover states, legal actions, constraints and a goal by solving a problem yourself.
+
+**Preparation.** Four small paper cards: Farmer, Wolf, Goat, Cabbage. Draw a river across a page. A farmer must take all three across. The boat holds the farmer and at most one other. Left alone without the farmer, the wolf eats the goat, and the goat eats the cabbage.
+
+**Task.**
+
+1. Predict: which first move looks tempting? Which is safe?
+2. Move the cards to find a plan that gets everyone across.
+3. Write each situation as a state, for example "Left: Wolf, Cabbage. Right: Farmer, Goat."
+4. Write down one move that fails, and which rule it breaks.
+
+**Reflect.** Which part of the puzzle is the state, which is an action, and which is the goal? Which tempting moves fail, and why?
+
+**Hint.** What must be true of what you leave behind on each bank? Nothing says that the boat must return empty.
+
+**Expected answers.** A valid plan takes seven crossings: take the goat; return alone; take the wolf; bring the goat back; take the cabbage; return alone; take the goat. (You can swap the wolf and the cabbage.) Taking the wolf or the cabbage first fails, because it leaves the goat with the cabbage, or the wolf with the goat. Each arrangement of the cards is a state, each crossing is an action, and "everyone on the far bank" is the goal state. The surprising step is bringing the goat back: search sometimes has to step away from the goal.
+
+**Why the representation matters (from the team's mini lecture).** Record a state as the bank each of the four is on, so there are 2 × 2 × 2 × 2 = 16 states. Six are illegal, because the wolf and the goat, or the goat and the cabbage, are on a bank without the farmer; 10 are legal. A breadth-first search of the legal states finds the shortest plan: 7 crossings, and exactly 2 such plans, which differ only in whether the wolf or the cabbage crosses third. Trying move lists blindly is far worse: the farmer has 4 choices at each of 7 crossings, so 4⁷ = 16,384 lists. If the boat held the farmer and two others, the shortest plan would take 3 crossings.
 
 ## 3. Uninformed search: BFS, DFS and uniform-cost search
 
@@ -1740,7 +1794,7 @@ Uninformed (blind) search uses no knowledge about where the goal is; it simply e
 
 BFS explores layer by layer, using a queue — first in, first out (Chapter 4, Section 6).
 
-<img width="710" height="286" alt="image" src="https://github.com/user-attachments/assets/ce66c166-0a10-4d03-8d58-f0469ce4a483" />
+<img width="710" height="286" alt="image" src="../assets/images/ch10_fig05.png" />
 
 Route found: E → H → R → A (A was reached from R, R from H). BFS always finds a route with the fewest steps (here 3), but it ignores the distances, so this route costs 11, not 7.
 
@@ -1748,7 +1802,7 @@ Route found: E → H → R → A (A was reached from R, R from H). BFS always fi
 
 DFS goes as deep as possible along one route before trying another, using a stack — last in, first out. (We push neighbours in reverse alphabetical order so that the alphabetically first one is on top.)
 
-<img width="529" height="205" alt="image" src="https://github.com/user-attachments/assets/cff7dc47-0982-4f76-8d2e-ac8afd23280a" />
+<img width="529" height="205" alt="image" src="../assets/images/ch10_fig06.png" />
 
 Route found: E → H → R → A, cost 11. DFS needs little memory and can be fast, but it gives no guarantee of finding the shortest or cheapest route, and on very large maps it may wander down a long dead end.
 
@@ -1756,17 +1810,17 @@ Route found: E → H → R → A, cost 11. DFS needs little memory and can be fa
 
 UCS always explores the frontier room with the lowest total cost so far, written g. If it finds a cheaper way to a room already in the frontier, it keeps the cheaper one.
 
-<img width="608" height="286" alt="image" src="https://github.com/user-attachments/assets/21386434-40c3-41cd-9809-d08569e55b3c" />
+<img width="608" height="286" alt="image" src="../assets/images/ch10_fig07.png" />
 
 Route found: E → K → S → A, cost 7 — the cheapest. UCS is guaranteed to find the cheapest route when all costs are positive, but it explores in every direction, including away from the goal.
 
-<img width="613" height="165" alt="image" src="https://github.com/user-attachments/assets/5ea0d195-dcfd-43c3-bd6e-f1edadd98b76" />
+<img width="613" height="165" alt="image" src="../assets/images/ch10_fig08.png" />
 
 ## 4. Informed search: greedy best-first search and A*
 
 Informed search uses extra knowledge about the problem — a heuristic — to explore the most promising rooms first (slide 38). A heuristic h is an estimate of the remaining cost from a room to the goal, for example the straight-line distance on a floor plan.
 
-<img width="463" height="124" alt="image" src="https://github.com/user-attachments/assets/32186a64-7f1c-4431-86d1-bea1a4a0710b" />
+<img width="463" height="124" alt="image" src="../assets/images/ch10_fig09.png" />
 
 These estimates never exceed the true cost. A heuristic like this is called admissible, and it matters for A* below.
 
@@ -1774,7 +1828,7 @@ These estimates never exceed the true cost. A heuristic like this is called admi
 
 Greedy search always explores the room that looks closest to the goal: the lowest h, ignoring the distance already walked.
 
-<img width="429" height="205" alt="image" src="https://github.com/user-attachments/assets/12f66ecd-c669-4a2a-b8c1-7d179c96efad" />
+<img width="429" height="205" alt="image" src="../assets/images/ch10_fig10.png" />
 
 Route: E → K → S → A, cost 7, after exploring only four rooms. Greedy search is fast, but it is not guaranteed to find the cheapest route: a misleading estimate can lead it down a costly path.
 
@@ -1782,7 +1836,7 @@ Route: E → K → S → A, cost 7, after exploring only four rooms. Greedy sear
 
 A* combines both ideas. For each room it adds the cost already walked and the estimate still to go: f = g + h. It explores the room with the lowest f.
 
-<img width="578" height="246" alt="image" src="https://github.com/user-attachments/assets/f58fcb9b-fe24-4140-b417-52bdddd81f68" />
+<img width="578" height="246" alt="image" src="../assets/images/ch10_fig11.png" />
 
 Route: E → K → S → A, cost 7. With an admissible heuristic, A* is guaranteed to find the cheapest route (on large maps it must also be allowed to go back to an explored room if it later finds a cheaper way there; this does not change any answer on our small map), and it usually explores fewer states than UCS because the heuristic pulls it towards the goal. You can see this here: UCS explored six rooms, but A* explored five and never needed R. Route-planning apps and computer games use A* and its relatives.
 
@@ -1795,7 +1849,7 @@ Minimax. Call the two players MAX (you, who want a high score) and MIN (the oppo
 - at a MIN level, take the lowest value of the children (the opponent's best reply);
 - at a MAX level, take the highest value.
 
-<img width="750" height="458" alt="image" src="https://github.com/user-attachments/assets/d9eafce4-1134-40b7-864e-ef41845aa340" />
+<img width="750" height="458" alt="image" src="../assets/images/ch10_fig12.png" />
 
 > **Figure 2.** A two-move game tree with minimax values. The crossed branch is skipped by alpha-beta pruning.
 
@@ -1809,7 +1863,7 @@ Sometimes we do not need a route; we need a good final arrangement — for examp
 
 Picture the possible solutions as a landscape, where the height is how good each solution is:
 
-<img width="364" height="84" alt="image" src="https://github.com/user-attachments/assets/3cd0d611-3761-4a29-bdc4-5dcf4aefd8e2" />
+<img width="364" height="84" alt="image" src="../assets/images/ch10_fig13.png" />
 
 Hill climbing always moves to the best (highest) neighbour, and stops when no neighbour is better. Starting at position 1: 1 (2) → 2 (4) → 3 (6). Both neighbours of 3 are worse (4 and 5), so it stops at quality 6. It is stuck on a local maximum: a hill that is not the highest one. The best solution, 9 at position 7, is never found. Hill climbing is simple and fast, but it can get stuck like this.
 
@@ -1844,7 +1898,7 @@ Use Figure 1 and the heuristic table of Section 4.
 
 # Chapter 11 — Symbolic Natural Language Processing
 
-> Chapter lead: Frederick Bryan The · Module: Software and Symbolic AI · Version: V2.0 draft (2 November 2026) — restructured draft (3 November 2026); discussed by the team on 4 November 2026
+> Chapter lead: Frederick Bryan The · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning outcomes
 
@@ -1876,7 +1930,7 @@ Until statistical methods took over in the late 1980s and 1990s (and deep learni
 - Words as Symbols & Grammar Rules: Symbolic NLP treats words as discrete symbols governed by explicit grammar rules. Instead of guessing word probabilities, it builds syntax trees using formal rules such as Context-Free Grammar (CFG) to analyze sentence structure.
 - The Step-by-Step Language Pipeline:
 
-<img width="750" height="143" alt="image" src="https://github.com/user-attachments/assets/b0070b99-06d2-44ac-bd67-a8d5b215eb01" />
+<img width="750" height="143" alt="image" src="../assets/images/ch11_fig01.png" />
 
 1. Text Input: Receiving raw text from the user (e.g., "The expert doctor examines the patient").
 2. Tokenization: Splitting the text into individual word tokens ["The", "expert", "doctor", "examines", "the", "patient"].
@@ -1888,7 +1942,7 @@ Until statistical methods took over in the late 1980s and 1990s (and deep learni
 
 PPT 2024 (slide 42) explains that formal grammars, such as context-free grammars (CFGs), define the rules for building correct sentences and capture their hierarchical structure. A CFG is a set of rewrite rules. Each rule says what a part of a sentence can be made of:
 
-<img width="661" height="286" alt="image" src="https://github.com/user-attachments/assets/fc18d263-113e-41ed-b870-9f097de42a40" />
+<img width="661" height="286" alt="image" src="../assets/images/ch11_fig02.png" />
 
 Parsing means finding how a sentence can be built from these rules. For "The cat chased the mouse":
 
@@ -1899,7 +1953,7 @@ Parsing means finding how a sentence can be built from these rules. For "The cat
 
 The result is a parse tree:
 
-<img width="750" height="507" alt="image" src="https://github.com/user-attachments/assets/d453198c-0478-4957-8ecc-4ee8ad750838" />
+<img width="750" height="507" alt="image" src="../assets/images/ch11_fig03.png" />
 
 > **Figure 1.** The parse tree shows the sentence's structure: who did what to whom.
 
@@ -1917,7 +1971,7 @@ As a semantic network (Chapter 8): cat —chased→ mouse. With an ontology, the
 
 PPT 2024 (slide 44) names the three knowledge representations most used for language:
 
-<img width="750" height="165" alt="image" src="https://github.com/user-attachments/assets/1d8fc689-286e-49f9-ba61-3d989e714850" />
+<img width="750" height="165" alt="image" src="../assets/images/ch11_fig04.png" />
 
 ## 4. Rule-based NLP: part-of-speech tagging and parsing
 
@@ -1927,7 +1981,7 @@ Part-of-speech (POS) tagging labels each word with its word class. A simple rule
 
 Example from the slide: "The quick brown fox jumps over the lazy dog."
 
-<img width="750" height="408" alt="image" src="https://github.com/user-attachments/assets/72e16dda-ea85-449e-be4e-2faa55095b73" />
+<img width="750" height="408" alt="image" src="../assets/images/ch11_fig05.png" />
 
 Rules like "a word ending in -ly is probably an adverb" or "after the, the next noun ends the noun phrase" handle words the lexicon does not know.
 
@@ -1976,7 +2030,7 @@ Sentiment analysis finds the emotional tone of a text — positive, negative or 
 - a negation rule: "not" or "never" directly before a sentiment word reverses it;
 - a simple decision: count positive minus negative; above 0 → positive, below 0 → negative, 0 → neutral.
 
-<img width="750" height="241" alt="image" src="https://github.com/user-attachments/assets/2e51616d-cafd-4247-af7b-434bc14758fb" />
+<img width="750" height="241" alt="image" src="../assets/images/ch11_fig06.png" />
 
 Limit: sarcasm fools simple rules. In "Good, the printer is broken again", good is on the positive list and broken is on neither list. The score is +1, positive, but the meaning is negative.
 
@@ -2010,7 +2064,7 @@ A small library example: a search for "car repair" also returns a book indexed u
 
 # Chapter 12 — Software and Symbolic AI Together
 
-> Chapter lead: Frederic Chandra 张国立 · Module: Software and Symbolic AI · Version: V2.0 working draft (2 November 2026) — discussed by the team on 4 November 2026
+> Chapter lead: Frederic Chandra 张国立 · Module: Software and Symbolic AI · Version: Final (V3.1), 25 November 2026. Earlier: V2.0 draft (2–3 November 2026), discussed by the team on 4 November 2026.
 
 ### Learning goals
 
@@ -2032,11 +2086,11 @@ In many advanced applications, software and symbolic AI do not compete — they 
 
 By combining these two approaches, the program logic manages the user experience and data flow, while the rule-based component evaluates logical conditions to derive conclusions.
 
-<img width="750" height="434" alt="image" src="https://github.com/user-attachments/assets/e4d420bf-4f63-479a-a307-4d2bfecbc2df" />
+<img width="750" height="434" alt="image" src="../assets/images/ch12_fig01.png" />
 
 > **Figure 1.** Software and symbolic AI together: the screens and the database (program logic) pass facts to the knowledge base, and the inference engine sends its conclusion back to the screen.
 
-<img width="750" height="175" alt="image" src="https://github.com/user-attachments/assets/f1f44153-630a-4da3-881d-c5836023f903" />
+<img width="750" height="175" alt="image" src="../assets/images/ch12_fig02.png" />
 
 ## 2. Fixed Program Logic vs. Explicit Rules
 
@@ -2054,7 +2108,7 @@ Traditional software relies on fixed program logic, where algorithms and decisio
 
 Chapters 5 and 9 wrote the same library decision in two different ways. Put side by side, they show what each approach is good at.
 
-<img width="750" height="526" alt="image" src="https://github.com/user-attachments/assets/6a94e436-83e5-4de3-a984-98ad45c4093b" />
+<img width="750" height="526" alt="image" src="../assets/images/ch12_fig03.png" />
 
 What this shows. For an approval, both versions reach the same decision. For a refusal, the program answers but the rules give no conclusion unless a rule such as R4 says so. The program is complete and predictable, but its policy is spread through the code. The rules make the policy visible and easy to change, but the system can only conclude what its rules cover. Real systems often combine the two (Figure 1).
 
@@ -2117,7 +2171,7 @@ Preparation. A computer with a web browser; Scratch (https://scratch.mit.edu); M
 3. The slide shows only this main script. Give each sprite a short script of its own that reacts to the messages, for example: when I receive turn-fan-on, switch the fan's costume to on.
 4. Click the green flag, test the commands in the table below, and record what happens.
 
-<img width="750" height="986" alt="image" src="https://github.com/user-attachments/assets/a6f37dc2-badb-47d6-956f-768156c4c652" />
+<img width="750" height="986" alt="image" src="../assets/images/ch12_fig04.png" />
 
 > **Figure 2.** The rule-based assistant. Source: professor's PPT 2024, chap4 slide 50. On the slide, the ask block contains the answer block, so the first question is blank and later questions repeat your last answer; you can type "Enter your command" there instead, as in Figure 3.
 
@@ -2134,29 +2188,29 @@ Preparation. A computer with a web browser; Scratch (https://scratch.mit.edu); M
 6. Click the green flag. Because of the extra ask, the question appears twice at the start, and the script does not check your first answer. Press Enter the first time, then type your command the second time.
 7. Test the same commands again. Each reply stays for about 5 seconds, until the question comes back.
 
-<img width="750" height="979" alt="image" src="https://github.com/user-attachments/assets/8d6b7565-6328-472a-9855-2930afbd28d0" />
+<img width="750" height="979" alt="image" src="../assets/images/ch12_fig05.png" />
 
 > **Figure 3.** The machine-learning assistant. Source: professor's PPT 2024, chap4 slide 50. The loop and the four messages stay the same. The main change is the test inside each IF: it now asks the trained model instead of comparing exact words.
 
-<img width="750" height="476" alt="image" src="https://github.com/user-attachments/assets/85302e3a-a64a-4f56-8cd5-e1d661cd0b1b" />
+<img width="750" height="476" alt="image" src="../assets/images/ch12_fig06.png" />
 
 > **Figure 4.** The team's training examples: six for each label. Screenshot from Machine Learning for Kids, 4 November 2026.
 
-<img width="750" height="630" alt="image" src="https://github.com/user-attachments/assets/ad7daccf-f7a2-4643-b7f7-791dc05e03b4" />
+<img width="750" height="630" alt="image" src="../assets/images/ch12_fig07.png" />
 
 > **Figure 5.** The trained model's answers to the eight test commands. Screenshots from Machine Learning for Kids, 4 November 2026.
 
-<img width="750" height="832" alt="image" src="https://github.com/user-attachments/assets/080eacb3-626b-487e-9dbb-e2c5393b3334" />
+<img width="750" height="832" alt="image" src="../assets/images/ch12_fig08.png" />
 
 > **Figure 6.** The team's working script, running in Machine Learning for Kids' version of Scratch. The yellow glow shows that it is running. Screenshot, 4 November 2026.
 
-<img width="750" height="455" alt="image" src="https://github.com/user-attachments/assets/dec5d4b4-5e10-460e-9237-a2439aea6338" />
+<img width="750" height="455" alt="image" src="../assets/images/ch12_fig09.png" />
 
 > **Figure 7.** Three commands run through the script in Figure 6: the command typed (top) and the cat's reply (bottom). The team typed "turn fan on" and "It's too dark too read" (a typing slip), so the wording differs a little from the table below, but the cat still gave the replies you would expect. Screenshots, 4 November 2026.
 
 ### Observation table
 
-<img width="750" height="546" alt="image" src="https://github.com/user-attachments/assets/def8e02c-68ae-4f00-b000-258696df214e" />
+<img width="750" height="546" alt="image" src="../assets/images/ch12_fig10.png" />
 
 None of these eight commands was a training example, yet the model chose a sensible label for the first seven. The last result matters most: the script in Figure 6 checks only the label, not the confidence, so the cat said "Fan on" when the team typed "make me a sandwich" (Figure 7). A real assistant would have switched the fan on.
 
@@ -2205,6 +2259,7 @@ To synthesize everything we have learned in this chapter, here is a master compa
 - Explicit rules are reliable under strict conditions but become unreliable when information is missing, conflicting, or outdated.
 - Missing information does not prove the opposite; assuming a fact is false simply because data is absent can cause logical errors in rule-based systems.
 - The same decision can be written as a program or as rules: for a refusal, the program answers but the rules give no conclusion unless a rule such as R4 says so. The rules make the policy easier to read and change, but conclude only what they cover.
+
 
 
 
