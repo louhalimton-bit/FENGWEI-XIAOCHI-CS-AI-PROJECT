@@ -31,7 +31,7 @@ The five members present accepted their assigned chapters and project roles. Fre
 
 - **Evidence E57 — Team:** Photo of the five members at Meeting 1.
 
-<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/8dd8a933-2d08-4291-a996-2f0b28fffed2" />
+<img width="780" height="585" alt="image" src="../../assets/images/meetings_stage2_01.png" />
 
 
 ## **Meeting 2 — Project Log and Stage 2 Materials**
@@ -69,7 +69,7 @@ The assets folder structure was set, with subfolders for videos, PowerPoint pres
 
 - **Evidence E58 — Team:** Photo of the four members at Meeting 2.
 
-<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/78acbd8c-cf07-4235-8383-a4c3d11fb6a6" />
+<img width="780" height="585" alt="image" src="../../assets/images/meetings_stage2_02.png" />
 
 
 ## **Meeting 3 — Twelve-Chapter Structure and Quality Review**
@@ -112,7 +112,7 @@ The module outline and project plan would use the twelve-chapter structure based
 
 - **Evidence E59 — Team:** Photo of the five members at Meeting 3.
 
-<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/7a1a2f44-5053-4ed6-8a22-94e8b237cbea" />
+<img width="780" height="585" alt="image" src="../../assets/images/meetings_stage2_03.png" />
 
 
 ## **Meeting 4 — Game Development and Chapter Quality Check**
@@ -152,7 +152,7 @@ The meeting set 7 November as the date to finish the game, the twelve-chapter qu
 
 - **Evidence E60 — Team:** Photo of the four members at Meeting 4.
 
-<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/0fb096fc-5af1-4bf1-8b1d-54dbcb594750" />
+<img width="780" height="585" alt="image" src="../../assets/images/meetings_stage2_04.png" />
 
 
 
@@ -197,6 +197,7 @@ Each member recorded their own chapters, and the module-content upload to GitHub
 
 - **Evidence E61 — Team:** Photo of the five members at Meeting 5.
 
-<img width="780" height="585" alt="image" src="https://github.com/user-attachments/assets/7e13cfde-6c1d-4a21-9f1b-3534b2513613" />
+<img width="780" height="585" alt="image" src="../../assets/images/meetings_stage2_05.png" />
+
 
 
