@@ -27,6 +27,10 @@ Imagine leaving home for class. It is raining and you are going outside, so you 
 
 > **Figure 1.** A familiar decision represented as facts, a rule, and a conclusion.
 
+<img width="750" height="422" alt="The farmer by a rainy window with a FACTS card and a RULE card; Pip holds a clipboard" src="../assets/images/ch01_story.jpg" />
+
+> **From Video 01 (2:25).** The farmer is about to go out in the rain. The two facts, raining and going_outside, and the rule IF raining AND going_outside THEN recommend_umbrella are on screen; Pip, with the clipboard, checks whether the rule matches.
+
 ## 2. What software is and what AI means here
 
 Software is the set of computer programs and procedures, with associated information such as data and documentation, that tells a computer system how to perform tasks [1, 15]. A simple model is input → processing → output: a person or sensor supplies information, the program processes it according to instructions, and the system returns a result or action. A calculator and a messaging app are software; their usefulness alone does not make them AI.
@@ -137,6 +141,10 @@ A building is a useful picture. The operating system is the building's foundatio
 > **Figure 1.** Layers of software. Each layer uses the services of the layer below it.
 
 Check yourself 1. Is a calculator app system software or application software? Answer: application software, because it does a task for the user; it runs on top of the operating system.
+
+<img width="750" height="422" alt="Pip beside three stacked blocks labelled Hardware, Operating system and Applications" src="../assets/images/ch02_story.jpg" />
+
+> **From Video 01 (3:31).** Pip builds the three layers: hardware at the bottom, the operating system (UNIX and Android) in the middle, and applications (Weixin, a report writer, library check-out) on top.
 
 ## 2. Operating systems: evolution
 
@@ -352,6 +360,10 @@ else:
 ```
 
 The Python Language Reference explains that an `if` statement selects exactly one of its branches to run, depending on whether its condition is true. In Python, the indented statements belong to their IF or ELSE branch. [2]
+
+<img width="750" height="422" alt="The farmer holds an umbrella by a rainy window while Pip watches" src="../assets/images/ch03_story.jpg" />
+
+> **From Video 02 (1:11).** The weather reminder acted out: it is raining and the farmer is going outside, so the result is an umbrella.
 
 ### What each line does
 
@@ -658,6 +670,10 @@ Breadth-first search (BFS) visits a graph layer by layer: first the start node, 
 
 Visiting order: E, H, K, R, S, A. The rooms one step away (H, K) come before the rooms two steps away (R, S). Chapter 10 uses BFS and other search methods to plan a route to the Archive.
 
+<img width="750" height="422" alt="The farmer and Pip at an easel showing the library map during breadth-first search" src="../assets/images/ch04_story.jpg" />
+
+> **From Video 02 (8:32).** Breadth-first search on the library map. Rooms nearer the Entrance come first, and a room that is already visited or already waiting is not added again.
+
 ## 7. Activity: choose and trace
 
 Part A — choose the structure. Which data structure fits best? (1) The order in which customers called a help line, to answer them fairly. (2) The browser's Back button. (3) The 30 seats in a classroom, numbered 0–29. (4) Which train stations are connected to which.
@@ -832,6 +848,10 @@ Suppose the library decides that a member may have at most five books on loan at
 ```
 
 Three things are worth noticing. First, a one-sentence change of policy needed a programmer, an edit in two places, and a full re-test. Second, the order of the conditions is a design decision: putting the loan-limit check before the availability check changes which reason a member sees when two reasons apply at once. Third, nobody can see the policy without reading the code. This is the "change the policy, change the code" side of the story. Chapter 9 (Sections 5–6) shows the opposite picture — the loan policy written as rules R1 and R2 that a person can read, with the engine untouched when a rule is edited — and Chapter 12 compares the two directly, with their strengths and their limitations.
+
+<img width="750" height="422" alt="The farmer and Pip with a clipboard at the library loan desk" src="../assets/images/ch05_story.jpg" />
+
+> **From Video 03 (1:20).** The new requirement arrives at the loan desk: a limit of five books, so the program must also know how many books a member already has.
 
 ## 9. Activity 5.1 — Describe the steps of a small everyday program
 
@@ -1132,6 +1152,10 @@ In classical logic and rule-based systems, a critical pitfall arises when inform
 
 The same trap appears on everyday forms. Mei fills in a library form but leaves the phone number blank. A rule says: IF the member has no phone number, THEN send reminders by post. The rule cannot fire yet: a blank box is unknown, not “no phone”. Mei may simply have skipped it, so the system should ask her, or record “not given yet”.
 
+<img width="750" height="422" alt="The farmer at the loan desk while Pip shrugs" src="../assets/images/ch06_story.jpg" />
+
+> **From Video 04 (0:43).** Can the system safely conclude "no fever"? No. Missing information is different from a false fact.
+
 ## 5. Where symbolic AI is used
 
 PPT 2024 (chap4 slide 5) lists four application areas. In most modern products, symbolic rules work together with machine learning rather than alone:
@@ -1247,6 +1271,10 @@ From p → q and q, concluding p. The ground is wet, so it is raining? Not neces
 
 From p → q and ¬p, concluding ¬q. It is not raining, so the ground is not wet? Again, not necessarily.
 
+<img width="750" height="422" alt="The farmer under a red umbrella by a rainy window, with Pip waving" src="../assets/images/ch07_story.jpg" />
+
+> **From Video 04 (4:56).** A rule works in one direction and does not automatically work backward: the first mistake above, concluding p from p → q and q.
+
 Forward chaining in Chapter 9 is modus ponens used again and again: when a rule's IF part is known to be true, its THEN part is added as a new fact.
 
 ## 5. Propositional logic in AI
@@ -1359,6 +1387,10 @@ A good representation lets the system:
 - grow — accept new knowledge without being rebuilt.
 
 There is no single best form. This chapter shows five forms from PPT 2024, all describing the same small library world, so you can compare them. Frames and scripts are counted as one form here; Video 05 and the Study Guide's first table list them separately, which makes six.
+
+<img width="750" height="422" alt="Pip behind a row of spice jars on a kitchen shelf, under the Chapter 8 menu card" src="../assets/images/ch08_story.jpg" />
+
+> **From Video 05 (0:46).** Chapter 8 opens at the spice shelf: every jar has a label and a place. Store your knowledge well, and you can find it in a blink.
 
 ## 2. Logic-based representation
 
@@ -1525,6 +1557,10 @@ Forward chaining starts from the facts we already have and works forward to new 
 2. Apply it: add its conclusion to the facts as a new fact.
 3. Go back to step 1, because the new fact may make another rule apply.
 4. Stop when no rule can add anything new.
+
+<img width="750" height="422" alt="Pip beside three stacked blocks labelled Known facts, Rules that match and New facts" src="../assets/images/ch09_story.jpg" />
+
+> **From Video 05 (4:05).** Forward chaining in three layers: known facts, the rules that match them, and the new facts they add, repeated until no rule can add anything new.
 
 Backward chaining starts from a possible conclusion, called the goal, and works backward to check whether the facts support it [1, 2]. It is like a doctor who asks "could this be pneumonia?" and then checks only the symptoms that matter. The steps are:
 
@@ -1857,6 +1893,10 @@ Worked example. After move L, MIN can choose 3 or 5, and picks 3. After move R, 
 
 Alpha-beta pruning gives the same answer as minimax while skipping branches that cannot change it. After exploring L, MAX knows it can get 3. Exploring R, the first leaf is 2, so MIN can force R down to 2 or less. Whatever the second leaf is, R is already worse than 3 — so the leaf 9 does not need to be looked at at all. In large games such as chess, pruning skips huge parts of the tree and lets the program look several moves further ahead in the same time.
 
+<img width="750" height="422" alt="Two Pips at a table with a fan between them, one saying "Best for me!", while the farmer watches" src="../assets/images/ch10_story.jpg" />
+
+> **From Video 06 (6:37).** A game against another player: each player chooses what is best for them, so minimax looks ahead to the opponent's reply.
+
 ## 6. Local search: hill climbing and simulated annealing
 
 Sometimes we do not need a route; we need a good final arrangement — for example, the best layout of shelves, or a timetable without clashes. Local search starts with one solution and keeps moving to a neighbouring solution, hoping to reach the best one (slide 40).
@@ -2040,6 +2080,10 @@ A question-answering system interprets a question in natural language and answer
 
 For the library: the question "Which books by Rowling are available?" becomes a query — find every x with Book(x) ∧ WrittenBy(x, Rowling) ∧ Available(x) — which the system answers from its facts (as SQL does in Chapter 5, Section F). Limit: it can only answer questions about knowledge it has been given.
 
+<img width="750" height="422" alt="The farmer asks "Which books by Rowling are available?" at the loan desk; Pip waves" src="../assets/images/ch11_story.jpg" />
+
+> **From Video 07 (3:19).** The farmer asks "Which books by Rowling are available?", and the answer comes from stored facts.
+
 ### 6.3 Information retrieval
 
 Information retrieval finds the documents that match what a user is looking for in a large collection (slide 49). Symbolic techniques help by representing the concepts in the documents and in the query. In the slide's legal example, legal concepts, case law and statutes are encoded in a formal structure, and the system matches a legal question with relevant documents.
@@ -2154,6 +2198,10 @@ Part B — change the policy in both versions. The library decides that a member
 
 PPT 2024 ends the Symbolic AI chapter with a hands-on activity (chap4, slide 50): build a tiny "smart assistant" that switches a fan and a lamp on and off, first with fixed rules, then with a machine-learning model, and compare them. It turns the whole module into one experiment.
 
+<img width="750" height="422" alt="Rule-Pip and Model-Pip at a table with a fan and a laptop, the farmer standing beside them" src="../assets/images/ch12_story.jpg" />
+
+> **From Video 07 (5:26).** Two versions of Pip, Rule-Pip and Model-Pip, control the same fan and lamp.
+
 Test status (4 November 2026): Part A, the script on slide 50, was rebuilt in the live Scratch editor and tested. In Part B, the team trained the model on Machine Learning for Kids and tested it on the website (Figures 4 and 5), then ran its own script in Machine Learning for Kids' version of Scratch and tried three commands (Figures 6 and 7).
 
 Goal. See, with your own hands, what a rule-based program understands and what a trained model understands, and why.
@@ -2259,7 +2307,6 @@ To synthesize everything we have learned in this chapter, here is a master compa
 - Explicit rules are reliable under strict conditions but become unreliable when information is missing, conflicting, or outdated.
 - Missing information does not prove the opposite; assuming a fact is false simply because data is absent can cause logical errors in rule-based systems.
 - The same decision can be written as a program or as rules: for a refusal, the program answers but the rules give no conclusion unless a rule such as R4 says so. The rules make the policy easier to read and change, but conclude only what they cover.
-
 
 
 
