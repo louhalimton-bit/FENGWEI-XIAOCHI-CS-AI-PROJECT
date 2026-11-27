@@ -1,6 +1,6 @@
 # Image index
 
-Every image in this repository, so that the Study Guide, Test Bank, slides and videos can reuse them. Files named `chNN_…` belong to Chapter NN. The `study-guide/` folder holds each figure of the final Study Guide as its own file.
+Every image in this repository, so that the Study Guide, Test Bank, slides and videos can reuse them. Files named `chNN_…` belong to Chapter NN. The `study-guide/` folder holds each figure of the final Study Guide as its own file. Files named `chNN_story.jpg` are stills from our video tutorials, one per chapter, in which Pip and the farmer act out the chapter’s example.
 
 ## Images used in the Markdown
 
@@ -22,6 +22,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch01_fig03.png` | 1 | `contents/content.md`, 3. How symbolic AI represents information |
 | `ch01_fig04.png` | 1 | `contents/content.md`, Worked example: the library loan |
 | `ch01_fig05.png` | 1 | `contents/content.md`, 5. Historical background and progression |
+| `ch01_story.jpg` | 1 | `contents/content.md`, 1. Start with a familiar decision (still from Video 01 at 2:25) |
 | `ch02_diagram01.png` | 2 | `assets/Chapters/Chapter2-Software Overview.md`, top of the page |
 | `ch02_diagram02.png` | 2 | `assets/Chapters/Chapter2-Software Overview.md`, top of the page |
 | `ch02_diagram03.png` | 2 | `assets/Chapters/Chapter2-Software Overview.md`, top of the page |
@@ -34,6 +35,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch02_fig04.png` | 2 | `contents/content.md`, 5. Programming languages: evolution |
 | `ch02_fig05.png` | 2 | `contents/content.md`, 6. Programming languages: categories and features |
 | `ch02_fig06.png` | 2 | `contents/content.md`, 7. Case studies: UNIX and Weixin |
+| `ch02_story.jpg` | 2 | `contents/content.md`, 1. System software and application software (still from Video 01 at 3:31) |
 | `ch03_diagram01.png` | 3 | `assets/Chapters/Chapter3-Algorithms - How Programs Process Information and Make Decisions.md`, top of the page |
 | `ch03_diagram02.png` | 3 | `assets/Chapters/Chapter3-Algorithms - How Programs Process Information and Make Decisions.md`, top of the page |
 | `ch03_diagram03.png` | 3 | `assets/Chapters/Chapter3-Algorithms - How Programs Process Information and Make Decisions.md`, top of the page |
@@ -60,6 +62,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch03_fig12.png` | 3 | `contents/content.md`, C. Iteration and recursion |
 | `ch03_fig13.png` | 3 | `contents/content.md`, D. Basic algorithms: searching and sorting |
 | `ch03_fig14.png` | 3 | `contents/content.md`, D. Basic algorithms: searching and sorting |
+| `ch03_story.jpg` | 3 | `contents/content.md`, 5. Worked example: a weather reminder (still from Video 02 at 1:11) |
 | `ch04_diagram01.png` | 4 | `assets/Chapters/Chapter4-Data Structures.md`, top of the page |
 | `ch04_diagram02.png` | 4 | `assets/Chapters/Chapter4-Data Structures.md`, top of the page |
 | `ch04_diagram03.png` | 4 | `assets/Chapters/Chapter4-Data Structures.md`, top of the page |
@@ -75,6 +78,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch04_fig05.png` | 4 | `contents/content.md`, 4. Stacks and queues |
 | `ch04_fig06.png` | 4 | `contents/content.md`, 5. Trees and binary trees |
 | `ch04_fig07.png` | 4 | `contents/content.md`, 6. Graphs and breadth-first search |
+| `ch04_story.jpg` | 4 | `contents/content.md`, 6. Graphs and breadth-first search (still from Video 02 at 8:32) |
 | `ch05_diagram01.png` | 5 | `assets/Chapters/Chapter5-Software Engineering and Databases.md`, top of the page |
 | `ch05_diagram02.png` | 5 | `assets/Chapters/Chapter5-Software Engineering and Databases.md`, top of the page |
 | `ch05_diagram03.png` | 5 | `assets/Chapters/Chapter5-Software Engineering and Databases.md`, top of the page |
@@ -92,11 +96,13 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch05_fig03.png` | 5 | `contents/content.md`, 5. Case study: a library management system |
 | `ch05_fig04.png` | 5 | `contents/content.md`, 7. Testing the program |
 | `ch05_fig05.png` | 5 | `contents/content.md`, 10. Answers and expected outcomes |
+| `ch05_story.jpg` | 5 | `contents/content.md`, 8. Changing the policy: "at most five books on loan" (still from Video 03 at 1:20) |
 | `ch06_diagram01.png` | 6 | `assets/Chapters/Chapter6-Introduction to Symbolic AI.md`, top of the page |
 | `ch06_diagram02.png` | 6 | `assets/Chapters/Chapter6-Introduction to Symbolic AI.md`, top of the page |
 | `ch06_fig01.png` | 6 | `contents/content.md`, 2. Rules in action: the medical example |
 | `ch06_fig02.png` | 6 | `contents/content.md`, 2. Rules in action: the medical example |
 | `ch06_fig03.png` | 6 | `contents/content.md`, 5. Where symbolic AI is used |
+| `ch06_story.jpg` | 6 | `contents/content.md`, The trap of missing information ("Missing information does not prove the opposite") (still from Video 04 at 0:43) |
 | `ch07_diagram01.png` | 7 | `assets/Chapters/Chapter7-Logic and Reasoning.md`, top of the page |
 | `ch07_diagram02.png` | 7 | `assets/Chapters/Chapter7-Logic and Reasoning.md`, top of the page |
 | `ch07_diagram03.png` | 7 | `assets/Chapters/Chapter7-Logic and Reasoning.md`, top of the page |
@@ -111,6 +117,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch07_fig05.png` | 7 | `contents/content.md`, 3. Implication and biconditional |
 | `ch07_fig06.png` | 7 | `contents/content.md`, 7. Formalising natural-language sentences |
 | `ch07_fig07.png` | 7 | `contents/content.md`, 7. Formalising natural-language sentences |
+| `ch07_story.jpg` | 7 | `contents/content.md`, 4. Inference rules: modus ponens and modus tollens (still from Video 04 at 4:56) |
 | `ch08_diagram01.png` | 8 | `assets/Chapters/Chapter8-Knowledge Representation.md`, top of the page |
 | `ch08_diagram02.png` | 8 | `assets/Chapters/Chapter8-Knowledge Representation.md`, top of the page |
 | `ch08_diagram03.png` | 8 | `assets/Chapters/Chapter8-Knowledge Representation.md`, top of the page |
@@ -123,6 +130,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch08_fig04.png` | 8 | `contents/content.md`, 4. Frames and scripts |
 | `ch08_fig05.png` | 8 | `contents/content.md`, 6. Ontologies |
 | `ch08_fig06.png` | 8 | `contents/content.md`, 6. Ontologies |
+| `ch08_story.jpg` | 8 | `contents/content.md`, 1. What knowledge representation is (still from Video 05 at 0:46) |
 | `ch09_diagram01.png` | 9 | `assets/Chapters/Chapter9-Rule-Based and Expert Systems.md`, top of the page |
 | `ch09_diagram02.png` | 9 | `assets/Chapters/Chapter9-Rule-Based and Expert Systems.md`, top of the page |
 | `ch09_diagram03.png` | 9 | `assets/Chapters/Chapter9-Rule-Based and Expert Systems.md`, top of the page |
@@ -150,6 +158,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch09_fig11.png` | 9 | `contents/content.md`, 9. Rule engines today: Drools |
 | `ch09_fig12.png` | 9 | `contents/content.md`, 10. Strengths and limits of rule-based AI |
 | `ch09_fig13.png` | 9 | `contents/content.md`, 11. Learner Activity 3: the hospital access rules |
+| `ch09_story.jpg` | 9 | `contents/content.md`, 4. Forward and backward chaining (still from Video 05 at 4:05) |
 | `ch10_diagram01.png` | 10 | `assets/Chapters/Chapter10-Planning and Problem Solving.md`, top of the page |
 | `ch10_diagram02.png` | 10 | `assets/Chapters/Chapter10-Planning and Problem Solving.md`, top of the page |
 | `ch10_diagram03.png` | 10 | `assets/Chapters/Chapter10-Planning and Problem Solving.md`, top of the page |
@@ -177,6 +186,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch10_fig12.png` | 10 | `contents/content.md`, 5. Adversarial search: minimax and alpha-beta pruning |
 | `ch10_fig13.png` | 10 | `contents/content.md`, 6. Local search: hill climbing and simulated annealing |
 | `ch10_library_map_large_labels.png` | 10 | Study Guide Figures 4.3 and 10.1 (redrawn with larger labels) |
+| `ch10_story.jpg` | 10 | `contents/content.md`, 5. Adversarial search: minimax and alpha-beta pruning (still from Video 06 at 6:37) |
 | `ch11_diagram01.png` | 11 | `assets/Chapters/Chapter11-Symbolic Natural Language Processing.md`, top of the page |
 | `ch11_diagram02.png` | 11 | `assets/Chapters/Chapter11-Symbolic Natural Language Processing.md`, top of the page |
 | `ch11_diagram03.png` | 11 | `assets/Chapters/Chapter11-Symbolic Natural Language Processing.md`, top of the page |
@@ -189,6 +199,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch11_fig04.png` | 11 | `contents/content.md`, 3. Semantics and knowledge representation for language |
 | `ch11_fig05.png` | 11 | `contents/content.md`, 4. Rule-based NLP: part-of-speech tagging and parsing |
 | `ch11_fig06.png` | 11 | `contents/content.md`, 6.1 Sentiment analysis |
+| `ch11_story.jpg` | 11 | `contents/content.md`, 6.2 Question answering (still from Video 07 at 3:19) |
 | `ch12_diagram01.png` | 12 | `assets/Chapters/Chapter12-Software and Symbolic AI Together.md`, top of the page |
 | `ch12_diagram02.png` | 12 | `assets/Chapters/Chapter12-Software and Symbolic AI Together.md`, top of the page |
 | `ch12_diagram03.png` | 12 | `assets/Chapters/Chapter12-Software and Symbolic AI Together.md`, top of the page |
@@ -210,6 +221,7 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `ch12_fig08.png` | 12 | `contents/content.md`, Part B — the machine-learning assistant (25 minutes) |
 | `ch12_fig09.png` | 12 | `contents/content.md`, Part B — the machine-learning assistant (25 minutes) |
 | `ch12_fig10.png` | 12 | `contents/content.md`, Observation table |
+| `ch12_story.jpg` | 12 | `contents/content.md`, 6. Hands-on: a rule-based assistant vs a machine-learning assistant (still from Video 07 at 5:26) |
 | `meetings_stage1_01.png` | – | `main/Project-Log/meeting-summaries.md`, Evidence |
 | `meetings_stage1_02.png` | – | `main/Project-Log/meeting-summaries.md`, Evidence |
 | `meetings_stage1_03.png` | – | `main/Project-Log/meeting-summaries.md`, Evidence |
@@ -275,5 +287,3 @@ Every image in this repository, so that the Study Guide, Test Bank, slides and v
 | `study-guide/sg_figure_12_5.png` | 12.5 | The machine-learning assistant. Source: the professor’s PPT 2024, chap4, slide 50. | 107 |
 | `study-guide/sg_figure_12_6.png` | 12.6 | The team’s working script. It adapts the slide’s script: one extra ask before the loop (press Enter the first time), wait 5 seconds at the end of the loop, and four short scripts that show the reply. | 108 |
 | `study-guide/sg_figure_12_7.png` | 12.7 | Three commands run through the script in Figure 12.6: “turn fan on” gets “Fan on”, “It’s too dark too read” (a typing slip) gets “Lamp on”, and “make me a sandwich” gets “Fan on”. The wording differs a little from the table below. Screenshots, 4 November 2026. | 109 |
-
-
